@@ -2,16 +2,6 @@
 
 @font-face {
 	font-family: 'Noto Sans';
-	src: url('../font/NotoSans-Bold.eot');
-	src: url('../font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../font/NotoSans-Bold.woff') format('woff'),
-		url('../font/NotoSans-Bold.woff2') format('woff2'),
-		url('../font/NotoSans-Bold.otf') format('otf'),
-		url('../font/NotoSans-Bold.ttf') format('truetype');
-	font-weight:700;
-}
-@font-face {
-	font-family: 'Noto Sans';
 	src: url('../font/NotoSans-DemiLight.eot');
 	src: url('../font/NotoSans-DemiLight.eot?#iefix') format('embedded-opentype'),
 		url('../font/NotoSans-DemiLight.woff') format('woff'),
@@ -39,4 +29,14 @@
 		url('../font/NotoSans-Medium.otf') format('otf'),
 		url('../font/NotoSans-Medium.ttf') format('truetype');
 	font-weight:500;
+}
+@font-face {
+	font-family: 'Noto Sans';
+	src: url('../font/NotoSans-Bold.eot');
+	src: url('../font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../font/NotoSans-Bold.woff') format('woff'),
+		url('../font/NotoSans-Bold.woff2') format('woff2'),
+		url('../font/NotoSans-Bold.otf') format('otf'),
+		url('../font/NotoSans-Bold.ttf') format('truetype');
+	font-weight:700;
 }

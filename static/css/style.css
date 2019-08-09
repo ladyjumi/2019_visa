@@ -6,7 +6,19 @@
 	body.hidden{overflow: hidden}
 
 	/*레이아웃*/
-	.inner{position: relative; width: 1200px; margin: 0 auto;}
+	.inner{position: relative; width: 1220px; margin: 0 auto; padding: 0 10px;}
+
+	#header{padding: 17px 0; border-bottom: 1px solid #cecece;}
+	#header h1{display: inline-block;}
+	#header h1 a{display: block; font-size: 20px; font-weight: 700; line-height: 37px; color: #223666}
+	#header .gnb{display: inline-block; margin-left: 66px;}
+	#header .gnb li{display: inline-block;}
+	#header .gnb li + li{margin-left: 17px;}
+	#header .gnb li a{padding: 11px 0 7px; font-size: 16px;}
+	#header .gnb li.active a{color: #b62232; border-bottom: 3px solid #b62232;}
+	#header .topMenu{position: absolute; top: 0; right: 10px;}
+	#header .topMenu select{padding-right: 20px; line-height: 37px;}
+	#header .topMenu option{-webkit-appearance: unset; padding:  0 2px;}
 
 
 

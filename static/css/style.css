@@ -2,33 +2,76 @@
 
 /* common */
 	html{overflow-y: scroll;}
-	body{font-size: 15px;}
+	body{font-size: 14px;}
+	a, button, input{font-size: 14px}
 	body.hidden{overflow: hidden}
 
 	/*레이아웃*/
 	.inner{position: relative; width: 1220px; margin: 0 auto; padding: 0 10px;}
 
-	#header{padding: 17px 0; border-bottom: 1px solid #cecece;}
-	#header h1{display: inline-block;}
-	#header h1 a{display: block; font-size: 20px; font-weight: 700; line-height: 37px; color: #223666}
-	#header .gnb{display: inline-block; margin-left: 66px;}
-	#header .gnb li{display: inline-block;}
-	#header .gnb li + li{margin-left: 17px;}
-	#header .gnb li a{padding: 11px 0 7px; font-size: 16px;}
-	#header .gnb li.active a{color: #b62232; border-bottom: 3px solid #b62232;}
-	#header .topMenu{position: absolute; top: 0; right: 10px;}
-	#header .topMenu select{padding-right: 20px; line-height: 37px;}
-	#header .topMenu option{-webkit-appearance: unset; padding:  0 2px;}
+#header{border-bottom: 1px solid #cecece;}
+#header > .inner{padding: 17px 10px;}
+#header h1{display: inline-block;}
+#header h1 a{display: block; font-size: 20px; font-weight: 700; line-height: 36px; color: #223666}
+#header .gnb{display: inline-block; margin-left: 66px;}
+#header .gnb li{display: inline-block;}
+#header .gnb li + li{margin-left: 35px;}
+#header .gnb li a{padding: 10px 0 7px; font-size: 16px; transition: .1s}
+#header .gnb li:hover a{color: #000}
+#header .gnb li.active a{color: #b62232; border-bottom: 3px solid #b62232;}
+#header .topMenu{position: absolute; top: 17px; right: 10px; font-size: 0;}
+#header .topMenu > *{position: relative;}
+#header .topMenu > * + *{margin-left: 10px;}
+#header .topMenu > * + *:before{position: absolute; top: 11px; left: -4px; display: block; content: ''; width: 1px; height: 12px; background-color: #ccc;}
+#header .topMenu select{padding: 8px 20px 10px 8px; background: #fff url(../images/selectbox2.png) no-repeat right 6px top 13px;}
+#header .topMenu option{background-color: #f5f6fa; text-align: right;}
+#header .topMenu .btnSerach{margin-right: -7px;}
+#header .btnSerach{width: 36px; height: 36px; background: url(../images/btn_seach.png) no-repeat center; text-indent: -9999px;}
+
+#header .searchBox{background-color: #f8f8f8; border-top: 1px solid #ccc;}
+#header .searchBox .inner{padding: 32px 60px 34px 10px;}
+#header .searchBox .searchArea{display: table; width: 100%; border-bottom: 1px solid #000; font-size: 0;}
+#header .searchBox .span1{display: table-cell; width: 100%;}
+#header .searchBox input[type="text"]{width: 100%; height: 42px; padding: 0 10px; font-size: 15px; color: #666; background-color: #f8f8f8;}
+#header .searchBox .btnSerach{display: inline-block; width: 44px; height: 42px;}
+
+.topVisual{padding: 0 0 100px; background-color: #164085; color: #fff; text-align: center;}
+.topVisual .inner{padding: 60px 0 27px;}
+.topVisual .title{font-size: 28px;}
+.topVisual .desc{padding: 16px 0 0; line-height: 22px}
+.topVisual .linkMore{margin: 18px 0 0; padding: 5px}
+.topVisual .linkMore:after{content: ''; display: inline-block; width: 24px; height: 14px; margin-left: 6px; background: url(../images/btn_arrow_link.png) no-repeat center top; vertical-align: middle;}
 
 
+.matchBox{width: 1200px; margin: -100px auto 0; padding: 48px 0 58px; background-color: #fff; box-shadow:  0 0 32px rgba(109,109,109,0.2)}
+.matchBox ul{width: 600px; margin: 0 auto; border: 1px solid #edeef5; border-radius: 16px; font-size: 0; box-shadow:  0 0 32px rgba(109,109,109,0.14)}
+.matchBox ul li{display: inline-block; width: 33.3333%; color: #666; border-radius: 16px; text-align: center; overflow: hidden;}
+.matchBox ul li span{display: block; width: 100%; font-size: 13px; line-height: 28px; text-transform: uppercase;}
+.matchBox ul li span b{padding-left:6px; font-size: 16px;}
+.matchBox ul li.active{position: relative; z-index: 1; height: 30px; margin: -1px 0;}
+.matchBox ul li.active span{color: #fff; line-height: 30px;
+	background: #dd6065;
+	background: -moz-linear-gradient(left,  #dd6065 0%, #961b1f 100%);
+	background: -webkit-linear-gradient(left,  #dd6065 0%,#961b1f 100%);
+	background: linear-gradient(to right,  #dd6065 0%,#961b1f 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd6065', endColorstr='#961b1f',GradientType=1 );
+}
 
+.searchTxt{margin: 40px 0 0; text-align: center; font-size: 0;}
+.searchTxt > p{position: relative; display: inline-block;}
+.searchTxt span, strong{font-size: 16px; line-height: 42px}
+.searchTxt strong{margin-left: 22px;}
+.searchTxt select{
+	margin: 0 18px 0 16px; min-width: 220px; height: 42px; padding: 0 40px 0 14px; border: 1px solid #dd5c61; border-radius: 4px; font-size: 16px; font-weight: 500; line-height: 40px;
+	background: url(../images/selectbox1.png) no-repeat right 14px center;
+}
 
+.btnSerachDetail{position: absolute; top: 0; left: 100%; width: fit-content; height: 40px; padding: 0 30px 0 10px; margin-left: 20px; color: #bf3f44; background: url(../images/selectbox1.png) no-repeat right 10px center;}
 
-
-
-
-
-
+.searchDetail{padding-top: 50px;}
+.searchDetail span{margin-left: 20px; font-size: 13px; line-height: 16px;}
+.searchDetail div{display: inline-block;}
+.searchDetail div + div{margin-left: 21px; border-left: 1px solid #dadada;}
 
 
 
@@ -84,8 +127,7 @@
 		ul.listWran > *::before{content: '※';}
 
 	/*Button*/
-		a[class*="btn"],
-		input[class*="btn"]{width: 151px; height: 42px; font-size: 15px; line-height: 42px; text-align: center; cursor: pointer; transition: .1s}
+	
 		/*테두리가 있는 버튼*/
 		[class*="Border"]{width: 131px; border: 1px solid #acafb2; transition: .1s}
 		/*페이지 하단의 큰 버튼*/
@@ -130,11 +172,10 @@
 	.inputTxt{height: 42px; padding: 0 16px; font-size: 15px}
 	.inputTxt:only-child{max-width: 500px}
 	/* checkbox */
-	.inputCheckWrap{height: 21px;}
-	.inputCheckWrap label input{width:19px; height: 19px}
-	.inputCheckWrap label{min-width: 21px; min-height: 21px; padding-left: 30px; font-size: 13px; line-height: 21px; background:url(../images/checkbox.png) 0 0 no-repeat}
-	.inputCheckWrap label:hover{background-position: 0 -21px}
-	.inputCheckWrap.active label{background-position: 0 -42px}
+	.inputCheckWrap{height: 16px;}
+	.inputCheckWrap label input{width:14px; height: 14px}
+	.inputCheckWrap label{min-width: 21px; min-height: 16px; padding-left: 24px; font-size: 13px; line-height: 16px; background:url(../images/checkbox.png) 0 0 no-repeat}
+	.inputCheckWrap.active label{background-position: 0 -16px}
 	/* radios */
 	.inputRadioWrap{height: 20px}
 	.inputRadioWrap label input{width: 18px; height: 18px}
@@ -159,10 +200,10 @@
 	.datePicker .calenderBox button{position: absolute; top: -1px; right: 0; width: 100%; height: 100%; background: url(../../global/images/icon_calendar.png) no-repeat right 20px center; text-indent: -9999px}
 	.datePicker .calenderBox .inputTxt{display: inline-block; width: 150px; padding-right: 54px; cursor: pointer}
 	/* placeholder */
-	::-webkit-input-placeholder{font-size: 13px; letter-spacing: -.02em}
-	::-moz-placeholder{font-size: 13px; letter-spacing: -.02em}
-	:-ms-input-placeholder{font-size: 13px; letter-spacing: -.02em !important}
-	:-moz-placeholder{font-size: 13px; letter-spacing: -.02em}
+	::-webkit-input-placeholder{font-size: 15px; letter-spacing: -.02em}
+	::-moz-placeholder{font-size: 15px; letter-spacing: -.02em}
+	:-ms-input-placeholder{font-size: 15px; letter-spacing: -.02em !important}
+	:-moz-placeholder{font-size: 15px; letter-spacing: -.02em}
 
 	/* 가입,수정폼 */		
 		.tableLine{display: table; width: 100%; margin: 20px 0 0; font-size: 0; text-align: left}

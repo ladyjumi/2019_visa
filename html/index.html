@@ -13,9 +13,11 @@
 
 <div class="wrap">
 
-	<div id="header">
+	<div class="header">
 		<div class="inner">
 			<h1><a href="#">비자 내비게이터</a></h1>
+
+			<!-- GNB -->
 			<ul class="gnb">
 				<li class="active"><a href="#">비자 검색</a></li>
 				<li><a href="#">입국목적별 비자 종류</a></li>
@@ -23,29 +25,38 @@
 				<li><a href="#">수수료</a></li>
 				<li><a href="#">입국 및 체류</a></li>
 			</ul>
+			<!-- //GNB -->
+
 			<div class="topMenu">
-				<span>
-					<select name="" id="">
-						<option value="">언어</option>
-						<option value="">한국어</option>
-						<option value="">ENGLISH</option>
-						<option value="">中文</option>
-					</select>
-				</span>
-				<a href="" class="btnSerach">검색버튼</a>
+				<!-- 언어변경 -->
+				<select name="" id="">
+					<option value="">언어</option>
+					<option value="">한국어</option>
+					<option value="">ENGLISH</option>
+					<option value="">中文</option>
+				</select>
+				<!-- //언어변경 -->
+				<button type="button" class="btnSerach">검색버튼</button>
 			</div>
 		</div>
-		<div class="searchBox">
-			<div class="inner">
-				<span class="searchArea">
-					<span class="span1"><input type="text" placeholder="검색어를 입력하세요."></span>
-					<input type="button" value="검색" class="btnSerach">
-				</span>
+
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<div class="inner">
+					<span class="searchBox">
+						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
+						<input type="button" value="검색" class="btnSerach">
+					</span>
+					<button type="button" class="btnClose">검색창 닫기</button>
+				</div>
 			</div>
+			<div class="dimmed"></div>
 		</div>
+		<!-- //검색창 -->
 	</div>
 
-	<div id="contents">
+	<div class="contents">
 
 		<div class="topVisual">
 			<div class="inner">
@@ -55,7 +66,7 @@
 			</div>
 		</div>
 
-		<div class="matchBox">
+		<div class="quickFinder">
 			<ul>
 				<li class="active"><span>Step<b>1</b></span></li>
 				<li><span>Step<b>2</b></span></li>
@@ -170,7 +181,15 @@
 
 	</div>
 
-	<div id="footer"></div>
+	<div class="footer">
+		<div class="inner">
+			<strong>비자 내비게이터</strong>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 ( 외국인종합안내센터 : 국번없이 1345 )</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
 </div>
 	
 </body>

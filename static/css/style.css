@@ -7,33 +7,43 @@
 	body.hidden{overflow: hidden}
 
 	/*레이아웃*/
-	.inner{position: relative; width: 1220px; margin: 0 auto; padding: 0 10px;}
+	.inner{width: 1200px; margin: 0 auto;}
 
-#header{border-bottom: 1px solid #cecece;}
-#header > .inner{padding: 17px 10px;}
-#header h1{display: inline-block;}
-#header h1 a{display: block; font-size: 20px; font-weight: 700; line-height: 36px; color: #223666}
-#header .gnb{display: inline-block; margin-left: 66px;}
-#header .gnb li{display: inline-block;}
-#header .gnb li + li{margin-left: 35px;}
-#header .gnb li a{padding: 10px 0 7px; font-size: 16px; transition: .1s}
-#header .gnb li:hover a{color: #000}
-#header .gnb li.active a{color: #b62232; border-bottom: 3px solid #b62232;}
-#header .topMenu{position: absolute; top: 17px; right: 10px; font-size: 0;}
-#header .topMenu > *{position: relative;}
-#header .topMenu > * + *{margin-left: 10px;}
-#header .topMenu > * + *:before{position: absolute; top: 11px; left: -4px; display: block; content: ''; width: 1px; height: 12px; background-color: #ccc;}
-#header .topMenu select{padding: 8px 20px 10px 8px; background: #fff url(../images/selectbox2.png) no-repeat right 6px top 13px;}
-#header .topMenu option{background-color: #f5f6fa; text-align: right;}
-#header .topMenu .btnSerach{margin-right: -7px;}
-#header .btnSerach{width: 36px; height: 36px; background: url(../images/btn_seach.png) no-repeat center; text-indent: -9999px;}
+.header{position: relative; border-bottom: 1px solid #cecece;}
+.header > .inner{position: relative; padding: 17px 0;}
+.header h1{display: inline-block;}
+.header h1 a{display: block; font-size: 20px; font-weight: 700; line-height: 36px; color: #223666}
+.header .btnSerach{width: 36px; height: 36px; background: url(../images/btn_seach.png) no-repeat center; text-indent: -9999px;}
+.header .gnb{display: inline-block; margin-left: 66px;}
+.header .gnb li{display: inline-block;}
+.header .gnb li + li{margin-left: 35px;}
+.header .gnb li a{padding: 10px 0 7px; font-size: 16px; transition: .1s}
+.header .gnb li:hover a{color: #000}
+.header .gnb li.active a{color: #b62232; border-bottom: 3px solid #b62232;}
+.header .topMenu{position: absolute; top: 17px; right: 0px; font-size: 0;}
+.header .topMenu > *{position: relative;}
+.header .topMenu > * + *{margin-left: 10px;}
+.header .topMenu > * + *:before{position: absolute; top: 11px; left: -4px; display: block; content: ''; width: 1px; height: 12px; background-color: #ccc;}
+.header .topMenu select{padding: 8px 20px 10px 8px; background: #fff url(../images/selectbox2.png) no-repeat right 6px top 13px;}
+.header .topMenu option{background-color: #f5f6fa; text-align: right;}
+.header .topMenu .btnSerach{margin-right: -7px}
 
-#header .searchBox{background-color: #f8f8f8; border-top: 1px solid #ccc;}
-#header .searchBox .inner{padding: 32px 60px 34px 10px;}
-#header .searchBox .searchArea{display: table; width: 100%; border-bottom: 1px solid #000; font-size: 0;}
-#header .searchBox .span1{display: table-cell; width: 100%;}
-#header .searchBox input[type="text"]{width: 100%; height: 42px; padding: 0 10px; font-size: 15px; color: #666; background-color: #f8f8f8;}
-#header .searchBox .btnSerach{display: inline-block; width: 44px; height: 42px;}
+.header .searchTop{display: none; position: absolute; top: 100%; left: 0; width: 100%; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; z-index: 10}
+.header .searchTop .inner{position: relative; padding: 32px 50px 34px 0;}
+.header .searchTop .searchArea{position: relative; z-index: 9; background-color: #f8f8f8;}
+.header .searchTop .searchBox{display: table; width: 100%; border-bottom: 1px solid #000; font-size: 0;}
+.header .searchTop .inputWrap{display: table-cell; width: 100%;}
+.header .searchTop input[type="text"]{width: 100%; height: 42px; padding: 0 10px; font-size: 15px; color: #666; background-color: #f8f8f8;}
+.header .searchTop .btnSerach{display: inline-block; width: 44px; height: 42px;}
+.header .searchTop .btnClose{display: block; width: 26px; height: 26px; position: absolute; top: 14px; right: -4px; background: url(../images/btn_close_search.png) no-repeat center; text-indent: -9999px;}
+.header .searchTop .dimmed{position: fixed; top: 71px; left: 0; width: 100%; height: 100%; background: #000; opacity: .7; z-index: 8}
+
+.footer{padding: 60px 0; background-color: #efefef; border-top: 1px solid #dcdcdc; text-align: center;}
+.footer .inner{color: #666;}
+.footer strong{display: block;}
+.footer address{margin-top: 18px; font-size: 13px;}
+.footer .address{font-size: 13px;}
+.footer .copy{margin-top: 8px; font-size: 12px; font-weight: 300}
 
 .topVisual{padding: 0 0 100px; background-color: #164085; color: #fff; text-align: center;}
 .topVisual .inner{padding: 60px 0 27px;}
@@ -42,14 +52,13 @@
 .topVisual .linkMore{margin: 18px 0 0; padding: 5px}
 .topVisual .linkMore:after{content: ''; display: inline-block; width: 24px; height: 14px; margin-left: 6px; background: url(../images/btn_arrow_link.png) no-repeat center top; vertical-align: middle;}
 
-
-.matchBox{width: 1200px; margin: -100px auto 0; padding: 48px 0 58px; background-color: #fff; box-shadow:  0 0 32px rgba(109,109,109,0.2)}
-.matchBox ul{width: 600px; margin: 0 auto; border: 1px solid #edeef5; border-radius: 16px; font-size: 0; box-shadow:  0 0 32px rgba(109,109,109,0.14)}
-.matchBox ul li{display: inline-block; width: 33.3333%; color: #666; border-radius: 16px; text-align: center; overflow: hidden;}
-.matchBox ul li span{display: block; width: 100%; font-size: 13px; line-height: 28px; text-transform: uppercase;}
-.matchBox ul li span b{padding-left:6px; font-size: 16px;}
-.matchBox ul li.active{position: relative; z-index: 1; height: 30px; margin: -1px 0;}
-.matchBox ul li.active span{color: #fff; line-height: 30px;
+.quickFinder{width: 1200px; margin: -100px auto 0; padding: 48px 0 58px; background-color: #fff; box-shadow:  0 0 32px rgba(109,109,109,0.2)}
+.quickFinder ul{width: 600px; margin: 0 auto; border: 1px solid #edeef5; border-radius: 16px; font-size: 0; box-shadow:  0 0 32px rgba(109,109,109,0.14)}
+.quickFinder ul li{display: inline-block; width: 33.3333%; color: #666; border-radius: 16px; text-align: center; overflow: hidden;}
+.quickFinder ul li span{display: block; width: 100%; font-size: 13px; line-height: 28px; text-transform: uppercase;}
+.quickFinder ul li span b{padding-left:6px; font-size: 16px;}
+.quickFinder ul li.active{position: relative; z-index: 1; height: 30px; margin: -1px 0;}
+.quickFinder ul li.active span{color: #fff; line-height: 30px;
 	background: #dd6065;
 	background: -moz-linear-gradient(left,  #dd6065 0%, #961b1f 100%);
 	background: -webkit-linear-gradient(left,  #dd6065 0%,#961b1f 100%);
@@ -59,14 +68,15 @@
 
 .searchTxt{margin: 40px 0 0; text-align: center; font-size: 0;}
 .searchTxt > p{position: relative; display: inline-block;}
-.searchTxt span, strong{font-size: 16px; line-height: 42px}
+.searchTxt span, 
+.searchTxt strong{font-size: 16px; line-height: 42px}
 .searchTxt strong{margin-left: 22px;}
 .searchTxt select{
 	margin: 0 18px 0 16px; min-width: 220px; height: 42px; padding: 0 40px 0 14px; border: 1px solid #dd5c61; border-radius: 4px; font-size: 16px; font-weight: 500; line-height: 40px;
-	background: url(../images/selectbox1.png) no-repeat right 14px center;
+	background: #fff url(../images/selectbox1.png) no-repeat right 14px center;
 }
 
-.btnSerachDetail{position: absolute; top: 0; left: 100%; width: fit-content; height: 40px; padding: 0 30px 0 10px; margin-left: 20px; color: #bf3f44; background: url(../images/selectbox1.png) no-repeat right 10px center;}
+.btnSerachDetail{position: absolute; top: 0; left: 100%; height: 40px; padding: 0 30px 0 10px; margin-left: 20px; color: #bf3f44; background: url(../images/selectbox1.png) no-repeat right 10px center; white-space: nowrap;}
 
 .searchDetail{padding-top: 50px;}
 .searchDetail span{margin-left: 20px; font-size: 13px; line-height: 16px;}
@@ -81,9 +91,49 @@
 
 
 
+/*어드민페이지*/
+.adminPage h3{margin-bottom: 14px; font-size: 16px; font-weight: 700}
+.adminPage h4{margin: 20px 0 16px; padding-left: 20px; font-weight: 500;}
+.adminPage .shapeRequire{color: #bf3f44; font-weight: 400;}
+.adminPage .header h1 a{font-size: 21px; font-weight: 500; color: #333}
+.adminPage .header .gnb{margin-left: 40px;}
+.adminPage .header .gnb li.active a{color: #1a6fa0; border-color: #1a6fa0; font-weight: 500}
 
+.adminPage .aside{height: 100%; min-height: calc(100vh - 71px); float: left; background-color: #fafafa;}
+.aside .lnb{border-bottom: 1px solid #ebebeb}
+.aside .lnb li > a, 
+.aside .lnb li > span{display: block; padding: 0 16px; cursor: pointer;}
+.aside .lnb > li + li{border-top: 1px solid #ebebeb}
+.aside .lnb > li > a,
+.aside .lnb > li > span{padding-top: 1px; line-height: 40px;}
+.aside .subM{padding: 10px 0; background-color: #ebebeb;}
+.aside .subM > li > a{padding: 6px 24px 6px 22px; font-size: 13px;}
+.aside .lnb > li.active > span{color: #1a6fa0; font-weight: 500}
+.aside .subM > li.active > a{color: #1a6fa0;}
 
+.adminPage .cont{margin-left: 150px; padding: 22px 0 0 20px;}
+.adminPage .cont h3{}
+.searchTable{width: 100%; border-top: 1px solid #999; border-bottom: 1px solid #999; font-size: 0;}
+.searchTable li{width: 100%;}
+.searchTable li .cell{display: inline-block;}
+.searchTable li:nth-child(n+2){border-top: 1px solid #dadada;}
+.searchTable li .title{display: inline-block; width: 140px; padding: 12px 30px 12px 22px; font-size: 14px; line-height: 36px; background-color: #f4f4f4;}
+.searchTable li .box{display: inline-block; min-height: 60px; padding: 12px 30px 12px 14px;}
+.searchTable li .box .inputD{margin-top: 10px;}
 
+.searchTable input[type="text"]{width: 140px; height: 36px; padding: 0 10px; border: 1px solid #d3d3d3; transition: border .1s;}
+.searchTable input[type="text"]:focus{border-color: #999;}
+.searchTable button{width: 88px; height: 36px; color: #fff; font-weight: 700; line-height: 36px; background-color: #777; transition: background .1s;}
+.searchTable button:focus{background-color: #666;}
+.searchTable input[type="text"] + button{margin-left: 8px;}
+.searchTable .inp.wide{width: 412px;}
+
+.searchTable .inputD + .inputD{margin-left: 16px;}
+.searchTable .inputD label{position: relative; display: inline-block; padding-left: 23px; font-size: 13px; line-height: 16px;}
+.searchTable .inputD span.icon{position: absolute; top: 0; left: 0; display: block; width: 16px; height: 16px;}
+.searchTable .inputD input.inp{position: absolute; top: 1px; left: 1px; width: 14px; height: 14px;}
+.searchTable .inputD input[type="radio"] + .icon{background: url(../images/radio1.png);}
+.searchTable .inputD input[type="radio"]:checked + .icon{background-position: 0 -16px;}
 
 
 
@@ -104,10 +154,7 @@
 	.topButtonArea.fix{position: fixed; bottom: 30px;}
 	.backTop{display: block; position: absolute; bottom: 0; right: 8px; z-index: 999; width: 38px; height: 38px; text-indent: -9999px; background: #2a2b2c url(../images/btn_arrow_top.png) no-repeat top 14px center; background-size: 18px auto; transition: background .1s}
 	.backTop:active{background-color: #ccc}
-	/*툴팁*/
-	.tipIcon{display: block; width: 16px; height: 16px; margin-left: 5px; border-radius: 50%;font-size: 13px; font-weight: 700; color: #fff; text-align: center; line-height: 16px; background-color: #ed586a; cursor: default}
-	.tipBox{display: none; position: absolute; top: 0; left: 100%; z-index: 1; 	padding: 14px; border-radius: 6px; background-color: rgba(42,43,44,1); color: #fff; text-align: left; font-size: 13px; line-height: 20px; word-break: keep-all}
-	.tooltipWrap:hover .tipBox{display: block}
+
 
 	/*List*/
 		ul[class*="list"]{text-align: left}
@@ -128,43 +175,7 @@
 
 	/*Button*/
 	
-		/*테두리가 있는 버튼*/
-		[class*="Border"]{width: 131px; border: 1px solid #acafb2; transition: .1s}
-		/*페이지 하단의 큰 버튼*/
-		a[class*="btnBig"],
-		input[class*="btnBig"]{width: 240px; height: 60px; font-size: 20px; line-height: 60px; font-weight: 500}
-		/*버튼색상*/
-		[class*="Blue"]{background-color: #5b94fd; color: #fff}
-		[class*="DarkBlue"]{background-color: #4d67a7; color: #fff}
-		[class*="Grey"]{background-color: #f5f5f5}
-		[class*="DarkGrey"]{background-color: #acafb2; color: #fff}		
-		/*btn:hover*/
-		[class*="Blue"]:hover{background-color: #466eb7}
-		[class*="DarkBlue"]:hover{background-color: #384a76}
-		[class*="Grey"]:hover{background-color: #e1e1e1}
-		[class*="DarkGrey"]:hover{background-color: #888}
-		.btnBorder{background-color: #fff}
-		.btnBorder:hover{background-color: #eee}
-		.btnGroup{font-size: 0; text-align: center}
-		.btnGroup > *{display: inline-block}
-		.btnGroup > * + *{margin-left: 10px}
-		.btnGroup.btm{margin-top: 50px}
-		.btnGroup.btm > * + *{margin-left: 20px}
-		.btnGroup.btm .btn{width: 240px; height: 60px; font-size: 20px; line-height: 60px; font-weight: 500}		
-		.btnGroup .btn:first-child{background-color: #acafb2}
-		.btnGroup .btn:first-child:hover{background-color: #888}
-		.btnGroup .btn:nth-child(2){background-color: #4d67a7}
-		.btnGroup .btn:nth-child(2):hover{background-color: #384a76}
-		.btnGroup .btn:last-child{background-color: #5b94fd}
-		.btnGroup .btn:last-child:hover{background-color: #305baa}
-		.btnGroup .btn:only-child{background-color: #5b94fd}
-		.btnGroup .btn:only-child:hover{background-color: #305baa}
-		.btn{position: relative; height: 44px; padding: 0 26px; background-color: #5b94fd; color: #fff; font-weight: 700; font-size: 15px; line-height: 44px; vertical-align: top; transition: all .2s; text-align: center; cursor: pointer}
-		.btn:hover{background-color: #305baa}
-		.btn:only-child{width: 100%; background-color: #5b94fd}
-		.btnBorder.btnExcel{width: auto; padding: 0 20px 0 46px; text-align: center; background: url(../images/icon_excel.png) no-repeat 5px center}
-		.btnBorder.btnExcel:hover{background-color: #eee}
-	
+
 /* form */
 	input[type="submit"], 	input[type="button"]{cursor: pointer}
 	[class*="FormWrap"] .inputTxt{width: 500px}
@@ -200,10 +211,10 @@
 	.datePicker .calenderBox button{position: absolute; top: -1px; right: 0; width: 100%; height: 100%; background: url(../../global/images/icon_calendar.png) no-repeat right 20px center; text-indent: -9999px}
 	.datePicker .calenderBox .inputTxt{display: inline-block; width: 150px; padding-right: 54px; cursor: pointer}
 	/* placeholder */
-	::-webkit-input-placeholder{font-size: 15px; letter-spacing: -.02em}
-	::-moz-placeholder{font-size: 15px; letter-spacing: -.02em}
-	:-ms-input-placeholder{font-size: 15px; letter-spacing: -.02em !important}
-	:-moz-placeholder{font-size: 15px; letter-spacing: -.02em}
+	::-webkit-input-placeholder{font-size: 15px}
+	::-moz-placeholder{font-size: 15px}
+	:-ms-input-placeholder{font-size: 15px}
+	:-moz-placeholder{font-size: 15px}
 
 	/* 가입,수정폼 */		
 		.tableLine{display: table; width: 100%; margin: 20px 0 0; font-size: 0; text-align: left}
@@ -251,52 +262,7 @@
 		.infoForm.white li + li{border-top: 0;}
 		.infoForm.white .title{width: 160px; padding-right: 10px; background-color: #fff; font-weight: 500}
 
-/* layout */
-	.headerWrap{height: 70px; border-bottom: 1px solid #eaeaea; background-color: #fff}
-	.headerWrap .inner{width: 100%; min-width: 1048px; max-width: 1200px; padding: 20px 0 19px; background-color: #fff}
-	.headerWrap .logo{display: inline-block; padding-top: 3px}
-	.headerWrap .logo a{display: block; width: 144px; height: 27px}
-	.headerWrap .nowState{position: relative; display: inline-block; margin: 9px 0 0 30px; height: 16px}
-	.headerWrap .nowState span{font-size: 13px; cursor: default}
-	.headerWrap .nowState span:after{display: inline-block; content: '?';	 width: 16px; height: 16px; margin-left: 5px; border-radius: 50%;font-size: 13px; font-weight: 700; color: #fff; text-align: center; line-height: 16px; background-color: #a5abb1; text-indent: -1px}
-	.headerWrap .nowState em{display: inline-block; width: 12px; height: 12px; margin: 2px 8px 0 0; border-radius: 50%; background-color: #377cfe; vertical-align: top}
-	.headerWrap .nowState .error em{background-color: #ff3e55}
-	.headerWrap .nowState .tipBox{width: 200px; margin: 0 0 0 -16px}
-	.headerWrap .nowState:hover .tipBox{display: inline-block}
-	.headerWrap .menuWrap{position: absolute; top: 20px; right: 0}
-	.headerWrap .gnb{display: inline-block; font-size: 0}
-	.headerWrap .gnb span,	.headerWrap .gnb a{transition: all .08s}
-	.headerWrap .gnb > li{position: relative; display: inline-block; margin: 0 20px}
-	.headerWrap .gnb > li:last-of-type{margin-right: 0}
-	.headerWrap .gnb > li > *{padding: 9px 8px 8px; font-size: 13px; font-weight: 400}
-	.headerWrap .gnb > li:last-of-type > *{padding-right: 0}
-	.headerWrap .gnb > li:hover > span{color: #000}
-	.headerWrap .gnb > li.active > span{color: #00aad2}
-	.headerWrap .gnb > li > .gnbSub{display: none; position: absolute; right: 0; padding: 24px 0; background-color: rgba(91,148,253,0.8); z-index: 1}
-	.headerWrap .gnb > li:hover .gnbSub{display: block}
-	.headerWrap .gnb .user{font-weight: 700; color: #377cfe; line-height: 12px}
-	.headerWrap .gnbSub li + li{margin-top: 2px}
-	.headerWrap .gnbSub a{display: block; padding: 8px 40px 8px 20px; color: #fff; font-size: 13px; font-weight: 400; white-space: nowrap}
-	.headerWrap .gnbSub li:hover a{background-color: #4e71b2; }
-	.headerWrap .mallLink{margin: 0 0 0 30px}
-	.headerWrap .mallLink a{width: 100px; height: 28px; line-height: 28px; text-align: center; color: #fff; border-radius: 14px}
-	.headerWrap .mallLink a.godo{background-color: #fc3b3b}
-	.headerWrap .mallLink a.naver{background-color: #00cb38}
-	.headerWrap .mallLink a.cafe24{background-color: #006eb6}
 
-	.footerWrap{background-color: #fff; border-top: 1px solid #e7e8ea; padding: 33px 0 32px;}
-	.footerWrap .inner{text-align: center;}
-	.footerWrap .logo{display: inline-block; width: 146px; height: 26px; margin: 24px 0 0; background: url(../../global/images/logo_g.svg) no-repeat; text-indent: -9999px;}
-	.footerWrap .text{display: inline-block; padding-left: 40px; text-align: left;}
-	.footerWrap .text > p{font-size: 0;}
-	.footerWrap .text > p + p{margin-top: 16px;}
-	.footerWrap .text span{font-size: 13px; font-weight: 300; line-height: 14px; color: #7e7f82;}
-	.footerWrap .text span + span{padding-left: 6px; margin-left: 8px; border-left: 1px solid #acafb2}
-	.footerWrap .text a{color: #2a2b2c; text-decoration: underline;}
-	
-	.container{min-height: calc(100vh - 210px);}
-	.container > .inner{padding: 40px 0 100px; text-align: left}
-	.container > .innerNarrow{padding: 40px 0 100px; text-align: left}
 
 /* paginate */
 	.paging{padding: 0 0 70px;}

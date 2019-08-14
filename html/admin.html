@@ -69,24 +69,20 @@
 						<div class="cell">
 							<p class="title"><em class="shapeRequire">*</em>신청대상</p>
 							<div class="box">
-								<span class="inputD">
-									<label>제외공관
+								<div class="inpGroup">
+									<label class="inpD">제외공관
 										<input type="radio" name="application" class="inp">
 										<span class="icon"></span>
 									</label>
-								</span>
-								<span class="inputD">
-									<label>전자비자
+									<label class="inpD">전자비자
 										<input type="radio" name="application" class="inp">
 										<span class="icon"></span>
 									</label>
-								</span>
-								<span class="inputD">
-									<label>비자발급인증서
+									<label class="inpD">비자발급인증서
 										<input type="radio" name="application" class="inp">
 										<span class="icon"></span>
 									</label>
-								</span>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -110,24 +106,20 @@
 						<div class="cell">
 							<p class="title"><em class="shapeRequire">*</em>발급 사증종류</p>
 							<div class="box">
-								<span class="inputD">
-									<label>복수
+								<div class="inpGroup">
+									<label class="inpD">복수
 										<input type="radio" name="visatype" class="inp">
 										<span class="icon"></span>
 									</label>
-								</span>
-								<span class="inputD">
-									<label>단수
+									<label class="inpD">단수
 										<input type="radio" name="visatype" class="inp">
 										<span class="icon"></span>
 									</label>
-								</span>
-								<span class="inputD">
-									<label>더블
+									<label class="inpD">더블
 										<input type="radio" name="visatype" class="inp">
 										<span class="icon"></span>
 									</label>
-								</span>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -161,7 +153,181 @@
 					</li>
 				</ul>
 
+				<table class="table">
+					<colgroup>
+						<col style="width: 56px" />
+						<col style="width: 200px" />
+						<col style="width: 160px" />
+						<col style="width: 140px" />
+						<col style="width: auto" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>선택</th>
+							<th>항목명</th>
+							<th>작성자</th>
+							<th>작성일</th>
+							<th>작성 폼 선택</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="inpCell">
+								<label class="inpD">
+									<input type="radio" name="select" class="inp">
+									<span class="icon"></span>
+								</label>
+							</td>
+							<td><p>기본 체류기간 30일 이하</p></td>
+							<td><p>Admin</p></td>
+							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
+							<td>
+								<div class="inpGroup">
+									<label class="inpD">TEXT
+										<input type="checkbox" name="" class="inp">
+										<span class="icon"></span>
+									</label>
+									<label class="inpD">RADIO
+										<input type="checkbox" name="" class="inp">
+										<span class="icon"></span>
+									</label>
+									<label class="inpD">체크박스
+										<input type="checkbox" name="" class="inp">
+										<span class="icon"></span>
+									</label>
+									<label class="inpD">첨부파일
+										<input type="checkbox" name="" class="inp">
+										<span class="icon"></span>
+									</label>
+									<label class="inpD">URL
+										<input type="checkbox" name="" class="inp">
+										<span class="icon"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="inpCell">
+								<label class="inpD">
+									<input type="radio" name="select" class="inp">
+									<span class="icon"></span>
+								</label>
+							</td>
+							<td><p>기본 체류기간 30일 이하</p></td>
+							<td><p>Admin</p></td>
+							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
+							<td>
+								<div class="inpGroup">
+									<label class="inpD">TEXT
+										<input type="checkbox" name="" class="inp">
+										<span class="icon"></span>
+									</label>
+									<label class="inpD">RADIO
+										<input type="checkbox" name="" class="inp">
+										<span class="icon"></span>
+									</label>
+									<label class="inpD">체크박스
+										<input type="checkbox" name="" class="inp">
+										<span class="icon"></span>
+									</label>
+									<label class="inpD">첨부파일
+										<input type="checkbox" name="" class="inp">
+										<span class="icon"></span>
+									</label>
+									<label class="inpD">URL
+										<input type="checkbox" name="" class="inp">
+										<span class="icon"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="paging">
+					<a href="#" class="direction prev">처음</a>
+					<a href="#" class="direction prev">이전</a>
+					<a href="#" class="num active">1</a>
+					<a href="#" class="num">2</a>
+					<a href="#" class="num">3</a>
+					<a href="#" class="num">4</a>
+					<a href="#" class="num">5</a>
+					<a href="#" class="num">6</a>
+					<a href="#" class="num">7</a>
+					<a href="#" class="num">8</a>
+					<a href="#" class="num">9</a>
+					<a href="#" class="num">10</a>
+					<a href="#" class="direction next">다음</a>
+					<a href="#" class="direction next">끝</a>
+				</div>
+
 				<h4><em class="shapeRequire">*</em>입국목적</h4>
+
+				<div class="divBox">
+					<div class="inpGroup">
+						<label class="inpD">관광 등 단기방문<em>(VC001)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">치료요양<em>(VC002)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">유학어학연수<em>(VC003)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">전문직 취업<em>(VC004)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">주재<em>(VC005)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">취재 종교<em>(VC006)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">투자<em>(VC007)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">무역경영<em>(VC008)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">재외동포<em>(VC009)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">방문취업<em>(VC010)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">가족방문 동거<em>(VC011)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">결혼이민<em>(VC012)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">연수<em>(VC013)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">비전문직 취업<em>(VC014)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+						<label class="inpD">외교 공무<em>(VC015)</em>
+							<input type="checkbox" name="" class="inp">
+							<span class="icon"></span>
+						</label>
+					</div>
+				</div>
+
 			</div>
 
 		</div>

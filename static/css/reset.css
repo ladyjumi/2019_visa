@@ -4,17 +4,17 @@
 /*default*/
 *{margin:0;padding:0;border:0;outline:0;vertical-align:top;box-sizing:border-box;letter-spacing: -.05em}
 html,body{width:100%;height:100%}
-body{color:#333;line-height:1;font-family:'Noto Sans KR', 'Noto Sans', sans-serif;font-weight:400;box-sizing:border-box}
+body{color:#333;line-height:1;font-family:'Noto Sans KR', sans-serif;font-weight:400;-webkit-font-smoothing: antialiased;box-sizing:border-box}
 a{font-style: inherit; color:inherit;text-decoration:none;border:none}
 fieldset,img{border:none}
 ul,ol,dl{list-style:none}
 em,address{font-style:normal}
-button{vertical-align:middle;cursor:pointer;border:none;background:none;border-radius: 0;apperance:none}
+button{vertical-align:middle;cursor:pointer;border:none;background:none;border-radius: 0;apperance:none;outline:unset;}
 button::-moz-focus-inner{padding:0;border:none}
 label{cursor:pointer}
 table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed}
 input,textarea,select,option{-moz-appearance: none; -webkit-appearance: none; appearance: none;-webkit-border-radius:0; font-weight: 400}
-button,input,textarea,select{font-family:'Noto Sans KR', 'Noto Sans', sans-serif;}
+button,input,textarea,select{font-family:'Noto Sans KR', sans-serif;}
 img,video{max-width:100%}
 a,em,b,button,img,strong,span{display:inline-block}
 textarea{resize:none}
@@ -78,13 +78,14 @@ body{min-height: 100vh}
 
 	/* paginate */
 	.paging{text-align: center; font-size: 0}
-	.paging a{display: inline-block; min-width: 28px; height: 28px; padding: 0 3px; border: 1px solid #e7e8ea; color: #acafb2; font-size: 14px; line-height: 25px; background-color: #fff; transition: 0.1s}
+	.paging a{display: inline-block; min-width: 28px; height: 28px; padding: 0 3px; border: 1px solid #e7e8ea; color: #666; line-height: 25px; transition: 0.1s}
 	.paging a.direction{width: 28px; min-width: unset; padding: 0; background: url(../images/btn_paging.png) no-repeat 0 0; text-indent: -9999px}
 	.paging a.direction{background-position: 0 -1px}
 	.paging a.direction:nth-of-type(2){background-position: 0 -29px}
+	.paging a.num{border-color: #fff; font-weight: 300;}
 	.paging a.next{background-position: 0 -57px}
 	.paging a.direction:last-of-type{background-position: 0 -85px}
-	.paging a.active{border-color: #2a2b2c; color: #2a2b2c; font-weight: 700}
+	.paging a.active{color: #1a6fa0; font-weight: 500; text-decoration: underline;}
 
 	/*목록없음*/
 	.emptyBox{text-align: center}

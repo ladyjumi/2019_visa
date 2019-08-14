@@ -5,6 +5,12 @@
 	body{font-size: 14px;}
 	a, button, input{font-size: 14px}
 	body.hidden{overflow: hidden}
+	/* placeholder */
+	::-webkit-input-placeholder{font-size: 15px}
+	::-moz-placeholder{font-size: 15px}
+	:-ms-input-placeholder{font-size: 15px}
+	:-moz-placeholder{font-size: 15px}
+
 
 	/*레이아웃*/
 	.inner{width: 1200px; margin: 0 auto;}
@@ -92,14 +98,31 @@
 
 
 /*어드민페이지*/
+
+.inpGroup{}
+.inpGroup .inpD{}
+
 .adminPage h3{margin-bottom: 14px; font-size: 16px; font-weight: 700}
-.adminPage h4{margin: 20px 0 16px; padding-left: 20px; font-weight: 500;}
+.adminPage h4{margin: 25px 0 16px; padding-left: 20px; font-weight: 500;}
 .adminPage .shapeRequire{color: #bf3f44; font-weight: 400;}
 .adminPage .header h1 a{font-size: 21px; font-weight: 500; color: #333}
 .adminPage .header .gnb{margin-left: 40px;}
 .adminPage .header .gnb li.active a{color: #1a6fa0; border-color: #1a6fa0; font-weight: 500}
-
 .adminPage .aside{height: 100%; min-height: calc(100vh - 71px); float: left; background-color: #fafafa;}
+.adminPage .cont{margin-left: 150px; padding: 22px 0 0 20px;}
+
+.adminPage input[type="text"]{width: 140px; height: 36px; padding: 0 10px; border: 1px solid #d3d3d3; transition: border .1s;}
+.adminPage input[type="text"]:focus{border-color: #999;}
+
+.adminPage .inpD + .inpD{margin-left: 16px;}
+.adminPage .inpD{position: relative; display: inline-block; padding-left: 23px; font-size: 13px; line-height: 16px; min-width: 16px; min-height: 16px; text-align: left;}
+.adminPage .inpD span.icon{position: absolute; top: 0; left: 0; display: block; width: 16px; height: 16px;}
+.adminPage .inpD input.inp{position: absolute; top: 1px; left: 1px; width: 14px; height: 14px;}
+.adminPage .inpD input[type="radio"] + .icon{background: url(../images/radio1.png);}
+.adminPage .inpD input[type="radio"]:checked + .icon{background-position: 0 -16px;}
+.adminPage .inpD input[type="checkbox"] + .icon{background: url(../images/checkbox1.png);}
+.adminPage .inpD input[type="checkbox"]:checked + .icon{background-position: 0 -16px;}
+
 .aside .lnb{border-bottom: 1px solid #ebebeb}
 .aside .lnb li > a, 
 .aside .lnb li > span{display: block; padding: 0 16px; cursor: pointer;}
@@ -111,29 +134,36 @@
 .aside .lnb > li.active > span{color: #1a6fa0; font-weight: 500}
 .aside .subM > li.active > a{color: #1a6fa0;}
 
-.adminPage .cont{margin-left: 150px; padding: 22px 0 0 20px;}
-.adminPage .cont h3{}
 .searchTable{width: 100%; border-top: 1px solid #999; border-bottom: 1px solid #999; font-size: 0;}
 .searchTable li{width: 100%;}
+.searchTable li+li{border-top: 1px solid #dadada;}
 .searchTable li .cell{display: inline-block;}
-.searchTable li:nth-child(n+2){border-top: 1px solid #dadada;}
-.searchTable li .title{display: inline-block; width: 140px; padding: 12px 30px 12px 22px; font-size: 14px; line-height: 36px; background-color: #f4f4f4;}
+.searchTable li .title{display: inline-block; min-width: 140px; padding: 12px 30px 12px 22px; font-size: 14px; line-height: 36px; background-color: #f4f4f4;}
 .searchTable li .box{display: inline-block; min-height: 60px; padding: 12px 30px 12px 14px;}
-.searchTable li .box .inputD{margin-top: 10px;}
+.searchTable li .box .inpGroup{margin-top: 10px;}
 
-.searchTable input[type="text"]{width: 140px; height: 36px; padding: 0 10px; border: 1px solid #d3d3d3; transition: border .1s;}
-.searchTable input[type="text"]:focus{border-color: #999;}
+
 .searchTable button{width: 88px; height: 36px; color: #fff; font-weight: 700; line-height: 36px; background-color: #777; transition: background .1s;}
 .searchTable button:focus{background-color: #666;}
 .searchTable input[type="text"] + button{margin-left: 8px;}
 .searchTable .inp.wide{width: 412px;}
 
-.searchTable .inputD + .inputD{margin-left: 16px;}
-.searchTable .inputD label{position: relative; display: inline-block; padding-left: 23px; font-size: 13px; line-height: 16px;}
-.searchTable .inputD span.icon{position: absolute; top: 0; left: 0; display: block; width: 16px; height: 16px;}
-.searchTable .inputD input.inp{position: absolute; top: 1px; left: 1px; width: 14px; height: 14px;}
-.searchTable .inputD input[type="radio"] + .icon{background: url(../images/radio1.png);}
-.searchTable .inputD input[type="radio"]:checked + .icon{background-position: 0 -16px;}
+.table{text-align: center; table-layout: auto;}
+.table thead{background-color: #bfcad9; border-top: 1px solid #aab2be; border-bottom: 1px solid #aab2be;}
+.table thead th{padding: 11px 0 12px; font-weight: 500; line-height: 16px;}
+.table tbody{font-size: 13px;}
+.table tbody tr{border-bottom: 1px solid #dadada;}
+.table tbody td{padding: 11px 0 12px; line-height: 16px;}
+.table tbody td > p{padding: 0 10px;}
+.table tbody td p span+span{margin-left: 3px;}
+.table .inpCell .inpD{padding-left: 0;}
+.table .inpGroup{display: inline-block; text-align: left; white-space: nowrap;}
+
+
+
+.divBox{padding: 20px; border: 1px solid #dadada;}
+.divBox .inpGroup{font-size: 0; margin-bottom: -14px;}
+.divBox .inpGroup .inpD{width: 20%; margin-left: 0; margin-bottom: 14px;}
 
 
 
@@ -179,23 +209,7 @@
 /* form */
 	input[type="submit"], 	input[type="button"]{cursor: pointer}
 	[class*="FormWrap"] .inputTxt{width: 500px}
-	/* text */
-	.inputTxt{height: 42px; padding: 0 16px; font-size: 15px}
-	.inputTxt:only-child{max-width: 500px}
-	/* checkbox */
-	.inputCheckWrap{height: 16px;}
-	.inputCheckWrap label input{width:14px; height: 14px}
-	.inputCheckWrap label{min-width: 21px; min-height: 16px; padding-left: 24px; font-size: 13px; line-height: 16px; background:url(../images/checkbox.png) 0 0 no-repeat}
-	.inputCheckWrap.active label{background-position: 0 -16px}
-	/* radios */
-	.inputRadioWrap{height: 20px}
-	.inputRadioWrap label input{width: 18px; height: 18px}
-	.inputRadioWrap label{padding-left: 30px; font-size: 15px; line-height: 20px; background:url(../images/radio.png) 0 0 no-repeat;}
-	.inputRadioWrap.active label{background-position: 0 -20px}
-	/* selectbox */
-	.selectBoxWrap select{width: 150px; height: 42px; padding: 0 42px 0 16px; font-size: 15px;}
-	.selectBoxWrap select{background-position: right 16px center;}
-	.selectBoxWrap select option{font-size: 15px;}
+
 	/* file */
 	.inputFileWrap{position: relative}
 	.inputFileWrap .inputTxt{width: 500px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
@@ -210,64 +224,15 @@
 	.datePicker .calenderBox{position: relative}
 	.datePicker .calenderBox button{position: absolute; top: -1px; right: 0; width: 100%; height: 100%; background: url(../../global/images/icon_calendar.png) no-repeat right 20px center; text-indent: -9999px}
 	.datePicker .calenderBox .inputTxt{display: inline-block; width: 150px; padding-right: 54px; cursor: pointer}
-	/* placeholder */
-	::-webkit-input-placeholder{font-size: 15px}
-	::-moz-placeholder{font-size: 15px}
-	:-ms-input-placeholder{font-size: 15px}
-	:-moz-placeholder{font-size: 15px}
 
-	/* 가입,수정폼 */		
-		.tableLine{display: table; width: 100%; margin: 20px 0 0; font-size: 0; text-align: left}
-		.tableLine .title{width: 160px; font-size: 15px; line-height: 42px; vertical-align: top}
-		.tableLine .title span{display: inline-block; margin: 0 0 0 3px; color: #acafb2}
-		.tableLine .box{display: table-cell; width: 100%; min-height: 42px; font-size: 15px}
-		.tableLine .box .txt{line-height: 42px}
-		.tableLine .box.choice .formLine{margin: 10px 0 0}		
-		.tableLine .addTxt{margin: 8px 0 0; font-size: 13px; color: #444}
-		.tableLine .listDot{margin: 20px 0 0; color: #7e7f82}
-		.formLine{width: 100%; font-size: 0}
-		.formLine + .formLine{margin: 11px 0 0}	
-		.formLine.inputCheckWrap{position: relative; text-align: left}
-		.tableLine .inputCheckWrap + .inputCheckWrap{margin: 0 0 0 30px}
-		.formLine.phoneNum > *{display: inline-block}
-		.formLine.phoneNum .inputTxt{width: 340px; margin-left: 10px}
-		.formLine .inTxt{position: relative}
-		.formLine .inTxt:after{display: block; content: '원'; width: 30px; height: 100%; position: absolute; top: 0; right: 0; font-size: 15px; color: #acafb2; line-height: 44px}
-		.formLine .inTxt .inputTxt{width: 150px; padding-right: 32px; text-align: right}
-		.selectBoxWrap + .selectBoxWrap{margin-left: 10px}
-		.inputRadioWrap{/*margin: 11px 0 10px;*/}
-		.inputRadioWrap + .inputRadioWrap{margin-left: 34px}
-		.inputRadioWrap + .inputTxt{margin-left: 34px}
-		.inputRadioWrap.etc{display: block; height: auto; margin:  2px 0 0}
-		.inputRadioWrap.etc label{display: inline-block; margin-right: 34px}
-
-	/*관리,정보폼*/
-		.infoForm{width: 700px; border: 1px solid #e7e8ea}
-		.infoForm li{display: table; width: 100%; line-height: 34px}
-		.infoForm li + li{border-top: 1px solid #e7e8ea}
-		.infoForm .title{display: table-cell; width: 194px; padding: 8px 24px; background-color: #f5f5f5}
-		.infoForm .box{display: table-cell; padding: 8px 20px}
-		.infoForm .box > span{width: 100%}
-		.infoForm .box.choice{vertical-align: middle}
-		.infoForm .box .txt{width: 100%; min-height: 34px; padding: 5px 4px; line-height: 24px; word-break: break-word}
-		.infoForm .box .priceTxt{font-weight: 700}
-		.infoForm .box .priceTxt span{color: #acafb2; font-size: 13px; font-weight: 400}
-		.infoForm .box .inputTxt{width: 100%; height: 33px; padding: 0 8px}
-		.infoForm .box .formLine > span{vertical-align: middle}
-		.infoForm .box select{height: 40px; margin: -5px 0 -4px;}
-		.infoForm .box [class*="btn"]{height: 34px; line-height: 34px; width: auto; padding: 0 12px; vertical-align: top}
-		.infoForm .box input[type="text"]{max-width: 100%}
-		.infoForm .box input[type="password"]{max-width: 300px}
-		.infoForm.white{border: 0;}
-		.infoForm.white li + li{border-top: 0;}
-		.infoForm.white .title{width: 160px; padding-right: 10px; background-color: #fff; font-weight: 500}
 
 
 
 /* paginate */
-	.paging{padding: 0 0 70px;}
+	.paging{padding: 80px 0 0;}
 	.paging a + a{margin: 0 0 0 5px}
-	.paging a:hover{border-color: #2a2b2c; color: #2a2b2c}
+	.paging a{font-size: 14px;}
+	.paging a:hover{color: #000;}
 
 /* popup */
 	.popWrap{position:absolute;top:0;left:0;width:100%;height:100%; z-index: 1000}/*레이어박스높이가짧을경우:fixed*/

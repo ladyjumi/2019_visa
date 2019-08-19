@@ -138,6 +138,37 @@ function gnbCloseM(){
 	})
 }
 
+function inputFileTxt(){
+	$('.inpFileWrap').each(function(){
+		$('input[type="file"]').on('change',function(){
+			var $fileName = $(this).val();
+			$(this).parents('label').siblings('input').val($fileName);
+		})
+	})
+}
+
+// 탭메뉴
+function tabMenu(){
+	$('.tabMenu').each(function(){
+		$(this).find('button').click(function(){
+			var idx = $(this).parents('li').index();
+			$(this).parents('li').addClass('active').siblings().removeClass('active');
+			$(this).closest('.tabMenu').siblings('.tabBox').eq(idx).show().siblings('.tabBox').hide();
+		});
+	})
+}
+
+function tableLineCheck(){
+	$('.table .inpCell .inpD').each(function(){
+		$(this).find('input:checked').parents('tr').addClass('selected').siblings('tr').removeClass('selected');
+		$(this).find('input[type="radio"]').on('change',function(){
+			if ($(this).prop('checked')) {
+				$(this).parents('tr').addClass('selected').siblings('tr').removeClass('selected');
+			}
+		})
+	})
+}
+
 //로딩바 show
 function lodingLoad(){
 	$('body').css('overflow','hidden');
@@ -152,6 +183,9 @@ function lodingClose(){
 $(function(){	
 
 	topSerach();
+	inputFileTxt();
+	tabMenu();
+	tableLineCheck();
 
 
 

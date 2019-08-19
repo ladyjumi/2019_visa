@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>VISA Navigator 퍼블리스트</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans+KR&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" /> -->
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+	body{font:normal 13px/1.5 'Noto Sans KR', 'Nanum Gothic', Arial, Verdana; color:#666;margin:0; letter-spacing: -.01em;}
+	body{background-color: #fafafa;}
+	span, p, td, th, a{font-family: 'Noto Sans KR', 'Nanum Gothic', Arial, Verdana; color:#666; letter-spacing: -.01em;}
+	h1, h2, h3, h4, h5, h6{color:#000;}
+	fieldset,ul, ol, dl, dt, dd, p, button, figure{margin:0;padding:0;}
+	legend, caption{width:0;height:0;visibility:hidden;font-size:0;line-height:0;}
+	em, a , input, textarea, keygen, select, button, isindex, i{font-style:normal;text-decoration:none;color:#666;}
+	fieldset, button{background:none;border:0px;}
+	ul:after,ol:after,dl:after{content:'';display:block;clear:both;}
+	li{list-style:none;}
+	img{vertical-align:middle;}
+	table{width:100%;border-spacing:0px;border-collapse:collapse;table-layout:fixed;font-family:'Noto Sans KR', 'Nanum Gothic', Arial, Verdana;background-color: #fff;}
+	iframe{width:100%;vertical-align:middle;}
+	hr{border:0 none;height:1px;background:#e3e3e3;}
+	*{word-break: keep-all;}	
+	.wrap{padding:10px;max-width:1200px;margin:0 auto;}
+	.text_box{padding:10px;margin-bottom:10px;color:#666;border:2px solid #ccc;line-height:1.5;background-color: #fff;}
+	.text_box strong{display:inline-block;}
+	.text_box strong:first-child{padding-left:0;}
+	.text_box span{display:inline-block;width:10px;height:10px;vertical-align:center;}
+	.table{border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:20px;}
+	.table table{width:100%;}
+	.table table thead th{padding:6px;background:#e4e4e4;border-left:1px solid #ddd;border-bottom:1px solid #999;color:#333;}
+	.table table tbody td{padding:6px 10px;border-top:1px solid #ddd;border-left:1px solid #ddd;}
+	.table table tbody th{text-align:center;background:#f9f9f9;color:#515151;border-top:1px solid #ddd;}
+	.table table tbody tr:first-child th, .table table tbody tr:first-child td{border-top:0;}
+	.table table th:first-child, .table table tbody td:first-child{border-left:0;}
+	.table table tbody tr:hover th, 
+	.table table tbody tr:hover td{background:#f1f1f1 !important;}
+	.table .link{display: inline-block; width: 100%; text-align: left; font-size: 0;}
+	.table .link a{display: inline-block; width: 40px; font-size: 12px; border-radius: 4px; text-align: center; text-decoration: none; background-color: #777; color: #fff;}
+	.table .link a + a{margin-left: 2px;}
+	.table .link a:last-child{background-color: #bc4b7b;}
+	.table .link a:first-child{background-color: #345798;}
+	.table .link a:hover{background-color: #333;}
+	.table .line th, .table .line td{border-top-color:#bbb;}
+
+	.midline{text-decoration:line-through;color: #aaa;}
+
+@media only screen and (max-width:760px ){
+	.table{overflow-y:auto;}
+	.table table{table-layout:auto;}
+	th, td{white-space:nowrap;font-size:11px;}
+}
+</style>
+<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+	$(function(){
+		var size = 0;
+		$('.line').each(function(idx){
+			$(this).children('th').attr('rowspan',
+				$(this).nextAll('.line').index() < 0 ? size = $(this).nextAll().length  + 1: $(this).nextAll('.line').index() - size
+			);
+			size = $(this).nextAll('.line').index();
+		});
+	});
+</script>
+</head>
+<body>	
+<section class="wrap">
+
+	<h1>VISA Navigator</h1>
+	<div class="text_box">
+		<p>PC/Mobile</p>
+		<p>* 문서타입 : HTML5 / CSS3</p>
+	</div>
+
+	<div class="table">
+
+		<table>
+			<colgroup>
+				<col width="8%">
+				<col width="14%">
+				<col width="14%">
+				<col width="15%">
+				<col width="104px">
+				<col width="">
+				<col width="">
+			</colgroup>
+
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>3depth</th>
+					<th>파일명</th>
+					<th>링크</th>
+					<th>상태</th>
+					<th>기타</th>
+				</tr>
+			</thead>
+
+			<tbody>
+
+				<tr class="line">
+					<th>Admin</th>
+					<td rowspan="3">체류자격 관리</td>
+					<td>코드관리</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>항목관리</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>등록관리</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>첨부파일 관리</td>
+					<td></td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td rowspan="3">수수료 관리</td>
+					<td>MAIN 관리</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>수수료 조정국가 관리</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>수수료 면제국가 관리</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td rowspan="2">비자표출 관리</td>
+					<td>법무부</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>중국(광저우)</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td rowspan="6">변경 이력 확인</td>
+					<td>체류자격 코드 이력</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>체류자격 항목 이력</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>체류자격 등록 이력</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>첨부파일 등록 이력</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>수수료 변경 이력</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>비자노출 관리 이력</td>
+					<td>layout.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc/layout.html">PC</a>
+							<a target="_blank" href="m/layout.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<!-- //////////////////////////////Front////////////////////////////////// -->
+
+				<tr class="line">
+					<th>Front</th>
+					<td>메인</td>
+					<td></td>
+					<td>index.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="web/index.html">PC</a>
+							<a target="_blank" href="m/index.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>	
+
+</section>
+	<!-- //contents -->
+
+</body>
+</html>

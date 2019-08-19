@@ -9,7 +9,7 @@ a{font-style: inherit; color:inherit;text-decoration:none;border:none}
 fieldset,img{border:none}
 ul,ol,dl{list-style:none}
 em,address{font-style:normal}
-button{vertical-align:middle;cursor:pointer;border:none;background:none;border-radius: 0;apperance:none;outline:unset;}
+button{vertical-align:middle;cursor:pointer;border:none;background:none;border-radius: 0;apperance:none;outline:unset;white-space:nowrap;}
 button::-moz-focus-inner{padding:0;border:none}
 label{cursor:pointer}
 table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed}
@@ -47,10 +47,10 @@ body{min-height: 100vh}
 	input[type="checkbox"],
 	input[type="radio"]{appearance:none; -webkit-appearance: none; -moz-appearance: none; border: 0; border-radius: 0; background: 0; opacity: 0; cursor: pointer}
 	/* placeholder */
-	::-webkit-input-placeholder{font-weight: 400; color:#666; letter-spacing: -.05em}
-	::-moz-placeholder{font-weight: 400; color:#666; letter-spacing: -.05em}
-	:-ms-input-placeholder{font-weight: 400; color:#666(102, 102, 102, 1); letter-spacing: -.05em}
-	:-moz-placeholder{font-weight: 400; color:#666; letter-spacing: -.05em}
+	::-webkit-input-placeholder{font-weight: 400; color:#999; letter-spacing: -.05em}
+	::-moz-placeholder{font-weight: 400; color:#999; letter-spacing: -.05em}
+	:-ms-input-placeholder{font-weight: 400; color:#999(153, 153, 153, 1); letter-spacing: -.05em}
+	:-moz-placeholder{font-weight: 400; color:#999; letter-spacing: -.05em}
 	/* text */
 	.inputTxt{border: 1px solid #ced2d6; text-align: left; transition: border .1s}
 	.inputTxt:focus{border-color: #aaa}
@@ -76,16 +76,7 @@ body{min-height: 100vh}
 	.textArea{width: 100%; overflow-y: auto; border: 1px solid #ced2d6; resize: none; transition: border .1s}
 	.textArea:focus{border-color: #aaa}
 
-	/* paginate */
-	.paging{text-align: center; font-size: 0}
-	.paging a{display: inline-block; min-width: 28px; height: 28px; padding: 0 3px; border: 1px solid #e7e8ea; color: #666; line-height: 25px; transition: 0.1s}
-	.paging a.direction{width: 28px; min-width: unset; padding: 0; background: url(../images/btn_paging.png) no-repeat 0 0; text-indent: -9999px}
-	.paging a.direction{background-position: 0 -1px}
-	.paging a.direction:nth-of-type(2){background-position: 0 -29px}
-	.paging a.num{border-color: #fff; font-weight: 300;}
-	.paging a.next{background-position: 0 -57px}
-	.paging a.direction:last-of-type{background-position: 0 -85px}
-	.paging a.active{color: #1a6fa0; font-weight: 500; text-decoration: underline;}
+	
 
 	/*목록없음*/
 	.emptyBox{text-align: center}

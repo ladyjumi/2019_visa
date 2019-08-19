@@ -5,12 +5,6 @@
 	body{font-size: 14px;}
 	a, button, input{font-size: 14px}
 	body.hidden{overflow: hidden}
-	/* placeholder */
-	::-webkit-input-placeholder{font-size: 15px}
-	::-moz-placeholder{font-size: 15px}
-	:-ms-input-placeholder{font-size: 15px}
-	:-moz-placeholder{font-size: 15px}
-
 
 	/*레이아웃*/
 	.inner{width: 1200px; margin: 0 auto;}
@@ -91,28 +85,45 @@
 
 
 
-
-
+/*탭메뉴*/
+.tabMenu{font-size: 0;}
+.tabMenu .red{color: #666}
+.tabMenu li{display: inline-block;}
+.tabMenu button{width: 100%; padding: 0 20px; height: 44px; border: 1px solid #dadada; background-color: #f4f4f4; font-weight: 500; color: #666;}
+.tabMenu li + li button{margin-left: -1px;}
+.tabMenu li.active{position: relative; z-index: 1;}
+.tabMenu li.active button{background-color: #fff; border-color: #1a6fa0; color: #333}
+.tabMenu li.active .red{color: #bf3f44}
+.tabBox + .tabBox{display: none;}
+.tabBox.divBox{margin-top: -1px;}
 
 
 
 
 /*어드민페이지*/
 
-.inpGroup{}
-.inpGroup .inpD{}
+.btnGroup.btm{display: block; margin: 30px 0 0; font-size: 0; text-align: center;}
+.btnGroup.btm > *{display: inline-block; min-width: 90px; height: 36px; font-size: 14px; font-weight: 700; line-height: 34px; text-align: center;}
+.btnGroup.btm > * + *{margin-left: 8px;}
+.btnGroup.btm > *:first-of-type{color: #1a6fa0; border: 1px solid #1a6fa0;}
+.btnGroup.btm > *:last-of-type{background-color: #1a6fa0; color: #fff;}
+.btnGroup.btm > *:only-child{background-color: #1a6fa0; color: #fff; margin-left: 0;}
 
-.adminPage h3{margin-bottom: 14px; font-size: 16px; font-weight: 700}
-.adminPage h4{margin: 25px 0 16px; padding-left: 20px; font-weight: 500;}
+.adminPage h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700}
+.adminPage h4{padding: 24px 0 12px; font-weight: 500;}
+.adminPage .red{color: #bf3f44;}
 .adminPage .shapeRequire{color: #bf3f44; font-weight: 400;}
 .adminPage .header h1 a{font-size: 21px; font-weight: 500; color: #333}
 .adminPage .header .gnb{margin-left: 40px;}
 .adminPage .header .gnb li.active a{color: #1a6fa0; border-color: #1a6fa0; font-weight: 500}
-.adminPage .aside{height: 100%; min-height: calc(100vh - 71px); float: left; background-color: #fafafa;}
-.adminPage .cont{margin-left: 150px; padding: 22px 0 0 20px;}
+.adminPage .contents .inner{position: relative;}
+.adminPage .aside{position: absolute; top: 0; left: 0; height: 100%; min-height: calc(100vh - 71px); float: left; background-color: #fafafa;}
+.adminPage .cont{margin-left: 150px; padding: 0 0 50px 20px;}
 
-.adminPage input[type="text"]{width: 140px; height: 36px; padding: 0 10px; border: 1px solid #d3d3d3; transition: border .1s;}
+.adminPage input[type="text"]{height: 36px; padding: 0 10px; border: 1px solid #d3d3d3; transition: border .1s;}
 .adminPage input[type="text"]:focus{border-color: #999;}
+.adminPage textarea{width: 100%; height: 118px; overflow-y: scroll; padding: 20px; font-size: 13px; line-height: 1.5; border: 1px solid #d3d3d3; resize: none; transition: border .1s;}
+.adminPage textarea:focus{border-color: #999;}
 
 .adminPage .inpD + .inpD{margin-left: 16px;}
 .adminPage .inpD{position: relative; display: inline-block; padding-left: 23px; font-size: 13px; line-height: 16px; min-width: 16px; min-height: 16px; text-align: left;}
@@ -134,37 +145,67 @@
 .aside .lnb > li.active > span{color: #1a6fa0; font-weight: 500}
 .aside .subM > li.active > a{color: #1a6fa0;}
 
-.searchTable{width: 100%; border-top: 1px solid #999; border-bottom: 1px solid #999; font-size: 0;}
-.searchTable li{width: 100%;}
+/*코드등록*/
+.searchTable{width: 100%; border-top: 1px solid #999; border-bottom: 1px solid #dadada; font-size: 0;}
+.searchTable li{display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex; width: 100%;}
 .searchTable li+li{border-top: 1px solid #dadada;}
-.searchTable li .cell{display: inline-block;}
-.searchTable li .title{display: inline-block; min-width: 140px; padding: 12px 30px 12px 22px; font-size: 14px; line-height: 36px; background-color: #f4f4f4;}
-.searchTable li .box{display: inline-block; min-height: 60px; padding: 12px 30px 12px 14px;}
+.searchTable li .cell{display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex;}
+.searchTable li .title{flex: none; min-width: 140px; padding: 12px 30px 12px 20px; font-size: 14px; line-height: 36px; background-color: #f4f4f4;}
+.searchTable li .title.short{padding: 12px 20px; min-width: auto;}
+.searchTable li .box{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; width: 100%; min-height: 60px; padding: 12px 30px 12px 14px;}
 .searchTable li .box .inpGroup{margin-top: 10px;}
-
-
-.searchTable button{width: 88px; height: 36px; color: #fff; font-weight: 700; line-height: 36px; background-color: #777; transition: background .1s;}
+.searchTable input[type="text"]{width: 140px;}
+.searchTable input + button{margin-left: 8px;}
+.searchTable input.wide{width: 412px;}
+.searchTable select{height: 36px; padding: 0 30px 0 10px; border: 1px solid #d3d3d3; font-size: 14px; background: #fff url(../images/selectbox1.png) no-repeat right 10px center;}
+.searchTable select + select{margin-left: 10px;}
 .searchTable button:focus{background-color: #666;}
-.searchTable input[type="text"] + button{margin-left: 8px;}
-.searchTable .inp.wide{width: 412px;}
+.searchTable button{height: 36px; padding: 0 20px; color: #fff; font-weight: 700; line-height: 36px; background-color: #888; transition: background .1s;}
+.searchTable button.blue{background-color: #1a6fa0}
+.searchTable .cell:last-of-type .box{width: 100%; padding-right: 20px;}
+/*.searchTable .cell:last-of-type input[type="text"]{width: 100%;}*/
+.searchTable .registBtn{margin: 12px 18px 12px auto;}
+.searchTable .searchBtn{width: 36px; height: 36px; margin-left: 0; background: url(../images/btn_seach.png) no-repeat center; text-indent: -9999px;}
 
+
+/*파일등록cell*/
+.searchTable .cell.file{width: 100%;}
+.searchTable .cell.file .title{padding-right: 60px;}
+.searchTable .cell.file .box{display: block; width: 100%; padding: 0;}
+.searchTable .cell.file .boxLine em{display: inline-block; min-width: 60px; margin: -1px 0 0 -60px; padding: 12px 15px; border-top: 1px solid #dadada; font-size: 14px; line-height: 36px; background-color: #f4f4f4;}
+.searchTable .cell.file .boxLine p{display: inline-flex; width: 100%; padding: 12px 15px;}
+.searchTable .cell.file .boxLine + .boxLine{border-top: 1px solid #dadada}
+
+.searchTable + .table{margin-top: 25px;}
 .table{text-align: center; table-layout: auto;}
-.table thead{background-color: #bfcad9; border-top: 1px solid #aab2be; border-bottom: 1px solid #aab2be;}
-.table thead th{padding: 11px 0 12px; font-weight: 500; line-height: 16px;}
+.table thead{background-color: #dae4f0; border-top: 1px solid #cfd7e3; border-bottom: 1px solid #cfd7e3;}
+.table thead th{padding: 12px 0; font-weight: 500; line-height: 16px;}
 .table tbody{font-size: 13px;}
 .table tbody tr{border-bottom: 1px solid #dadada;}
 .table tbody td{padding: 11px 0 12px; line-height: 16px;}
 .table tbody td > p{padding: 0 10px;}
 .table tbody td p span+span{margin-left: 3px;}
+.table tbody tr.selected{background-color: #f1f6fb;}
 .table .inpCell .inpD{padding-left: 0;}
 .table .inpGroup{display: inline-block; text-align: left; white-space: nowrap;}
 
+.inpFileWrap{position: relative; font-size: 0;}
+.inpFileWrap input[type="text"]{width: 314px;}
+.inpFileWrap label{position: absolute; top: 0; left: 0; display: block; height: 36px; padding-left: 100%;}
+.inpFileWrap label b{display: block; width: 90px; height: 36px; margin-left: 8px; padding: 0; line-height: 36px; color: #fff; background-color: #888; font-size: 14px; text-align: center;}
+.inpFileWrap label input{position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0;}
 
+.topRight{float: right; text-align: right; margin: -24px 0 0; color: #666; font-size: 13px}
 
 .divBox{padding: 20px; border: 1px solid #dadada;}
+.divBox .text{font-size: 13px; line-height: 21px}
 .divBox .inpGroup{font-size: 0; margin-bottom: -14px;}
 .divBox .inpGroup .inpD{width: 20%; margin-left: 0; margin-bottom: 14px;}
 
+.titleBox{padding: 11px 20px; background-color: #dbe7ec; border: 1px solid #cadae0;}
+.titleBox p{font-weight: 500; line-height: 1.45;}
+.contBox{padding: 20px; border: 1px solid #dadada; border-top: 0}
+.contBox textarea{font-size: 13px;}
 
 
 
@@ -229,10 +270,19 @@
 
 
 /* paginate */
-	.paging{padding: 80px 0 0;}
-	.paging a + a{margin: 0 0 0 5px}
-	.paging a{font-size: 14px;}
-	.paging a:hover{color: #000;}
+	.paging{padding: 40px 0 0; text-align: center; font-size: 0}
+	.paging a{display: inline-block; min-width: 28px; height: 28px; padding: 0 3px; border: 1px solid #e7e8ea; color: #666; line-height: 25px; transition: 0.1s}
+	.paging .num{border-color: #fff; font-weight: 300;}
+	.paging .num + .num{margin: 0 0 0 2px}
+	.paging .direction{width: 28px; min-width: unset; padding: 0; background: url(../images/btn_paging.png) no-repeat 0 0; background-position: 0 -1px; text-indent: -9999px}
+	.paging .direction + .direction{margin-left: 6px;}
+	.paging .direction + .num, .paging .num + .direction{margin-left: 12px;}
+	.paging .direction:last-of-type{background-position: 0 -85px}
+	.paging .direction:nth-of-type(2){background-position: 0 -29px}
+	.paging .next{background-position: 0 -57px}
+	.paging a:hover{color: #000;}	
+	.paging a.active{color: #1a6fa0; font-weight: 500; text-decoration: underline;}
+
 
 /* popup */
 	.popWrap{position:absolute;top:0;left:0;width:100%;height:100%; z-index: 1000}/*레이어박스높이가짧을경우:fixed*/

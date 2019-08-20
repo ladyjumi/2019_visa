@@ -97,47 +97,6 @@ function topButtonWeb(){
 	})
 }
 
-
-// 메뉴 아코디언
-function gnbmenuM(){
-	$('.gnbArea').each(function(){
-		var $gnb = $(this).find('.gnb');
-		$gnb.find('span').click(function(){
-			if ($(this).closest('li').hasClass('active')) {
-				$(this).closest('li').removeClass('active').find('.gnbSub').slideUp(200);
-			} else {
-				$(this).next('.gnbSub').slideDown(200);
-				$(this).parent('li').addClass('active').siblings('li').removeClass('active').find('.gnbSub').slideUp(200);
-			}
-		})
-	})
-}
-
-// 모바일 메뉴 열기
-function gnbOpenM(){
-	$('.headerWrap').find('.gnbBtn').each(function(){
-		$(this).click(function(){
-			$(this).closest('.inner')
-			.next('.gnbWrap').fadeIn(50).addClass('on')
-			.animate({left: '0'}, 300);
-			$('body').addClass('hidden');			
-		})
-	})
-}
-
-// 모바일 메뉴 닫기
-function gnbCloseM(){
-	$('.headerWrap').find('.gnbClose').each(function(){
-		$(this).click(function(){
-			$(this).closest('.gnbWrap')
-			.animate({left: '-100%'}, 300)
-			.fadeOut(50)
-			.removeClass('on');
-			$('body').removeClass('hidden');			
-		})
-	})
-}
-
 function inputFileTxt(){
 	$('.inpFileWrap').each(function(){
 		$('input[type="file"]').on('change',function(){
@@ -169,6 +128,20 @@ function tableLineCheck(){
 	})
 }
 
+function adminLNB(){
+	$('.lnb').each(function(){
+		$('.lnb > li > span').click(function(){
+			if ($(this).closest('li').hasClass('active')) {
+				$(this).siblings('.subM').slideUp(200)
+				.closest('li').removeClass('active');
+			} else {
+				$(this).siblings('.subM').slideDown(200)
+				.closest('li').toggleClass('active');
+			}
+		})
+	})
+}
+
 //로딩바 show
 function lodingLoad(){
 	$('body').css('overflow','hidden');
@@ -186,6 +159,7 @@ $(function(){
 	inputFileTxt();
 	tabMenu();
 	tableLineCheck();
+	adminLNB();
 
 
 

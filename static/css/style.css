@@ -7,13 +7,14 @@
 	body.hidden{overflow: hidden}
 
 	/*레이아웃*/
+	.wrap{min-width: 1200px;}
 	.inner{width: 1200px; margin: 0 auto;}
 
 .header{position: relative; border-bottom: 1px solid #cecece;}
 .header > .inner{position: relative; padding: 17px 0;}
 .header h1{display: inline-block;}
 .header h1 a{display: block; font-size: 20px; font-weight: 700; line-height: 36px; color: #223666}
-.header .btnSerach{width: 36px; height: 36px; background: url(../images/btn_seach.png) no-repeat center; text-indent: -9999px;}
+.header .btnSearch{width: 36px; height: 36px; background: url(../images/common/icon_search.svg) no-repeat center; background-size: 18px; text-indent: -9999px;}
 .header .gnb{display: inline-block; margin-left: 66px;}
 .header .gnb li{display: inline-block;}
 .header .gnb li + li{margin-left: 35px;}
@@ -21,12 +22,13 @@
 .header .gnb li:hover a{color: #000}
 .header .gnb li.active a{color: #b62232; border-bottom: 3px solid #b62232;}
 .header .topMenu{position: absolute; top: 17px; right: 0px; font-size: 0;}
-.header .topMenu > *{position: relative;}
-.header .topMenu > * + *{margin-left: 10px;}
-.header .topMenu > * + *:before{position: absolute; top: 11px; left: -4px; display: block; content: ''; width: 1px; height: 12px; background-color: #ccc;}
+.header .topMenu > *{position: relative; line-height: 36px}
+.header .topMenu > * + *{margin-left: 24px;}
+
+.header .topMenu > * + *:before{position: absolute; top: 50%; left: -11px; display: block; content: ''; width: 1px; height: 12px; margin-top: -5px; background-color: #ccc;}
 .header .topMenu select{padding: 8px 20px 10px 8px; background: #fff url(../images/selectbox2.png) no-repeat right 6px top 13px;}
 .header .topMenu option{background-color: #f5f6fa; text-align: right;}
-.header .topMenu .btnSerach{margin-right: -7px}
+/*.header .topMenu .btnSearch{margin-right: -7px}*/
 
 .header .searchTop{display: none; position: absolute; top: 100%; left: 0; width: 100%; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; z-index: 10}
 .header .searchTop .inner{position: relative; padding: 32px 50px 34px 0;}
@@ -34,7 +36,7 @@
 .header .searchTop .searchBox{display: table; width: 100%; border-bottom: 1px solid #000; font-size: 0;}
 .header .searchTop .inputWrap{display: table-cell; width: 100%;}
 .header .searchTop input[type="text"]{width: 100%; height: 42px; padding: 0 10px; font-size: 15px; color: #666; background-color: #f8f8f8;}
-.header .searchTop .btnSerach{display: inline-block; width: 44px; height: 42px;}
+.header .searchTop .btnSearch{display: inline-block; width: 44px; height: 42px;}
 .header .searchTop .btnClose{display: block; width: 26px; height: 26px; position: absolute; top: 14px; right: -4px; background: url(../images/btn_close_search.png) no-repeat center; text-indent: -9999px;}
 .header .searchTop .dimmed{position: fixed; top: 71px; left: 0; width: 100%; height: 100%; background: #000; opacity: .7; z-index: 8}
 
@@ -84,23 +86,29 @@
 .searchDetail div + div{margin-left: 21px; border-left: 1px solid #dadada;}
 
 
-
 /*탭메뉴*/
 .tabMenu{font-size: 0;}
-.tabMenu .red{color: #666}
+.tabMenu em.red{color: #666}
 .tabMenu li{display: inline-block;}
 .tabMenu button{width: 100%; padding: 0 20px; height: 44px; border: 1px solid #dadada; background-color: #f4f4f4; font-weight: 500; color: #666;}
-.tabMenu li + li button{margin-left: -1px;}
+.tabMenu li + li{margin-left: -1px;}
 .tabMenu li.active{position: relative; z-index: 1;}
 .tabMenu li.active button{background-color: #fff; border-color: #1a6fa0; color: #333}
-.tabMenu li.active .red{color: #bf3f44}
+.tabMenu li.active em.red{color: #bf3f44}
 .tabBox + .tabBox{display: none;}
-.tabBox.divBox{margin-top: -1px;}
+.tabBox{margin-top: -1px;}
+
+.typeSmall .tabMenu li{width: 33.3333%}
+.typeSmall .tabMenu button{font-size: 13px; height: 24px;}
+.typeSmall .tabBox{padding: 0 2px 0 0; border: 0}
+.typeSmall .tabBox input[type="text"]{width: 100%; height: 34px; font-size: 13px;}
 
 
 
 
 /*어드민페이지*/
+
+hr.line{margin: 30px 0; height: 1px; background-color: #999;}
 
 .btnGroup.btm{display: block; margin: 30px 0 0; font-size: 0; text-align: center;}
 .btnGroup.btm > *{display: inline-block; min-width: 90px; height: 36px; font-size: 14px; font-weight: 700; line-height: 34px; text-align: center;}
@@ -109,9 +117,8 @@
 .btnGroup.btm > *:last-of-type{background-color: #1a6fa0; color: #fff;}
 .btnGroup.btm > *:only-child{background-color: #1a6fa0; color: #fff; margin-left: 0;}
 
-.adminPage h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700}
+.adminPage h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700; border-bottom: 1px solid #999}
 .adminPage h4{padding: 24px 0 12px; font-weight: 500;}
-.adminPage .red{color: #bf3f44;}
 .adminPage .shapeRequire{color: #bf3f44; font-weight: 400;}
 .adminPage .header h1 a{font-size: 21px; font-weight: 500; color: #333}
 .adminPage .header .gnb{margin-left: 40px;}
@@ -119,154 +126,172 @@
 .adminPage .contents .inner{position: relative;}
 .adminPage .aside{position: absolute; top: 0; left: 0; height: 100%; min-height: calc(100vh - 71px); float: left; background-color: #fafafa;}
 .adminPage .cont{margin-left: 150px; padding: 0 0 50px 20px;}
+.adminPage .currentInfo{display: inline-block; padding: 9px 0; font-size: 0; line-height: 1.4;}
+.adminPage .currentInfo span{font-size: 13px; color: #666}
+.adminPage .currentInfo span + span{margin-left: 3px;}
+.adminPage .currentInfo span em{margin: 0 1px; color: #333; font-weight: 300}
+.adminPage .topMenu *{font-size: 13px}
+.adminPage .topMenu .searchBox{width: 120px; height: 26px; margin-top: 5px; padding: 0 2px; border: 0; border-bottom: 1px solid #888;}
+.adminPage .topMenu .searchBox:focus{border-color: #000}
+.adminPage .topMenu .btnSearch{width: 20px;}
 
 .adminPage input[type="text"]{height: 36px; padding: 0 10px; border: 1px solid #d3d3d3; transition: border .1s;}
 .adminPage input[type="text"]:focus{border-color: #999;}
-.adminPage textarea{width: 100%; height: 118px; overflow-y: scroll; padding: 20px; font-size: 13px; line-height: 1.5; border: 1px solid #d3d3d3; resize: none; transition: border .1s;}
+.adminPage input.inpNum{width: 70px;}
+.adminPage textarea{width: 100%; height: 118px; overflow-y: auto; padding: 20px; font-size: 13px; line-height: 1.5; border: 1px solid #d3d3d3; word-break: keep-all; transition: border .1s;}
 .adminPage textarea:focus{border-color: #999;}
+.adminPage select{height: 36px; padding: 0 30px 0 10px; border: 1px solid #d3d3d3; font-size: 14px; background: #fff url(../images/selectbox1.png) no-repeat right 10px center;}
+.adminPage select + select{margin-left: 10px;}
+.adminPage .inpWrap{line-height: 36px}
+.adminPage .inpWrap input{margin-right: 4px;}
 
 .adminPage .inpD + .inpD{margin-left: 16px;}
 .adminPage .inpD{position: relative; display: inline-block; padding-left: 23px; font-size: 13px; line-height: 16px; min-width: 16px; min-height: 16px; text-align: left;}
-.adminPage .inpD span.icon{position: absolute; top: 0; left: 0; display: block; width: 16px; height: 16px;}
+.adminPage .inpD span.icon{position: absolute; top: 50%; left: 0; display: block; width: 16px; height: 16px; margin-top: -8px;}
 .adminPage .inpD input.inp{position: absolute; top: 1px; left: 1px; width: 14px; height: 14px;}
 .adminPage .inpD input[type="radio"] + .icon{background: url(../images/radio1.png);}
 .adminPage .inpD input[type="radio"]:checked + .icon{background-position: 0 -16px;}
 .adminPage .inpD input[type="checkbox"] + .icon{background: url(../images/checkbox1.png);}
 .adminPage .inpD input[type="checkbox"]:checked + .icon{background-position: 0 -16px;}
 
-.aside .lnb{border-bottom: 1px solid #ebebeb}
+.aside .lnb{width: 150px; border-bottom: 1px solid #ebebeb}
 .aside .lnb li > a, 
-.aside .lnb li > span{display: block; padding: 0 16px; cursor: pointer;}
+.aside .lnb li > span{display: block; padding: 0 16px; cursor: pointer; transition: background .05s}
+.aside .lnb li > a:hover, 
+.aside .lnb li > span:hover{background-color: #ddd;}
 .aside .lnb > li + li{border-top: 1px solid #ebebeb}
 .aside .lnb > li > a,
-.aside .lnb > li > span{padding-top: 1px; line-height: 40px;}
-.aside .subM{padding: 10px 0; background-color: #ebebeb;}
-.aside .subM > li > a{padding: 6px 24px 6px 22px; font-size: 13px;}
+.aside .lnb > li > span{position: relative; padding-top: 1px; line-height: 40px;}
+.aside .lnb > li > span:after{display: block; content: ''; position: absolute; right: 10px; top: 50%; width: 10px; height: 6px; margin: -3px 0 0; background: url(../images/btn_lnb.png) no-repeat center; transition: .2s}
+.aside .subM{padding: 10px 0; background-color: #ebebeb; display: none;}
+.aside .subM > li > a{padding: 6px 20px; font-size: 13px;}
 .aside .lnb > li.active > span{color: #1a6fa0; font-weight: 500}
+.aside .lnb > li.active > span:after{transform: rotate(180deg);}
+.aside .lnb > li.active > span,
+.aside .lnb > li.active > a{height: 41px; line-height: 42px}
+.aside .lnb > li.active .subM{display: block;}
 .aside .subM > li.active > a{color: #1a6fa0;}
 
+.tableTop{padding: 18px 0 8px; text-align: right; font-size: 0;}
+.tableTop .btn{margin-left: 8px; min-width: 86px; height: 24px; font-size: 13px; line-height: 22px; border: 1px solid #bbb}
+.tableTop .btn:last-of-type{color: #1a6fa0; border-color: #1a6fa0}
+
 /*코드등록*/
-.searchTable{width: 100%; border-top: 1px solid #999; border-bottom: 1px solid #dadada; font-size: 0;}
-.searchTable li{display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex; width: 100%;}
-.searchTable li+li{border-top: 1px solid #dadada;}
-.searchTable li .cell{display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex;}
-.searchTable li .title{flex: none; min-width: 140px; padding: 12px 30px 12px 20px; font-size: 14px; line-height: 36px; background-color: #f4f4f4;}
-.searchTable li .title.short{padding: 12px 20px; min-width: auto;}
-.searchTable li .box{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; width: 100%; min-height: 60px; padding: 12px 30px 12px 14px;}
-.searchTable li .box .inpGroup{margin-top: 10px;}
+.searchTable{width: 100%; border-bottom: 1px solid #dadada; font-size: 0;}
+.searchTable > li{display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex; width: 100%;}
+.searchTable > li+li{border-top: 1px solid #dadada;}
+.searchTable > li .cell{display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex;}
+.searchTable > li .cell:only-child{width: 100%;}
+.searchTable > li .title{flex: none; width: 140px; padding: 12px 30px 12px 20px; font-size: 14px; line-height: 36px; background-color: #f4f4f4;}
+.searchTable > li .title.short{padding: 12px 20px; width: auto;}
+.searchTable > li .box{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex: auto; min-height: 60px; padding: 12px 30px 12px 14px;}
+.searchTable > li .box .inpGroup{margin-top: 10px;}
 .searchTable input[type="text"]{width: 140px;}
-.searchTable input + button{margin-left: 8px;}
+.searchTable input.inpNum{width: 70px;}
+.searchTable input.inpNum + select{border-left: 0}
+.searchTable input + .btn{flex: none; margin-left: 8px;}
 .searchTable input.wide{width: 412px;}
-.searchTable select{height: 36px; padding: 0 30px 0 10px; border: 1px solid #d3d3d3; font-size: 14px; background: #fff url(../images/selectbox1.png) no-repeat right 10px center;}
-.searchTable select + select{margin-left: 10px;}
-.searchTable button:focus{background-color: #666;}
-.searchTable button{height: 36px; padding: 0 20px; color: #fff; font-weight: 700; line-height: 36px; background-color: #888; transition: background .1s;}
-.searchTable button.blue{background-color: #1a6fa0}
-.searchTable .cell:last-of-type .box{width: 100%; padding-right: 20px;}
-/*.searchTable .cell:last-of-type input[type="text"]{width: 100%;}*/
+.searchTable .btn:focus{background-color: #666;}
+.searchTable .btn{height: 36px; padding: 0 20px; color: #fff; font-weight: 700; line-height: 36px; background-color: #888; transition: background .1s;}
+.searchTable .btn.blue{background-color: #1a6fa0}
 .searchTable .registBtn{margin: 12px 18px 12px auto;}
 .searchTable .searchBtn{width: 36px; height: 36px; margin-left: 0; background: url(../images/btn_seach.png) no-repeat center; text-indent: -9999px;}
-
+.searchTable .box.row{display: block; padding: 0;}
+.searchTable .box.row .boxLine{position: relative; padding: 12px 15px;}
+.searchTable .box.row em.subTitle{position: absolute; top: 0; right: 100%; min-width: 60px; margin-top: -1px; padding: 12px 15px; border-top: 1px solid #dadada; font-size: 14px; line-height: 36px; background-color: #f4f4f4;}
 
 /*파일등록cell*/
-.searchTable .cell.file{width: 100%;}
 .searchTable .cell.file .title{padding-right: 60px;}
-.searchTable .cell.file .box{display: block; width: 100%; padding: 0;}
-.searchTable .cell.file .boxLine em{display: inline-block; min-width: 60px; margin: -1px 0 0 -60px; padding: 12px 15px; border-top: 1px solid #dadada; font-size: 14px; line-height: 36px; background-color: #f4f4f4;}
 .searchTable .cell.file .boxLine p{display: inline-flex; width: 100%; padding: 12px 15px;}
-.searchTable .cell.file .boxLine + .boxLine{border-top: 1px solid #dadada}
+.searchTable .boxLine + .boxLine{border-top: 1px solid #dadada}
 
+
+/*table*/
 .searchTable + .table{margin-top: 25px;}
 .table{text-align: center; table-layout: auto;}
+.table .pad{padding-right: 5px; padding-left: 5px;}
 .table thead{background-color: #dae4f0; border-top: 1px solid #cfd7e3; border-bottom: 1px solid #cfd7e3;}
-.table thead th{padding: 12px 0; font-weight: 500; line-height: 16px;}
+.table thead th{padding: 12px 0; font-weight: 500; line-height: 16px; vertical-align: middle;}
+.table thead tr + tr th{border-top: 1px solid #d7d7d7}
 .table tbody{font-size: 13px;}
 .table tbody tr{border-bottom: 1px solid #dadada;}
 .table tbody td{padding: 11px 0 12px; line-height: 16px;}
 .table tbody td > p{padding: 0 10px;}
 .table tbody td p span+span{margin-left: 3px;}
+.table.input thead{background-color: #f4f4f4; border-color: #d7d7d7}
 .table tbody tr.selected{background-color: #f1f6fb;}
+.table tbody td select{margin: -10px 0; border: 0; background-color: transparent;}
+.table tbody td textarea{min-height: 60px; height: 60px; padding: 10px; font-size: 13px; line-height: 1.5; resize: vertical;}
+.table .inpCell{vertical-align: middle;}
 .table .inpCell .inpD{padding-left: 0;}
 .table .inpGroup{display: inline-block; text-align: left; white-space: nowrap;}
+.table input.inpNum{width: 60px; text-align: right;}
 
-.inpFileWrap{position: relative; font-size: 0;}
+
+/*파일찾기*/
+.inpFileWrap{position: relative; padding-right: 98px; font-size: 0;}
 .inpFileWrap input[type="text"]{width: 314px;}
-.inpFileWrap label{position: absolute; top: 0; left: 0; display: block; height: 36px; padding-left: 100%;}
-.inpFileWrap label b{display: block; width: 90px; height: 36px; margin-left: 8px; padding: 0; line-height: 36px; color: #fff; background-color: #888; font-size: 14px; text-align: center;}
+.inpFileWrap label{position: absolute; top: 0; left: 0; display: block; width: 100%; height: 36px;}
+.inpFileWrap label b{display: block; width: 90px; height: 36px; margin-left: auto; padding: 0; line-height: 36px; color: #fff; background-color: #888; font-size: 14px; text-align: center;}
 .inpFileWrap label input{position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0;}
 
+/*타이틀 옆 필수항목 텍스트*/
 .topRight{float: right; text-align: right; margin: -24px 0 0; color: #666; font-size: 13px}
 
-.divBox{padding: 20px; border: 1px solid #dadada;}
+.divBox{padding: 20px; margin-bottom: 24px; border: 1px solid #dadada;}
 .divBox .text{font-size: 13px; line-height: 21px}
 .divBox .inpGroup{font-size: 0; margin-bottom: -14px;}
 .divBox .inpGroup .inpD{width: 20%; margin-left: 0; margin-bottom: 14px;}
 
-.titleBox{padding: 11px 20px; background-color: #dbe7ec; border: 1px solid #cadae0;}
-.titleBox p{font-weight: 500; line-height: 1.45;}
-.contBox{padding: 20px; border: 1px solid #dadada; border-top: 0}
-.contBox textarea{font-size: 13px;}
+.editWrap{border: 1px solid #dadada;}
+.editWrap .editArea{padding: 20px;}
+.editWrap .attachWrap{padding: 20px; border-top: 1px solid #dadada;}
+.editWrap .addAttach{padding: 0 0 10px 86px; font-size: 0;}
+.editWrap .addAttach .btn{min-width: 102px; height: 24px; margin-right: 8px; font-size: 13px; line-height: 22px; border: 1px solid #bbb}
+.editWrap .attachBox{margin-top: 10px; font-size: 0;}
+.editWrap .attachBox .inpD{margin-right: 15px; line-height: 36px; font-size: 14px}
+
+.registSet + .registSet{margin-top: 10px;}
+.registSet textarea{height: 80px; padding: 6px 10px; font-size: 13px; line-height: 21px}
+.registSet strong.title{display: block; padding: 20px 0 14px;}
+.registSet .titleBox{padding: 11px 20px; background-color: #dbe7ec; border: 1px solid #cadae0;}
+.registSet .titleBox p{font-weight: 500; line-height: 1.45;}
+.registSet .contBox{padding: 20px; border: 1px solid #dadada; border-top: 0}
+.registSet .contBox textarea{font-size: 13px;}
+.registSet .searchTable{border-top: 1px solid #dadada}
+.registSet .searchTable .cell .title{padding: 12px 20px;}
+.registSet .searchTable .cell .boxLine{width: 100%;}
+.registSet .searchTable .cell.file .inpTxt{width: 212px;}
+.registSet .searchTable .cell.url .inpTxt{width: 310px;}
+.registSet .tabWrap{display: inline-block; width: 306px; margin-left: 20px;}
+
+.titleTxtBox{display: block; margin-bottom: 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; font-weight: 700; line-height: 42px; text-align: center;}
+
+.addOption{padding: 2px 0;}
+.addOption li{padding: 14px 20px;}
+.addOption li + li{border-top: 1px solid #dadada;}
 
 
-
-	.spaceLine{display: table; width: 100%}
-	.spaceLine > *{display: table-cell; vertical-align: middle}
-	.spaceLine > *:first-child{text-align: left}
-	.spaceLine > *:last-child{text-align: right}	
-	.termArea{max-height: 162px; padding: 20px; border: 1px solid #ced2d6; font-size: 13px; line-height: 20px; text-align: left; overflow-y: auto}	
-	.emptyBox{padding: 150px 0; border-top: 1px solid #b3b8bc; border-bottom: 1px solid #b3b8bc}
-	.sectionWrap + .emptyBox{margin: 20px 0 0; padding: 100px 0 150px; border: 0; background-color: #fff;}
-	.section + .emptyBox{margin: 20px 0 0; padding: 100px 0 150px; border-top: 1px solid #e7e8ea; border-bottom: 0; background-color: #fff;}
-	.emptyBox .txt{padding-top: 84px; line-height: 1.4; background-size: auto 80px}
-	.emptyBox + .section{border-top: 1px solid #e7e8ea;}
-	.emptyBox .btnBlue{margin: 20px 0 0;}
-	/*탑버튼*/
-	.topButtonArea{position: absolute; left: 50%; bottom: 0; width: 1200px; margin-left: -600px;}
-	.topButtonArea.fix{position: fixed; bottom: 30px;}
-	.backTop{display: block; position: absolute; bottom: 0; right: 8px; z-index: 999; width: 38px; height: 38px; text-indent: -9999px; background: #2a2b2c url(../images/btn_arrow_top.png) no-repeat top 14px center; background-size: 18px auto; transition: background .1s}
-	.backTop:active{background-color: #ccc}
-
-
-	/*List*/
-		ul[class*="list"]{text-align: left}
-		ul[class*="list"] > *{position: relative; word-break: keep-all; line-height: 1.3}
-		ul[class*="list"] > * + *{margin-top: 6px;}
-		ul[class*="list"] > *::before{display: block; content: ''; position: absolute; top: 0; left: 0}
-		ul.listDot > *{padding-left: 10px;}
-		ul.listDot > *::before{content: '·';}		
-		ul.listNum{list-style: decimal;}
-		ul.listNum > *{padding-left: 4px; line-height: 1.6}
-		ul.listNum > * + *{margin-top: 8px}
-		ul.listNum > *::before{display: none;}
-		ul.listSqure > *{padding-left: 10px;}
-		ul.listSqure > *::before{top: 7px; width: 4px; height: 4px; background-color: #acafb2}
-		ul.listWran{text-align: left}
-		ul.listWran > *{padding-left: 17px;}
-		ul.listWran > *::before{content: '※';}
-
-	/*Button*/
-	
-
-/* form */
-	input[type="submit"], 	input[type="button"]{cursor: pointer}
-	[class*="FormWrap"] .inputTxt{width: 500px}
-
-	/* file */
-	.inputFileWrap{position: relative}
-	.inputFileWrap .inputTxt{width: 500px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden}
-	.inputFileWrap label{position: absolute; top: 0; left: 0; display: block; width: 100%; height: 42px; z-index: 1}
-	.inputFileWrap label .btnBorder{height: 42px}
-	.inputFileWrap .inputFile{-moz-appearance: none; -webkit-appearance: none; appearance: none; -webkit-border-radius: 0;width: 0px; height: 0px; line-height: 42px; opacity: 0}
-	/* textarea */
-	.textArea{max-width: 800px; min-height: 300px; padding: 16px; font-size: 15px;}
-	/* calender */
-	.datePicker{font-size: 0; vertical-align: top}
-	.datePicker .range{display: inline-block; width: 50px; font-size: 15px; line-height: 42px; text-align: center}
-	.datePicker .calenderBox{position: relative}
-	.datePicker .calenderBox button{position: absolute; top: -1px; right: 0; width: 100%; height: 100%; background: url(../../global/images/icon_calendar.png) no-repeat right 20px center; text-indent: -9999px}
-	.datePicker .calenderBox .inputTxt{display: inline-block; width: 150px; padding-right: 54px; cursor: pointer}
-
-
+.columnWrap{margin-top: 25px; font-size: 0;}
+.columnWrap > div{display: inline-block; width: 50%; font-size: 12px}
+.columnWrap > div:first-of-type{padding-right: 22px;}
+.columnWrap > div:last-of-type{padding-left: 22px; border-left: 1px solid #cecece}
+.columnWrap .titleWrap{padding: 10px 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; line-height: 18px}
+.columnWrap .titleWrap .date{float: right; font-size: 13px; color: #666}
+.columnWrap .searchTable > li .title{width: 115px; padding: 10px 15px; font-size: 12px; line-height: 30px}
+.columnWrap .searchTable > li .box{min-height: 50px; padding: 10px 12px;}
+.columnWrap .searchTable > li .box .inpGroup{margin-top: 7px;}
+.columnWrap .searchTable > li .box .inpD{font-size: 12px}
+.columnWrap .searchTable > li .box .btn{height: 30px; padding: 0 10px; line-height: 30px; font-size: 12px;}
+.columnWrap .searchTable input.wide{width: auto; flex: auto}
+.columnWrap input[type="text"]{height: 30px; padding: 0 6px; font-size: 12px}
+.columnWrap .divBox{padding: 16px}
+.columnWrap .divBox .inpGroup{margin-bottom: -10px;}
+.columnWrap .divBox .inpGroup .inpD{width: 33.333%; margin-bottom: 10px; font-size: 11px; word-break: break-all;}
+.columnWrap .divBox .inpGroup .inpD .icon{top: 0; margin-top: 0;}
+.columnWrap .tabMenu button{height: 35px; font-size: 12px; padding: 0 14px}
+.columnWrap .divBox .text{font-size: 11px; line-height: 17px}
+.columnWrap textarea{height: 80px; padding: 12px 16px; font-size: 11px; line-height: 17px}
 
 
 /* paginate */

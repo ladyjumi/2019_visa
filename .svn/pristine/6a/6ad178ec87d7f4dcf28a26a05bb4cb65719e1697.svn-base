@@ -1,0 +1,51 @@
+@charset "utf-8";
+@import url("font.css");
+
+/*default*/
+*{margin:0;padding:0;border:0;vertical-align:top;box-sizing:border-box;letter-spacing: -.05em}
+html,body{width:100%;height:100%}
+body{color:#333;line-height:1;font-family:'Noto Sans KR', sans-serif;font-weight:400;-webkit-font-smoothing: antialiased;box-sizing:border-box}
+a{font-style: inherit; color:inherit;text-decoration:none;border:none}
+fieldset,img{border:none}
+ul,ol,dl{list-style:none}
+em,address{font-style:normal}
+button{vertical-align:middle;cursor:pointer;border:none;background:none;border-radius:0;apperance:none;white-space:nowrap;}
+button::-moz-focus-inner{padding:0;border:none}
+label{cursor:pointer}
+table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed}
+input,textarea,select,option{-moz-appearance: none; -webkit-appearance: none; appearance: none;-webkit-border-radius:0;outline:0;font-weight: 400}
+button,input,textarea,select{font-family:'Noto Sans KR', sans-serif;}
+img,video{max-width:100%}
+a,em,b,button,img,strong,span{display:inline-block}
+textarea{resize:none}
+textarea,p,span,li{word-break:keep-all;}
+strong{font-weight: 500}
+b{font-weight: 700;}
+*{-webkit-text-size-adjust:none;-webkit-tap-highlight-color: transparent}
+.clearfix:after{content:'';display:block;clear:both}
+.hide{position: absolute;top: -999px;left: -999px;width: 0;height: 0;overflow: hidden;font-size: 0;color: transparent;line-height: 0;text-indent: -9999px;}
+/*input[type="text"]{background-color: transparent;}*/
+/*input:-webkit-autofill{-webkit-box-shadow: 0 0 0 1000px #f6f8f9 inset !important}*/
+select::-ms-expand{display: none}
+
+/*편의*/
+.taR{text-align: right}
+.taL{text-align: left}
+.taC{text-align: center}
+.positionR{position: absolute; top: 0; right: 0}
+.floatR{float: right}
+.red{color: #bf3f44}
+
+
+
+/*style*/
+body{min-height: 100vh}
+.container .hiddenArea{display: none}
+
+	input[type="checkbox"],
+	input[type="radio"]{border: 0; border-radius: 0; background: 0; opacity: 0; cursor: pointer;}
+	/* placeholder */
+	::-webkit-input-placeholder{font-weight: 400; color:#999; letter-spacing: -.05em}
+	::-moz-placeholder{font-weight: 400; color:#999; letter-spacing: -.05em}
+	:-ms-input-placeholder{font-weight: 400; color:#999(153, 153, 153, 1); letter-spacing: -.05em}
+	:-moz-placeholder{font-weight: 400; color:#999; letter-spacing: -.05em}

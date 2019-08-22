@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>수수료면제국가관리</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body class="admin">
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자네비게이터 Admin</a></h1>
+
+			<!-- GNB -->
+			<ul class="gnb">
+				<li class="active"><a href="#">콘텐츠관리</a></li>
+				<li><a href="#">계정관리</a></li>
+			</ul>
+			<!-- //GNB -->
+
+			<div class="topMenu">
+				<p class="currentInfo">
+					<span><em>Admin1234</em>접속 중</span>
+					<span>
+						[최종접속시간 
+						<em>2019.07.08</em>
+						<em>12:13:15</em>
+						/
+						<em>106.247.228.114</em>]
+					</span>
+				</p>
+				<a href="#">로그아웃</a>
+				<a href="#">비밀번호 변경</a>
+				<span>
+					<input type="text" placeholder="검색" class="searchBox">
+					<button type="button" class="searchBtn">검색버튼</button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="contents">
+		<div class="inner">
+
+			<!-- LNB -->
+			<div class="aside">
+				<ul class="lnb">
+					<li>
+						<span>체류자격 관리</span>
+						<ul class="subM">
+							<li><a href="#">체류자격 코드 관리</a></li>
+							<li><a href="#">체류자격 항목 관리</a></li>
+							<li><a href="#">체류자격 등록 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="#">첨부파일 관리</a></li>
+					<li>
+						<span>수수료 관리</span>
+						<ul class="subM">
+							<li><a href="#">MAIN 관리</a></li>
+							<li><a href="#">수수료 조정국가 관리</a></li>
+							<li class="active"><a href="#">수수료 면제국가 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>비자표출 관리</span>
+						<ul class="subM">
+							<li><a href="#">법무부</a></li>
+							<li><a href="#">중국(광저우)</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>변경 이력 확인</span>
+						<ul class="subM">
+							<li><a href="#">체류자격 코드 이력</a></li>
+							<li><a href="#">체류자격 항목 이력</a></li>
+							<li><a href="#">체류자격 등록 이력 </a></li>
+							<li><a href="#">첨부파일 등록 이력</a></li>
+							<li><a href="#">수수료 변경 이력</a></li>
+							<li><a href="#">비자노출 관리 이력</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- //LNB -->
+
+			<div class="cont">
+
+				<h3>수수료 면제국가 관리</h3>
+				<span class="topRight"><em class="red">*</em>필수항목</span>
+				<div class="tableTop btnGroup">
+					<button type="button" class="btnBorder">선택삭제</button>
+					<button type="button" class="btnBorder">대상 추가</button>
+				</div>
+				<table class="table input">
+					<colgroup>
+						<col style="width: 56px" />
+						<col style="width: 320px" />
+						<col style="width: " />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>선택</th>
+							<th>면제대상국가</th>
+							<th>면제조건</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="inpCell">
+								<label class="inpD">
+									<input type="radio" name="select" class="inp">
+									<span class="icon"></span>
+								</label>
+							</td>
+							<td class="pad"><textarea>스페인, 이탈리아, 태국, 일본, 대만, 우크라이나, 바베이도스, 콜롬비아, 페루, 라이베리아</textarea></td>
+							<td class="pad"><textarea>체류기간에 관계없이 모든 비자</textarea></td>
+						</tr>
+						<tr>
+							<td class="inpCell">
+								<label class="inpD">
+									<input type="radio" name="select" class="inp">
+									<span class="icon"></span>
+								</label>
+							</td>
+							<td class="pad"><textarea>미국</textarea></td>
+							<td class="pad"><textarea>외교(A-1), 관용(A-2) 내지 협정(A-3)</textarea></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4><em class="red">*</em>변경사유</h4>
+				<textarea></textarea>
+		
+				<span class="btnGroup btm">
+					<button type="button" class="btn">저장하기</button>
+				</span>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	
+</body>
+</html>

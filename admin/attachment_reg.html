@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>첨부파일관리</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body class="admin">
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자네비게이터 Admin</a></h1>
+
+			<!-- GNB -->
+			<ul class="gnb">
+				<li class="active"><a href="#">콘텐츠관리</a></li>
+				<li><a href="#">계정관리</a></li>
+			</ul>
+			<!-- //GNB -->
+
+			<div class="topMenu">
+				<p class="currentInfo">
+					<span><em>Admin1234</em>접속 중</span>
+					<span>
+						[최종접속시간 
+						<em>2019.07.08</em>
+						<em>12:13:15</em>
+						/
+						<em>106.247.228.114</em>]
+					</span>
+				</p>
+				<a href="#">로그아웃</a>
+				<a href="#">비밀번호 변경</a>
+				<span>
+					<input type="text" placeholder="검색" class="searchBox">
+					<button type="button" class="searchBtn">검색버튼</button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="contents">
+		<div class="inner">
+
+			<!-- LNB -->
+			<div class="aside">
+				<ul class="lnb">
+					<li>
+						<span>체류자격 관리</span>
+						<ul class="subM">
+							<li><a href="#">체류자격 코드 관리</a></li>
+							<li><a href="#">체류자격 항목 관리</a></li>
+							<li><a href="#">체류자격 등록 관리</a></li>
+						</ul>
+					</li>
+					<li class="active"><a href="#">첨부파일 관리</a></li>
+					<li>
+						<span>수수료 관리</span>
+						<ul class="subM">
+							<li><a href="#">MAIN 관리</a></li>
+							<li><a href="#">수수료 조정국가 관리</a></li>
+							<li><a href="#">수수료 면제국가 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>비자표출 관리</span>
+						<ul class="subM">
+							<li><a href="#">법무부</a></li>
+							<li><a href="#">중국(광저우)</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>변경 이력 확인</span>
+						<ul class="subM">
+							<li><a href="#">체류자격 코드 이력</a></li>
+							<li><a href="#">체류자격 항목 이력</a></li>
+							<li><a href="#">체류자격 등록 이력 </a></li>
+							<li><a href="#">첨부파일 등록 이력</a></li>
+							<li><a href="#">수수료 변경 이력</a></li>
+							<li><a href="#">비자노출 관리 이력</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- //LNB -->
+
+			<div class="cont">
+
+				<h3>첨부파일 관리</h3>
+				<span class="topRight"><em class="red">*</em>필수항목</span>
+				<ul class="optionTable">
+					<li>
+						<div class="cell">
+							<p class="title">대상</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title">체류자격</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+								</select>
+								<select class="selectD">
+									<option value="">전체</option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title">체류자격명</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+									<option value="">단기일반</option>
+									<option value="">일반관광</option>
+									<option value="">FTA독립</option>
+									<option value="">학사유학</option>
+									<option value="">DE계열 6개월이상 체류자</option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title">파일등록</p>
+							<div class="box row">
+								<div class="boxLine">
+									<em class="subTitle">국문</em>
+									<p>									
+										<span class="inpFileWrap">
+											<input type="text" readonly="" class="inpT">
+											<label for=""><b>파일 찾기</b><input type="file"></label>
+										</span>
+									</p>
+								</div>
+								<div class="boxLine">
+									<em class="subTitle">중문</em>
+									<p>
+										<span class="inpFileWrap">
+											<input type="text" readonly="" class="inpT">
+											<label for=""><b>파일 찾기</b><input type="file"></label>
+										</span>
+									</p>
+								</div>
+								<div class="boxLine">
+									<em class="subTitle">영문</em>
+									<p>
+										<span class="inpFileWrap">
+											<input type="text" readonly="" class="inpT">
+											<label for=""><b>파일 찾기</b><input type="file"></label>
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title">URL</p>
+							<div class="box"><input type="text" class="inpT wide"></div>
+						</div>
+					</li>
+				</ul>
+
+				<h4><em class="red">*</em>등록사유</h4>
+				<textarea></textarea>
+				
+				<span class="btnGroup btm">
+					<button type="button" class="btn">목록</button>
+					<button type="button" class="btn">파일등록</button>
+				</span>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	
+</body>
+</html>

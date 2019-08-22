@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>Admin계정수정</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body class="admin">
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자네비게이터 Admin</a></h1>
+
+			<!-- GNB -->
+			<ul class="gnb">
+				<li><a href="#">콘텐츠관리</a></li>
+				<li class="active"><a href="#">계정관리</a></li>
+			</ul>
+			<!-- //GNB -->
+
+			<div class="topMenu">
+				<p class="currentInfo">
+					<span><em>Admin1234</em>접속 중</span>
+					<span>
+						[최종접속시간 
+						<em>2019.07.08</em>
+						<em>12:13:15</em>
+						/
+						<em>106.247.228.114</em>]
+					</span>
+				</p>
+				<a href="#">로그아웃</a>
+				<a href="#">비밀번호 변경</a>
+				<span>
+					<input type="text" placeholder="검색" class="searchBox">
+					<button type="button" class="searchBtn">검색버튼</button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="contents">
+		<div class="inner">
+
+			<!-- LNB -->
+			<div class="aside">
+				<ul class="lnb">
+					<li class="active"><a href="#">계정관리</a></li>
+					<li><a href="#">계정생성</a></li>
+					<li><a href="#">공관/센터 관리</a></li>
+					<li><a href="#">공관/센터 생성</a></li>
+				</ul>
+			</div>
+			<!-- //LNB -->
+
+			<div class="cont">
+
+				<h3>계정수정</h3>
+				<span class="topRight"><em class="red">*</em>필수항목</span>
+				
+				<ul class="optionTable">
+					<li>
+						<div class="cell">
+							<p class="title">이메일 ID</p>
+							<div class="box">
+								<input type="text" class="inpT" value="visa1234" disabled="">
+								<span class="txt mid">@</span>
+								<input type="text" class="inpT" value="gmail.com" disabled="">
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title"><em class="red">*</em>담당자이름</p>
+							<div class="box"><input type="text" value="홍길동" class="inpT"></div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title"><em class="red">*</em>비밀번호</p>
+							<div class="box">
+								<input type="password" class="inpT">
+								<span class="txt addTxt">*영문+숫자+특수문자 조합으로 8자리 이상의 길이</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title">계정종류</p>
+							<div class="box row">
+								<div class="boxLine">
+									<span class="inpGroup">
+										<label class="inpD">
+											<input type="radio" name="radio" class="inp">
+											<span class="icon"></span>
+											<span class="text">법무부</span>
+										</label>
+									</span>
+								</div>
+								<div class="boxLine">
+									<span class="inpGroup">
+										<label class="inpD">
+											<input type="radio" name="radio" class="inp">
+											<span class="icon"></span>
+											<span class="text">공관</span>
+										</label>
+									</span>
+									<select class="selectD" disabled="">
+										<option value="">option1</option>
+										<option value="">option2</option>
+									</select>
+								</div>
+								<div class="boxLine">
+									<span class="inpGroup">
+										<label class="inpD">
+											<input type="radio" name="radio" class="inp">
+											<span class="icon"></span>
+											<span class="text">센터</span>
+										</label>
+									</span>
+									<select class="selectD">
+										<option value="">option1</option>
+										<option value="">option2</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</li>					
+					<li>
+						<div class="cell">
+							<p class="title">접속IP</p>
+							<div class="box row">
+								<div class="boxLine">
+									<span class="inpGroup">
+										<label class="inpD">
+											<input type="radio" name="radio" class="inp">
+											<span class="icon"></span>
+											<span class="text">허용</span>
+										</label>
+										<label class="inpD">
+											<input type="radio" name="radio" class="inp">
+											<span class="icon"></span>
+											<span class="text">거부</span>
+										</label>
+									</span>
+								</div>
+								<div class="boxLine">
+									<input type="text" class="inpT">
+									<span class="txt mid">-</span>
+									<input type="text" class="inpT">
+									<button type="button" class="btn grey">추가</button>
+								</div>
+								<div class="boxLine">
+									<table class="table">
+										<colgroup>
+											<col style="width: 80px" />
+											<col style="width: auto" />
+											<col style="width: auto" />
+											<col style="width: 80px" />
+											<col style="width: 80px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>번호</th>
+												<th>허용/거부</th>
+												<th>IP</th>
+												<th>수정</th>
+												<th>삭제</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>허용</td>
+												<td>
+													<p><em>223.111.222.333</em> - <em>123.456.555.444</em></p>
+												</td>
+												<td class="btnCell">
+													<button type="button" class="btnBorder">수정</button>
+												</td>
+												<td class="btnCell">
+													<button type="button" class="btnBorder">삭제</button>
+												</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>거부</td>
+												<td>
+													<p><em>223.111.222.333</em> - <em>123.456.555.444</em></p>
+												</td>
+												<td class="btnCell">
+													<button type="button" class="btnBorder">수정</button>
+												</td>
+												<td class="btnCell">
+													<button type="button" class="btnBorder">삭제</button>
+												</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>허용</td>
+												<td>
+													<p><em>223.111.222.333</em> - <em>123.456.555.444</em></p>
+												</td>
+												<td class="btnCell">
+													<button type="button" class="btnBorder">수정</button>
+												</td>
+												<td class="btnCell">
+													<button type="button" class="btnBorder">삭제</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<p class="addTxt">*낮은 번호일수록 우선순위가 높습니다.</p>
+								</div>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+
+				<!-- 페이지하단버튼 -->
+				<span class="btnGroup btm">
+					<button type="button" class="btn">수정하기</button>
+					<button type="button" class="btn">계정삭제</button>
+				</span>
+				<!-- //페이지하단버튼 -->
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	
+</body>
+</html>

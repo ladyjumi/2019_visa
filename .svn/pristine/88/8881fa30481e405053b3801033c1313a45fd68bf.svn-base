@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>visa-admin템플릿</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+	<style>
+		body{max-width: 800px; margin: 0 auto}
+		h1{padding-bottom: 20px; text-align: center;}
+		.guideBox{ padding: 20px; margin: 0 0 20px; border: 1px solid #ddd}
+		.guideBox > .title{display: inline-block; padding: 5px; margin: 0 0 16px; font-size: 16px; font-weight: 500; letter-spacing: -.02em; background-color: #a5cbe1}
+		.guideBox > .title + .subTitle{margin-top: 10px;}
+		.guideBox > .subTitle{display: block; margin-top: 40px; padding: 0 0 10px; font-weight: 500; line-height: 24px;}
+		.guideBox .element{margin-bottom: 8px;}
+		.guideBox .code{max-width: 500px; margin-top: 10px; padding: 10px 15px; height: auto; border-color: #aaa; border-style: dashed; font-family: 'Roboto'; letter-spacing: 0;}
+	</style>
+</head>
+<body class="admin" style="padding: 30px">
+
+<h1>어드민템플릿</h1>
+
+<div class="guideBox">
+	<p class="title">input [type:text/password]</p>
+	<div class="element"><input type="text" class="inpT" value="text"></div>
+	<div class="element"><input type="password" class="inpT" value="12345"></div>
+	<div class="element"><input type="text" class="inpT" value="disabled" disabled=""></div>
+	<textarea class="code" readonly=""><input type="text" class="inpT"></textarea>
+</div>
+
+<div class="guideBox">
+	<p class="title">input [type:radio]</p>
+	<div class="element">
+		<label class="inpD">
+			<input type="radio" name="radio" class="inp">
+			<span class="icon"></span>
+			<span class="text">RADIO1</span>
+		</label>
+	</div>
+	<div class="element">
+		<label class="inpD">
+			<input type="radio" name="radio" class="inp" checked="">
+			<span class="icon"></span>
+			<span class="text">RADIO2</span>
+		</label>
+	</div>
+	<div class="element">
+		<label class="inpD">
+			<input type="radio" name="radio" class="inp" disabled="">
+			<span class="icon"></span>
+			<span class="text">RADIO3</span>
+		</label>
+	</div>
+	<textarea class="code" readonly="" style="height: 120px">
+<label class="inpD">
+	<input type="radio" name="radio" class="inp">
+	<span class="icon"></span>
+	<span class="text">RADIO</span>
+</label></textarea>
+</div>
+
+<div class="guideBox">
+	<p class="title">input [type:checkbox]</p>
+	<div class="element">
+		<label class="inpD">
+			<input type="checkbox" class="inp">
+			<span class="icon"></span>
+			<span class="text">CHECKBOX1</span>
+		</label>
+	</div>
+	<div class="element">
+		<label class="inpD">
+			<input type="checkbox" class="inp" checked="">
+			<span class="icon"></span>
+			<span class="text">CHECKBOX2</span>
+		</label>
+	</div>
+	<div class="element">
+		<label class="inpD">
+			<input type="checkbox" class="inp" disabled="">
+			<span class="icon"></span>
+			<span class="text">CHECKBOX3</span>
+		</label>
+	</div>
+	<textarea class="code" readonly="" style="height: 120px">
+<label class="inpD">
+	<input type="checkbox" class="inp">
+	<span class="icon"></span>
+	<span class="text">CHECKBOX</span>
+</label></textarea>
+</div>
+
+<div class="guideBox">
+	<p class="title">selectbox</p>
+	<div class="element">
+		<select class="selectD">
+			<option value="">옵션1</option>
+			<option value="">옵션2</option>
+		</select>
+	</div>
+	<div class="element">
+		<select class="selectD" disabled="">
+			<option value="">옵션1</option>
+			<option value="">옵션2</option>
+		</select>
+	</div>
+	<textarea class="code" readonly="" style="height: 100px">
+<select class="selectD">
+	<option value="">option1</option>
+	<option value="">option2</option>
+</select></textarea>
+</div>
+
+<div class="guideBox">
+	<p class="title">Button정의</p>
+	<p class="addTxt">(클래스명에 따른 스타일 정의; a태그로 교체해도 무방)</p>
+	<p class="subTitle">1. text버튼</p>
+	<div class="element">
+		<button type="button" class="btn blue">.btn.blue</button>
+		<button type="button" class="btn white">.btn.white</button>
+		<button type="button" class="btn grey">.btn.grey</button>
+	</div>
+	<div class="element">
+		<button type="button" class="btnBorder">.btnBorder</button>
+		<button type="button" class="btnBorder blue">.btnBorder.blue</button>
+	</div>
+	
+	<p class="subTitle">2. 페이지 하단</p>
+	<!-- 페이지하단버튼 -->
+	<span class="btnGroup btm">
+		<button type="button" class="btn">.btn</button>
+		<button type="button" class="btn">.btn</button>
+	</span>
+	<!-- //페이지하단버튼 -->
+	
+	<p class="subTitle">3. 표 상단, 타이틀 오른쪽</p>	
+	<!-- 테이블상단버튼 -->
+	<div class="tableTop topRight btnGroup">
+		<button type="button" class="btnBorder">.btnBorder</button>
+		<button type="button" class="btnBorder">.btnBorder</button>
+	</div>
+	<!-- 테이블상단버튼 -->
+
+	
+</div>
+	
+</body>
+</html>

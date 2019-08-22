@@ -13,40 +13,6 @@ function topSerach(){
 	})	
 }
 
-function inputCheckDesign(){
-	$('.inputCheckWrap').each(function(){
-		$(this).find('input[type="checkbox"]').on('change',function(){
-			if ($(this).prop('checked')) {
-				$(this).parents('.inputCheckWrap').addClass('active')
-			} else {
-				$(this).parents('.inputCheckWrap').removeClass('active')
-			}
-		})
-	})
-}
-
-function inputRadioDesign(){
-	$('.inputRadioWrap').each(function(){
-		$(this).find('input[type="radio"]').on('change',function(){
-			$(this).parents('.inputRadioWrap').addClass('active');
-			$(this).parents('.inputRadioWrap').siblings().removeClass('active')
-		})
-	})
-}
-
-function changeInputDesign(){
-	var $designWrap = $('.inputCheckWrap, .inputRadioWrap');
-	$designWrap.each(function(){
-		if ($(this).find('input').prop('checked')) {
-			$(this).addClass('active')
-		} else {
-			$(this).removeClass('active')
-		}
-	})
-	
-}
-
-
 function openPop(){
 	$('.popWrap').fadeIn(100);
 	$('body').addClass('hidden');
@@ -117,12 +83,22 @@ function tabMenu(){
 	})
 }
 
-function tableLineCheck(){
+function selectedTableLine(){
 	$('.table .inpCell .inpD').each(function(){
-		$(this).find('input:checked').parents('tr').addClass('selected').siblings('tr').removeClass('selected');
+		$(this).find('input:checked')
+		.parents('tr').addClass('selected')
+		.siblings('tr').removeClass('selected');
 		$(this).find('input[type="radio"]').on('change',function(){
 			if ($(this).prop('checked')) {
-				$(this).parents('tr').addClass('selected').siblings('tr').removeClass('selected');
+				$(this).parents('tr').addClass('selected')
+				.siblings('tr').removeClass('selected');
+			}
+		})
+		$(this).find('input[type="checkbox"]').on('change',function(){
+			if ($(this).prop('checked')) {
+				$(this).parents('tr').addClass('selected');
+			}else{
+				$(this).parents('tr').removeClass('selected');
 			}
 		})
 	})
@@ -130,15 +106,25 @@ function tableLineCheck(){
 
 function adminLNB(){
 	$('.lnb').each(function(){
+		$('.subM > .active').parents('li').addClass('active');
+		$('.lnb > .active .subM').show().closest('li').addClass('open');
 		$('.lnb > li > span').click(function(){
-			if ($(this).closest('li').hasClass('active')) {
+			if ($(this).closest('li').hasClass('open')) {
 				$(this).siblings('.subM').slideUp(200)
-				.closest('li').removeClass('active');
+				.closest('li').removeClass('open');
 			} else {
 				$(this).siblings('.subM').slideDown(200)
-				.closest('li').toggleClass('active');
+				.closest('li').addClass('open');
 			}
 		})
+	})
+}
+
+function regBoxOpen(){
+	$('.registBox .openBtn').click(function(){
+		$(this).toggleClass('closed')
+		.closest('.titleBox')
+		.next('.contBox').slideToggle(200);
 	})
 }
 
@@ -158,15 +144,11 @@ $(function(){
 	topSerach();
 	inputFileTxt();
 	tabMenu();
-	tableLineCheck();
+	selectedTableLine();
 	adminLNB();
-
-
+	regBoxOpen();
 
 
 	topButtonWeb();
 	topButton();
-	inputCheckDesign();	
-	inputRadioDesign();
-	changeInputDesign();
 });

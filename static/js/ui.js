@@ -128,6 +128,18 @@ function regBoxOpen(){
 	})
 }
 
+function visaListMenu(){
+	$('.visaList.total .inBox').click(function(){
+		if ($(this).closest('li').hasClass('open')) {
+			$(this).next('.visaType').slideUp(200)
+			$(this).closest('li').removeClass('open')
+		} else {
+			$(this).next('.visaType').slideDown(200);
+			$(this).closest('li').addClass('open')
+		}
+	})
+}
+
 //로딩바 show
 function lodingLoad(){
 	$('body').css('overflow','hidden');
@@ -147,6 +159,7 @@ $(function(){
 	selectedTableLine();
 	adminLNB();
 	regBoxOpen();
+	visaListMenu();
 
 
 	topButtonWeb();

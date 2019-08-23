@@ -9,26 +9,28 @@
 
 
 /*레이아웃*/
-	.wrap{min-width: 1200px}
-	.inner{width: 1200px; margin: 0 auto}
+.wrap{min-width: 1200px}
+.inner{width: 1200px; margin: 0 auto}
 
 .header{position: relative; border-bottom: 1px solid #cecece}
-.header > .inner{position: relative; padding: 17px 0}
+.header > .inner{position: relative; padding: 17px 0;}
 .header h1{display: inline-block}
-.header h1 a{display: block; font-size: 20px; font-weight: 700; line-height: 36px; color: #223666}
-.header .searchBtn{width: 36px; height: 36px; background-size: 18px}
-.header .gnb{display: inline-block; margin-left: 66px}
+.header h1 a{display: block; font-size: 21px; font-weight: 500; line-height: 36px;}
+.header .gnb{display: inline-block; margin-left: 50px}
 .header .gnb li{display: inline-block}
-.header .gnb li + li{margin-left: 20px}
-.header .gnb li a{padding: 11px 0 6px; font-size: 16px; font-weight: 500; transition: .1s}
+.header .gnb li + li{margin-left: 30px}
+.header .gnb li a{padding: 10px 0 7px; font-size: 16px; font-weight: 500; transition: .1s}
 .header .gnb li:hover a{color: #000}
 .header .gnb li.active a{color: #b62232; border-bottom: 3px solid #b62232}
+.header .searchBtn{width: 36px; height: 36px; background-size: 18px}
 .header .topMenu{position: absolute; top: 17px; right: 0px; font-size: 0}
 .header .topMenu > *{position: relative; line-height: 36px}
 .header .topMenu > * + *{margin-left: 24px}
 .header .topMenu > * + *:before{position: absolute; top: 50%; left: -11px; display: block; content: ''; width: 1px; height: 12px; margin-top: -5px; background-color: #ccc}
-.header .topMenu select{padding: 8px 20px 10px 8px; background: #fff url(../images/selectbox2.png) no-repeat right 6px top 13px}
-.header .topMenu option{background-color: #f5f6fa; text-align: right}
+.header .topMenu select.lang{height: 36px; padding: 0 22px 0 8px; font-size: 13px; background: #fff url(../images/selectbox2.png) no-repeat right 6px center;}
+.header .topMenu select.lang option{background-color: #f5f6fa}
+.header .topMenu select.lang + .searchBtn{width: 21px;background-size: 21px; outline: 0;}
+.header .topMenu select.lang + .searchBtn:before{left: -13px}
 .header .searchTop{display: none; position: absolute; top: 100%; left: 0; width: 100%; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; z-index: 10}
 .header .searchTop .inner{position: relative; padding: 32px 50px 34px 0}
 .header .searchTop .searchArea{position: relative; z-index: 9; background-color: #f8f8f8}
@@ -39,43 +41,46 @@
 .header .searchTop .btnClose{display: block; width: 26px; height: 26px; position: absolute; top: 14px; right: -4px; background: url(../images/btn_close_search.png) no-repeat center; text-indent: -9999px}
 .header .searchTop .dimmed{position: fixed; top: 71px; left: 0; width: 100%; height: 100%; background: #000; opacity: .7; z-index: 8}
 
-.footer{padding: 60px 0; background-color: #efefef; border-top: 1px solid #dcdcdc; text-align: center}
+.footer{padding: 26px 0; background-color: #efefef; border-top: 1px solid #dcdcdc;}
 .footer .inner{color: #666}
-.footer strong{display: block}
-.footer address{margin-top: 18px; font-size: 13px}
-.footer .address{font-size: 13px}
-.footer .copy{margin-top: 8px; font-size: 12px; font-weight: 300}
+.footer span{line-height: 22px}
+.footer address{display: inline-block; margin-left: 20px; font-size: 13px; line-height: 22px}
 
-.topVisual{padding: 0 0 100px; background-color: #164085; color: #fff; text-align: center}
-.topVisual .inner{padding: 60px 0 27px}
+.topVisual{height: 276px; padding: 48px 0; background: url(../images/bg_visual.png) center 0; color: #fff;}
+.topVisual .inner{position: relative; padding: 14px 0 0;}
 .topVisual .title{font-size: 28px}
-.topVisual .desc{padding: 16px 0 0; line-height: 22px}
-.topVisual .linkMore{margin: 18px 0 0; padding: 5px}
-.topVisual .linkMore:after{content: ''; display: inline-block; width: 24px; height: 14px; margin-left: 6px; background: url(../images/btn_arrow_link.png) no-repeat center top; vertical-align: middle}
-
-.quickFinder{width: 1200px; margin: -100px auto 0; padding: 48px 0 58px; background-color: #fff; box-shadow:  0 0 32px rgba(109,109,109,0.2)}
-.quickFinder ul{width: 600px; margin: 0 auto; border: 1px solid #edeef5; border-radius: 16px; font-size: 0; box-shadow:  0 0 32px rgba(109,109,109,0.14)}
-.quickFinder ul li{display: inline-block; width: 33.3333%; color: #666; border-radius: 16px; text-align: center; overflow: hidden}
-.quickFinder ul li span{display: block; width: 100%; font-size: 13px; line-height: 28px; text-transform: uppercase}
-.quickFinder ul li span b{padding-left:6px; font-size: 16px}
-.quickFinder ul li.active{position: relative; z-index: 1; height: 30px; margin: -1px 0}
-.quickFinder ul li.active span{color: #fff; line-height: 30px;
+.topVisual .desc{padding: 30px 0 0; font-size: 13px; line-height: 22px}
+.topVisual .linkMore{height: 30px; margin: 26px 0 0; padding: 0 22px; border: 1px solid #fff; font-size: 13px; line-height: 28px; transition: background .1s}
+.topVisual .linkMore:after{content: ''; display: inline-block; width: 24px; height: 14px; margin: 9px 0 0 7px; background: url(../images/btn_arrow_link.png) no-repeat center top; vertical-align: top;}
+.topVisual .linkMore:hover{background-color: rgba(0,0,0,0.3);}
+.finderWrap{position: absolute; top: 0; right: 0; width: 600px;}
+.stepNavi{padding: 0 30px; background-color: rgba(255,255,255,0.7); border-radius: 13px; overflow: hidden; box-shadow: 15px 15px 32px rgba(0,0,0,0.3)}
+.stepNavi p{font-size: 0;}
+.stepNavi p > *{font-size: 13px; display: inline-block;}
+.stepNavi .step{margin-right: 20px; line-height: 25px; color: #c6464b; text-transform: uppercase;}
+.stepNavi .bar{position: relative; width: 438px; padding: 8px 0;}
+.stepNavi .bar:after{	display: block; content: ''; height: 9px; border-radius: 5px;
 	background: #dd6065;
 	background: -moz-linear-gradient(left,  #dd6065 0%, #961b1f 100%);
 	background: -webkit-linear-gradient(left,  #dd6065 0%,#961b1f 100%);
 	background: linear-gradient(to right,  #dd6065 0%,#961b1f 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd6065', endColorstr='#961b1f',GradientType=1 );
 }
-
-.searchTxt{margin: 40px 0 0; text-align: center; font-size: 0}
-.searchTxt > p{position: relative; display: inline-block}
-.searchTxt span, 
-.searchTxt strong{font-size: 16px; line-height: 42px}
-.searchTxt strong{margin-left: 22px}
-.searchTxt select{
-	margin: 0 18px 0 16px; min-width: 220px; height: 42px; padding: 0 40px 0 14px; border: 1px solid #dd5c61; border-radius: 4px; font-size: 16px; font-weight: 500; line-height: 40px;
-	background: #fff url(../images/selectbox1.png) no-repeat right 14px center;
-}
+.stepNavi.step1 .bar:after{width: 33%;}
+.stepNavi.step2 .bar:after{width: 66%;}
+.stepNavi.step3 .bar:after{width: 100%;}
+.stepNavi .num{float: right; color: #666; line-height: 24px}
+.stepNavi .num em{color: #333}
+.finder{margin: 17px 0 0; padding: 24px 30px; color: #333; background-color: #fff; border-radius: 5px; box-shadow: 15px 15px 32px rgba(0,0,0,0.45)}
+.finder .line{position: relative; line-height: 36px; text-align: left; font-size: 0;}
+.finder .line + .line{margin-top: 16px;}
+.finder .line > *{font-size: 14px;}
+.finder .line > span:first-of-type{min-width: 48px; text-align: right;}
+.finder select{width: 220px; height: 36px; margin: 0 12px 0 10px; padding: 0 40px 0 14px; border: 1px solid #dd5c61; letter-spacing: -.02em;	background: #fff url(../images/selectbox1.png) no-repeat right 14px center;}
+.finder .NextBtn{position: absolute; top: 0; right: 0; height: 36px; padding: 0 20px; line-height: 36px; background-color: #c6464b; color: #fff; font-weight: 700; text-align: center;}
+.finder .line.disabled{opacity: .5;}
+.finder .line.disabled .NextBtn{display: none;}
+.finder .line.disabled select, .finder select:disabled{border-color: #888;}
 
 .btnSerachDetail{position: absolute; top: 0; left: 100%; height: 40px; padding: 0 30px 0 10px; margin-left: 20px; color: #bf3f44; background: url(../images/selectbox1.png) no-repeat right 10px center; white-space: nowrap}
 
@@ -84,9 +89,111 @@
 .searchDetail div{display: inline-block}
 .searchDetail div + div{margin-left: 21px; border-left: 1px solid #dadada}
 
+/*Front*/
+.frontCont{width: 1200px; margin: 0 auto; padding: 60px 0 150px; font-size: 13px}
+.frontCont hr.line{height: 1px; margin: 45px 0; background-color: #dadada;}
+.frontCont h2{margin-bottom: 40px; font-size: 22px; font-weight: 500; text-transform: uppercase;}
+.frontCont h3{margin-bottom: 20px; font-size: 17px; font-weight: 500}
+.frontCont h3 em{margin-left: 2px; font-size: 14px; color: #666; vertical-align: baseline;}
+.frontCont h4{margin: 40px 0 14px; font-size: 14px; font-weight: 500}
+.frontCont h4 + p.txt{color: #666}
+.frontCont .table thead{background-color: #f4f4f4; border-color: #d7d7d7}
+
+.finderManual{display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; flex-direction: row; width: 100%; justify-content: space-between;}
+.finderManual li{position: relative; display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; align-items: center; width: 340px; min-height: 162px; padding: 30px 60px; background-color: #f4f4f4; border-radius: 12px;}
+.finderManual li p{padding-bottom: 4px; line-height: 22px}
+.finderManual li b{display: block; margin-bottom: 8px; color: #c6464b; line-height: 17px}
+.finderManual li b em{margin-left: 2px; font-size: 17px; vertical-align: baseline;}
+.finderManual li:before{display: inline-block; flex: none; content: ''; width: 82px; height: 72px; margin: 0 18px 2px 0; background: url(../images/icon_finder.png) no-repeat;}
+.finderManual li:nth-child(1):before{background-position: 0 0px;}
+.finderManual li:nth-child(2):before{background-position: 0 -72px;}
+.finderManual li:nth-child(3):before{background-position: 0 -144px;}
+.finderManual li:after{display: block; content: ''; position: absolute; top: 50%; left: 100%; width: 20px; height: 18px; margin: -9px 0 0 36px; background: url(../images/split.png); background-position: -32px -100px}
+.finderManual li:last-of-type:after{display: none;}
+
+/*비자리스트*/
+.visaList .inBox{position: relative; display: block; width: 100%; border: 1px solid #dadada}
+.visaList .name{font-size: 0;}
+.visaList .name .icon{width: 50px; height: 50px; background-image: url(../images/icon_visa.png); background-repeat: no-repeat;}
+.visaList .name em{font-size: 17px; line-height: 50px}
+.visaList .desc{display: block; margin-top: 10px; color: #666; font-size: 14px; line-height: 1.7;}
+
+/*part*/
+.visaList.part{margin: 0 -7px; font-size: 0;}
+.visaList.part > li{display: inline-block; width: 25%; padding: 0 7px; text-align: center;}
+.visaList.part .inBox{min-height: 200px; padding: 20px 24px 24px;}
+.visaList.part .name em{margin-left: 6px;}
+
+/*total*/
+.gridWrap{margin: 0 -7px; font-size: 0;}
+.visaList.total{display: inline-block; width: 33.333%; padding: 0 7px;}
+.visaList.total > li{position: relative;}
+.visaList.total > li + li{margin-top: 14px;}
+.visaList.total > li:before{display: block; content: ''; position: absolute; top: 42px; right: 30px; width: 15px; height: 10px; background: url(../images/arrow_visalist.png) no-repeat center; transition: .2s}
+.visaList.total > li.open:before{transform: rotate(180deg);}
+.visaList.total .inBox{height: 96px; padding: 20px 60px 24px; text-align: left; outline: 0; overflow: visible;}
+.visaList.total .name em{margin-left: 16px;}
+.visaList .visaType{display: none; padding: 6px 20px; border: 1px solid #999; border-top: 0;}
+.visaList .visaType li{background: url(../images/arrow_visalist2.png) no-repeat right 10px center;}
+.visaList .visaType li + li{border-top: 1px solid #dadada}
+.visaList .visaType li a{display: block; padding: 12px 10px; font-weight: 500; line-height: 1.4}
+.visaList.total > li.open .inBox{border: 2px solid #c6464b;}
+.visaList.total > li.open .inBox:before,
+.visaList.total > li.open .inBox:after{display: none;}
+
+/*effect*/
+.visaList li .inBox:before,.visaList li .inBox:after{display: block; content: ''; position: absolute; width: 0; height: 0; opacity: 0; transition: .2s;}
+.visaList li .inBox:before{top: -1px; left: -1px; border-top: 2px solid #c6464b; border-left: 2px solid #c6464b;}
+.visaList li .inBox:after{bottom: -1px; right: -1px; border-bottom: 2px solid #c6464b; border-right: 2px solid #c6464b;}
+.visaList li .inBox:hover:before,
+.visaList li .inBox:hover:after{width: 100%; height: 100%; opacity: 1;}
+
+/*비자icon*/
+.visa01 .icon{background-position: 0 0px;}								/*01.관광단기방문*/
+.visa02 .icon{background-position: 0 -50px;} 						/*02.전문직취업*/
+.visa03 .icon{background-position: 0 -100px;} 					/*03.투자*/
+.visa04 .icon{background-position: 0 -150px;} 					/*04.방문취업*/
+.visa05 .icon{background-position: 0 -200px;} 					/*05.연수*/
+.visa06 .icon{background-position: -50px 0px;} 				/*06.치료요양*/
+.visa07 .icon{background-position: -50px -50px;} 			/*07.주재*/
+.visa08 .icon{background-position: -50px -100px;} 		/*08.무역경영*/
+.visa09 .icon{background-position: -50px -150px;} 		/*09.가족방문동거*/
+.visa10 .icon{background-position: -50px -200px;} 		/*10.비전문직취업*/
+.visa11 .icon{background-position: -100px 0px;} 				/*11.유학어학연수*/
+.visa12 .icon{background-position: -100px -50px;} 		/*12.취재종교*/
+.visa13 .icon{background-position: -100px -100px;} 	/*13.재외동포*/
+.visa14 .icon{background-position: -100px -150px;} 	/*14.결혼이민*/
+.visa15 .icon{background-position: -100px -200px;} 	/*15.외교공무*/
+
+.listDot{margin-top: 24px;}
+ul[class*="list"]{text-align: left}
+ul[class*="list"] > *{position: relative; word-break: keep-all; line-height: 1.3}
+ul[class*="list"] > * + *{margin-top: 6px;}
+ul[class*="list"] > *::before{display: block; content: ''; position: absolute; left: 0}
+ul.listDot > *{padding-left: 8px; color: #666;}
+ul.listDot > *::before{width: 2px; height: 2px; background: #8a8a8a; top: 6.5px;}
+
 
 
 /*Admin*/
+.admin h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700; border-bottom: 1px solid #999}
+.admin h4{padding: 24px 0 12px; font-weight: 500}
+.admin .shapeRequire{color: #bf3f44; font-weight: 400}
+.admin .header .gnb li.active a{color: #1a6fa0; border-color: #1a6fa0;}
+.admin .contents .inner{position: relative}
+.admin .aside{position: absolute; top: 0; left: 0; height: 100%; min-height: calc(100vh - 71px); float: left; background-color: #fafafa}
+.admin .cont{margin-left: 150px; padding: 0 0 50px 20px}
+.admin .currentInfo{display: inline-block; padding: 9px 0; font-size: 0; line-height: 1.4}
+.admin .currentInfo span{font-size: 13px; color: #666}
+.admin .currentInfo span + span{margin-left: 3px}
+.admin .currentInfo span em{margin: 0 1px; color: #333; font-weight: 300}
+.admin .topMenu *{font-size: 13px}
+.admin .topMenu .searchBox{width: 120px; height: 26px; margin-top: 5px; padding: 0 2px; border: 0; border-bottom: 1px solid #888}
+.admin .topMenu .searchBox:focus{border-color: #000}
+.admin .topMenu .searchBtn{width: 20px}
+.admin .searchBtn{background-size: 18px}
+.admin textarea{width: 100%; height: 118px; overflow-y: auto; padding: 20px; font-size: 13px; line-height: 1.5; border: 1px solid #d3d3d3; word-break: keep-all; transition: border .1s}
+.admin textarea:focus{border-color: #999}
 
 .wrap.login{min-width: unset; padding: 200px 10px 100px; text-align: center;}
 .logBox{display: block; max-width: 560px; margin: 0 auto; padding: 90px 100px 110px; border: 1px solid #dadada}
@@ -97,8 +204,7 @@
 .logBox .btn.blue{margin: 30px 0 10px;}
 .logBox .btn em.circle{width: 17px; height: 17px; margin: 9px 0 0 2px; border: 1px solid #1a6fa0; border-radius: 50%; font-size: 12px; line-height: 15px;}
 
-.admin textarea{width: 100%; height: 118px; overflow-y: auto; padding: 20px; font-size: 13px; line-height: 1.5; border: 1px solid #d3d3d3; word-break: keep-all; transition: border .1s}
-.admin textarea:focus{border-color: #999}
+
 .inpWrap{line-height: 36px}
 .inpWrap input{margin-right: 4px}
 .inpT{height: 36px; padding: 0 10px; border: 1px solid #d3d3d3; transition: border .1s}
@@ -163,26 +269,6 @@
 
 hr.line{margin: 30px 0; height: 1px; background-color: #999}
 .addTxt{font-size: 13px; color: #666}
-
-.admin h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700; border-bottom: 1px solid #999}
-.admin h4{padding: 24px 0 12px; font-weight: 500}
-.admin .shapeRequire{color: #bf3f44; font-weight: 400}
-.admin .header h1 a{font-size: 21px; font-weight: 500; color: #333}
-.admin .header .gnb{margin-left: 40px}
-.admin .header .gnb li.active a{color: #1a6fa0; border-color: #1a6fa0;}
-.admin .contents .inner{position: relative}
-.admin .aside{position: absolute; top: 0; left: 0; height: 100%; min-height: calc(100vh - 71px); float: left; background-color: #fafafa}
-.admin .cont{margin-left: 150px; padding: 0 0 50px 20px}
-.admin .currentInfo{display: inline-block; padding: 9px 0; font-size: 0; line-height: 1.4}
-.admin .currentInfo span{font-size: 13px; color: #666}
-.admin .currentInfo span + span{margin-left: 3px}
-.admin .currentInfo span em{margin: 0 1px; color: #333; font-weight: 300}
-.admin .topMenu *{font-size: 13px}
-.admin .topMenu .searchBox{width: 120px; height: 26px; margin-top: 5px; padding: 0 2px; border: 0; border-bottom: 1px solid #888}
-.admin .topMenu .searchBox:focus{border-color: #000}
-.admin .topMenu .searchBtn{width: 20px}
-.admin .searchBtn{background-size: 18px}
-
 
 .aside .lnb{width: 150px; border-bottom: 1px solid #ebebeb}
 .aside .lnb li > a, 

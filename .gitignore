@@ -1,3 +1,6 @@
 
 *.db
 .svn/wc.db
+*.db
+*.svn-base
+*.db

@@ -6,7 +6,10 @@
 	a, button, input, select{font-size: 14px}
 	body.hidden{overflow: hidden}
 
-
+	/*탑버튼*/
+		.topButtonArea{position: absolute; left: 50%; bottom: 0; width: 1200px; margin-left: -600px;}
+		.topButtonArea.fix{position: fixed; bottom: 30px;}
+		.backTop{display: block; position: absolute; bottom: 0; right: -36px; z-index: 999; width: 36px; height: 36px; text-indent: -9999px; background: #2a2b2c url(../images/btn_top.png) no-repeat; transition: background .1s; cursor: pointer;}
 
 /*레이아웃*/
 .wrap{min-width: 1200px}
@@ -40,7 +43,7 @@
 .header .searchTop .btnSearch{display: inline-block; width: 44px; height: 42px}
 .header .searchTop .btnClose{display: block; width: 26px; height: 26px; position: absolute; top: 14px; right: -4px; background: url(../images/btn_close_search.png) no-repeat center; text-indent: -9999px}
 .header .searchTop .dimmed{position: fixed; top: 71px; left: 0; width: 100%; height: 100%; background: #000; opacity: .7; z-index: 8}
-
+.contents{position: relative;}
 .footer{padding: 26px 0; background-color: #efefef; border-top: 1px solid #dcdcdc;}
 .footer .inner{color: #666}
 .footer span{line-height: 22px}
@@ -98,6 +101,9 @@
 .frontCont h4{margin: 40px 0 14px; font-size: 14px; font-weight: 500}
 .frontCont h4 + p.txt{color: #666}
 .frontCont .table thead{background-color: #f4f4f4; border-color: #d7d7d7}
+.frontCont .tabMenu li{width: 25%;}
+.frontCont .tabMenu button{height: 50px; padding: 0 10px; background-color: #fff; font-size: 13px;}
+.frontCont .tabMenu li.active button{border-color: #c6464b;}
 
 .finderManual{display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; flex-direction: row; width: 100%; justify-content: space-between;}
 .finderManual li{position: relative; display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; align-items: center; width: 340px; min-height: 162px; padding: 30px 60px; background-color: #f4f4f4; border-radius: 12px;}
@@ -169,19 +175,42 @@
 .cardList{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex;}
 .cardList li{width: 100%; padding: 22px 0; border: 1px solid #dadada; text-align: center; vertical-align: middle; table-layout: fixed;}
 .cardList li + li{margin-left: 15px;}
-.cardList li span{display: flex; flex-direction: column; justify-content: center; width: 100%; height: 40px;}
-.cardList li span img{flex: none; margin: 0 auto;}
+.cardList li span{display: inline-flex; flex-direction: column; justify-content: center; height: 40px;}
 .cardList li p{margin-top:10px; font-size: 13px; color: #666666;}
+
+.titleDot:before{display: inline-block; content: ''; width: 2px; height: 2px; margin-right: 3px; background-color: #636363; vertical-align: super;}
+.processList{margin: 12px 0 6px; font-size: 0;}
+.processList li{position: relative; display: inline-block; width: 210px; margin: 0 60px 16px 0; border: 1px solid #dadada; font-size: 13px;}
+.processList li:after{display: block; content: ''; position: absolute; top: 50%; left: 100%; width: 12px; height: 14px; margin: -7px 0 0 24px; background: url(../images/arrow_process.png);}
+.processList li:nth-child(4n){margin-right: 0;}
+.processList li:nth-child(4n):after{display: none;}
+.processList li:last-of-type .desc{padding: 13px 20px 11px; margin: 0; background-color: #f2f0ed;}
+.processList li:last-of-type:after{display: none;}
+.processList .top{padding: 10px 0 9px; margin: 0 20px; line-height: 19px; font-size: 0;}
+.processList .top span{padding-left: 25px; font-size: 13px; background: url(../images/icon_person.png) no-repeat;}
+.processList .top span.typeBlue{background-position: 0 -19px; color: #467fc6}
+.processList .top span.typeRed{background-position: 0 -38px; color: #c6464b}
+.processList .top span + span{margin-left: 12px;}
+.processList .desc{min-height: 100px; padding: 13px 0 11px; margin: 0 20px; border-top: 1px solid #dadada;}
+.processList .desc strong{display: block; min-height: 53px; font-size: 14px; line-height: 22px}
+.processList .desc p{color: #666}
+.processList .arrowN{width: 22px; height: 11px; margin-top: 5px; background: url(../images/arrow_visalist2.png) no-repeat center; text-indent: -9999px; opacity: .7}
 
 .txtTable{border-bottom: 1px solid #dadada}
 .txtTable tbody tr{border-top: 1px solid #dadada;}
 .txtTable tbody th{padding: 22px 20px; background-color: #f4f4f4; font-weight: 500; line-height: 22px; vertical-align: top; text-align: left; word-break: keep-all;}
 .txtTable tbody td{padding: 22px 20px; line-height: 22px;}
-.txtTable .listDot{margin: 2px 0 4px;}
+.txtTable .listDot{margin: 0 0 4px;}
 .txtTable .listDot li{line-height: 22px; color: #333}
 .txtTable .listDot li + li{margin-top: 0;}
 .txtTable .listDot > *::before{top: 10px;}
+.txtTable * + .listDot{margin-top: 2px;}
 .txtTable .divBox{width: 760px; margin: 12px 0 14px;}
+.txtTable .btnVisaMenu{height: 30px; padding: 0 10px; margin: -8px 0 -5px 8px; min-width: 124px; font-size: 13px; line-height: 28px; border: 1px solid #333;}
+
+.tableTop.btnManual{margin-top: -38px;}
+.btnManual a{padding-left: 32px; color: #333; line-height: 25px; background: url(../images/icon_document.png) no-repeat left center;}
+.btnManual a + a{margin-left: 30px;}
 
 .listDot{margin-top: 24px;}
 ul[class*="list"]{text-align: left}

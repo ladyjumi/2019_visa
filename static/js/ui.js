@@ -48,9 +48,9 @@ $(window).scroll(function(){
 function topButtonWeb(){
 	$('.topButtonArea').each(function(){
 		var BodyHeight = $('body, html').height();	
-		var tableNum = $('.tableArea').offset();
-		var tableHeight = $('.tableArea').height();
-		var tableBottomNum = tableNum.top + tableHeight;
+		var tableNum = $('.contents').offset();
+		var tableHeight = $('.contents').height();
+		var tableBottomNum = tableNum.top + tableHeight + 36;
 		var Top = $(window).scrollTop();	
 		console.log(BodyHeight);
 		if ((tableBottomNum - BodyHeight) < Top )

@@ -1,27 +1,36 @@
 function topSerach(){
-	$('.topMenu .btnSerach').each(function(){
+	$('.topMenu .showsearchBar').each(function(){
 		$(this).click(function(){
 			$('body').addClass('hidden');
 			$(this).closest('.header')
-			.find('.searchTop').show()
+			.find('.searchTop').fadeIn(150)
 			.find('input[type="text"]').focus();
 		})
-		$('.searchTop').find('.btnClose').click(function(){
+		$('.searchTop .dimmed').click(function(){
 			$('body').removeClass('hidden');
-			$(this).closest('.searchTop').hide();
+			$(this).closest('.searchTop').fadeOut(100);
 		})
 	})	
 }
 
 function openPop(){
-	$('.popWrap').fadeIn(100);
-	$('body').addClass('hidden');
+	$('.openPop').click(function(){
+		$('body').addClass('hidden');
+		var href = $(this).attr('href');
+		$(href).fadeIn(100);		
+		return false;	
+	});
+	closePop();
 }
 
 function closePop(){
-	$('.popWrap').fadeOut(200);
-	$('body').removeClass('hidden');
-	return false;
+	$('.popWrap').each(function(){
+		$(this).find('.closePop').click(function(){
+			$(this).closest('.popWrap').fadeOut(150);
+			$('body').removeClass('hidden');
+			return false;
+		})
+	})
 }
 
 function topButton(){
@@ -52,7 +61,6 @@ function topButtonWeb(){
 		var tableHeight = $('.contents').height();
 		var tableBottomNum = tableNum.top + tableHeight + 36;
 		var Top = $(window).scrollTop();	
-		console.log(BodyHeight);
 		if ((tableBottomNum - BodyHeight) < Top )
 		{
 			$('.topButtonArea').removeClass('fix');
@@ -160,6 +168,7 @@ $(function(){
 	adminLNB();
 	regBoxOpen();
 	visaListMenu();
+	openPop();
 
 
 	topButtonWeb();

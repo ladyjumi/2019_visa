@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>비자검색3</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자 내비게이터</a></h1>
+			<!-- GNB -->
+			<ul class="gnb">
+				<li class="active"><a href="#">비자 검색</a></li>
+				<li><a href="#">입국목적별 비자 종류</a></li>
+				<li><a href="#">신청절차</a></li>
+				<li><a href="#">수수료</a></li>
+				<li><a href="#">입국 및 체류</a></li>
+			</ul>
+			<!-- //GNB -->
+			<div class="topMenu">
+				<!-- 언어변경 -->
+				<select class="lang">
+					<option value="">한국어</option>
+					<option value="">ENGLISH</option>
+					<option value="">中文</option>
+				</select>
+				<!-- //언어변경 -->
+				<button type="button" class="searchBtn showsearchBar">검색버튼</button>
+			</div>
+		</div>
+
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<div class="inner">
+					<span class="searchBox">
+						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
+						<input type="button" value="검색" class="searchBtn">
+					</span>
+				</div>
+			</div>
+			<div class="dimmed"></div>
+		</div>
+		<!-- //검색창 -->
+	</div>
+
+	<div class="contents">
+
+		<div class="topVisual">
+			<div class="inner">
+				<p class="title">비자 종류와 정보를 쉽게 확인하세요.</p>
+				<p class="desc">현재 국적으로 보유한 국가를 선택하고 목적 국가를 입력하면 최적화된 비자발급과 관련한 정보가 보여집니다. <br>해당되지 않을 경우 전체 리스트를 통해 확인할 수 있습니다.</p>
+				<a href="#" class="linkMore">비자 전체리스트</a>
+
+				<div class="finderWrap">
+					<div class="stepNavi step3">
+						<p>
+							<em class="step">Step <b>3</b></em>
+							<span class="bar"></span>
+							<span class="num"><em>3</em> / 3</span>
+						</p>
+					</div>
+					<div class="finder">
+						<p class="line">
+							<span>나는</span>
+							<select>
+								<option value="">어느 나라</option>
+								<option value="">AFGHANISTAN</option>
+								<option value="">BAHRAIN</option>
+								<option value="">BANGLADESH</option>
+								<option value="">BHUTAN</option>
+								<option value="">BRUNEI</option>
+								<option value="">CAMBODIA</option>
+								<option value="">CHINA P. R.</option>
+								<option value="">CHINA P. R.(HONG KONG)</option>
+								<option value="">CHINA P. R.(MACAO)</option>
+								<option value="">CHINA(TAIWAN)</option>
+								<option value="">CYPRUS</option>
+								<option value="">EAST-TIMOR</option>
+								<option value="">HONG KONG ID.</option>
+								<option value="">INDIA</option>
+								<option value="">INDONESIA</option>
+								<option value="">IRAN</option>
+								<option value="">IRAQ</option>
+								<option value="">ISRAEL</option>
+								<option value="">JAPAN</option>
+								<option value="">JORDAN</option>
+								<option value="">KAZAKHSTAN</option>
+								<option value="">KUWAIT</option>
+								<option value="">KYRGYZ REPUBLIC</option>
+								<option value="">LAOS</option>
+								<option value="">LEBANON</option>
+								<option value="">MALAYSIA</option>
+								<option value="">MALDIVES</option>
+								<option value="">MONGOLIA</option>
+								<option value="">MYANMAR</option>
+								<option value="">NEPAL</option>
+								<option value="">OMAN</option>
+								<option value="">PAKISTAN</option>
+								<option value="">PALESTINE</option>
+								<option value="">PHILIPPINES</option>
+								<option value="">QATAR</option>
+								<option value="">SAUDI ARABIA</option>
+								<option value="">SINGAPORE</option>
+								<option value="">SRI LANKA</option>
+								<option value="">SYRIA</option>
+								<option value="">TAJIKISTAN</option>
+								<option value="">THAILAND</option>
+								<option value="">TURKEY</option>
+								<option value="">TURKMENISTAN</option>
+								<option value="">U.A.E</option>
+								<option value="">UZBEKISTAN</option>
+								<option value="">VIETNAM</option>
+								<option value="">YEMEN</option>
+							</select>
+							<span>사람이고,</span>
+						</p>
+						<p class="line">
+							<span>한국에</span>
+							<select>
+								<option value="">방문 목적</option>
+								<option value="">관광 등 단기방문</option>
+								<option value="">치료요양</option>
+								<option value="">유학/어학연수</option>
+								<option value="">전문직 취업</option>
+								<option value="">주재</option>
+								<option value="">취재/종교</option>
+								<option value="">투자</option>
+								<option value="">무역경영</option>
+								<option value="">재외동포</option>
+								<option value="">방문취업</option>
+								<option value="">가족방문/동거</option>
+								<option value="">결혼이민</option>
+								<option value="">연수</option>
+								<option value="">비전문직 취업</option>
+								<option value="">외교, 공무</option>
+							</select>
+							<span>(으)로 방문 예정입니다.</span>
+							<button type="button" class="NextBtn">검색</button>
+						</p>
+						<!-- 상세검색 -->
+						<div class="detail">
+							<strong>상세검색</strong>
+							<div class="detailOption">
+								<em>체류기간</em>
+								<label class="inpD">
+									<input type="checkbox" class="inp">
+									<span class="icon"></span>
+									<span class="text">90일이하</span>
+								</label>
+								<label class="inpD">
+									<input type="checkbox" class="inp">
+									<span class="icon"></span>
+									<span class="text">90일이상</span>
+								</label>
+								<label class="inpD">
+									<input type="checkbox" class="inp">
+									<span class="icon"></span>
+									<span class="text">영주</span>
+								</label>
+							</div>
+							<div class="detailOption">
+								<em>비자종류</em>
+								<label class="inpD">
+									<input type="checkbox" class="inp">
+									<span class="icon"></span>
+									<span class="text">단수</span>
+								</label>
+								<label class="inpD">
+									<input type="checkbox" class="inp">
+									<span class="icon"></span>
+									<span class="text">더블</span>
+								</label>
+								<label class="inpD">
+									<input type="checkbox" class="inp">
+									<span class="icon"></span>
+									<span class="text">복수</span>
+								</label>
+							</div>
+						</div>
+						<!-- //상세검색 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="frontCont">
+			<h2>검색 결과</h2>
+		</div>
+
+		<div class="topButtonArea"><span class="backTop"></span></div>
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>비자 내비게이터</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 ( 외국인종합안내센터 : 국번없이 1345 )</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>

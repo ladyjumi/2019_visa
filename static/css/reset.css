@@ -45,7 +45,7 @@ body{min-height: 100vh}
 	input[type="checkbox"],
 	input[type="radio"]{border: 0; border-radius: 0; background: 0; opacity: 0; cursor: pointer;}
 	/* placeholder */
-	::-webkit-input-placeholder{font-weight: 400; color:#999; letter-spacing: -.05em}
-	::-moz-placeholder{font-weight: 400; color:#999; letter-spacing: -.05em}
-	:-ms-input-placeholder{font-weight: 400; color:#999(153, 153, 153, 1); letter-spacing: -.05em}
-	:-moz-placeholder{font-weight: 400; color:#999; letter-spacing: -.05em}
+	::-webkit-input-placeholder{font-weight: 400; color:#666; letter-spacing: -.05em}
+	::-moz-placeholder{font-weight: 400; color:#666; letter-spacing: -.05em}
+	:-ms-input-placeholder{font-weight: 400; color:#666(153, 153, 153, 1); letter-spacing: -.05em}
+	:-moz-placeholder{font-weight: 400; color:#666; letter-spacing: -.05em}

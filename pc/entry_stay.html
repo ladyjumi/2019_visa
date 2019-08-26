@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>입국및체류</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자 내비게이터</a></h1>
+			<!-- GNB -->
+			<ul class="gnb">
+				<li><a href="#">비자 검색</a></li>
+				<li><a href="#">입국목적별 비자 종류</a></li>
+				<li><a href="#">신청절차</a></li>
+				<li><a href="#">수수료</a></li>
+				<li class="active"><a href="#">입국 및 체류</a></li>
+			</ul>
+			<!-- //GNB -->
+			<div class="topMenu">
+				<!-- 언어변경 -->
+				<select class="lang">
+					<option value="">한국어</option>
+					<option value="">ENGLISH</option>
+					<option value="">中文</option>
+				</select>
+				<!-- //언어변경 -->
+				<button type="button" class="searchBtn showsearchBar">검색버튼</button>
+			</div>
+		</div>
+
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<div class="inner">
+					<span class="searchBox">
+						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
+						<input type="button" value="검색" class="searchBtn">
+					</span>
+				</div>
+			</div>
+			<div class="dimmed"></div>
+		</div>
+		<!-- //검색창 -->
+	</div>
+
+	<div class="contents">
+
+		<div class="frontCont">
+			<h2>입국 및 체류</h2>
+
+			<h3>입국절차</h3>
+			<table class="txtTable">
+				<colgroup>
+					<col style="width: 140px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>입국요건</th>
+						<td>
+							<p>대한민국에 입국하고자 하는 외국인은 아래와 같은 입국요건을 갖추어야 합니다.</p>
+							<ul class="listDot">
+								<li>유효한 여권 등을 소지하여야 합니다. <br>유효기간이 만료되거나, 위조 또는 변조된 여권으로는 입국할 수 없습니다.</li>
+								<li>유효한 비자를 소지하여야 합니다. <br>비자 유효기간 내에 입국하여야 하며, 발급받은 비자와 방문목적이 일치하지 않을 경우 입국이 거부될 수 있습니다.
+									<div class="divBox">
+										<p class="red">※ 다만, 아래의 조건에 해당하는 경우 비자없이 입국할 수 있습니다.</p>
+										<ul class="listDash">
+											<li>재입국허가를 받은 사람 또는 재입국허가가 면제된 사람으로서 그 허가 또는 면제받은 기간이 만료되기 전에 입국하는 자</li>
+											<li>대한민국과 <em class="red">비자면제협정을 체결한 국가의 국민</em>으로서 그 협정에 의하여 <em class="red">면제 대상</em>이 되는 자</li>
+											<li>국제친선,관광 또는 대한민국의 이익 등을 위하여 입국하는 자로서 대통령령이 정하는 바에 따라 따로 입국허가를 받은 사람</li>
+											<li>난민여행증명서를 발급받고 출국하여 그 <em class="red">유효기간이 만료되기 전에</em> 입국하는 사람</li>
+										</ul>
+									</div>
+								</li>
+								<li>출입국관리법 상 입국금지 사유에 해당되지 않아야 합니다.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>비자의 종류와 <br>유효기간</th>
+						<td>
+							<p>
+								단수비자 : 유효기간 내에 1회에 한하여 입국할 수 있습니다. <br>
+								더블비자 : 유효기간(6개월) 내에 2회 입국할 수 있습니다. <br>
+								복수비자 : 유효기간(1년, 3년, 5년) 내에 제한없이 입국할 수 있습니다. <br>
+							</p>
+							<div class="imgWrap">
+								<img src="../static/images/img_visa.jpg" alt="대한민국 비자 견본이미지(다음내용 참고)">
+								<p>대한민국 비자</p>
+							</div>
+							<ol class="listNum">
+								<li><span><i>1</i>비자번호</span> : 비자발급 일련번호</li>
+								<li><span><i>2</i>체류자격</span> : 외국인이 국내에 체류하면서 행할 수 있는 사회적인 활동이나 신분의 종류</li>
+								<li><span><i>3</i>체류기간</span> : 대한민국 입국일로부터 기산하여 체류할 수 있는 기간</li>
+								<li><span><i>4</i>종류</span> : 비자의 종류(S: 단수비자, D: 더블비자, M: 복수비자)</li>
+								<li><span><i>5</i>발급일</span> : 비자 발급일자를 의미</li>
+								<li><span><i>6</i>입국만료일</span> : 비자유효기간을 의미 (만료일까지 한국에 입구하여야 하며, 만료일이 지난 비자는 무효임)</li>
+								<li><span><i>7</i>발급지</span> : 비자를 발금한 재외공관에 대한 정보</li>
+							</ol>
+						</td>
+					</tr>
+					<tr>
+						<th>입국신고서</th>
+						<td>
+							<p>대한민국에 입국하는 외국인은 대한민국 출입국항에서 출입국심사관의 입국심사를 받아야 합니다. <br>입국심사를 받을 때에는 여행목적과 국내 체류지 등을 기재한 대한민국 입국신고서(서식 제41의2호) 와 여권을 제시하시기 바랍니다.</p>
+							<div class="imgWrap">
+								<img src="../static/images/img_arrivalcard.jpg" alt="대한민국 입국신고서(서식 제41의2호) 이미지">
+								<p>대한민국 입국신고서</p>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>외국인등록 대상 및 절차</h3>
+			<table class="txtTable">
+				<colgroup>
+					<col style="width: 140px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>외국인등록 대상</th>
+						<td>
+							<p>아래 외국인은 입국일로부터 90일 이내에 주소지를 관할하는 출입국·외국인관서에 외국인등록을 하여야 합니다.</p>
+							<ul class="listDot">
+								<li>대한민국에 입국한 날부터 90일을 초과하여 체류하려는 외국인</li>
+								<li>대한민국 국적을 상실하고 외국국적을 취득하였거나 우리나라에서 출생한 외국인 등이 체류자격을 부여받아 그날부터 90일을 초과하여 체류하려는 외국인</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>외국인등록사항 변경 신고의무</th>
+						<td>
+							<p>외국인등록을 한 외국인이 아래 신고사유에 해당하는 변경이 있을 때에는 사유가 발생한 날로부터 14일 이내에 본인 또는 대리인이 관할 출입국·외국인관서에 외국인등록사항 변경신고를 하여야 합니다. <br>(외국인등록사항이 변경된 날부터 14일 이내에 관할 출입국·외국인관서에 신고를 하지 않은 경우 출입국관리법 제35조 위반으로 과태료가 부과됩니다.)</p>
+							<ul class="listNumber">
+								<li>신고 사유
+									<ul class="listDot">
+										<li>성명, 성별, 생년월일 및 국적이 변경된 경우</li>
+										<li>여권의 번호, 발급일자 및 유효기간이 변경된 경우</li>
+										<li>문화예술(D-1),유학(D-2),일반연수(D-4)부터 무역경영(D-9) 자격 외국인이 소속기관 또는 단체가 변경(명칭변경 포함)된 경우</li>
+										<li>취재(D-5), 종교(D-6), 주재(D-7), 기업투자(D-8), 무역경영(D-9) 자격 외국인이 소속기관 또는 단체의 명칭이 변경된 경우</li>
+									</ul>
+								</li>
+								<li>신고 시 제출서류
+									<ul class="listDot">
+										<li>성명, 성별, 생년월일 및 국적이 변경된 경우</li>
+										<li>여권의 번호, 발급일자 및 유효기간이 변경된 경우</li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>외국인의 활동범위와 취업</h3>
+			<table class="txtTable">
+				<colgroup>
+					<col style="width: 140px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>외국인의 활동범위와 취업</th>
+						<td>
+							<ul class="listDot">
+								<li>외국인은 비자 상에 기재된 또는 입국 시 부여된 체류자격과 체류기간의 범위 내에서 대한민국에 체류할 수 있습니다.</li>
+								<li>대한민국에서 취업을 하고자 할 때에는 취업을 할 수 있는 체류자격을 소지하여야 하며, 지정된 근무장소에서만 근무하여야 합니다.</li>
+								<li>취업활동을 할 수 있는 체류자격은 아래와 같습니다.
+									<div class="divBox">
+										<p>단기취업(C-4), 교수(E-1), 회화지도(E-2), 연구(E-3), 기술지도(E-4), 전문직업(E-5), 예술흥행(E-6), 특정활동(E-7), 비전문취업(E-9), <br>선원취업(E-10), 거주(F-2), 재외동포(F-4), 영주(F-5), 결혼이민(F-6), 관광취업(H-1), 방문취업(H-2)</p>
+									</div>
+								</li>
+								<li>취업할 수 있는 체류자격을 소지하였더라도 관할 출입국·외국인관서에 사전허가나 신고를 하지 않고 비자발급 당시 계약된 고용주가 아닌 다른 고용주와 별도의 고용계약을 맺고 취업활동을 하는 것은 원칙적으로 비자조건을 위반하는 행위입니다.</li>
+								<li>고용주 변경, 근무장소 변경 등을 위해서는 반드시 관할 출입국·외국인관서 또는 외국인종합안내센터(국번없이 1345)에 관련 절차를 확인하고, 사전에 또는 일정한 기간 내에 관할 출입국·외국인관서에 허가를 받거나 신고를 하시기 바랍니다.</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="topButtonArea"><span class="backTop"></span></div>
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>비자 내비게이터</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 ( 외국인종합안내센터 : 국번없이 1345 )</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>

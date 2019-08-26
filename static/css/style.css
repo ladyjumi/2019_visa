@@ -4,12 +4,34 @@
 	html{overflow-y: scroll}
 	body{font-size: 14px}
 	a, button, input, select{font-size: 14px}
-	body.hidden{overflow: hidden}
+	body.hidden{overflow: hidden; height: 100%;}
+
+	/*버튼정의*/
+	.btn{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; color: #fff; text-align: center; transition: background .1s}
+	.btn.red{background-color: #c6464b}
+	.btn.blue{background-color: #1a6fa0}
+	.btn.grey{background-color: #888}
+	.btn.white{background-color: #fff; color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px;}
+	.btnBorder{min-width: 86px; height: 24px; padding: 0 14px; font-size: 13px; line-height: 22px; color: #333; text-align: center; border: 1px solid #bbb}
+	.btnBorder.blue{border-color: #1a6fa0; color: #1a6fa0;}
+	.btnGroup{font-size: 0}
+	.btnGroup > *{display: inline-block}
+	.btnGroup > * + *{margin-left: 8px}
+	.btnGroup.btm{display: block; margin: 30px 0 0; text-align: center}
+	.btnGroup.btm > *{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; text-align: center; transition: background .1s}
+	.btnGroup.btm > *:first-of-type{color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px}
+	.btnGroup.btm > *:last-of-type{background-color: #1a6fa0; color: #fff}
+	.btnGroup.btm > *:only-child{background-color: #1a6fa0; color: #fff; margin-left: 0}
+	.searchBtn{width: 36px; height: 36px; background: url(../images/common/icon_search.svg) no-repeat center; text-indent: -9999px; cursor: pointer;}
+	.lineMoveBtn{width: 30px; height: 24px; background: url(../images/split.png) no-repeat; text-indent: -9999px}
+	.lineMoveBtn.up{background-position: -32px -50px}
+	.lineMoveBtn.dw{background-position: -32px -74px}
+	.lineMoveBtn + .lineMoveBtn{margin-left: 2px;}
 
 	/*탑버튼*/
-		.topButtonArea{position: absolute; left: 50%; bottom: 0; width: 1200px; margin-left: -600px;}
-		.topButtonArea.fix{position: fixed; bottom: 30px;}
-		.backTop{display: block; position: absolute; bottom: 0; right: -36px; z-index: 999; width: 36px; height: 36px; text-indent: -9999px; background: #2a2b2c url(../images/btn_top.png) no-repeat; transition: background .1s; cursor: pointer;}
+	.topButtonArea{position: absolute; left: 50%; bottom: 0; width: 1200px; margin-left: -600px;}
+	.topButtonArea.fix{position: fixed; bottom: 30px;}
+	.backTop{display: block; position: absolute; bottom: 0; right: -36px; z-index: 999; width: 36px; height: 36px; text-indent: -9999px; background: #2a2b2c url(../images/btn_top.png) no-repeat; transition: background .1s; cursor: pointer;}
 
 /*레이아웃*/
 .wrap{min-width: 1200px}
@@ -25,7 +47,7 @@
 .header .gnb li a{padding: 10px 0 7px; font-size: 16px; font-weight: 500; transition: .1s}
 .header .gnb li:hover a{color: #000}
 .header .gnb li.active a{color: #b62232; border-bottom: 3px solid #b62232}
-.header .searchBtn{width: 36px; height: 36px; background-size: 18px}
+.header .searchBtn{background-size: 18px}
 .header .topMenu{position: absolute; top: 17px; right: 0px; font-size: 0}
 .header .topMenu > *{position: relative; line-height: 36px}
 .header .topMenu > * + *{margin-left: 24px}
@@ -34,23 +56,24 @@
 .header .topMenu select.lang option{background-color: #f5f6fa}
 .header .topMenu select.lang + .searchBtn{width: 21px;background-size: 21px; outline: 0;}
 .header .topMenu select.lang + .searchBtn:before{left: -13px}
-.header .searchTop{display: none; position: absolute; top: 100%; left: 0; width: 100%; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; z-index: 10}
-.header .searchTop .inner{position: relative; padding: 32px 50px 34px 0}
-.header .searchTop .searchArea{position: relative; z-index: 9; background-color: #f8f8f8}
-.header .searchTop .searchBox{display: table; width: 100%; border-bottom: 1px solid #000; font-size: 0}
-.header .searchTop .inputWrap{display: table-cell; width: 100%}
-.header .searchTop input[type="text"]{width: 100%; height: 42px; padding: 0 10px; font-size: 15px; color: #666; background-color: #f8f8f8}
-.header .searchTop .btnSearch{display: inline-block; width: 44px; height: 42px}
-.header .searchTop .btnClose{display: block; width: 26px; height: 26px; position: absolute; top: 14px; right: -4px; background: url(../images/btn_close_search.png) no-repeat center; text-indent: -9999px}
-.header .searchTop .dimmed{position: fixed; top: 71px; left: 0; width: 100%; height: 100%; background: #000; opacity: .7; z-index: 8}
 .contents{position: relative;}
 .footer{padding: 26px 0; background-color: #efefef; border-top: 1px solid #dcdcdc;}
 .footer .inner{color: #666}
 .footer span{line-height: 22px}
 .footer address{display: inline-block; margin-left: 20px; font-size: 13px; line-height: 22px}
 
+.searchTop{display: none; position: absolute; top: 100%; left: 0; width: 100%; border-top: 1px solid #ddd; border-bottom: 1px solid #cecece; z-index: 10}
+.searchTop .inner{position: relative; width: 700px; padding: 18px 0 22px}
+.searchTop .searchArea{position: relative; z-index: 9; background-color: #f8f8f8}
+.searchTop .searchBox{display: table; width: 100%; border-bottom: 1px solid #000; font-size: 0}
+.searchTop .inputWrap{display: table-cell; width: 100%}
+.searchTop input[type="text"]{width: 100%; height: 42px; padding: 0 10px; font-size: 14px; background-color: #f8f8f8}
+.searchTop .searchBtn{display: inline-block; width: 42px; height: 42px; background-size: 21px;}
+.searchTop .btnClose{display: block; width: 26px; height: 26px; position: absolute; top: 8px; left: 100%; background: url(../images/btn_close_search.png) no-repeat center; text-indent: -9999px}
+.searchTop .dimmed{position: fixed; top: 71px; left: 0; width: 100%; height: 100%; background: #000; opacity: .7; z-index: 8}
+
 .topVisual{height: 276px; padding: 48px 0; background: url(../images/bg_visual.png) center 0; color: #fff;}
-.topVisual .inner{position: relative; padding: 14px 0 0;}
+.topVisual .inner{position: relative; padding: 14px 600px 0 0;}
 .topVisual .title{font-size: 28px}
 .topVisual .desc{padding: 30px 0 0; font-size: 13px; line-height: 22px}
 .topVisual .linkMore{height: 30px; margin: 26px 0 0; padding: 0 22px; border: 1px solid #fff; font-size: 13px; line-height: 28px; transition: background .1s}
@@ -78,22 +101,24 @@
 .finder .line{position: relative; line-height: 36px; text-align: left; font-size: 0;}
 .finder .line + .line{margin-top: 16px;}
 .finder .line > *{font-size: 14px;}
-.finder .line > span:first-of-type{min-width: 48px; text-align: right;}
+.finder .line > span:first-of-type{min-width: 36px; text-align: right;}
 .finder select{width: 220px; height: 36px; margin: 0 12px 0 10px; padding: 0 40px 0 14px; border: 1px solid #dd5c61; letter-spacing: -.02em;	background: #fff url(../images/selectbox1.png) no-repeat right 14px center;}
 .finder .NextBtn{position: absolute; top: 0; right: 0; height: 36px; padding: 0 20px; line-height: 36px; background-color: #c6464b; color: #fff; font-weight: 700; text-align: center;}
 .finder .line.disabled{opacity: .5;}
 .finder .line.disabled .NextBtn{display: none;}
 .finder .line.disabled select, .finder select:disabled{border-color: #888;}
-
-.btnSerachDetail{position: absolute; top: 0; left: 100%; height: 40px; padding: 0 30px 0 10px; margin-left: 20px; color: #bf3f44; background: url(../images/selectbox1.png) no-repeat right 10px center; white-space: nowrap}
-
-.searchDetail{padding-top: 50px}
-.searchDetail span{margin-left: 20px; font-size: 13px; line-height: 16px}
-.searchDetail div{display: inline-block}
-.searchDetail div + div{margin-left: 21px; border-left: 1px solid #dadada}
+.finder .detail{margin-top: 24px; font-size: 0; line-height: 16px;}
+.finder .detail strong{padding-right: 14px; font-size: 14px;}
+.finder .detail .detailOption{position: relative; display: inline-block; font-size: 13px;}
+.finder .detail .detailOption em{margin-right: 10px; font-weight: 500;}
+.finder .detail .detailOption + .detailOption{padding-left: 10px; margin-left: 9px;}
+.finder .detail .detailOption + .detailOption:before{display: block; content: ''; position: absolute; top: 2px; left: 0; width: 1px; height: 12px; background-color: #dadada;}
+.finder .inpD{padding-left: 20px;}
+.finder .inpD input[type="checkbox"]:checked + .icon{background-position: -32px -16px}
+.finder .inpD + .inpD{margin-left: 6px;}
 
 /*Front*/
-.frontCont{width: 1200px; margin: 0 auto; padding: 60px 0 150px; font-size: 13px}
+.frontCont{width: 1200px; margin: 0 auto; padding: 50px 0 150px; font-size: 13px}
 .frontCont hr.line{height: 1px; margin: 45px 0; background-color: #dadada;}
 .frontCont h2{margin-bottom: 40px; font-size: 22px; font-weight: 500; text-transform: uppercase;}
 .frontCont h3{margin-bottom: 20px; font-size: 17px; font-weight: 500}
@@ -104,6 +129,7 @@
 .frontCont .tabMenu li{width: 25%;}
 .frontCont .tabMenu button{height: 50px; padding: 0 10px; background-color: #fff; font-size: 13px;}
 .frontCont .tabMenu li.active button{border-color: #c6464b;}
+.tabMenu.applyTab{margin-bottom: 40px;}
 
 .finderManual{display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; flex-direction: row; width: 100%; justify-content: space-between;}
 .finderManual li{position: relative; display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; align-items: center; width: 340px; min-height: 162px; padding: 30px 60px; background-color: #f4f4f4; border-radius: 12px;}
@@ -172,14 +198,13 @@
 .visa15 .icon{background-position: -100px -200px;} 	/*15.외교공무*/
 
 /*신용카드*/
-.cardList{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex;}
+.cardList{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; margin: 20px 0 0;}
 .cardList li{width: 100%; padding: 22px 0; border: 1px solid #dadada; text-align: center; vertical-align: middle; table-layout: fixed;}
 .cardList li + li{margin-left: 15px;}
 .cardList li span{display: inline-flex; flex-direction: column; justify-content: center; height: 40px;}
 .cardList li p{margin-top:10px; font-size: 13px; color: #666666;}
 
-.titleDot:before{display: inline-block; content: ''; width: 2px; height: 2px; margin-right: 3px; background-color: #636363; vertical-align: super;}
-.processList{margin: 12px 0 6px; font-size: 0;}
+.processList{margin: 0 0 -16px; font-size: 0;}
 .processList li{position: relative; display: inline-block; width: 210px; margin: 0 60px 16px 0; border: 1px solid #dadada; font-size: 13px;}
 .processList li:after{display: block; content: ''; position: absolute; top: 50%; left: 100%; width: 12px; height: 14px; margin: -7px 0 0 24px; background: url(../images/arrow_process.png);}
 .processList li:nth-child(4n){margin-right: 0;}
@@ -190,42 +215,65 @@
 .processList .top span{padding-left: 25px; font-size: 13px; background: url(../images/icon_person.png) no-repeat;}
 .processList .top span.typeBlue{background-position: 0 -19px; color: #467fc6}
 .processList .top span.typeRed{background-position: 0 -38px; color: #c6464b}
+.processList .top span.typeGreen{background-position: 0 -57px; color: #31abaf}
 .processList .top span + span{margin-left: 12px;}
 .processList .desc{min-height: 100px; padding: 13px 0 11px; margin: 0 20px; border-top: 1px solid #dadada;}
 .processList .desc strong{display: block; min-height: 53px; font-size: 14px; line-height: 22px}
 .processList .desc p{color: #666}
 .processList .arrowN{width: 22px; height: 11px; margin-top: 5px; background: url(../images/arrow_visalist2.png) no-repeat center; text-indent: -9999px; opacity: .7}
+.processList + p{margin-top: 20px;}
 
 .txtTable{border-bottom: 1px solid #dadada}
 .txtTable tbody tr{border-top: 1px solid #dadada;}
 .txtTable tbody th{padding: 22px 20px; background-color: #f4f4f4; font-weight: 500; line-height: 22px; vertical-align: top; text-align: left; word-break: keep-all;}
+.txtTable tbody th span{font-size: 12px; color: #666}
 .txtTable tbody td{padding: 22px 20px; line-height: 22px;}
+.txtTable .imgWrap{display: inline-block; margin: 24px 0 10px -5px}
+.txtTable .imgWrap p{margin-top: 5px; text-align: center;}
 .txtTable .listDot{margin: 0 0 4px;}
-.txtTable .listDot li{line-height: 22px; color: #333}
-.txtTable .listDot li + li{margin-top: 0;}
-.txtTable .listDot > *::before{top: 10px;}
 .txtTable * + .listDot{margin-top: 2px;}
 .txtTable .divBox{width: 760px; margin: 12px 0 14px;}
 .txtTable .btnVisaMenu{height: 30px; padding: 0 10px; margin: -8px 0 -5px 8px; min-width: 124px; font-size: 13px; line-height: 28px; border: 1px solid #333;}
+.txtTable + h3{margin-top: 40px;}
 
 .tableTop.btnManual{margin-top: -38px;}
 .btnManual a{padding-left: 32px; color: #333; line-height: 25px; background: url(../images/icon_document.png) no-repeat left center;}
 .btnManual a + a{margin-left: 30px;}
 
-.listDot{margin-top: 24px;}
 ul[class*="list"]{text-align: left}
-ul[class*="list"] > *{position: relative; word-break: keep-all; line-height: 1.3}
-ul[class*="list"] > * + *{margin-top: 6px;}
-ul[class*="list"] > *::before{display: block; content: ''; position: absolute; left: 0}
-.listDot > *{padding-left: 8px; color: #666;}
-.listDot > *::before{width: 2px; height: 2px; background: #8a8a8a; top: 6.5px;}
+ul[class*="list"] > *{position: relative; word-break: keep-all;}
+ul[class*="list"] > *::before{display: block; position: absolute; left: 0}
+.listDot{margin-top: 24px;}
+.listDot > *{padding-left: 8px; line-height: 22px; color: #333}
+.listDot > *::before{content: ''; width: 2px; height: 2px; background: #8a8a8a; top: 10px;}
 
-.listNum{}
+.listNum{margin-top: 10px;}
 .listNum li{color: #666; line-height: 22px}
 .listNum li span{color: #333}
 .listNum li i{display: inline-block; width: 15px; height: 15px; margin: 4px 4px 0 0; background-color: #888; border-radius: 50%; font-size: 11px; line-height: 15px; color: #fff; font-style: normal; text-align: center;}
 .listNumber{margin: 14px 0 0 12px; list-style: decimal;}
 .listNumber > li + li{margin-top: 10px;}
+
+.listDash > *{padding-left: 5px;}
+.listDash > *::before{content: '-'; line-height: 20px;}
+
+.titleDot{position: relative; margin-bottom: 12px;}
+.titleDot:before{display: inline-block; content: ''; width: 2px; height: 2px; margin-right: 3px; background-color: #636363; vertical-align: super;}
+.txtDash{position: relative; padding-left: 5px;}
+.txtDash:before{display: block; content: '-'; position: absolute; top: 0; left: 0;}
+
+/*검색결과*/
+.resultTxt{margin-top: -20px; color: #666}
+.resultTxt b{color: #333}
+.searchResult{margin-top: 40px; border-bottom: 1px solid #dadada}
+.searchResult li{padding: 12px 40px 16px 20px; border-top: 1px solid #dadada;}
+.searchResult li a{padding: 8px 17px 8px 0; font-size: 14px; font-weight: 500; background: url(../images/arrow_visalist2.png) no-repeat right center;}
+.searchResult li p{padding: 2px 10px 0; font-size: 13px; line-height: 1.4; color: #666; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+
+/*비자전체리스트*/
+.table.visaAll{table-layout: fixed;}
+.visaAll td p{display: inline-block; min-width: 122px; text-align: left;}
+.visaAll td a{display: inline-block; min-width: 50px; font-size: 13px;  background: url(../images/arrow_visalist2.png) no-repeat right center; text-align: left;}
 
 /*Admin*/
 .admin h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700; border-bottom: 1px solid #999}
@@ -279,27 +327,6 @@ ul[class*="list"] > *::before{display: block; content: ''; position: absolute; l
 .inpD input[type="checkbox"]:checked + .icon{background-position: -16px -16px}
 .inpD input[type="checkbox"]:disabled + .icon{background-position: -16px -32px}
 .inpD + .inpD{margin-left: 16px}
-
-/*버튼정의*/
-.btn{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; color: #fff; text-align: center; transition: background .1s}
-.btn.blue{background-color: #1a6fa0}
-.btn.grey{background-color: #888}
-.btn.white{background-color: #fff; color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px;}
-.btnBorder{min-width: 86px; height: 24px; padding: 0 14px; font-size: 13px; line-height: 22px; color: #333; text-align: center; border: 1px solid #bbb}
-.btnBorder.blue{border-color: #1a6fa0; color: #1a6fa0;}
-.btnGroup{font-size: 0}
-.btnGroup > *{display: inline-block}
-.btnGroup > * + *{margin-left: 8px}
-.btnGroup.btm{display: block; margin: 30px 0 0; text-align: center}
-.btnGroup.btm > *{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; text-align: center; transition: background .1s}
-.btnGroup.btm > *:first-of-type{color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px}
-.btnGroup.btm > *:last-of-type{background-color: #1a6fa0; color: #fff}
-.btnGroup.btm > *:only-child{background-color: #1a6fa0; color: #fff; margin-left: 0}
-.searchBtn{width: 36px; height: 36px; background: url(../images/common/icon_search.svg) no-repeat center; text-indent: -9999px}
-.lineMoveBtn{width: 30px; height: 24px; background: url(../images/split.png) no-repeat; text-indent: -9999px}
-.lineMoveBtn.up{background-position: -32px -50px}
-.lineMoveBtn.dw{background-position: -32px -74px}
-.lineMoveBtn + .lineMoveBtn{margin-left: 2px;}
 
 /*탭메뉴*/
 .tabMenu{font-size: 0}
@@ -502,17 +529,21 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 	.paging a.active{color: #1a6fa0; font-weight: 500; text-decoration: underline}
 
 /* popup */
-	.popWrap{position:absolute;top:0;left:0;width:100%;height:100%; z-index: 1000}/*레이어박스높이가짧을경우:fixed*/
+	.popWrap{display: none; position:absolute;top:0;left:0;width:100%;height:100%; z-index: 1000}/*레이어박스높이가짧을경우:fixed*/
 	.popWrap .popDim{position:fixed;top:0;left:0;width:100%;height:100%;background:black;opacity:0.6;filter:alpha(opacity=60)}
-	.popWrap .popBox{position: fixed; top: 50%; left: 50%; text-align: center; background-color: #fff; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%)}
+	.popWrap .popBox{position: fixed; top: 50%; left: 50%; width: 900px; padding-bottom: 50px; background-color: #fff; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%)}
 	.popWrap .popBox{min-width: 400px}
-	.popWrap .btnClose{position: absolute; bottom: 100%; right: -20px; width: 72px; height: 72px; padding: 20px; background: url(../images/btn_close_pop.png) no-repeat center}
-	.popWrap .popTop{padding: 15px 30px; background-color: #b3b8bc}
-	.popWrap .popTop .title{color: #fff; font-size: 22px; font-weight: 400; line-height: 1.3}
-	.popWrap .popCont{min-width: 410px; padding: 34px 50px 30px}
-	.popWrap .btnGroup.btm{margin: 30px auto 0}
-	.popWrap .btnGroup.btm .btn{min-width: auto; width: 150px; height: 42px; font-size: 15px; line-height: 42px}
-	.popWrap .btnGroup.btm > * + *{margin-left: 10px}
+	.popWrap .closePopBtn{position: absolute; bottom: 100%; right: -10px; width: 42px; height: 42px;background: url(../images/common/btn_x_white.svg) no-repeat center; background-size: 22px; text-indent: -9999px; outline: 0}
+	.popWrap .titleWrap{padding: 15px 30px 14px; border-bottom: 1px solid #dadada; text-align: center;}
+	.popWrap h2{font-size: 22px; font-weight: 500; line-height: 1.4}
+	.popWrap h3{margin-bottom: 18px; font-size: 17px; line-height: 20px; font-weight: 500;}
+	.popWrap .popArea{padding: 40px 20px 0;}
+	.popWrap .scrollBox{max-height: 480px; overflow-y: auto;}
+	.popWrap .btnGroup{margin: 30px auto 0; text-align: center;}
+
+	.countryList table td{vertical-align: middle;}
+	.countryList table td > p{padding: 0 20px; line-height: 22px;}
+
 
 /*미디어쿼리*/
 @media screen and (max-width:1000px){}

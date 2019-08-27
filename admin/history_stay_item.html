@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>변경이력-체류자격항목</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body class="admin">
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자네비게이터 Admin</a></h1>
+
+			<!-- GNB -->
+			<ul class="gnb">
+				<li class="active"><a href="#">콘텐츠관리</a></li>
+				<li><a href="#">계정관리</a></li>
+			</ul>
+			<!-- //GNB -->
+
+			<div class="topMenu">
+				<p class="currentInfo">
+					<span><em>Admin1234</em>접속 중</span>
+					<span>
+						[최종접속시간 
+						<em>2019.07.08</em>
+						<em>12:13:15</em>
+						/
+						<em>106.247.228.114</em>]
+					</span>
+				</p>
+				<a href="#">로그아웃</a>
+				<a href="#">비밀번호 변경</a>
+				<span>
+					<input type="text" placeholder="검색" class="searchBox">
+					<button type="button" class="searchBtn">검색버튼</button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="contents">
+		<div class="inner">
+
+			<!-- LNB -->
+			<div class="aside">
+				<ul class="lnb">
+					<li>
+						<span>체류자격 관리</span>
+						<ul class="subM">
+							<li><a href="#">체류자격 코드 관리</a></li>
+							<li><a href="#">체류자격 항목 관리</a></li>
+							<li><a href="#">체류자격 등록 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="#">첨부파일 관리</a></li>
+					<li>
+						<span>수수료 관리</span>
+						<ul class="subM">
+							<li><a href="#">MAIN 관리</a></li>
+							<li><a href="#">수수료 조정국가 관리</a></li>
+							<li><a href="#">수수료 면제국가 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>비자표출 관리</span>
+						<ul class="subM">
+							<li><a href="#">법무부</a></li>
+							<li><a href="#">중국(광저우)</a></li>
+						</ul>
+					</li>
+					<li>
+						<span>변경 이력 확인</span>
+						<ul class="subM">
+							<li><a href="#">체류자격 코드 이력</a></li>
+							<li class="active"><a href="#">체류자격 항목 이력</a></li>
+							<li><a href="#">체류자격 등록 이력 </a></li>
+							<li><a href="#">첨부파일 등록 이력</a></li>
+							<li><a href="#">수수료 변경 이력</a></li>
+							<li><a href="#">비자노출 관리 이력</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- //LNB -->
+
+			<div class="cont">
+
+				<h3>체류자격 항목 이력</h3>
+
+				<!-- 2단영역 -->
+				<div class="columnWrap col2">
+
+					<!-- 비교계정1 -->
+					<div class="account">
+						
+						<div class="titleWrap">
+							<b>관리계정 : <em>Admin1</em></b>
+							<span class="date">작성일 : 2019-09-28</span>
+						</div>
+
+						<h5>TEXT</h5>
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">TEXT 등록영역</p>
+									<div class="box">
+										<select name="" id="" class="selectD" disabled>
+											<option value="">1개</option>
+											<option value="">2개</option>
+											<option value="">3개</option>
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<h5>RADIO 버튼</h5>
+						<table class="table input">
+							<colgroup>
+								<col style="width: 56px" />
+								<col style="width: auto" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>선택</th>
+									<th>버튼명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="radio1" class="inp" disabled>
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td><input type="text" class="inpT" value="버튼이름1" disabled></td>
+								</tr>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="radio1" class="inp" disabled>
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td><input type="text" class="inpT" value="버튼이름2" disabled></td>
+								</tr>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="radio1" class="inp" disabled>
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td><input type="text" class="inpT" value="버튼이름3" disabled></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h5>체크박스 버튼</h5>
+						<table class="table input">
+							<colgroup>
+								<col style="width: 56px" />
+								<col style="width: auto" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>선택</th>
+									<th>버튼명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="radio2" class="inp" disabled>
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td><input type="text" class="inpT" value="버튼이름1" disabled></td>
+								</tr>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="radio2" class="inp" disabled>
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td><input type="text" class="inpT" value="버튼이름2" disabled></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h5>첨부파일</h5>
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">첨부파일 등록영역</p>
+									<div class="box">
+										<select name="" id="" class="selectD" disabled>
+											<option value="">1개</option>
+											<option value="">2개</option>
+											<option value="">3개</option>
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<h5>URL 입력</h5>
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">URL 등록영역</p>
+									<div class="box">
+										<select name="" id="" class="selectD" disabled>
+											<option value="">1개</option>
+											<option value="">2개</option>
+											<option value="">3개</option>
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<h5><em class="red">*</em>등록사유</h5>
+						<textarea disabled>신규등록</textarea>
+					</div>
+					<!-- //비교계정1 -->
+
+					<!-- 비교계정2 -->
+					<div class="account">
+						
+						<div class="titleWrap">
+							<b>관리계정 : <em>Admin2</em></b>
+							<span class="date">작성일 : 2019-09-28</span>
+						</div>
+
+						<h5>TEXT</h5>
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">TEXT 등록영역</p>
+									<div class="box">
+										<select name="" id="" class="selectD" disabled>
+											<option value="">1개</option>
+											<option value="">2개</option>
+											<option value="">3개</option>
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<h5>RADIO 버튼</h5>
+						<table class="table input">
+							<colgroup>
+								<col style="width: 56px" />
+								<col style="width: auto" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>선택</th>
+									<th>버튼명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="radio3" class="inp" disabled>
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td><input type="text" class="inpT" value="버튼이름1" disabled></td>
+								</tr>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="radio3" class="inp" disabled>
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td><input type="text" class="inpT" value="버튼이름2" disabled></td>
+								</tr>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="radio3" class="inp" disabled>
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td><input type="text" class="inpT" value="버튼이름3" disabled></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h5 class="red">체크박스 버튼</h5>
+						<table class="table input">
+							<colgroup>
+								<col style="width: 56px" />
+								<col style="width: auto" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>선택</th>
+									<th>버튼명</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+
+						<h5>첨부파일</h5>
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">첨부파일 등록영역</p>
+									<div class="box">
+										<select name="" id="" class="selectD" disabled>
+											<option value="">1개</option>
+											<option value="">2개</option>
+											<option value="">3개</option>
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<h5>URL 입력</h5>
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title red">URL 등록영역</p>
+									<div class="box">
+										<select name="" id="" class="selectD" disabled>
+											<option value="">1개</option>
+											<option value="">2개</option>
+											<option value="" selected>3개</option>
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<h5><em class="red">*</em>수정사유</h5>
+						<textarea class="red" disabled>체크박스 폼 삭제, URL 등록영역 추가</textarea>
+					</div>
+					<!-- //비교계정2 -->
+					
+				</div>
+				<!-- //2단영역 -->
+
+				<span class="btnGroup btm">
+					<button type="button" class="btn">목록</button>
+				</span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	
+</body>
+</html>

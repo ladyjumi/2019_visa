@@ -56,18 +56,15 @@ $(window).scroll(function(){
 
 function topButtonWeb(){
 	$('.topButtonArea').each(function(){
-		var BodyHeight = $('body, html').height();	
-		var tableNum = $('.contents').offset();
-		var tableHeight = $('.contents').height();
-		var tableBottomNum = tableNum.top + tableHeight + 36;
+		var BodyHeight = $('body, html').height();
+		var wrapHeight = $('.wrap').height();	
+		var FooterHeight = $('.footer').outerHeight();
+		var gap = 30;
 		var Top = $(window).scrollTop();	
-		if ((tableBottomNum - BodyHeight) < Top )
-		{
-			$('.topButtonArea').removeClass('fix');
-		} else if ((tableBottomNum - BodyHeight) > Top )
-		{
-			$('.topButtonArea').addClass('fix');
-		}
+		if ((wrapHeight - FooterHeight - BodyHeight) < Top )
+		{$('.topButtonArea').removeClass('fix').css('bottom',FooterHeight+gap);}
+		else if ((wrapHeight - FooterHeight - BodyHeight) > Top )
+		{$('.topButtonArea').addClass('fix').css('bottom',gap);}
 	})
 }
 
@@ -128,11 +125,16 @@ function adminLNB(){
 	})
 }
 
-function regBoxOpen(){
-	$('.registBox .openBtn').click(function(){
-		$(this).toggleClass('closed')
-		.closest('.titleBox')
-		.next('.contBox').slideToggle(200);
+function viewBoxOpen(){
+	$('.viewBox').each(function(){
+		$('.viewBox.open .contBox').show();
+		$(this).find('.titleBox').click(function(){
+			if ($(this).closest('.viewBox').hasClass('open')) {
+				$(this).next('.contBox').hide().closest('.viewBox').removeClass('open');
+			} else {
+				$(this).next('.contBox').show().closest('.viewBox').addClass('open');	
+			}
+		})
 	})
 }
 
@@ -166,7 +168,7 @@ $(function(){
 	tabMenu();
 	selectedTableLine();
 	adminLNB();
-	regBoxOpen();
+	viewBoxOpen();
 	visaListMenu();
 	openPop();
 

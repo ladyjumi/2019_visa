@@ -6,37 +6,60 @@
 	a, button, input, select{font-size: 14px}
 	body.hidden{overflow: hidden; height: 100%;}
 
-	/*버튼정의*/
-	.btn{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; color: #fff; text-align: center; transition: background .1s}
-	.btn.red{background-color: #c6464b}
-	.btn.blue{background-color: #1a6fa0}
-	.btn.grey{background-color: #888}
-	.btn.white{background-color: #fff; color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px;}
-	.btnBorder{min-width: 86px; height: 24px; padding: 0 14px; font-size: 13px; line-height: 22px; color: #333; text-align: center; border: 1px solid #bbb}
-	.btnBorder.blue{border-color: #1a6fa0; color: #1a6fa0;}
-	.btnGroup{font-size: 0}
-	.btnGroup > *{display: inline-block}
-	.btnGroup > * + *{margin-left: 8px}
-	.btnGroup.btm{display: block; margin: 30px 0 0; text-align: center}
-	.btnGroup.btm > *{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; text-align: center; transition: background .1s}
-	.btnGroup.btm > *:first-of-type{color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px}
-	.btnGroup.btm > *:last-of-type{background-color: #1a6fa0; color: #fff}
-	.btnGroup.btm > *:only-child{background-color: #1a6fa0; color: #fff; margin-left: 0}
-	.searchBtn{width: 36px; height: 36px; background: url(../images/common/icon_search.svg) no-repeat center; text-indent: -9999px; cursor: pointer;}
-	.lineMoveBtn{width: 30px; height: 24px; background: url(../images/split.png) no-repeat; text-indent: -9999px}
-	.lineMoveBtn.up{background-position: -32px -50px}
-	.lineMoveBtn.dw{background-position: -32px -74px}
-	.lineMoveBtn + .lineMoveBtn{margin-left: 2px;}
+/*버튼정의*/
+.btn{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; color: #fff; text-align: center; transition: background .1s}
+.btn.red{background-color: #c6464b}
+.btn.blue{background-color: #1a6fa0}
+.btn.grey{background-color: #888}
+.btn.white{background-color: #fff; color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px;}
+.btnBorder{min-width: 86px; height: 24px; padding: 0 14px; font-size: 13px; line-height: 22px; color: #333; text-align: center; border: 1px solid #bbb}
+.btnBorder.blue{border-color: #1a6fa0; color: #1a6fa0;}
+.btnGroup{font-size: 0;}
+.btnGroup > *{display: inline-block}
+.btnGroup > * + *{margin-left: 8px}
+.btnGroup.btm{display: block; margin: 30px 0 0; text-align: center}
+.btnGroup.btm > *{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; text-align: center; transition: background .1s}
+.btnGroup.btm > *:first-of-type{color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px}
+.btnGroup.btm > *:last-of-type{background-color: #1a6fa0; color: #fff}
+.btnGroup.btm > *:only-child{background-color: #1a6fa0; color: #fff; margin-left: 0}
+.searchBtn{width: 36px; height: 36px; background: url(../images/common/icon_search.svg) no-repeat center; text-indent: -9999px; cursor: pointer;}
+.lineMoveBtn{width: 30px; height: 24px; background: url(../images/split.png) no-repeat; text-indent: -9999px}
+.lineMoveBtn.up{background-position: -32px -50px}
+.lineMoveBtn.dw{background-position: -32px -74px}
+.lineMoveBtn + .lineMoveBtn{margin-left: 2px;}
 
-	/*탑버튼*/
-	.topButtonArea{position: absolute; left: 50%; bottom: 0; width: 1200px; margin-left: -600px;}
-	.topButtonArea.fix{position: fixed; bottom: 30px;}
-	.backTop{display: block; position: absolute; bottom: 0; right: -36px; z-index: 999; width: 36px; height: 36px; text-indent: -9999px; background: #2a2b2c url(../images/btn_top.png) no-repeat; transition: background .1s; cursor: pointer;}
+/*툴팁*/
+.tooltip{position: relative; margin: 0 0 0 4px;}
+.tooltip .tipIcon{width: 20px; height: 20px; background: url(../images/common/icon_tooltip.svg) no-repeat center; background-size: 18px; text-indent: -9999px;}
+.tooltip .tipTxt{display: none; position: absolute; top: 100%; left: -39px; width: 310px; padding-top: 20px; z-index: 1;}
+.tooltip .tipTxt > em{position: relative; padding: 16px 20px; background-color: #f4f4f4; border: 1px solid #999; color: #333; font-size: 13px; font-weight: 400; line-height: 22px; white-space: normal; text-align: left; cursor: default; box-shadow: 6px 6px 10px rgba(0,0,0,0.2);}
+.tooltip .tipTxt > em:before{display: block; content: ''; position: absolute; bottom: 100%; left: 40px; width: 16px; height: 16px; background: url(../images/arrow_tooltip.png) no-repeat;}
+.tooltip:hover .tipTxt{display: block;}
+.active .tooltip .tipIcon{background: url(../images/common/icon_tooltip_red.svg) no-repeat center; background-size: 18px;}
+.tooltip.right .tipTxt{left: unset; right: -39px;}
+.tooltip.right .tipTxt > em:before{left: unset; right: 40px;}
+.tooltip.center .tipTxt{left: 50%; transform: translateX(-50%);}
+.tooltip.center .tipTxt > em:before{left: 50%; margin-left: -8px;}
+
+/*탑버튼*/
+.topButtonArea{position: absolute; left: 50%; width: 1200px; margin-left: -600px;}
+.topButtonArea.fix{position: fixed; bottom: 0;}
+.backTop{display: block; position: absolute; bottom: 0; right: -36px; z-index: 999; width: 36px; height: 36px; text-indent: -9999px; background: #2a2b2c url(../images/btn_top.png) no-repeat; transition: background .1s; cursor: pointer;}
+
+/*뷰박스*/
+.viewBox + .viewBox{margin-top: 10px}
+.viewBox .titleBox{position: relative; padding: 11px 20px; cursor: pointer;}
+.viewBox .titleBox p{font-weight: 500; line-height: 1.45}
+.viewBox .titleBox .openBtn{display: block; position: absolute; top: 0; right: 0; width: 42px; height: 100%; padding: 0 21px; text-align: center;}
+.viewBox .titleBox .openBtn:before,
+.viewBox .titleBox .openBtn:after{position: absolute; top: 50%; left: 50%; content: ''; display: block; width: 11px; height: 1px; margin: -0.5px 0 0 -5.5px; background-color: #444; transition: .1s;}
+.viewBox .titleBox .openBtn:after{transform: rotate(-90deg);}
+.viewBox.open .titleBox .openBtn:after{transform: rotate(0deg);}
+.viewBox .contBox{display: none; padding: 20px; border: 1px solid #dadada; border-top: 0}
 
 /*레이아웃*/
-.wrap{min-width: 1200px}
+.wrap{position: relative; min-width: 1200px}
 .inner{width: 1200px; margin: 0 auto}
-
 .header{position: relative; border-bottom: 1px solid #cecece}
 .header > .inner{position: relative; padding: 17px 0;}
 .header h1{display: inline-block}
@@ -56,7 +79,6 @@
 .header .topMenu select.lang option{background-color: #f5f6fa}
 .header .topMenu select.lang + .searchBtn{width: 21px;background-size: 21px; outline: 0;}
 .header .topMenu select.lang + .searchBtn:before{left: -13px}
-.contents{position: relative;}
 .footer{padding: 26px 0; background-color: #efefef; border-top: 1px solid #dcdcdc;}
 .footer .inner{color: #666}
 .footer span{line-height: 22px}
@@ -125,6 +147,7 @@
 .frontCont h3 em{margin-left: 2px; font-size: 14px; color: #666; vertical-align: baseline;}
 .frontCont h4{margin: 40px 0 14px; font-size: 14px; font-weight: 500}
 .frontCont h4 + p.txt{color: #666}
+.frontCont .btnGroup{text-align: center;}
 .frontCont .table thead{background-color: #f4f4f4; border-color: #d7d7d7}
 .frontCont .tabMenu li{width: 25%;}
 .frontCont .tabMenu button{height: 50px; padding: 0 10px; background-color: #fff; font-size: 13px;}
@@ -142,6 +165,26 @@
 .finderManual li:nth-child(3):before{background-position: 0 -144px;}
 .finderManual li:after{display: block; content: ''; position: absolute; top: 50%; left: 100%; width: 20px; height: 18px; margin: -9px 0 0 36px; background: url(../images/split.png); background-position: -32px -100px}
 .finderManual li:last-of-type:after{display: none;}
+
+/*finder step3 검색결과*/
+.resultVisa .addTxt{margin-top: 8px; color: #333}
+.resultVisa .titleBox{padding: 11px 30px; border: 1px solid #dadada;}
+.resultVisa .titleBox p{font-size: 14px; font-weight: 500}
+.resultVisa .contBox{padding: 22px 30px 30px; font-size: 13px; line-height: 22px;}
+.resultVisa.open .titleBox{background-color: #333; border-color: #333}
+.resultVisa.open .titleBox p{color: #fff}
+.resultVisa.open .titleBox .openBtn:before, 
+.resultVisa.open .titleBox .openBtn:after{background-color: #fff}
+.resultVisa .listNum2{margin: 8px 0 0;}
+.resultVisa .listNumber{margin-top: 0;}
+.resultVisa .listNumber > li + li{margin-top: 2px;}
+.resultVisa .fileDown{margin: -4px 0;}
+.resultVisa .fileDown .btn{height: 30px; line-height: 30px; font-size: 13px; font-weight: 400}
+.resultVisa .tabMenu{margin: 30px -3px 30px 0;}
+.resultVisa .tabMenu li{width: 33.3333%}
+.resultVisa .tabMenu li button{font-size: 14px}
+.resultVisa .tabMenu li.active button{color: #c6464b}
+
 
 /*비자리스트*/
 .visaList .inBox{position: relative; display: block; width: 100%; border: 1px solid #dadada}
@@ -241,21 +284,22 @@
 .btnManual a + a{margin-left: 30px;}
 
 ul[class*="list"]{text-align: left}
-ul[class*="list"] > *{position: relative; word-break: keep-all;}
-ul[class*="list"] > *::before{display: block; position: absolute; left: 0}
+ul[class*="list"] > *{position: relative; word-break: keep-all; line-height: 22px;}
+ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .listDot{margin-top: 24px;}
-.listDot > *{padding-left: 8px; line-height: 22px; color: #333}
+.listDot > *{padding-left: 8px; color: #333}
 .listDot > *::before{content: ''; width: 2px; height: 2px; background: #8a8a8a; top: 10px;}
-
+.listDash > *{padding-left: 5px;}
+.listDash > *::before{content: '-'; top: 0px; line-height: 20px;}
 .listNum{margin-top: 10px;}
-.listNum li{color: #666; line-height: 22px}
-.listNum li span{color: #333}
-.listNum li i{display: inline-block; width: 15px; height: 15px; margin: 4px 4px 0 0; background-color: #888; border-radius: 50%; font-size: 11px; line-height: 15px; color: #fff; font-style: normal; text-align: center;}
+.listNum > li{color: #666;}
+.listNum > li span{color: #333}
+.listNum > li i{display: inline-block; width: 15px; height: 15px; margin: 4px 4px 0 0; background-color: #888; border-radius: 50%; font-size: 11px; line-height: 15px; color: #fff; font-style: normal; text-align: center;}
 .listNumber{margin: 14px 0 0 12px; list-style: decimal;}
 .listNumber > li + li{margin-top: 10px;}
+.listNum2 > li{margin-bottom: 2px; padding-left: 13px; text-indent: -13px;}
+.listNum2 > li ul{text-indent: 0;}
 
-.listDash > *{padding-left: 5px;}
-.listDash > *::before{content: '-'; line-height: 20px;}
 
 .titleDot{position: relative; margin-bottom: 12px;}
 .titleDot:before{display: inline-block; content: ''; width: 2px; height: 2px; margin-right: 3px; background-color: #636363; vertical-align: super;}
@@ -272,8 +316,12 @@ ul[class*="list"] > *::before{display: block; position: absolute; left: 0}
 
 /*비자전체리스트*/
 .table.visaAll{table-layout: fixed;}
-.visaAll td p{display: inline-block; min-width: 122px; text-align: left;}
+.visaAll td p{display: inline-block; min-width: 155px; text-align: left;}
 .visaAll td a{display: inline-block; min-width: 50px; font-size: 13px;  background: url(../images/arrow_visalist2.png) no-repeat right center; text-align: left;}
+
+.visaDesc{padding: 18px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada}
+.visaDesc p.txt{line-height: 22px; margin: 3px 0;}
+.visaDesc + .addTxt{padding: 18px;}
 
 /*Admin*/
 .admin h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700; border-bottom: 1px solid #999}
@@ -294,15 +342,16 @@ ul[class*="list"] > *::before{display: block; position: absolute; left: 0}
 .admin .searchBtn{background-size: 18px}
 .admin textarea{width: 100%; height: 118px; overflow-y: auto; padding: 20px; font-size: 13px; line-height: 1.5; border: 1px solid #d3d3d3; word-break: keep-all; transition: border .1s}
 .admin textarea:focus{border-color: #999}
+.admin textarea:disabled{color: #aaa; background-color: #f4f4f4}
 
 .wrap.login{min-width: unset; padding: 200px 10px 100px; text-align: center;}
 .logBox{display: block; max-width: 560px; margin: 0 auto; padding: 90px 100px 110px; border: 1px solid #dadada}
 .logBox strong{display: block; margin-bottom: 45px; font-size: 30px}
 .logBox strong span{margin-right: 6px; color: #1a6fa0}
 .logBox .inpT{display: block; width: 100%; height: 40px; margin-bottom: 10px;}
-.logBox .btn{display: block; width: 100%; height: 46px; line-height: 46px}
+.logBox .btn{display: block; width: 100%; height: 46px; line-height: 44px}
 .logBox .btn.blue{margin: 30px 0 10px;}
-.logBox .btn em.circle{width: 17px; height: 17px; margin: 9px 0 0 2px; border: 1px solid #1a6fa0; border-radius: 50%; font-size: 12px; line-height: 15px;}
+.logBox .btn em.circle{width: 17px; height: 17px; margin: 13px 0 0 3px; border: 1px solid #1a6fa0; border-radius: 50%; font-size: 12px; line-height: 15px;}
 
 
 .inpWrap{line-height: 36px}
@@ -312,7 +361,7 @@ ul[class*="list"] > *::before{display: block; position: absolute; left: 0}
 .inpT:disabled{color: #aaa; background-color: #f4f4f4}
 .inpNum{width: 70px}
 .selectD{height: 36px; padding: 0 30px 0 10px; background: #fff url(../images/selectbox1.png) no-repeat right 10px center; border: 1px solid #d3d3d3}
-.selectD:disabled{background-color: #f4f4f4; opacity: .65;}
+.selectD:disabled{background-color: #f4f4f4; opacity: .8;}
 .selectD:focus{border-color: #999}
 .selectD + .selectD{margin-left: 10px;}
 .inpD{position: relative; display: inline-block; padding-left: 23px; font-size: 13px; line-height: 16px; min-width: 16px; min-height: 16px; text-align: left}
@@ -322,10 +371,13 @@ ul[class*="list"] > *::before{display: block; position: absolute; left: 0}
 .inpD input:disabled ~ .text{color: #aaa;}
 .inpD input[type="radio"] + .icon{background-position: 0 0;}
 .inpD input[type="radio"]:checked + .icon{background-position: 0 -16px}
-.inpD input[type="radio"]:disabled + .icon{background-position: 0 -32px}
+.inpD input[type="radio"]:disabled{background-position: 0 0;}
+.inpD input[type="radio"]:checked:disabled + .icon{background-position: 0 -32px}
 .inpD input[type="checkbox"] + .icon{background-position: -16px 0}
 .inpD input[type="checkbox"]:checked + .icon{background-position: -16px -16px}
-.inpD input[type="checkbox"]:disabled + .icon{background-position: -16px -32px}
+.inpD input[type="checkbox"]:disabled + .icon{background-position: -16px 0}
+.inpD input[type="checkbox"]:checked:disabled + .icon{background-position: -16px -32px}
+
 .inpD + .inpD{margin-left: 16px}
 
 /*탭메뉴*/
@@ -457,17 +509,9 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .editWrap .attachBox .inpD .text{line-height: 35px;}
 
 /*등록항목*/
-.registBox + .registBox{margin-top: 10px}
-.registBox textarea{height: 80px; padding: 6px 10px; font-size: 13px; line-height: 21px}
+.registBox .titleBox{background-color: #dbe7ec; border: 1px solid #cadae0}
+.registBox textarea{height: 80px; padding: 6px 10px; line-height: 21px}
 .registBox strong.title{display: block; padding: 20px 0 14px}
-.registBox .titleBox{position: relative; padding: 11px 20px; background-color: #dbe7ec; border: 1px solid #cadae0}
-.registBox .titleBox p{font-weight: 500; line-height: 1.45}
-.registBox .titleBox .openBtn{display: block; position: absolute; top: 0; right: 0; width: 42px; height: 100%; padding: 0 21px; text-align: center;}
-.registBox .titleBox .openBtn:before,
-.registBox .titleBox .openBtn:after{position: absolute; top: 50%; left: 50%; content: ''; display: block; width: 11px; height: 1px; margin: -0.5px 0 0 -5.5px; background-color: #444; transition: .1s;}
-.registBox .titleBox .openBtn.closed:after{transform: rotate(-90deg);}
-.registBox .contBox{padding: 20px; border: 1px solid #dadada; border-top: 0}
-.registBox .contBox textarea{font-size: 13px}
 .registBox .optionTable .cell .title{padding: 12px 20px}
 .registBox .optionTable .cell .boxLine{width: 100%}
 .registBox .optionTable .cell.url .boxLine > .inpT{width: 412px}
@@ -479,9 +523,13 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 /*타이틀회색상자*/
 .titleTxtBox{display: block; margin-bottom: 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; font-weight: 700; line-height: 42px; text-align: center}
 
-/*단*/
+/*이력비교 (2단)*/
 .columnWrap{position: relative; margin-top: 25px; font-size: 0}
 .columnWrap.col2 > div{width: 50%}
+.columnWrap .red{color: #bf3f44 !important;}
+.columnWrap hr.line{margin: 24px 0;}
+.columnWrap .inpD + .inpD{margin-left: 10px;}
+.columnWrap .inpD .text{font-size: 12px}
 .columnWrap .btn{min-width: 70px; height: 30px; padding: 0 10px; line-height: 30px; font-size: 12px}
 .columnWrap .btnBorder{min-width: 70px; height: 20px; line-height: 18px; font-size: 11px}
 .columnWrap .topRight.btnGroup{margin-top: -26px;}
@@ -490,29 +538,48 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap h4{padding: 18px 0 10px; font-size: 13px; border-bottom: 1px solid #999}
 .columnWrap h5{padding: 18px 0 10px; font-size: 12px; font-weight: 500}
 .columnWrap .inpT{height: 30px; padding: 0 6px; font-size: 12px}
-.columnWrap textarea{height: 80px; padding: 12px 16px; font-size: 11px; line-height: 17px}
-.columnWrap select{height: 30px; padding: 0 30px 0 10px; font-size: 12px}.columnWrap > div{display: inline-block; font-size: 12px}
+.columnWrap textarea{height: 70px; padding: 8px 9px; font-size: 11px; line-height: 17px}
+.columnWrap select{height: 30px; padding: 0 30px 0 10px; font-size: 12px}
+.columnWrap > div{display: inline-block; font-size: 12px}
 .columnWrap > div:first-of-type{padding-right: 22px}
 .columnWrap > div:last-of-type{padding-left: 22px}
 .columnWrap > div:last-of-type:after{position: absolute; top: 0; left: 50%; display: block; content: ''; width: 1px; height: 100%; background-color: #cecece}
 .columnWrap .titleWrap{padding: 10px 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; line-height: 18px}
 .columnWrap .titleWrap .date{float: right; font-size: 13px; color: #666}
-.columnWrap .optionTable > li .title{width: 116px; padding: 10px 15px; font-size: 12px; line-height: 30px}
+.columnWrap .optionTable > li .title{width: 116px; padding: 9px 12px; font-size: 12px; line-height: 30px}
 .columnWrap .optionTable > li .title.short{width: auto}
-.columnWrap .optionTable > li .box{min-height: 50px; padding: 10px 12px}
+.columnWrap .optionTable > li .box{min-height: 48px; padding: 9px 11px}
 .columnWrap .optionTable > li .box .inpGroup{margin-top: 7px}
-.columnWrap .optionTable > li .box .inpD{font-size: 12px}
+.columnWrap .optionTable .box.row{padding: 0;}
+.columnWrap .optionTable .box.row .boxLine{padding: 10px;}
 .columnWrap .optionTable input.wide{width: auto; flex: auto}
 .columnWrap .tabMenu button{height: 35px; font-size: 12px; padding: 0 14px}
 .columnWrap .divBox{padding: 16px}
 .columnWrap .divBox .inpGroup{margin-bottom: -10px}
-.columnWrap .divBox .inpGroup .inpD{width: 33.333%; margin-bottom: 10px; font-size: 11px; word-break: break-all}
+.columnWrap .divBox .inpGroup .inpD{width: 33.333%; margin-bottom: 10px; margin-left: 0; word-break: break-all}
 .columnWrap .divBox .inpGroup .inpD .icon{top: 0; margin-top: 0}
-.columnWrap .divBox .text{font-size: 11px; line-height: 17px}
+.columnWrap .divBox p.text{line-height: 17px}
 .columnWrap .table{font-size: 12px}
-.columnWrap .table thead th{padding: 8px 0}
-.columnWrap .table tbody td{padding: 8px 0;}
-
+.columnWrap .table thead th{padding: 8px 0; font-size: 12px}
+.columnWrap .table tbody td{padding: 8px 0; font-size: 11px}
+.columnWrap .titleTxtBox{margin-bottom: 12px; font-size: 13px; line-height: 35px;}
+.columnWrap .viewBox + .viewBox{margin-top: 6px;}
+.columnWrap .registBox{font-size: 12px;}
+.columnWrap .registBox .titleBox{padding: 8px 14px 7px;}
+.columnWrap .registBox .contBox{padding: 14px;}
+.columnWrap .registBox .optionTable .cell .title{width: 100px; padding: 10px 12px;}
+.columnWrap .registBox .optionTable .cell.url .boxLine > .inpT{width: 100%;}
+.columnWrap .registBox .inpFileWrap{width: 100%;}
+.columnWrap .registBox .inpFileWrap .inpT{width: 100%;}
+.columnWrap .registBox .inpFileWrap label{height: 30px;}
+.columnWrap .registBox .inpFileWrap label b{height: 30px; line-height: 30px; font-size: 12px;}
+.columnWrap .registBox .boxLine.down{display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex;}
+.columnWrap .registBox .boxLine.down .inpT{width: 100%;}
+.columnWrap .addOption li{padding: 10px 12px;}
+.columnWrap .editWrap .editArea{padding: 15px;}
+.columnWrap .editWrap .attachWrap{padding: 10px 15px}
+.columnWrap .editWrap .attachBox{margin-top: 0;}
+.columnWrap .editWrap .attachBox > p{font-size: 12px; line-height: 30px;}
 /* paginate */
 	.paging{padding: 40px 0 0; text-align: center; font-size: 0}
 	.paging a{display: inline-block; min-width: 28px; height: 28px; padding: 0 3px; line-height: 28px;}

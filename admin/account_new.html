@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>Admin계정수정</title>
+	<title>Admin계정생성</title>
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
@@ -51,8 +51,8 @@
 			<!-- LNB -->
 			<div class="aside">
 				<ul class="lnb">
-					<li class="active"><a href="#">계정관리</a></li>
-					<li><a href="#">계정생성</a></li>
+					<li><a href="#">계정관리</a></li>
+					<li class="active"><a href="#">계정생성</a></li>
 					<li><a href="#">공관/센터 관리</a></li>
 					<li><a href="#">공관/센터 생성</a></li>
 				</ul>
@@ -61,17 +61,17 @@
 
 			<div class="cont">
 
-				<h3>계정수정</h3>
+				<h3>계정생성</h3>
 				<span class="topRight"><em class="red">*</em>필수항목</span>
 				
 				<ul class="optionTable">
 					<li>
 						<div class="cell">
-							<p class="title">이메일 ID</p>
+							<p class="title"><em class="red">*</em>이메일 ID</p>
 							<div class="box">
-								<input type="text" class="inpT" value="visa1234" disabled>
+								<input type="text" class="inpT">
 								<span class="txt mid">@</span>
-								<input type="text" class="inpT" value="gmail.com" disabled>
+								<input type="text" class="inpT">
 							</div>
 						</div>
 					</li>
@@ -100,12 +100,12 @@
 					</li>
 					<li>
 						<div class="cell">
-							<p class="title">계정종류</p>
+							<p class="title"><em class="red">*</em>계정종류</p>
 							<div class="box row">
 								<div class="boxLine">
 									<span class="inpGroup">
 										<label class="inpD">
-											<input type="radio" name="radio" class="inp" disabled checked>
+											<input type="radio" name="radio" class="inp">
 											<span class="icon"></span>
 											<span class="text">법무부</span>
 										</label>
@@ -114,12 +114,12 @@
 								<div class="boxLine">
 									<span class="inpGroup">
 										<label class="inpD">
-											<input type="radio" name="radio" class="inp" disabled>
+											<input type="radio" name="radio" class="inp">
 											<span class="icon"></span>
 											<span class="text">공관</span>
 										</label>
 									</span>
-									<select class="selectD" disabled>
+									<select class="selectD">
 										<option value="">option1</option>
 										<option value="">option2</option>
 									</select>
@@ -127,27 +127,19 @@
 								<div class="boxLine">
 									<span class="inpGroup">
 										<label class="inpD">
-											<input type="radio" name="radio" class="inp" disabled>
+											<input type="radio" name="radio" class="inp">
 											<span class="icon"></span>
 											<span class="text">센터</span>
 										</label>
 									</span>
-									<select class="selectD" disabled>
+									<select class="selectD">
 										<option value="">option1</option>
 										<option value="">option2</option>
 									</select>
 								</div>
 							</div>
 						</div>
-					</li>
-					<li>
-						<div class="cell">
-							<p class="title">계정상태</p>
-							<div class="box">
-								<span class="txt">유효계정</span>
-							</div>
-						</div>
-					</li>
+					</li>					
 					<li>
 						<div class="cell">
 							<p class="title"><em class="red">*</em>접속IP</p>
@@ -218,7 +210,6 @@
 											</tr>
 										</tbody>
 									</table>
-									<p class="addTxt">*낮은 번호일수록 우선순위가 높습니다.</p>
 								</div>
 							</div>
 						</div>
@@ -228,8 +219,7 @@
 
 				<!-- 페이지하단버튼 -->
 				<span class="btnGroup btm">
-					<button type="button" class="btn">계정삭제</button>
-					<button type="button" class="btn">수정하기</button>
+					<button type="button" class="btn">생성하기</button>
 				</span>
 				<!-- //페이지하단버튼 -->
 

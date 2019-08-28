@@ -1,4 +1,4 @@
-function topSerach(){
+function topSearch(){
 	$('.topMenu .showsearchBar').each(function(){
 		$(this).click(function(){
 			$('body').addClass('hidden');
@@ -13,6 +13,16 @@ function topSerach(){
 	})	
 }
 
+function closePop(){
+	$('.popWrap').each(function(){
+		$(this).find('.closePop').click(function(){
+			$(this).closest('.popWrap').fadeOut(120);
+			$('body').removeClass('hidden');
+			return false;
+		})
+	})
+}
+
 function openPop(){
 	$('.openPop').click(function(){
 		$('body').addClass('hidden');
@@ -23,14 +33,13 @@ function openPop(){
 	closePop();
 }
 
-function closePop(){
-	$('.popWrap').each(function(){
-		$(this).find('.closePop').click(function(){
-			$(this).closest('.popWrap').fadeOut(150);
-			$('body').removeClass('hidden');
-			return false;
+function openPopS(){
+	$('.openPopS').each(function(){
+		$(this).click(function(){
+			$(this).next('.popS').slideDown(200);
 		})
 	})
+	closePop();
 }
 
 function topButton(){
@@ -113,7 +122,7 @@ function adminLNB(){
 	$('.lnb').each(function(){
 		$('.subM > .active').parents('li').addClass('active');
 		$('.lnb > .active .subM').show().closest('li').addClass('open');
-		$('.lnb > li > span').click(function(){
+		$('.lnb li > span').click(function(){
 			if ($(this).closest('li').hasClass('open')) {
 				$(this).siblings('.subM').slideUp(200)
 				.closest('li').removeClass('open');
@@ -163,7 +172,7 @@ function lodingClose(){
 
 $(function(){	
 
-	topSerach();
+	topSearch();
 	inputFileTxt();
 	tabMenu();
 	selectedTableLine();
@@ -171,7 +180,7 @@ $(function(){
 	viewBoxOpen();
 	visaListMenu();
 	openPop();
-
+	openPopS();
 
 	topButtonWeb();
 	topButton();

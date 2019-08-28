@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>Admin공관센터수정</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body class="admin">
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자네비게이터 Admin</a></h1>
+
+			<!-- GNB -->
+			<ul class="gnb">
+				<li><a href="#">콘텐츠관리</a></li>
+				<li class="active"><a href="#">계정관리</a></li>
+			</ul>
+			<!-- //GNB -->
+
+			<div class="topMenu">
+				<p class="currentInfo">
+					<span><em>Admin1234</em>접속 중</span>
+					<span>
+						[최종접속시간 
+						<em>2019.07.08</em>
+						<em>12:13:15</em>
+						/
+						<em>106.247.228.114</em>]
+					</span>
+				</p>
+				<a href="#">로그아웃</a>
+				<a href="#">비밀번호 변경</a>
+				<span>
+					<input type="text" placeholder="검색" class="searchBox">
+					<button type="button" class="searchBtn">검색버튼</button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="contents">
+		<div class="inner">
+
+			<!-- LNB -->
+			<div class="aside">
+				<ul class="lnb">
+					<li><a href="#">계정관리</a></li>
+					<li><a href="#">계정생성</a></li>
+					<li class="active"><a href="#">공관/센터 관리</a></li>
+					<li><a href="#">공관/센터 생성</a></li>
+				</ul>
+			</div>
+			<!-- //LNB -->
+
+			<div class="cont">
+
+				<h3>공관/센터 수정</h3>
+				<span class="topRight"><em class="red">*</em>필수항목</span>
+				
+				<ul class="optionTable">
+					<li>
+						<div class="cell">
+							<p class="title">공관/센터 종류</p>
+							<div class="box">
+								<div class="inpGroup">
+									<label class="inpD">
+										<input type="radio" name="radio1" class="inp" checked disabled>
+										<span class="icon"></span>
+										<span class="text">공관</span>
+									</label>
+									<label class="inpD">
+										<input type="radio" name="radio1" class="inp" disabled>
+										<span class="icon"></span>
+										<span class="text">센터</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title short"><em class="red">*</em>공관/센터 노출 이름</p>
+							<div class="box">
+								<input type="text" class="inpT wide">
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title">국가</p>
+							<div class="box">
+								<select class="selectD" disabled>
+									<option value="">베트남</option>
+									<option value="">1</option>
+									<option value="">2</option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title">공관/센터 이름</p>
+							<div class="box">
+								<input type="text" value="하노이" class="inpT wide" disabled>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<!-- 페이지하단버튼 -->
+				<span class="btnGroup btm">
+					<button type="button" class="btn">수정하기</button>
+				</span>
+				<!-- //페이지하단버튼 -->
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	
+</body>
+</html>

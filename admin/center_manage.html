@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>이력-체류자격코드</title>
+	<title>Admin공관센터관리</title>
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
@@ -19,8 +19,8 @@
 
 			<!-- GNB -->
 			<ul class="gnb">
-				<li class="active"><a href="#">콘텐츠관리</a></li>
-				<li><a href="#">계정관리</a></li>
+				<li><a href="#">콘텐츠관리</a></li>
+				<li class="active"><a href="#">계정관리</a></li>
 			</ul>
 			<!-- //GNB -->
 
@@ -51,71 +51,30 @@
 			<!-- LNB -->
 			<div class="aside">
 				<ul class="lnb">
-					<li>
-						<span>체류자격 관리</span>
-						<ul class="subM">
-							<li><a href="#">체류자격 코드 관리</a></li>
-							<li><a href="#">체류자격 항목 관리</a></li>
-							<li><a href="#">체류자격 등록 관리</a></li>
-						</ul>
-					</li>
-					<li><a href="#">첨부파일 관리</a></li>
-					<li>
-						<span>수수료 관리</span>
-						<ul class="subM">
-							<li><a href="#">MAIN 관리</a></li>
-							<li><a href="#">수수료 조정국가 관리</a></li>
-							<li><a href="#">수수료 면제국가 관리</a></li>
-						</ul>
-					</li>
-					<li>
-						<span>비자표출 관리</span>
-						<ul class="subM">
-							<li><a href="#">법무부</a></li>
-							<li><a href="#">중국(광저우)</a></li>
-						</ul>
-					</li>
-					<li>
-						<span>변경 이력 확인</span>
-						<ul class="subM">
-							<li class="active"><a href="#">체류자격 코드 이력</a></li>
-							<li><a href="#">체류자격 항목 이력</a></li>
-							<li><a href="#">체류자격 등록 이력 </a></li>
-							<li><a href="#">첨부파일 등록 이력</a></li>
-							<li><a href="#">수수료 변경 이력</a></li>
-							<li><a href="#">비자노출 관리 이력</a></li>
-						</ul>
-					</li>
+					<li><a href="#">계정관리</a></li>
+					<li><a href="#">계정생성</a></li>
+					<li class="active"><a href="#">공관/센터 관리</a></li>
+					<li><a href="#">공관/센터 생성</a></li>
 				</ul>
 			</div>
 			<!-- //LNB -->
 
 			<div class="cont">
 
-				<h3>체류자격 코드 이력</h3>
+				<h3>공관/센터 관리</h3>
+
 				<ul class="optionTable">
 					<li>
 						<div class="cell">
-							<p class="title short">체류자격</p>
+							<p class="title short">종류</p>
 							<div class="box">
 								<select class="selectD">
 									<option value="">전체</option>
+									<option value="">공관</option>
+									<option value="">센터</option>
 								</select>
 								<select class="selectD">
 									<option value="">전체</option>
-								</select>
-							</div>
-						</div>
-						<div class="cell">
-							<p class="title short">체류자격명</p>
-							<div class="box">
-								<select class="selectD">
-									<option value="">전체</option>
-									<option value="">단기일반</option>
-									<option value="">일반관광</option>
-									<option value="">FTA독립</option>
-									<option value="">학사유학</option>
-									<option value="">DE계열 6개월이상 체류자</option>
 								</select>
 							</div>
 						</div>
@@ -126,46 +85,54 @@
 								<button type="button" class="searchBtn">검색하기</button>
 							</div>
 						</div>
+						<button type="button" class="btn blue registBtn">공관/센터 생성</button>
 					</li>
 				</ul>
 
-				<!-- table 내 링크 영역 미정 -->
-				<!-- 변경 이력 tr태그에 클래스 "red" 추가하면 텍스트 색상 변경됩니다. -->
-
 				<table class="table">
 					<colgroup>
-						<col style="width: 160px" />
-						<col style="width: 160px" />
+						<col style="width: 56px" />
+						<col style="width: 300px" />
 						<col style="width: auto" />
-						<col style="width: 200px" />
-						<col style="width: 160px" />
+						<col style="width: 300px" />
 					</colgroup>
 					<thead>
 						<tr>
-							<th>체류자격(대분류)</th>
-							<th>체류자격(소분류)</th>
-							<th>체류자격명</th>
-							<th>작성자</th>
-							<th>작성일</th>
+							<th>선택</th>
+							<th>종류1</th>
+							<th>종류2</th>
+							<th>생성일</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="red">
-							<td>C3</td>
-							<td>02</td>
-							<td><p>단체관광</p></td>
-							<td><p>Admin2</p></td>
+						<tr>
+							<td class="inpCell">
+								<label class="inpD">
+									<input type="radio" name="select" class="inp">
+									<span class="icon"></span>
+								</label>
+							</td>
+							<td>공관</td>
+							<td><p><em>인도네시아</em>/<em>자카르타</em></p></td>
 							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
 						</tr>
 						<tr>
-							<td>E7</td>
-							<td>01</td>
-							<td><p>특정활동</p></td>
-							<td><p>Admin</p></td>
+							<td class="inpCell">
+								<label class="inpD">
+									<input type="radio" name="select" class="inp">
+									<span class="icon"></span>
+								</label>
+							</td>
+							<td>센터</td>
+							<td><p><em>중국</em>/<em>광저우</em></p></td>
 							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
 						</tr>
 					</tbody>
 				</table>
+
+				<span class="btnGroup btm">
+					<button type="button" class="btn">수정</button>
+				</span>
 
 				<div class="paging">
 					<a href="#" class="direction prev">처음</a>

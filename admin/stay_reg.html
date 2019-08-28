@@ -99,7 +99,7 @@
 						<div class="cell">
 							<p class="title short">체류자격</p>
 							<div class="box">
-								<input type="text" class="inpT wide">
+								<input type="text" class="inpT">
 							</div>
 						</div>
 					</li>
@@ -108,7 +108,55 @@
 				<h4>항목 등록</h4>
 				<div class="topRight tableTop btnGroup">
 					<button type="button" class="btnBorder">선택삭제</button>
-					<button type="button" class="btnBorder">항목찾기</button>
+					<button type="button" class="btnBorder openPopS">항목찾기</button>
+					<div class="popWrap popS">
+						<div class="popArea">
+							<button type="button" class="closePopBtn closePop">닫기</button>
+							<div class="popTitle"><p>항목선택</p></div>
+							<div class="popCont">
+								<div class="selectItem">
+									<p>
+										<label class="inpD">
+											<input type="checkbox" class="inp">
+											<span class="icon"></span>
+											<span class="text">체류자격 순번</span>
+										</label>
+									</p>
+									<p>
+										<label class="inpD">
+											<input type="checkbox" class="inp">
+											<span class="icon"></span>
+											<span class="text">기본 체류기간 30일 이하</span>
+										</label>
+									</p>
+									<p>
+										<label class="inpD">
+											<input type="checkbox" class="inp">
+											<span class="icon"></span>
+											<span class="text">기본체류기간 90일 이하</span>
+										</label>
+									</p>
+									<p>
+										<label class="inpD">
+											<input type="checkbox" class="inp">
+											<span class="icon"></span>
+											<span class="text">기본 체류기간 90일 이상</span>
+										</label>
+									</p>
+									<p>
+										<label class="inpD">
+											<input type="checkbox" class="inp">
+											<span class="icon"></span>
+											<span class="text">기본 체류기간 영주</span>
+										</label>
+									</p>
+								</div>
+								<p class="btnGroup btm">
+									<button type="button" class="closePop">선택</button>
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<table class="table input">
 					<colgroup>

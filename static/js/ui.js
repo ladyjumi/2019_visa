@@ -1,3 +1,4 @@
+// web 검색창
 function topSearch(){
 	$('.topMenu .showsearchBar').each(function(){
 		$(this).click(function(){
@@ -12,6 +13,23 @@ function topSearch(){
 		})
 	})	
 }
+
+// mobile 검색창
+function topSearchM(){
+	$('.btnWrap .showsearchBar').each(function(){
+		$(this).click(function(){
+			$(this).closest('.header')
+			.find('.searchTop').show().animate({right:0},200)
+			.find('input[type="text"]').focus();
+		})
+		$('.searchTop .back').click(function(){
+			$(this).closest('.searchTop').animate({right:"100%"},200,function(){
+				$(this).hide();
+			});
+		})
+	})	
+}
+
 
 function closePop(){
 	$('.popWrap').each(function(){
@@ -173,6 +191,7 @@ function lodingClose(){
 $(function(){	
 
 	topSearch();
+	topSearchM();
 	inputFileTxt();
 	tabMenu();
 	selectedTableLine();

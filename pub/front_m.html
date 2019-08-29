@@ -22,7 +22,6 @@
 				<button type="button" class="gnbBtn">메뉴열기</button>				
 			</span>
 		</div>
-
 		<nav class="gnbWrap">
 			<div class="navBox">
 				<!-- 언어변경 -->
@@ -44,37 +43,33 @@
 				<button type="button" class="gnbClose">메뉴닫기</button>
 			</div>
 		</nav>
-		
-
 		<!-- 검색창 -->
 		<div class="searchTop">
 			<div class="searchArea">
-				<div class="inner">
-					<span class="searchBox">
-						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
-						<input type="button" value="검색" class="searchBtn">
-					</span>
-				</div>
+				<span class="inputWrap">
+					<input type="text" placeholder="검색어를 입력하세요.">
+					<button type="button" class="btnDel">지우기</button>
+				</span>
+				<input type="button" value="검색" class="searchBtn">
 			</div>
-			<div class="dimmed"></div>
+			<button type="button" class="back">검색창 닫기</button>			
 		</div>
 		<!-- //검색창 -->
 	</div>
 
-	<div class="contents" style="display: none;">
+	<div class="contents">
 
 		<div class="topVisual">
 			<div class="inner">
-				<p class="title">비자 종류와 정보를 쉽게 확인하세요.</p>
+				<p class="title">비자 종류와 정보를 쉽게 <br>확인하세요.</p>
 				<p class="desc">현재 국적으로 보유한 국가를 선택하고 목적 국가를 입력하면 최적화된 비자발급과 관련한 정보가 보여집니다. <br>해당되지 않을 경우 전체 리스트를 통해 확인할 수 있습니다.</p>
 				<a href="#" class="linkMore">비자 전체리스트</a>
-
 				<div class="finderWrap">
 					<div class="stepNavi step1">
 						<p>
 							<em class="step">Step <b>1</b></em>
 							<span class="bar"></span>
-							<span class="num"><em>1</em> / 3</span>
+							<span class="num"><em>1</em>/3</span>
 						</p>
 					</div>
 					<div class="finder">
@@ -131,11 +126,10 @@
 								<option value="">YEMEN</option>
 							</select>
 							<span>사람이고,</span>
-							<button type="button" class="NextBtn">다음</button>
 						</p>
-						<p class="line disabled">
+						<p class="line">
 							<span>한국에</span>
-							<select disabled="">
+							<select>
 								<option value="">방문 목적</option>
 								<option value="">관광 등 단기방문</option>
 								<option value="">치료요양</option>
@@ -153,48 +147,28 @@
 								<option value="">비전문직 취업</option>
 								<option value="">외교, 공무</option>
 							</select>
-							<span>(으)로 방문 예정입니다.</span>
-							<button type="button" class="NextBtn">검색</button>
+							<span>(으)로</span>							
 						</p>
+						<span class="text">방문 예정입니다.</span>
 						<div class="detail">
-							<strong>상세검색</strong>
 							<div class="detailOption">
 								<em>체류기간</em>
-								<label class="inpD">
-									<input type="checkbox" class="inp">
-									<span class="icon"></span>
-									<span class="text">90일이하</span>
-								</label>
-								<label class="inpD">
-									<input type="checkbox" class="inp">
-									<span class="icon"></span>
-									<span class="text">90일이상</span>
-								</label>
-								<label class="inpD">
-									<input type="checkbox" class="inp">
-									<span class="icon"></span>
-									<span class="text">영주</span>
-								</label>
+								<select>
+									<option value="">90일 이하</option>
+									<option value="">91일 이상</option>
+									<option value="">영주</option>
+								</select>
 							</div>
 							<div class="detailOption">
 								<em>비자종류</em>
-								<label class="inpD">
-									<input type="checkbox" class="inp">
-									<span class="icon"></span>
-									<span class="text">단수</span>
-								</label>
-								<label class="inpD">
-									<input type="checkbox" class="inp">
-									<span class="icon"></span>
-									<span class="text">더블</span>
-								</label>
-								<label class="inpD">
-									<input type="checkbox" class="inp">
-									<span class="icon"></span>
-									<span class="text">복수</span>
-								</label>
+								<select>
+									<option value="">단수</option>
+									<option value="">복수</option>
+									<option value="">더블</option>
+								</select>
 							</div>
 						</div>
+						<button type="button" class="NextBtn">다음</button>
 					</div>
 				</div>
 			</div>
@@ -227,7 +201,7 @@
 			<h2>자주 검색된 비자 안내</h2>
 			<ul class="visaList part">
 				<li class="visa01">
-					<a href="#"class="inBox">
+					<a href="#" class="inBox">
 						<strong class="name">
 							<span class="icon"></span>
 							<em>관광 등 단기방문</em>
@@ -236,7 +210,7 @@
 					</a>
 				</li>
 				<li class="visa02">
-					<a href="#"class="inBox">
+					<a href="#" class="inBox">
 						<strong class="name">
 							<span class="icon"></span>
 							<em>전문직 취업</em>
@@ -245,7 +219,7 @@
 					</a>
 				</li>
 				<li class="visa07">
-					<a href="#"class="inBox">
+					<a href="#" class="inBox">
 						<strong class="name">
 							<span class="icon"></span>
 							<em>주재</em>
@@ -254,7 +228,7 @@
 					</a>
 				</li>
 				<li class="visa14">
-					<a href="#"class="inBox">
+					<a href="#" class="inBox">
 						<strong class="name">
 							<span class="icon"></span>
 							<em>결혼, 이민</em>
@@ -265,277 +239,269 @@
 			</ul>
 
 			<h2>입국목적별 비자 종류</h2>
-			<div class="gridWrap">
-				<ul class="visaList total">
-					<li class="visa01">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>관광 등 단기방문</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">비자면제 <em>(B-1)</em></a></li>
-							<li><a href="#">일반무비자 <em>(B-2-1)</em></a></li>
-							<li><a href="#">제주무비자 <em>(B-2-2)</em></a></li>
-							<li><a href="#">단기일반 <em>(C-3-1)</em></a></li>
-							<li><a href="#">단체관광등 <em>(C-3-2)</em></a></li>
-							<li><a href="#">일반상용 <em>(C-3-4)</em></a></li>
-							<li><a href="#">협정단기상용 <em>(C-3-5)</em></a></li>
-							<li><a href="#">단기상용 <em>(C-3-6)</em></a></li>
-							<li><a href="#">동포방문 <em>(C-3-8)</em></a></li>
-							<li><a href="#">일반관광 <em>(C-3-9)</em></a></li>
-							<li><a href="#">관광취업 <em>(H-1)</em></a></li>
-							<li><a href="#">순수환승 <em>(C-3-10)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa02">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>전문직 취업</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">단기취업 <em>(C-4)</em></a></li>
-							<li><a href="#">구직활동 <em>(D-10-1)</em></a></li>
-							<li><a href="#">기술창업활동 <em>(D-10-2)</em></a></li>
-							<li><a href="#">교수 <em>(E-1)</em></a></li>
-							<li><a href="#">일반회화강사 <em>(E-2-1)</em></a></li>
-							<li><a href="#">학교보조교사 <em>(E-2-2)</em></a></li>
-							<li><a href="#">FTA영어 <em>(E-2-91)</em></a></li>
-							<li><a href="#">연구 <em>(E-3)</em></a></li>
-							<li><a href="#">기술지도 <em>(E-4)</em></a></li>
-							<li><a href="#">전문직업 <em>(E-5)</em></a></li>
-							<li><a href="#">예술연예 <em>(E-6-1)</em></a></li>
-							<li><a href="#">호텔유흥 <em>(E-6-2)</em></a></li>
-							<li><a href="#">운동 <em>(E-6-3)</em></a></li>
-							<li><a href="#">특정활동 <em>(E-7-1)</em></a></li>
-							<li><a href="#">FTA독립 <em>(E-7-91)</em></a></li>
-							<li><a href="#">특정능력 <em>(F-5-11)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa03">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>투자</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">법인에 투자<em>(D-8-1)</em></a></li>
-							<li><a href="#">벤처기업 <em>(D-8-2)</em></a></li>
-							<li><a href="#">개인기업투자 <em>(D-8-3)</em></a></li>
-							<li><a href="#">기술창업 <em>(D-8-4)</em></a></li>
-							<li><a href="#">FTA전근 <em>(D-8-91)</em></a></li>
-							<li><a href="#">고액투자 <em>(F-5-5)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa04">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>방문 취업</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">연고방취 <em>(H-2-1)</em></a></li>
-							<li><a href="#">유학방취 <em>(H-2-2)</em></a></li>
-							<li><a href="#">추첨방취 <em>(H-2-5)</em></a></li>
-							<li><a href="#">만기방취 <em>(H-2-7)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa05">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>연수</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">문화예술 <em>(D-1)</em></a></li>
-							<li><a href="#">해외직접 <em>(D-3-11)</em></a></li>
-							<li><a href="#">기술수출 <em>(D-3-12)</em></a></li>
-							<li><a href="#">플랜트수출 <em>(D-3-13)</em></a></li>
-							<li><a href="#">기타기관연수 <em>(D-4-2)</em></a></li>
-							<li><a href="#">한식조리연수 <em>(D-4-5)</em></a></li>
-							<li><a href="#">사설기관연수 <em>(D-4-6)</em></a></li>
-						</ol>
-					</li>
-				</ul>
-
-				<ul class="visaList total">
-					<li class="visa06">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>치료요양</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">의료관광 <em>(C-3-3)</em></a></li>
-							<li><a href="#">치료요양 <em>(G-1-10)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa07">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>주재</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">외국기업 <em>(D-7-1)</em></a></li>
-							<li><a href="#">내국기업 <em>(D-7-2)</em></a></li>
-							<li><a href="#">FTA전근 <em>(D-7-91)</em></a></li>
-							<li><a href="#">FTA계약 <em>(D-7-92)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa08">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>무역 경영</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">무역고유거래 <em>(D-9-1)</em></a></li>
-							<li><a href="#">수출설비 <em>(D-9-2)</em></a></li>
-							<li><a href="#">선박설비 <em>(D-9-3)</em></a></li>
-							<li><a href="#">경영영리사업 <em>(D-9-4)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa09">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>가족방문, 동거</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">외교동거 <em>(F-1-3)</em></a></li>
-							<li><a href="#">동포배우자등 <em>(F-1-19)</em></a></li>
-							<li><a href="#">유학생부모 <em>(F-1F-13)</em></a></li>
-							<li><a href="#">국민자녀 <em>(F-2-2)</em></a></li>
-							<li><a href="#">영주자가족 <em>(F-2-3)</em></a></li>
-							<li><a href="#">동반 <em>(F-3-1)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa10">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>비전문직 취업</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">제조업 <em>(E-9-1)</em></a></li>
-							<li><a href="#">건설업 <em>(E-9-2)</em></a></li>
-							<li><a href="#">농업 <em>(E-9-3)</em></a></li>
-							<li><a href="#">어업 <em>(E-9-4)</em></a></li>
-							<li><a href="#">서비스업 <em>(E-9-5)</em></a></li>
-							<li><a href="#">내항선원 <em>(E-10-1)</em></a></li>
-							<li><a href="#">어선원 <em>(E-10-2)</em></a></li>
-							<li><a href="#">순항선원 <em>(E-10-3)</em></a></li>
-							<li><a href="#">외교가사보조 <em>(F-1-21)</em></a></li>
-							<li><a href="#">고액가사보조 <em>(F-1-22)</em></a></li>
-							<li><a href="#">첨단가사보조 <em>(F-1-23)</em></a></li>
-							<li><a href="#">전문가사보조 <em>(F-1-24)</em></a></li>
-						</ol>
-					</li>
-				</ul>
-
-				<ul class="visaList total">
-					<li class="visa11">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>유학, 어학연수</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">전문학사 <em>(D-2-1)</em></a></li>
-							<li><a href="#">학사유학 <em>(D-2-2)</em></a></li>
-							<li><a href="#">석사유학 <em>(D-2-3)</em></a></li>
-							<li><a href="#">박사유학 <em>(D-2-4)</em></a></li>
-							<li><a href="#">연구유학 <em>(D-2-5)</em></a></li>
-							<li><a href="#">교환학생 <em>(D-2-6)</em></a></li>
-							<li><a href="#">대학부설어학원연수 <em>(D-4-1)</em></a></li>
-							<li><a href="#">초중고생 <em>(D-4-3)</em></a></li>
-							<li><a href="#">외국어연수 <em>(D-4-7)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa12">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>취재, 종교</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">일시취재 <em>(C-1)</em></a></li>
-							<li><a href="#">취재 <em>(D-5)</em></a></li>
-							<li><a href="#">종교 <em>(D-6)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa13">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>재외동포</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">재외동포 본인 <em>(F-4-11)</em></a></li>
-							<li><a href="#">재외동포 직계가족 <em>(F-4-12)</em></a></li>
-							<li><a href="#">DE계열 6개월이상 체류자 <em>(F-4-13)</em></a></li>
-							<li><a href="#">대학졸업자 <em>(F-4-14)</em></a></li>
-							<li><a href="#">OECD영주자 <em>(F-4-15)</em></a></li>
-							<li><a href="#">법인대표 등 (<em>F-4-16)</em></a></li>
-							<li><a href="#">10만불 기업가 <em>(F-4-17)</em></a></li>
-							<li><a href="#">다국적기업 <em>(F-4-18)</em></a></li>
-							<li><a href="#">동포단체대표 <em>(F-4-19)</em></a></li>
-							<li><a href="#">공무원 등 <em>(F-4-20)</em></a></li>
-							<li><a href="#">교원 <em>(F-4-21)</em></a></li>
-							<li><a href="#">60세이상자 <em>(F-F-25)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa14">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>결혼이민</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">국민배우자 <em>(F-6-1)</em></a></li>
-							<li><a href="#">자녀양육 <em>(F-6-2)</em></a></li>
-						</ol>
-					</li>
-					<li class="visa15">
-						<button type="button" class="inBox">
-							<strong class="name">
-								<span class="icon"></span>
-								<em>외교, 공무</em>
-							</strong>
-						</button>
-						<ol class="visaType">
-							<li><a href="#">외교 <em>(A-1)</em></a></li>
-							<li><a href="#">공무 <em>(A-2)</em></a></li>
-						</ol>
-					</li>
-				</ul>
-			</div>
+			<ul class="visaList total">
+				<li class="visa01">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>관광 등 단기방문</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">비자면제 <em>(B-1)</em></a></li>
+						<li><a href="#">일반무비자 <em>(B-2-1)</em></a></li>
+						<li><a href="#">제주무비자 <em>(B-2-2)</em></a></li>
+						<li><a href="#">단기일반 <em>(C-3-1)</em></a></li>
+						<li><a href="#">단체관광등 <em>(C-3-2)</em></a></li>
+						<li><a href="#">일반상용 <em>(C-3-4)</em></a></li>
+						<li><a href="#">협정단기상용 <em>(C-3-5)</em></a></li>
+						<li><a href="#">단기상용 <em>(C-3-6)</em></a></li>
+						<li><a href="#">동포방문 <em>(C-3-8)</em></a></li>
+						<li><a href="#">일반관광 <em>(C-3-9)</em></a></li>
+						<li><a href="#">관광취업 <em>(H-1)</em></a></li>
+						<li><a href="#">순수환승 <em>(C-3-10)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa02">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>전문직 취업</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">단기취업 <em>(C-4)</em></a></li>
+						<li><a href="#">구직활동 <em>(D-10-1)</em></a></li>
+						<li><a href="#">기술창업활동 <em>(D-10-2)</em></a></li>
+						<li><a href="#">교수 <em>(E-1)</em></a></li>
+						<li><a href="#">일반회화강사 <em>(E-2-1)</em></a></li>
+						<li><a href="#">학교보조교사 <em>(E-2-2)</em></a></li>
+						<li><a href="#">FTA영어 <em>(E-2-91)</em></a></li>
+						<li><a href="#">연구 <em>(E-3)</em></a></li>
+						<li><a href="#">기술지도 <em>(E-4)</em></a></li>
+						<li><a href="#">전문직업 <em>(E-5)</em></a></li>
+						<li><a href="#">예술연예 <em>(E-6-1)</em></a></li>
+						<li><a href="#">호텔유흥 <em>(E-6-2)</em></a></li>
+						<li><a href="#">운동 <em>(E-6-3)</em></a></li>
+						<li><a href="#">특정활동 <em>(E-7-1)</em></a></li>
+						<li><a href="#">FTA독립 <em>(E-7-91)</em></a></li>
+						<li><a href="#">특정능력 <em>(F-5-11)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa03">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>투자</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">법인에 투자<em>(D-8-1)</em></a></li>
+						<li><a href="#">벤처기업 <em>(D-8-2)</em></a></li>
+						<li><a href="#">개인기업투자 <em>(D-8-3)</em></a></li>
+						<li><a href="#">기술창업 <em>(D-8-4)</em></a></li>
+						<li><a href="#">FTA전근 <em>(D-8-91)</em></a></li>
+						<li><a href="#">고액투자 <em>(F-5-5)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa04">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>방문 취업</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">연고방취 <em>(H-2-1)</em></a></li>
+						<li><a href="#">유학방취 <em>(H-2-2)</em></a></li>
+						<li><a href="#">추첨방취 <em>(H-2-5)</em></a></li>
+						<li><a href="#">만기방취 <em>(H-2-7)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa05">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>연수</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">문화예술 <em>(D-1)</em></a></li>
+						<li><a href="#">해외직접 <em>(D-3-11)</em></a></li>
+						<li><a href="#">기술수출 <em>(D-3-12)</em></a></li>
+						<li><a href="#">플랜트수출 <em>(D-3-13)</em></a></li>
+						<li><a href="#">기타기관연수 <em>(D-4-2)</em></a></li>
+						<li><a href="#">한식조리연수 <em>(D-4-5)</em></a></li>
+						<li><a href="#">사설기관연수 <em>(D-4-6)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa06">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>치료요양</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">의료관광 <em>(C-3-3)</em></a></li>
+						<li><a href="#">치료요양 <em>(G-1-10)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa07">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>주재</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">외국기업 <em>(D-7-1)</em></a></li>
+						<li><a href="#">내국기업 <em>(D-7-2)</em></a></li>
+						<li><a href="#">FTA전근 <em>(D-7-91)</em></a></li>
+						<li><a href="#">FTA계약 <em>(D-7-92)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa08">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>무역 경영</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">무역고유거래 <em>(D-9-1)</em></a></li>
+						<li><a href="#">수출설비 <em>(D-9-2)</em></a></li>
+						<li><a href="#">선박설비 <em>(D-9-3)</em></a></li>
+						<li><a href="#">경영영리사업 <em>(D-9-4)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa09">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>가족방문, 동거</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">외교동거 <em>(F-1-3)</em></a></li>
+						<li><a href="#">동포배우자등 <em>(F-1-19)</em></a></li>
+						<li><a href="#">유학생부모 <em>(F-1F-13)</em></a></li>
+						<li><a href="#">국민자녀 <em>(F-2-2)</em></a></li>
+						<li><a href="#">영주자가족 <em>(F-2-3)</em></a></li>
+						<li><a href="#">동반 <em>(F-3-1)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa10">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>비전문직 취업</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">제조업 <em>(E-9-1)</em></a></li>
+						<li><a href="#">건설업 <em>(E-9-2)</em></a></li>
+						<li><a href="#">농업 <em>(E-9-3)</em></a></li>
+						<li><a href="#">어업 <em>(E-9-4)</em></a></li>
+						<li><a href="#">서비스업 <em>(E-9-5)</em></a></li>
+						<li><a href="#">내항선원 <em>(E-10-1)</em></a></li>
+						<li><a href="#">어선원 <em>(E-10-2)</em></a></li>
+						<li><a href="#">순항선원 <em>(E-10-3)</em></a></li>
+						<li><a href="#">외교가사보조 <em>(F-1-21)</em></a></li>
+						<li><a href="#">고액가사보조 <em>(F-1-22)</em></a></li>
+						<li><a href="#">첨단가사보조 <em>(F-1-23)</em></a></li>
+						<li><a href="#">전문가사보조 <em>(F-1-24)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa11">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>유학, 어학연수</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">전문학사 <em>(D-2-1)</em></a></li>
+						<li><a href="#">학사유학 <em>(D-2-2)</em></a></li>
+						<li><a href="#">석사유학 <em>(D-2-3)</em></a></li>
+						<li><a href="#">박사유학 <em>(D-2-4)</em></a></li>
+						<li><a href="#">연구유학 <em>(D-2-5)</em></a></li>
+						<li><a href="#">교환학생 <em>(D-2-6)</em></a></li>
+						<li><a href="#">대학부설어학원연수 <em>(D-4-1)</em></a></li>
+						<li><a href="#">초중고생 <em>(D-4-3)</em></a></li>
+						<li><a href="#">외국어연수 <em>(D-4-7)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa12">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>취재, 종교</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">일시취재 <em>(C-1)</em></a></li>
+						<li><a href="#">취재 <em>(D-5)</em></a></li>
+						<li><a href="#">종교 <em>(D-6)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa13">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>재외동포</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">재외동포 본인 <em>(F-4-11)</em></a></li>
+						<li><a href="#">재외동포 직계가족 <em>(F-4-12)</em></a></li>
+						<li><a href="#">DE계열 6개월이상 체류자 <em>(F-4-13)</em></a></li>
+						<li><a href="#">대학졸업자 <em>(F-4-14)</em></a></li>
+						<li><a href="#">OECD영주자 <em>(F-4-15)</em></a></li>
+						<li><a href="#">법인대표 등 (<em>F-4-16)</em></a></li>
+						<li><a href="#">10만불 기업가 <em>(F-4-17)</em></a></li>
+						<li><a href="#">다국적기업 <em>(F-4-18)</em></a></li>
+						<li><a href="#">동포단체대표 <em>(F-4-19)</em></a></li>
+						<li><a href="#">공무원 등 <em>(F-4-20)</em></a></li>
+						<li><a href="#">교원 <em>(F-4-21)</em></a></li>
+						<li><a href="#">60세이상자 <em>(F-F-25)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa14">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>결혼이민</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">국민배우자 <em>(F-6-1)</em></a></li>
+						<li><a href="#">자녀양육 <em>(F-6-2)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa15">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>외교, 공무</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">외교 <em>(A-1)</em></a></li>
+						<li><a href="#">공무 <em>(A-2)</em></a></li>
+					</ol>
+				</li>
+			</ul>
 
 			<h2>수수료</h2>
-			<h3>비자발급 신청에 따른 기본 수수료<em>(미국달러 기준)</em></h3>
-			<div class="tableTop topRight btnManual">
+			<h3>비자발급 신청에 따른 기본 수수료 <em>(미국달러 기준)</em></h3>
+			<div class="btnManual">
 				<a href="#">수수료 조정국가 보기</a>
 				<a href="#">협정에 의한 수수료 면제국가 보기</a>
 			</div>
 			<table class="table">
 				<colgroup>
-					<col style="width: 60%">
+					<col style="width: 70%">
 					<col style="width: auto;">
 				</colgroup>
 				<thead>
@@ -572,30 +538,30 @@
 			</ul>
 			<hr class="line">
 			<h3>전자민원 수수료</h3>
-			<p>비자 포털 상에서 처리되는 비자 심사 <em class="red">수수료는 미국달러로 부과</em>됩니다. 신용카드로 결제할 경우 결제일과 청구일의 미국 달러화 환율에 따라 청구금액이 달라질 수 있으니 이점 유의하시기 바랍니다.</p>
+			<p class="txt">비자 포털 상에서 처리되는 비자 심사 <em class="red">수수료는 미국달러로 부과</em>됩니다. 신용카드로 결제할 경우 결제일과 청구일의 미국 달러화 환율에 따라 청구금액이 달라질 수 있으니 이점 유의하시기 바랍니다.</p>
 			<h4>추가 수수료</h4>
 			<p class="txt">비자 포탈에서 전자비자 신청 시 비자 심사 수수료 이외에 카드사용 및 전자결제 대행서비스 이용에 따른 추가 수수료가 부과됩니다.</p>
 			<h4>사용가능한 결제수단</h4>
 			<p class="txt">국제적으로 통용되는 신용카드</p>
 			<ul class="cardList">
 				<li>
-					<span><img src="../static/images/img_creditcard1.png" alt=""></span>
+					<span><img src="../static/images/m/img_creditcard1.png" alt=""></span>
 					<p>VISA</p>
 				</li>
 				<li>
-					<span><img src="../static/images/img_creditcard2.png" alt=""></span>
+					<span><img src="../static/images/m/img_creditcard2.png" alt=""></span>
 					<p>Master</p>
 				</li>
 				<li>
-					<span><img src="../static/images/img_creditcard3.png" alt=""></span>
+					<span><img src="../static/images/m/img_creditcard3.png" alt=""></span>
 					<p>JCB</p>
 				</li>
 				<li>
-					<span><img src="../static/images/img_creditcard4.png" alt=""></span>
+					<span><img src="../static/images/m/img_creditcard4.png" alt=""></span>
 					<p>American Express</p>
 				</li>
 				<li>
-					<span><img src="../static/images/img_creditcard5.png" alt=""></span>
+					<span><img src="../static/images/m/img_creditcard5.png" alt=""></span>
 					<p>Unionpay</p>
 				</li>
 			</ul>
@@ -603,10 +569,6 @@
 			<h2>입국 및 체류</h2>
 			<h3>입국절차</h3>
 			<table class="txtTable">
-				<colgroup>
-					<col style="width: 140px">
-					<col>
-				</colgroup>
 				<tbody>
 					<tr>
 						<th>입국요건</th>
@@ -630,7 +592,7 @@
 						</td>
 					</tr>
 					<tr>
-						<th>비자의 종류와 <br>유효기간</th>
+						<th>비자의 종류와 유효기간</th>
 						<td>
 							<p>
 								단수비자 : 유효기간 내에 1회에 한하여 입국할 수 있습니다. <br>
@@ -642,13 +604,13 @@
 								<p>대한민국 비자</p>
 							</div>
 							<ol class="listNum">
-								<li><span><i>1</i>비자번호</span> : 비자발급 일련번호</li>
-								<li><span><i>2</i>체류자격</span> : 외국인이 국내에 체류하면서 행할 수 있는 사회적인 활동이나 신분의 종류</li>
-								<li><span><i>3</i>체류기간</span> : 대한민국 입국일로부터 기산하여 체류할 수 있는 기간</li>
-								<li><span><i>4</i>종류</span> : 비자의 종류(S: 단수비자, D: 더블비자, M: 복수비자)</li>
-								<li><span><i>5</i>발급일</span> : 비자 발급일자를 의미</li>
-								<li><span><i>6</i>입국만료일</span> : 비자유효기간을 의미 (만료일까지 한국에 입구하여야 하며, 만료일이 지난 비자는 무효임)</li>
-								<li><span><i>7</i>발급지</span> : 비자를 발금한 재외공관에 대한 정보</li>
+								<li><i>1</i><span>비자번호</span> : 비자발급 일련번호</li>
+								<li><i>2</i><span>체류자격</span> : 외국인이 국내에 체류하면서 행할 수 있는 사회적인 활동이나 신분의 종류</li>
+								<li><i>3</i><span>체류기간</span> : 대한민국 입국일로부터 기산하여 체류할 수 있는 기간</li>
+								<li><i>4</i><span>종류</span> : 비자의 종류(S: 단수비자, D: 더블비자, M: 복수비자)</li>
+								<li><i>5</i><span>발급일</span> : 비자 발급일자를 의미</li>
+								<li><i>6</i><span>입국만료일</span> : 비자유효기간을 의미 (만료일까지 한국에 입구하여야 하며, 만료일이 지난 비자는 무효임)</li>
+								<li><i>7</i><span>발급지</span> : 비자를 발금한 재외공관에 대한 정보</li>
 							</ol>
 						</td>
 					</tr>
@@ -666,10 +628,6 @@
 			</table>
 			<h3>외국인등록 대상 및 절차</h3>
 			<table class="txtTable">
-				<colgroup>
-					<col style="width: 140px">
-					<col>
-				</colgroup>
 				<tbody>
 					<tr>
 						<th>외국인등록 대상</th>
@@ -707,10 +665,6 @@
 			</table>
 			<h3>외국인의 활동범위와 취업</h3>
 			<table class="txtTable">
-				<colgroup>
-					<col style="width: 140px">
-					<col>
-				</colgroup>
 				<tbody>
 					<tr>
 						<th>외국인의 활동범위와 취업</th>
@@ -732,569 +686,599 @@
 			</table>
 
 			<h2>신청절차</h2>
-			<ul class="tabMenu applyTab">
-				<li class="active"><button type="button">비자포털을 통한 전자비자신청</button></li>
-				<li><button type="button">제외공관을 통한 비자신청</button></li>
-				<li><button type="button">비자포털을 통한 비자발급인정서 신청</button></li>
-				<li><button type="button">국내 출입국·외국인관서를 통한 비자발급인정서 신청</button></li>
-			</ul>
-			<div class="tabBox">
-				<h3>비자포털을 통한 전자비자 신청</h3>
-				<table class="txtTable">
-					<colgroup>
-						<col style="width: 140px">
-						<col>
-					</colgroup>
-					<tbody>
-						<tr>
-							<th>신청경로</th>
-							<td>
-								<span>비자포털 신청 메뉴</span>
-								<button type="button" class="btnVisaMenu">전자비자(개인)</button>
-							</td>
-						</tr>
-						<tr>
-							<th>신청자</th>
-							<td>
-								<p>외국인 본인 또는 초청자에 의한 대리신청</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청가능한 체류자격 <span>2014.12.08 기준</span></th>
-							<td>
-								<ul class="listDot">
-									<li>교수(E-1), 연구(E-3), 기술지도(E-4), 전문직업(E-5) 비자와 그 동반가족에게 발급하는 동반(F-3) 비자</li>
-									<li>특정활동(E-7) 비자와 그 동반가족에게 발급하는 동반(F-3) 비자 <p class="txtDash">신청요건 : 고용추천서(일명 GOLD CARD)를 받은 첨단과학기술인력</p></li>
-									<li>재외공관장이 지정(법무부장관 승인)한 국외 전담여행사가 비자신청을 대행하는 단체관광객에 대한 비자(C-3-2)</li>
-									<li>전자비자 대리신청자로 지정된 우수 외국인환자 유치기관이 초청하는 외국인 환자와 간병인에게 발급하는 의료관광(C-3-3) 또는 치료요양(G-1-10) 비자</li>
-									<li>국내 기업의 초청을 받은 자에 대한 일반상용(C-3-4) 비자  <p class="txtDash">신청요건 : 외국인 지문확인시스템을 도입한 ‘12. 1. 1. 이후 3회 이상 단기방문(C-3) 자격으로 입국한 사실이 있고 국내 체류기간 중 불법체류나 기타 범법사실이 없었던 자에 한함</p></li>
-								</ul>
-								<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>준비서류</th>
-							<td>
-								<ul class="listDot">
-									<li>비자발급신청서 (전자신청서)</li>
-									<li>여권사본 파일</li>
-									<li>사진 파일 (총천연색, 3.5cm x 4.5cm)</li>
-									<li>수수료 (전자결제가 가능한 신용카드)</li>
-									<li>각 체류자격별 제출서류 파일 <p class="txtDash red">비자내비게이터 비자종류별 제출서류 안내에서 확인하시거나, 각 재외공관 홈페이지 영사 게시판의 비자정보를 통해 확인하시기 바랍니다.</p></li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>처리절차</th>
-							<td>
-								<p class="titleDot">외국인 본인 신청절차</p>
-								<ul class="processList">
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>1. 전자신청서 작성</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>2. 전자결제</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>3. 신청 및 전송</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인(개인/기업)</span>
-										</div>
-										<div class="desc">
-											<strong>4. 초청 확인</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeRed">비자심사 담당자</span>
-										</div>
-										<div class="desc">
-											<strong>5. 접수 및 심사</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>6. 결과확인</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>7. 전자비자발급확인서 <br>출력/송부</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>8. 대한민국 입국</strong>
-										</div>
-									</li>
-								</ul>
-								<p class="titleDot">초청인 대리 신청절차</p>
-								<ul class="processList">
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>1. 로그인</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>2. 전자신청서 작성</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>3. 전자결제</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeRed">비자심사 담당자</span>
-										</div>
-										<div class="desc">
-											<strong>4. 접수 및 심사</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>5. 결과확인</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-											<em class="arrowN">to</em>
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>6. 전자비자발급확인서 <br>출력/송부</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>7. 대한민국 입국</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-								</ul>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>비자포털을 통한 전자비자신청</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>신청경로</th>
+								<td>
+									<span>비자포털 신청 메뉴</span>
+									<button type="button" class="btnVisaMenu">전자비자(개인)</button>
+								</td>
+							</tr>
+							<tr>
+								<th>신청자</th>
+								<td>
+									<p>외국인 본인 또는 초청자에 의한 대리신청</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청가능한 체류자격 <span>(2014.12.08 기준)</span></th>
+								<td>
+									<ul class="listDot">
+										<li>교수(E-1), 연구(E-3), 기술지도(E-4), 전문직업(E-5) 비자와 그 동반가족에게 발급하는 동반(F-3) 비자</li>
+										<li>특정활동(E-7) 비자와 그 동반가족에게 발급하는 동반(F-3) 비자 <p class="txtDash">신청요건 : 고용추천서(일명 GOLD CARD)를 받은 첨단과학기술인력</p></li>
+										<li>재외공관장이 지정(법무부장관 승인)한 국외 전담여행사가 비자신청을 대행하는 단체관광객에 대한 비자(C-3-2)</li>
+										<li>전자비자 대리신청자로 지정된 우수 외국인환자 유치기관이 초청하는 외국인 환자와 간병인에게 발급하는 의료관광(C-3-3) 또는 치료요양(G-1-10) 비자</li>
+										<li>국내 기업의 초청을 받은 자에 대한 일반상용(C-3-4) 비자  <p class="txtDash">신청요건 : 외국인 지문확인시스템을 도입한 ‘12. 1. 1. 이후 3회 이상 단기방문(C-3) 자격으로 입국한 사실이 있고 국내 체류기간 중 불법체류나 기타 범법사실이 없었던 자에 한함</p></li>
+									</ul>
+									<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>준비서류</th>
+								<td>
+									<ul class="listDot">
+										<li>비자발급신청서 (전자신청서)</li>
+										<li>여권사본 파일</li>
+										<li>사진 파일 (총천연색, 3.5cm x 4.5cm)</li>
+										<li>수수료 (전자결제가 가능한 신용카드)</li>
+										<li>각 체류자격별 제출서류 파일 <p class="txtDash red">비자내비게이터 비자종류별 제출서류 안내에서 확인하시거나, 각 재외공관 홈페이지 영사 게시판의 비자정보를 통해 확인하시기 바랍니다.</p></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>처리절차</th>
+								<td>
+									<p class="titleDot">외국인 본인 신청절차</p>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자신청서 작성</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자결제</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>신청 및 전송</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span class="typeBlue">초청인(개인/기업)</span>
+											</div>
+											<div class="desc">
+												<strong>초청 확인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과확인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>7</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자비자발급확인서 출력/송부</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>8</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+									<p class="titleDot">초청인 대리 신청절차</p>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>로그인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자신청서 작성</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자결제</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과확인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span><em class="arrowN">to</em><span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자비자발급확인서 출력/송부</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>7</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-			<div class="tabBox">
-				<h3>제외공관을 통한 비자신청</h3>
-				<table class="txtTable">
-					<colgroup>
-						<col style="width: 140px">
-						<col>
-					</colgroup>
-					<tbody>
-						<tr>
-							<th>신청장소</th>
-							<td>
-								<p>거주국(지역) 관할 대한민국 대사관 또는 영사관</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청자</th>
-							<td>
-								<p>외국인 본인 또는 비자신청 대행업체(지정 여행사)에 의한 대리 신청</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청가능한 체류자격 <span>2014.12.08 기준</span></th>
-							<td>
-								<ul class="listDot">
-									<li>외교(A-1), 공무(A-2) 자격 해당자에 대한 단수 또는 복수비자</li>
-									<li>일시취재(C-1), 단기방문(C-3), 단기취업(C-4) 자격 해당자에 대한 체류기간 90일 이하의 단수비자</li>
-									<li>복수비자발급협정 등이 체결된 국가 중 체류자격 일시취재(C-1) 및 단기방문(C-3) 자격 해당자에 대한 체류기간 90일 이하의 복수비자</li>
-									<li>문화예술(D-1) 자격 해당자 중 한국국제교류재단 및 한국문화예술위원회의 초청을 받아 문화예술 활동을 하고자 하는 자에 대한 체류기간 1년 이하의 단수비자 등 재외공관장에게 발급권한이 위임된 비자</li>
-								</ul>
-								<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>준비서류</th>
-							<td>
-								<ul class="listDot">
-									<li>비자발급신청서 (제17호 서식, 또는 비자포털 신청 메뉴)</li>
-									<li>여권</li>
-									<li>사진 (총천연색, 3.5cm x 4.5cm)</li>
-									<li>수수료 (원칙적으로 미화로 지불) <p class="txtDash">재외공관장이 허용한 경우, 주재국 화폐로 지불 가능합니다.</p></li>
-									<li>각 체류자격별 제출서류
-										<p class="txtDash red">비자내비게이터에 안내된 제출서류는 각국에서 적용할 수 있는 최소 범위의 공통 기준을 제시한 것입니다. <br>재외공관의 장은 보다 정확한 비자심사를 위해 주재국(관할지역)의 실정을 고려하여 제출서류를 추가하거나, 제출서류를 면제할 수 있습니다.<br>그러므로 비자내비게이터에 안내된 제출서류와 각 재외공관 홈페이지(영사 게시판)에 게시된 비자 제출서류가 다를 때에는 재외공관의 제출서류 기준에 따라 서류를 준비하시기 바랍니다.</p>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>처리절차</th>
-							<td>
-								<ul class="processList">
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>1. 신청서 제출</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeGreen">영사</span>
-										</div>
-										<div class="desc">
-											<strong>2. 접수 및 심사</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeGreen">영사</span>
-										</div>
-										<div class="desc">
-											<strong>3. 비자발급</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>4. 대한민국 입국</strong>
-										</div>
-									</li>
-								</ul>
-								<p class="red">※ 기타 궁금한 사항은 거주국(관할지역) 재외공관 영사과로 문의하시기 바랍니다.</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>제외공관을 통한 비자신청</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>신청장소</th>
+								<td>
+									<p>거주국(지역) 관할 대한민국 대사관 또는 영사관</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청자</th>
+								<td>
+									<p>외국인 본인 또는 비자신청 대행업체(지정 여행사)에 의한 대리 신청</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청가능한 체류자격 <span>(2014.12.08 기준)</span></th>
+								<td>
+									<ul class="listDot">
+										<li>외교(A-1), 공무(A-2) 자격 해당자에 대한 단수 또는 복수비자</li>
+										<li>일시취재(C-1), 단기방문(C-3), 단기취업(C-4) 자격 해당자에 대한 체류기간 90일 이하의 단수비자</li>
+										<li>복수비자발급협정 등이 체결된 국가 중 체류자격 일시취재(C-1) 및 단기방문(C-3) 자격 해당자에 대한 체류기간 90일 이하의 복수비자</li>
+										<li>문화예술(D-1) 자격 해당자 중 한국국제교류재단 및 한국문화예술위원회의 초청을 받아 문화예술 활동을 하고자 하는 자에 대한 체류기간 1년 이하의 단수비자 등 재외공관장에게 발급권한이 위임된 비자</li>
+									</ul>
+									<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>준비서류</th>
+								<td>
+									<ul class="listDot">
+										<li>비자발급신청서 (제17호 서식, 또는 비자포털 신청 메뉴)</li>
+										<li>여권</li>
+										<li>사진 (총천연색, 3.5cm x 4.5cm)</li>
+										<li>수수료 (원칙적으로 미화로 지불) <p class="txtDash">재외공관장이 허용한 경우, 주재국 화폐로 지불 가능합니다.</p></li>
+										<li>각 체류자격별 제출서류
+											<p class="txtDash red">비자내비게이터에 안내된 제출서류는 각국에서 적용할 수 있는 최소 범위의 공통 기준을 제시한 것입니다. <br>재외공관의 장은 보다 정확한 비자심사를 위해 주재국(관할지역)의 실정을 고려하여 제출서류를 추가하거나, 제출서류를 면제할 수 있습니다.<br>그러므로 비자내비게이터에 안내된 제출서류와 각 재외공관 홈페이지(영사 게시판)에 게시된 비자 제출서류가 다를 때에는 재외공관의 제출서류 기준에 따라 서류를 준비하시기 바랍니다.</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>처리절차</th>
+								<td>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>신청서 제출</strong>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+									<p class="red">※ 기타 궁금한 사항은 거주국(관할지역) 재외공관 영사과로 문의하시기 바랍니다.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-			<div class="tabBox">
-				<h3>비자포털을 통한 비자발급인정서 신청</h3>
-				<table class="txtTable">
-					<colgroup>
-						<col style="width: 140px">
-						<col>
-					</colgroup>
-					<tbody>
-						<tr>
-							<th>신청경로</th>
-							<td>
-								<span>비자포털 신청 메뉴</span>
-								<button type="button" class="btnVisaMenu">비자발급인정서</button>
-							</td>
-						</tr>
-						<tr>
-							<th>신청자</th>
-							<td>
-								<p>초청자에 의한 대리 신청</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청가능한 체류자격 <span>2014.12.08 기준</span></th>
-							<td>
-								<ul class="listDot">
-									<li>교수(E-1), 회화지도(E-2), 연구(E-3), 기술지도(E-4) 또는 전문직업(E-5) 및 그 동반가족에게 발급하는 동반(F-3) 비자</li>
-									<li>특정활동(E-7) 및 그 동반가족에게 발급하는 동반(F-3) 비자<p class="txtDash">신청요건 : 통계청이 고시한 표준직업분류의 대분류 1(관리자) 또는 2번(전문가 및 관련종사자) 직종 종사자</p></li>
-									<li>외국인환자 유치기관이 초청하는 외국인 환자와 간병인에게 발급하는 의료관광(C-3-3) 또는 치료요양(G-1-10) 비자</li>
-									<li>우대기업 초청 단기상용(C-3-6) 비자</li>
-									<li>유학(D-2), 어학연수(D-4-1) 비자</li>
-									<li>비전문취업(E-9), 선원취업(E-10) 비자</li>
-								</ul>
-								<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>준비서류</th>
-							<td>
-								<ul class="listDot">
-									<li>비자발급신청서 (전자신청서)</li>
-									<li>여권사본 파일</li>
-									<li>사진 파일 (총천연색, 3.5cm x 4.5cm)</li>
-									<li>수수료 (전자결제가 가능한 신용카드)</li>
-									<li>각 체류자격별 제출서류 파일 <p class="txtDash red">비자내비게이터 비자종류별 제출서류 안내에서 확인하시거나, 각 재외공관 홈페이지 영사 게시판의 비자정보를 통해 확인하시기 바랍니다.</p></li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>처리절차</th>
-							<td>
-								<ul class="processList">
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>1. 로그인</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>2. 전자신청서 작성</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeRed">비자심사 담당자</span>
-										</div>
-										<div class="desc">
-											<strong>3. 접수 및 심사</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>4. 결과조회</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-											<em class="arrowN">to</em>
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>5. 결과 확인 및 비자신청서 다운로드</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>6. 비자신청 및 수수료 결재</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeGreen">영사</span>
-										</div>
-										<div class="desc">
-											<strong>7. 비자발급</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>8. 대한민국 입국</strong>
-										</div>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>비자발급인정서 심사결과 확인</th>
-							<td>
-								<p>비자발급인정서 심사결과는 비자포털의 진행상황 조회, 신청서에 기재한 초청자의 E-MAIL 또는 <br>휴대폰 메시지, <em class="red">ARS (02-2650-6363)</em> 조회로 확인할 수 있습니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>비자신청</th>
-							<td>
-								<ul class="listDot">
-									<li>초청자는 비자포탈의 진행상황 조회 화면에서 비자발급인정서 소지자용 비자신청서 다운로드하여 피초청자에게 이메일로 송부하거나, 비자발급인정번호 및 유효기간을 알려주시기 바랍니다.</li>
-									<li>입국하려는 외국인은 대한민국의 초청자로부터 비자발급인정서 소지자용 비자신청서 또는 비자발급인정번호(유효기간)를 송부받아 대한민국 대사관 또는 영사관에 비자발급을 신청하시기 바랍니다.</li>
-								</ul>
-								<p class="red">※ 비자발급인정서의 유효기간은 3개월이며, 1회 비자발급에 한하여 그 효력이 인정됩니다.</p>
-								<p class="red">기타 궁금한 사항은 외국인종합안내센터 (국번없이 1345, 외국에서는 +82-1345)로 문의하시기 바랍니다.</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>비자포털을 통한 비자발급인정서 신청</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>신청경로</th>
+								<td>
+									<span>비자포털 신청 메뉴</span>
+									<button type="button" class="btnVisaMenu">비자발급인정서</button>
+								</td>
+							</tr>
+							<tr>
+								<th>신청자</th>
+								<td>
+									<p>초청자에 의한 대리 신청</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청가능한 체류자격 <span>(2014.12.08 기준)</span></th>
+								<td>
+									<ul class="listDot">
+										<li>교수(E-1), 회화지도(E-2), 연구(E-3), 기술지도(E-4) 또는 전문직업(E-5) 및 그 동반가족에게 발급하는 동반(F-3) 비자</li>
+										<li>특정활동(E-7) 및 그 동반가족에게 발급하는 동반(F-3) 비자<p class="txtDash">신청요건 : 통계청이 고시한 표준직업분류의 대분류 1(관리자) 또는 2번(전문가 및 관련종사자) 직종 종사자</p></li>
+										<li>외국인환자 유치기관이 초청하는 외국인 환자와 간병인에게 발급하는 의료관광(C-3-3) 또는 치료요양(G-1-10) 비자</li>
+										<li>우대기업 초청 단기상용(C-3-6) 비자</li>
+										<li>유학(D-2), 어학연수(D-4-1) 비자</li>
+										<li>비전문취업(E-9), 선원취업(E-10) 비자</li>
+									</ul>
+									<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>준비서류</th>
+								<td>
+									<ul class="listDot">
+										<li>비자발급신청서 (전자신청서)</li>
+										<li>여권사본 파일</li>
+										<li>사진 파일 (총천연색, 3.5cm x 4.5cm)</li>
+										<li>수수료 (전자결제가 가능한 신용카드)</li>
+										<li>각 체류자격별 제출서류 파일 <p class="txtDash red">비자내비게이터 비자종류별 제출서류 안내에서 확인하시거나, 각 재외공관 홈페이지 영사 게시판의 비자정보를 통해 확인하시기 바랍니다.</p></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>처리절차</th>
+								<td>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>로그인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자신청서 작성</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과조회</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+												<em class="arrowN">to</em>
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과 확인 및 비자신청서 다운로드</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>비자신청 및 수수료 결재</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>7</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>8</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>비자발급인정서 심사결과 확인</th>
+								<td>
+									<p>비자발급인정서 심사결과는 비자포털의 진행상황 조회, 신청서에 기재한 초청자의 E-MAIL 또는 <br>휴대폰 메시지, <em class="red">ARS (02-2650-6363)</em> 조회로 확인할 수 있습니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>비자신청</th>
+								<td>
+									<ul class="listDot">
+										<li>초청자는 비자포탈의 진행상황 조회 화면에서 비자발급인정서 소지자용 비자신청서 다운로드하여 피초청자에게 이메일로 송부하거나, 비자발급인정번호 및 유효기간을 알려주시기 바랍니다.</li>
+										<li>입국하려는 외국인은 대한민국의 초청자로부터 비자발급인정서 소지자용 비자신청서 또는 비자발급인정번호(유효기간)를 송부받아 대한민국 대사관 또는 영사관에 비자발급을 신청하시기 바랍니다.</li>
+									</ul>
+									<p class="red">※ 비자발급인정서의 유효기간은 3개월이며, 1회 비자발급에 한하여 그 효력이 인정됩니다.</p>
+									<p class="red">기타 궁금한 사항은 외국인종합안내센터 (국번없이 1345, 외국에서는 +82-1345)로 문의하시기 바랍니다.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-			<div class="tabBox">
-				<h3>국내 출입국·외국인관서를 통한 비자발급인정서 신청</h3>
-				<table class="txtTable">
-					<colgroup>
-						<col style="width: 140px">
-						<col>
-					</colgroup>
-					<tbody>
-						<tr>
-							<th>신청장소</th>
-							<td>
-								<p>초청자의 주소지 관할 출입국·외국인관서</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청자</th>
-							<td>
-								<p>외국인 본인, 초청자 또는 대행기관(E-9, E-10) 등에 의한 대리 신청</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청가능한 체류자격 <span>2014.11.01 기준</span></th>
-							<td>
-								<ul class="listDot">
-									<li>문화예술(D-1), 유학(D-2), 기술연수(D-3), 일반연수(D-4), 취재(D-5), 종교(D-6), 주재(D-7), 기업투자(D-8), 무역경영(D-9), 교수(E-1), 회화지도(E-2), 연구(E-3), 기술지도(E-4), 전문직업(E-5), 예술흥행(E-6), 특정활동(E-7), 비전문취업(E-9), 선원취업(E-10), 방문동거(F-1), 동반(F-3), 기타(G-1) 및 방문취업(H-2) 자격에 해당하는 자에 대한 장기비자</li>
-									<li>미수교국가 또는 특정국가의 국민 (쿠바, 시리아, 마케도니아)에 대한 장기 비자</li>
-									<li>기타 법무부장관이 특히 필요하다고 인정하는 자에 대한 비자</li>
-								</ul>
-								<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>준비서류</th>
-							<td>
-								<ul class="listDot">
-									<li>비자발급인정신청서 (서식 제21호)</li>
-									<li>여권사본</li>
-									<li>사진 (총천연색, 3.5cm x 4.5cm)</li>
-									<li>각 체류자격별 제출서류
-										<p class="txtDash red">비자내비게이터에 안내된 제출서류는 각국에서 적용할 수 있는 최소 범위의 공통 기준을 제시한 것입니다. <br>출입국 · 외국인관서의 장은 보다 정확한 비자심사를 위해 제출서류를 추가하거나, 제출서류를 면제할 수 있습니다.</p>
-									</li>
-									<li>대리인 신청 시, 위임장, 대리인 재직증명서, 대리인 신분증 사본을 추가로 제출하여야 합니다. <br>(단, 심사 시 필요한 경우 대리 신청이 제한될 수 있습니다.)</li>									
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>비자발급인정서 처리절차</th>
-							<td>
-								<ul class="processList">
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>1. 신청서 작성</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeRed">비자심사 담당자</span>
-										</div>
-										<div class="desc">
-											<strong>2. 접수 및 심사</strong>
-											<p>관할 출입국 외국인관서</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-											<em class="arrowN">to</em>
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>3. 비자발급인정번호 송부</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>4. 비자발급 신청</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeGreen">영사</span>
-										</div>
-										<div class="desc">
-											<strong>5. 비자발급</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>6. 대한민국 입국</strong>
-										</div>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>비자발급인정서 심사결과 통지</th>
-							<td>
-								<p>비자발급인정서 심사결과는 비자포탈의 진행상황 조회, 신청서에 기재한 초청자의 E-MAIL 또는 <br>휴대폰 메시지, <em class="red">ARS (02-2650-6363)</em> 조회로 확인할 수 있습니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>비자발급</th>
-							<td>
-								<ul class="listDot">
-									<li>초청자는 비자포탈의 진행상황 조회 화면에서 비자발급인정서 소지자용 비자신청서 다운로드하여 피초청자에게 이메일로 송부하거나, 비자발급인정번호 및 유효기간을 알려주시기 바랍니다.</li>
-									<li>입국하려는 외국인은 대한민국의 초청자로부터 비자발급인정서 소지자용 비자신청서 또는 비자발급인정번호(유효기간)를 송부받아 대한민국 대사관 또는 영사관에 비자발급을 신청하시기 바랍니다.</li>
-								</ul>
-								<p class="red">※ 비자발급인정서의 유효기간은 3개월이며, 1회 비자발급에 한하여 그 효력이 인정됩니다.</p>
-								<p class="red">기타 궁금한 사항은 외국인종합안내센터 (국번없이 1345, 외국에서는 +82-1345)로 문의하시기 바랍니다.</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>국내 출입국·외국인관서를 통한 <br>비자발급인정서 신청</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>신청장소</th>
+								<td>
+									<p>초청자의 주소지 관할 출입국·외국인관서</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청자</th>
+								<td>
+									<p>외국인 본인, 초청자 또는 대행기관(E-9, E-10) 등에 의한 대리 신청</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청가능한 체류자격 <span>(2014.11.01 기준)</span></th>
+								<td>
+									<ul class="listDot">
+										<li>문화예술(D-1), 유학(D-2), 기술연수(D-3), 일반연수(D-4), 취재(D-5), 종교(D-6), 주재(D-7), 기업투자(D-8), 무역경영(D-9), 교수(E-1), 회화지도(E-2), 연구(E-3), 기술지도(E-4), 전문직업(E-5), 예술흥행(E-6), 특정활동(E-7), 비전문취업(E-9), 선원취업(E-10), 방문동거(F-1), 동반(F-3), 기타(G-1) 및 방문취업(H-2) 자격에 해당하는 자에 대한 장기비자</li>
+										<li>미수교국가 또는 특정국가의 국민 (쿠바, 시리아, 마케도니아)에 대한 장기 비자</li>
+										<li>기타 법무부장관이 특히 필요하다고 인정하는 자에 대한 비자</li>
+									</ul>
+									<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>준비서류</th>
+								<td>
+									<ul class="listDot">
+										<li>비자발급인정신청서 (서식 제21호)</li>
+										<li>여권사본</li>
+										<li>사진 (총천연색, 3.5cm x 4.5cm)</li>
+										<li>각 체류자격별 제출서류
+											<p class="txtDash red">비자내비게이터에 안내된 제출서류는 각국에서 적용할 수 있는 최소 범위의 공통 기준을 제시한 것입니다. <br>출입국 · 외국인관서의 장은 보다 정확한 비자심사를 위해 제출서류를 추가하거나, 제출서류를 면제할 수 있습니다.</p>
+										</li>
+										<li>대리인 신청 시, 위임장, 대리인 재직증명서, 대리인 신분증 사본을 추가로 제출하여야 합니다. <br>(단, 심사 시 필요한 경우 대리 신청이 제한될 수 있습니다.)</li>									
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>비자발급인정서 처리절차</th>
+								<td>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>신청서 작성</strong>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+												<p>관할 출입국 외국인관서</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span><em class="arrowN">to</em><span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급인정번호 송부</strong>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급 신청</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>비자발급인정서 심사결과 통지</th>
+								<td>
+									<p>비자발급인정서 심사결과는 비자포탈의 진행상황 조회, 신청서에 기재한 초청자의 E-MAIL 또는 <br>휴대폰 메시지, <em class="red">ARS (02-2650-6363)</em> 조회로 확인할 수 있습니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>비자발급</th>
+								<td>
+									<ul class="listDot">
+										<li>초청자는 비자포탈의 진행상황 조회 화면에서 비자발급인정서 소지자용 비자신청서 다운로드하여 피초청자에게 이메일로 송부하거나, 비자발급인정번호 및 유효기간을 알려주시기 바랍니다.</li>
+										<li>입국하려는 외국인은 대한민국의 초청자로부터 비자발급인정서 소지자용 비자신청서 또는 비자발급인정번호(유효기간)를 송부받아 대한민국 대사관 또는 영사관에 비자발급을 신청하시기 바랍니다.</li>
+									</ul>
+									<p class="red">※ 비자발급인정서의 유효기간은 3개월이며, 1회 비자발급에 한하여 그 효력이 인정됩니다.</p>
+									<p class="red">기타 궁금한 사항은 외국인종합안내센터 (국번없이 1345, 외국에서는 +82-1345)로 문의하시기 바랍니다.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1309,7 +1293,7 @@
 		</div>
 	</div>
 
-	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
+	<!-- <div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div> -->
 </div>
 
 

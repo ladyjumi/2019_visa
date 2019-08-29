@@ -2,8 +2,9 @@
 
 /* web common */
 	html{overflow-y: scroll}
-	body{font-size: 14px; color: #000}
-	a, button, input, select{font-size: 14px; outline: 0;}
+	body{font-size: 13px;}
+	em{display: inline;}
+	a, button, input, select{font-size: 13px; outline: 0;}
 	body.hidden{overflow: hidden; height: 100%;}
 
 /*버튼정의*/
@@ -47,15 +48,32 @@
 .backTop{display: block; position: absolute; bottom: 0; right: -36px; z-index: 999; width: 36px; height: 36px; text-indent: -9999px; background: #2a2b2c url(../images/btn_top.png) no-repeat; transition: background .1s; cursor: pointer;}
 
 /*뷰박스*/
-.viewBox + .viewBox{margin-top: 10px}
+.viewBox{margin: 0 -20px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada}
+.viewBox + .viewBox{border-top: 0;}
+.viewBox.open{border-color: #333;}
 .viewBox .titleBox{position: relative; padding: 11px 20px; cursor: pointer;}
-.viewBox .titleBox p{font-weight: 500; line-height: 1.45}
+.viewBox .titleBox p{font-size: 14px; font-weight: 500; line-height: 1.45}
 .viewBox .titleBox .openBtn{display: block; position: absolute; top: 0; right: 0; width: 42px; height: 100%; padding: 0 21px; text-align: center;}
 .viewBox .titleBox .openBtn:before,
 .viewBox .titleBox .openBtn:after{position: absolute; top: 50%; left: 50%; content: ''; display: block; width: 11px; height: 1px; margin: -0.5px 0 0 -5.5px; background-color: #444; transition: .1s;}
 .viewBox .titleBox .openBtn:after{transform: rotate(-90deg);}
 .viewBox.open .titleBox .openBtn:after{transform: rotate(0deg);}
-.viewBox .contBox{display: none; padding: 20px; border: 1px solid #dadada; border-top: 0}
+.viewBox .contBox{display: none; padding: 20px; border-top: 1px solid #dadada;}
+.viewBox .txtTable{border-bottom: 0}
+.viewBox .addTxt{margin-top: 8px; color: #333}
+.viewBox.open .titleBox{background-color: #333; border-color: #333}
+.viewBox.open .titleBox p{color: #fff}
+.viewBox.open .titleBox .openBtn:before, 
+.viewBox.open .titleBox .openBtn:after{background-color: #fff}
+.viewBox .listNum2{margin: 8px 0 0;}
+.viewBox .listNumber{margin-top: 0;}
+.viewBox .listNumber > li + li{margin-top: 2px;}
+.viewBox .fileDown{margin: -4px 0;}
+.viewBox .fileDown .btn{height: 30px; line-height: 30px; font-size: 13px; font-weight: 400}
+.viewBox .tabMenu{margin: 30px -3px 30px 0;}
+.viewBox .tabMenu li{width: 33.3333%}
+.viewBox .tabMenu li button{font-size: 14px}
+.viewBox .tabMenu li.active button{color: #c6464b}
 
 /*레이아웃*/
 .wrap{position: relative;}
@@ -69,14 +87,13 @@
 .header .searchBtn{width: 32px; background-size: 18px}
 .header .gnbBtn{width: 32px; background: url(../images/m/btn_gnb.png) no-repeat center; background-size: 22px auto; text-indent: -9999px;}
 
-.footer{padding: 26px 0; background-color: #efefef; border-top: 1px solid #dcdcdc;}
-.footer .inner{color: #666}
-.footer span{line-height: 22px}
-.footer address{display: inline-block; margin-left: 20px; font-size: 13px; line-height: 22px}
+.footer{padding: 22px 0 26px; background-color: #efefef; border-top: 1px solid #dcdcdc; color: #666}
+.footer span{display: block; margin-bottom: 8px; font-size: 13px; font-weight: 500}
+.footer address{font-size: 12px; line-height: 1.5}
 
 nav{position: absolute; top: 0; right: 0; width: 100%; height: 100%; display: none;}
 nav:before{display: block; content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7);}
-nav .navBox{position: absolute; top: 0; right: 0; width: 70%; max-width: 400px; min-width: 210px; height: 100vh; background-color: #f5f5f5; text-align: left; overflow: hidden; z-index: 1}
+nav .navBox{position: absolute; top: 0; right: 0; width: 70%; max-width: 400px; min-width: 210px; height: 100vh; background-color: #f5f5f5; color: #000; text-align: left; overflow: hidden; z-index: 1}
 nav .lang{padding: 13px 20px; font-size: 0}
 nav .lang li{position: relative; display: inline-block; line-height: 30px}
 nav .lang li + li:before{position: absolute; top: 50%; left: 0; display: block; content: ''; width: 1px; height: 12px; margin-top: -5px; background-color: #ccc}
@@ -91,30 +108,32 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; b
 
 
 
-.searchTop{display: none; position: absolute; top: 100%; left: 0; width: 100%; border-top: 1px solid #ddd; border-bottom: 1px solid #cecece; z-index: 10}
-.searchTop .inner{position: relative; width: 700px; padding: 18px 0 22px}
-.searchTop .searchArea{position: relative; z-index: 9; background-color: #f8f8f8}
-.searchTop .searchBox{display: table; width: 100%; border-bottom: 1px solid #000; font-size: 0}
-.searchTop .inputWrap{display: table-cell; width: 100%}
-.searchTop input[type="text"]{width: 100%; height: 42px; padding: 0 10px; font-size: 14px; background-color: #f8f8f8}
-.searchTop .searchBtn{display: inline-block; width: 42px; height: 42px; background-size: 21px;}
-.searchTop .btnClose{display: block; width: 26px; height: 26px; position: absolute; top: 8px; left: 100%; background: url(../images/btn_close_search.png) no-repeat center; text-indent: -9999px}
+.searchTop{display: none; position: absolute; top: 0; right: 100%; width: 100%; background-color: #fff; border-bottom: 1px solid #c6464b; z-index: 10}
+.searchTop .back{position: absolute; top: 0; left: 0; width: 56px; height: 56px; background: url(../images/m/btn_back.png) no-repeat center; background-size: 23px; text-indent: -9999px;}
+.searchTop .searchArea{position: relative; padding: 0 45px 0 56px;}
+.searchTop .inputWrap{position: relative; width: 100%; padding-right: 30px;}
+.searchTop input[type="text"]{width: 100%; height: 56px; font-size: 16px;}
+.searchTop .btnDel{position: absolute; top: 0; right: 0; width: 30px; height: 100%; background: url(../images/common/btn_close_search.svg) no-repeat center; background-size: 14px; text-indent: -9999px;}
+.searchTop .searchBtn{position: absolute; top: 0; right: 15px; display: block; width: 30px; height: 100%;}
+.searchTop .btnClose{display: block; width: 26px; height: 26px; position: absolute; top: 8px; left: 100%; background: url(../images/common/btn_close_search.svg) no-repeat center; text-indent: -9999px}
 .searchTop .dimmed{position: fixed; top: 71px; left: 0; width: 100%; height: 100%; background: #000; opacity: .7; z-index: 8}
 
-.topVisual{height: 276px; padding: 48px 0; background: url(../images/bg_visual.png) center 0; color: #fff;}
-.topVisual .inner{position: relative; padding: 14px 600px 0 0;}
-.topVisual .title{font-size: 28px}
-.topVisual .desc{padding: 30px 0 0; font-size: 13px; line-height: 22px}
-.topVisual .linkMore{height: 30px; margin: 26px 0 0; padding: 0 22px; border: 1px solid #fff; font-size: 13px; line-height: 28px; transition: background .1s}
-.topVisual .linkMore:after{content: ''; display: inline-block; width: 24px; height: 14px; margin: 9px 0 0 7px; background: url(../images/btn_arrow_link.png) no-repeat center top; vertical-align: top;}
-.topVisual .linkMore:hover{background-color: rgba(0,0,0,0.3);}
-.finderWrap{position: absolute; top: 0; right: 0; width: 600px;}
-.stepNavi{padding: 0 30px; background-color: rgba(255,255,255,0.7); border-radius: 13px; overflow: hidden; box-shadow: 15px 15px 32px rgba(0,0,0,0.3)}
-.stepNavi p{font-size: 0;}
-.stepNavi p > *{font-size: 13px; display: inline-block;}
-.stepNavi .step{margin-right: 20px; line-height: 25px; color: #c6464b; text-transform: uppercase;}
-.stepNavi .bar{position: relative; width: 438px; padding: 8px 0;}
-.stepNavi .bar:after{	display: block; content: ''; height: 9px; border-radius: 5px;
+.topVisual{padding: 30px 0 0; background: url(../images/m/bg_visual.png) no-repeat center 0; color: #fff; background-size: 1650px;}
+.topVisual .inner{position: relative;}
+.topVisual .inner:before{display: block; content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 66px; background-color: #fff;}
+.topVisual .title{font-size: 22px; line-height: 1.45}
+.topVisual .desc{padding: 16px 10px 0 0; font-size: 14px; line-height: 1.45}
+.topVisual .linkMore{height: 40px; margin: 16px 0 0; padding: 0 26px; border: 1px solid #fff; font-size: 15px; line-height: 38px; transition: background .1s}
+.topVisual .linkMore:after{content: ''; display: inline-block; width: 24px; height: 14px; margin: 0 0 0 16px; background: url(../images/btn_arrow_link.png) no-repeat center top; vertical-align: middle;}
+.topVisual .linkMore:active{background-color: rgba(0,0,0,0.3);}
+.finderWrap{position: relative; margin-top: 30px; z-index: 1}
+.stepNavi{padding: 0 12px; background-color: rgba(255,255,255,0.7); border-radius: 10px; overflow: hidden; box-shadow: 5px 5px 10px rgba(0,0,0,0.3)}
+.stepNavi p{display: inline-flex; width: 100%; height: 20px; align-items: center;}
+.stepNavi p > *{display: inline-block; font-size: 11px; line-height: 20px; white-space: nowrap;}
+.stepNavi .step{margin-right: 9px; line-height: 21px; color: #c6464b; text-transform: uppercase;}
+.stepNavi .step b{margin-left: 3px; font-size: 12px; line-height: 20px;}
+.stepNavi .bar{position: relative; width: 100%;}
+.stepNavi .bar:after{	display: block; content: ''; height: 7px; border-radius: 5px;
 	background: #dd6065;
 	background: -moz-linear-gradient(left,  #dd6065 0%, #961b1f 100%);
 	background: -webkit-linear-gradient(left,  #dd6065 0%,#961b1f 100%);
@@ -124,36 +143,39 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; b
 .stepNavi.step1 .bar:after{width: 33%;}
 .stepNavi.step2 .bar:after{width: 66%;}
 .stepNavi.step3 .bar:after{width: 100%;}
-.stepNavi .num{float: right; color: #666; line-height: 24px}
+.stepNavi .num{margin-left: 10px; color: #666; letter-spacing: 0}
 .stepNavi .num em{color: #333}
-.finder{margin: 17px 0 0; padding: 24px 30px; color: #333; background-color: #fff; border-radius: 5px; box-shadow: 15px 15px 32px rgba(0,0,0,0.45)}
-.finder .line{position: relative; line-height: 36px; text-align: left; font-size: 0;}
-.finder .line + .line{margin-top: 16px;}
+
+.finder{margin: 12px 0 0; padding: 20px 20px 0; color: #333; background-color: #fff; border-radius: 4px 4px 6px 6px; box-shadow: 0px 5px 9px rgba(0,0,0,0.32)}
+.finder select{width: 100%; height: 36px; padding: 0 40px 0 10px; border: 1px solid #dd5c61; letter-spacing: -.02em;	background: #fff url(../images/selectbox1.png) no-repeat right 14px center;}
+.finder .line{position: relative; display: inline-flex; width: 100%; line-height: 36px; text-align: left; font-size: 0;}
+.finder .line + .line{margin-top: 14px; padding-top: 14px; border-top: 1px solid #dadada}
 .finder .line > *{font-size: 14px;}
-.finder .line > span:first-of-type{min-width: 36px; text-align: right;}
-.finder select{width: 220px; height: 36px; margin: 0 12px 0 10px; padding: 0 40px 0 14px; border: 1px solid #dd5c61; letter-spacing: -.02em;	background: #fff url(../images/selectbox1.png) no-repeat right 14px center;}
-.finder .NextBtn{position: absolute; top: 0; right: 0; height: 36px; padding: 0 20px; line-height: 36px; background-color: #c6464b; color: #fff; font-weight: 700; text-align: center;}
+.finder .line span{flex: none;}
+.finder .line select{margin: 0 8px 0 10px;}
+.finder .line + .text{padding-top: 11px;}
 .finder .line.disabled{opacity: .5;}
 .finder .line.disabled .NextBtn{display: none;}
 .finder .line.disabled select, .finder select:disabled{border-color: #888;}
-.finder .detail{margin-top: 24px; font-size: 0; line-height: 16px;}
-.finder .detail strong{padding-right: 14px; font-size: 14px;}
-.finder .detail .detailOption{position: relative; display: inline-block; font-size: 13px;}
-.finder .detail .detailOption em{margin-right: 10px; font-weight: 500;}
-.finder .detail .detailOption + .detailOption{padding-left: 10px; margin-left: 9px;}
-.finder .detail .detailOption + .detailOption:before{display: block; content: ''; position: absolute; top: 2px; left: 0; width: 1px; height: 12px; background-color: #dadada;}
-.finder .inpD{padding-left: 20px;}
-.finder .inpD input[type="checkbox"]:checked + .icon{background-position: -32px -16px}
-.finder .inpD + .inpD{margin-left: 6px;}
+.finder .line.disabled + .text{opacity: .5;}
+.finder .NextBtn{display: block; width: calc(100% + 40px); height: 44px; margin: 22px -20px 0; font-size: 16px; line-height: 44px; border-radius: 0 0 4px 4px; background-color: #c6464b; color: #fff; font-weight: 700; text-align: center; transition: .1s}
+.finder .NextBtn:active{background-color: #96181c;}
+
+.finder .detail{margin: 14px 0 0; padding: 14px 0 0; font-size: 0; line-height: 16px; border-top: 1px solid #dadada}
+.finder .detail .detailOption{position: relative; display: inline-block; width: 50%; font-size: 14px;}
+.finder .detail .detailOption em{display: block; margin: 0 0 6px; font-weight: 500;}
+.finder .detail .detailOption:first-of-type{padding-right: 7px;}
+.finder .detail .detailOption:last-of-type{padding-left: 7px;}
 
 /*Front*/
-.frontCont{width: 1200px; margin: 0 auto; padding: 50px 0 150px; font-size: 13px}
-.frontCont hr.line{height: 1px; margin: 45px 0; background-color: #dadada;}
-.frontCont h2{margin-bottom: 40px; font-size: 22px; font-weight: 500; text-transform: uppercase;}
-.frontCont h3{margin-bottom: 20px; font-size: 17px; font-weight: 500}
-.frontCont h3 em{margin-left: 2px; font-size: 14px; color: #666; vertical-align: baseline;}
-.frontCont h4{margin: 40px 0 14px; font-size: 14px; font-weight: 500}
-.frontCont h4 + p.txt{color: #666}
+.frontCont{margin: 0 auto; padding: 50px 20px 50px;}
+.frontCont hr.line{height: 1px; margin: 32px 0; background-color: #dadada;}
+.frontCont h2{margin-bottom: 20px; font-size: 20px; font-weight: 500; text-transform: uppercase;}
+.frontCont h3{margin-bottom: 10px; font-size: 16px; font-weight: 500}
+.frontCont h3 em{margin-left: 2px; font-size: 13px; color: #666; vertical-align: baseline; white-space: nowrap;}
+.frontCont h3 + p.txt{line-height: 1.38}
+.frontCont h4{margin: 30px 0 10px; font-size: 15px; font-weight: 500}
+.frontCont h4 + p.txt{line-height: 1.38; color: #666}
 .frontCont .btnGroup{text-align: center;}
 .frontCont .table thead{background-color: #f4f4f4; border-color: #d7d7d7}
 .frontCont .tabMenu li{width: 25%;}
@@ -161,74 +183,58 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; b
 .frontCont .tabMenu li.active button{border-color: #c6464b;}
 .tabMenu.applyTab{margin-bottom: 40px;}
 
-.finderManual{display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; flex-direction: row; width: 100%; justify-content: space-between;}
-.finderManual li{position: relative; display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; align-items: center; width: 340px; min-height: 162px; padding: 30px 60px; background-color: #f4f4f4; border-radius: 12px;}
-.finderManual li p{padding-bottom: 4px; line-height: 22px}
-.finderManual li b{display: block; margin-bottom: 8px; color: #c6464b; line-height: 17px}
-.finderManual li b em{margin-left: 2px; font-size: 17px; vertical-align: baseline;}
-.finderManual li:before{display: inline-block; flex: none; content: ''; width: 82px; height: 72px; margin: 0 18px 2px 0; background: url(../images/icon_finder.png) no-repeat;}
-.finderManual li:nth-child(1):before{background-position: 0 0px;}
-.finderManual li:nth-child(2):before{background-position: 0 -72px;}
-.finderManual li:nth-child(3):before{background-position: 0 -144px;}
-.finderManual li:after{display: block; content: ''; position: absolute; top: 50%; left: 100%; width: 20px; height: 18px; margin: -9px 0 0 36px; background: url(../images/split.png); background-position: -32px -100px}
+/*Quick Finder*/
+.finderManual{width: 100%;}
+.finderManual li{position: relative; display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; align-items: center; padding: 22px 34px; background-color: #f4f4f4; border-radius: 12px;}
+.finderManual li p{padding-bottom: 4px; line-height: 1.4; color: #666}
+.finderManual li b{display: block; margin-bottom: 8px; color: #c6464b; line-height: 1}
+.finderManual li b em{margin-left: 4px; font-size: 18px; vertical-align: baseline;}
+.finderManual li:before{display: inline-block; flex: none; content: ''; width: 58px; height: 50px; margin: 0 18px 2px 0; background-repeat: no-repeat; background-position: center;}
+.finderManual li:nth-child(1):before{background-image: url(../images/common/icon_finder1.svg);}
+.finderManual li:nth-child(2):before{background-image: url(../images/common/icon_finder2.svg);}
+.finderManual li:nth-child(3):before{background-image: url(../images/common/icon_finder3.svg);}
+.finderManual li:after{display: block; content: ''; position: absolute; top: 100%; left: 50%; width: 14px; height: 15px; margin: 12px 0 0; background: url(../images/m/split.png); background-position: 0 0; background-size: 200px; transform: translateX(-50%);}
 .finderManual li:last-of-type:after{display: none;}
+.finderManual li + li{margin-top: 39px;}
 
-/*finder step3 검색결과*/
-.resultVisa .addTxt{margin-top: 8px; color: #333}
-.resultVisa .titleBox{padding: 11px 30px; border: 1px solid #dadada;}
-.resultVisa .titleBox p{font-size: 14px; font-weight: 500}
-.resultVisa .contBox{padding: 22px 30px 30px; font-size: 13px; line-height: 22px;}
-.resultVisa.open .titleBox{background-color: #333; border-color: #333}
-.resultVisa.open .titleBox p{color: #fff}
-.resultVisa.open .titleBox .openBtn:before, 
-.resultVisa.open .titleBox .openBtn:after{background-color: #fff}
-.resultVisa .listNum2{margin: 8px 0 0;}
-.resultVisa .listNumber{margin-top: 0;}
-.resultVisa .listNumber > li + li{margin-top: 2px;}
-.resultVisa .fileDown{margin: -4px 0;}
-.resultVisa .fileDown .btn{height: 30px; line-height: 30px; font-size: 13px; font-weight: 400}
-.resultVisa .tabMenu{margin: 30px -3px 30px 0;}
-.resultVisa .tabMenu li{width: 33.3333%}
-.resultVisa .tabMenu li button{font-size: 14px}
-.resultVisa .tabMenu li.active button{color: #c6464b}
 
 
 /*비자리스트*/
-.visaList .inBox{position: relative; display: block; width: 100%; border: 1px solid #dadada}
-.visaList .name{font-size: 0;}
-.visaList .name .icon{width: 50px; height: 50px; background-image: url(../images/icon_visa.png); background-repeat: no-repeat;}
-.visaList .name em{font-size: 17px; line-height: 50px}
-.visaList .desc{display: block; margin-top: 10px; color: #666; font-size: 14px; line-height: 1.7;}
+.visaList .inBox{position: relative; display: block; width: 100%;}
+.visaList .name{display: block; font-size: 0;}
+.visaList .name .icon{width: 50px; height: 50px; background-image: url(../images/m/icon_visa.png); background-repeat: no-repeat;}
+.visaList .name em{font-size: 17px;}
+.visaList .desc{display: block; margin-top: 12px; color: #666; font-size: 13px; line-height: 1.7;}
 
 /*part*/
-.visaList.part{margin: 0 -7px; font-size: 0;}
-.visaList.part > li{display: inline-block; width: 25%; padding: 0 7px; text-align: center;}
-.visaList.part .inBox{min-height: 200px; padding: 20px 24px 24px;}
-.visaList.part .name em{margin-left: 6px;}
+.visaList.part li + li{margin-top: 10px;}
+.visaList.part .inBox{padding: 18px 22px 20px; border: 1px solid #dadada}
+.visaList.part .name{background: url(../images/m/arrow_right.png) no-repeat right center; background-size: 9px;}
+.visaList.part .name em{margin-left: 4px; font-size: 17px; line-height: 50px}
+/*effect*/
+.visaList.part li .inBox:before,
+.visaList.part li .inBox:after{display: block; content: ''; position: absolute; width: 0; height: 0; opacity: 0; transition: .2s;}
+.visaList.part li .inBox:before{top: -1px; left: -1px; border-top: 2px solid #c6464b; border-left: 2px solid #c6464b;}
+.visaList.part li .inBox:after{bottom: -1px; right: -1px; border-bottom: 2px solid #c6464b; border-right: 2px solid #c6464b;}
+.visaList.part li .inBox:active:before,
+.visaList.part li .inBox:active:after{width: 100%; height: 100%; opacity: 1;}
 
 /*total*/
-.gridWrap{margin: 0 -7px; font-size: 0;}
-.visaList.total{display: inline-block; width: 33.333%; padding: 0 7px;}
-.visaList.total > li{position: relative;}
-.visaList.total > li + li{margin-top: 14px;}
-.visaList.total > li:before{display: block; content: ''; position: absolute; top: 42px; right: 30px; width: 15px; height: 10px; background: url(../images/arrow_visalist.png) no-repeat center; transition: .2s}
-.visaList.total > li.open:before{transform: rotate(180deg);}
-.visaList.total .inBox{height: 96px; padding: 20px 60px 24px; text-align: left; outline: 0; overflow: visible;}
-.visaList.total .name em{margin-left: 16px;}
-.visaList .visaType{display: none; padding: 6px 20px; border: 1px solid #999; border-top: 0;}
-.visaList .visaType li{background: url(../images/arrow_visalist2.png) no-repeat right 10px center;}
-.visaList .visaType li + li{border-top: 1px solid #dadada}
-.visaList .visaType li a{display: block; padding: 12px 10px; font-weight: 500; line-height: 1.4}
-.visaList.total > li.open .inBox{border: 2px solid #c6464b;}
-.visaList.total > li.open .inBox:before,
-.visaList.total > li.open .inBox:after{display: none;}
+.visaList.total{margin: 0 -20px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada}
+.visaList.total > li + li{border-top: 1px solid #dadada}
+.visaList.total .inBox{height: 45px; padding: 0 19px; text-align: left; outline: 0; overflow: visible;}
+.visaList.total .icon{width: 24px; height: 24px;}
+.visaList.total .name{position: relative;}
+.visaList.total .name em{margin-left: 16px; font-size: 15px; line-height: 24px; font-weight: 400; color: #333}
+.visaList.total .name:before{display: block; content: ''; position: absolute; top: 0; right: 0; width: 15px; height: 100%; background: url(../images/arrow_visalist.png) no-repeat center; transition: .2s}
+.visaList.total .open .name:before{transform: rotate(180deg);}
+.visaList.total .open .name em{font-weight: 500}
+.visaList .visaType{display: none; padding: 0 20px; background-color: #f4f4f4}
+.visaList .visaType li{background: url(../images/arrow_visalist2.png) no-repeat right 6px center;}
+.visaList .visaType li + li{border-top: 1px solid #fff}
+.visaList .visaType li a{display: block; padding: 10px 11px; line-height: 1.45}
 
-/*effect*/
-.visaList li .inBox:before,.visaList li .inBox:after{display: block; content: ''; position: absolute; width: 0; height: 0; opacity: 0; transition: .2s;}
-.visaList li .inBox:before{top: -1px; left: -1px; border-top: 2px solid #c6464b; border-left: 2px solid #c6464b;}
-.visaList li .inBox:after{bottom: -1px; right: -1px; border-bottom: 2px solid #c6464b; border-right: 2px solid #c6464b;}
-.visaList li .inBox:hover:before,
-.visaList li .inBox:hover:after{width: 100%; height: 100%; opacity: 1;}
+
 
 /*비자icon*/
 .visa01 .icon{background-position: 0 0px;}								/*01.관광단기방문*/
@@ -248,67 +254,67 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; b
 .visa15 .icon{background-position: -100px -200px;} 	/*15.외교공무*/
 
 /*신용카드*/
-.cardList{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; margin: 20px 0 0;}
-.cardList li{width: 100%; padding: 22px 0; border: 1px solid #dadada; text-align: center; vertical-align: middle; table-layout: fixed;}
-.cardList li + li{margin-left: 15px;}
-.cardList li span{display: inline-flex; flex-direction: column; justify-content: center; height: 40px;}
-.cardList li p{margin-top:10px; font-size: 13px; color: #666666;}
+.cardList{margin: 14px -3px -6px; font-size: 0;}
+.cardList li{display: inline-block; width: calc(50% - 6px); margin: 0 3px 6px; padding: 16px 0; border: 1px solid #dadada; text-align: center;}
+.cardList li span{width: 47px;}
+.cardList li p{margin-top: 4px; font-size: 11px; color: #666;}
 
-.processList{margin: 0 0 -16px; font-size: 0;}
-.processList li{position: relative; display: inline-block; width: 210px; margin: 0 60px 16px 0; border: 1px solid #dadada; font-size: 13px;}
-.processList li:after{display: block; content: ''; position: absolute; top: 50%; left: 100%; width: 12px; height: 14px; margin: -7px 0 0 24px; background: url(../images/arrow_process.png);}
-.processList li:nth-child(4n){margin-right: 0;}
-.processList li:nth-child(4n):after{display: none;}
-.processList li:last-of-type .desc{padding: 13px 20px 11px; margin: 0; background-color: #f2f0ed;}
-.processList li:last-of-type:after{display: none;}
-.processList .top{padding: 10px 0 9px; margin: 0 20px; line-height: 19px; font-size: 0;}
-.processList .top span{padding-left: 25px; font-size: 13px; background: url(../images/icon_person.png) no-repeat;}
-.processList .top span.typeBlue{background-position: 0 -19px; color: #467fc6}
-.processList .top span.typeRed{background-position: 0 -38px; color: #c6464b}
-.processList .top span.typeGreen{background-position: 0 -57px; color: #31abaf}
+.processList{position: relative; padding-left: 25px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada}
+.processList:before{display: block; content: ''; position: absolute; top: 0; left: 9px; width: 1px; height: 100%; background-color: #dadada}
+.processList li{position: relative; min-height: 80px; padding: 10px 6px; font-size: 13px;}
+.processList li + li{border-top: 1px solid #e4e4e4}
+.processList li:last-of-type .desc strong{color: #467fc6; font-weight: 500}
+.processList i{position: absolute; top: 50%; left: -25px; display: block; width: 18px; height: 18px; margin: -6.5px 0 0; font-style: normal; font-size: 12px; font-weight: 500; line-height: 16.5px; background-color: #fff; border: 1px solid #333; border-radius: 50%; text-align: center;}
+.processList .top{padding-bottom: 6px; line-height: 17px; font-size: 0;}
+.processList .top span{padding-left: 20px; font-size: 12px; background: url(../images/icon_person.png) no-repeat; background-size: 17px auto}
+.processList .top span.typeBlue{background-position: 0 -17px; color: #467fc6}
+.processList .top span.typeRed{background-position: 0 -34px; color: #c6464b}
+.processList .top span.typeGreen{background-position: 0 -51px; color: #31abaf}
 .processList .top span + span{margin-left: 12px;}
-.processList .desc{min-height: 100px; padding: 13px 0 11px; margin: 0 20px; border-top: 1px solid #dadada;}
-.processList .desc strong{display: block; min-height: 53px; font-size: 14px; line-height: 22px}
-.processList .desc p{color: #666}
-.processList .arrowN{width: 22px; height: 11px; margin-top: 5px; background: url(../images/arrow_visalist2.png) no-repeat center; text-indent: -9999px; opacity: .7}
+.processList .desc strong{display: block;}
+.processList .desc p{margin-top: 3px; color: #666; font-size: 12px}
+.processList .arrowN{display: inline-block; width: 21px; height: 11px; margin-top: 3px; background: url(../images/arrow_visalist2.png) no-repeat center; text-indent: -9999px; opacity: .7}
 .processList + p{margin-top: 20px;}
 
 .txtTable{border-bottom: 1px solid #dadada}
 .txtTable tbody tr{border-top: 1px solid #dadada;}
-.txtTable tbody th{padding: 22px 20px; background-color: #f4f4f4; font-weight: 500; line-height: 22px; vertical-align: top; text-align: left; word-break: keep-all;}
+.txtTable tbody tr > *{display: block; width: 100%;}
+.txtTable tbody th{padding: 7px 12px; background-color: #f4f4f4; font-size: 14px; font-weight: 500; line-height: 22px; vertical-align: top; text-align: left; word-break: keep-all;}
 .txtTable tbody th span{font-size: 12px; color: #666}
-.txtTable tbody td{padding: 22px 20px; line-height: 22px;}
-.txtTable .imgWrap{display: inline-block; margin: 24px 0 10px -5px}
-.txtTable .imgWrap p{margin-top: 5px; text-align: center;}
+.txtTable tbody td{padding: 16px 12px; line-height: 1.4;}
+.txtTable .imgWrap{margin: 14px 0 10px; text-align: center;}
+.txtTable .imgWrap p{margin-top: 3px; color: #666; text-align: center;}
 .txtTable .listDot{margin: 0 0 4px;}
 .txtTable * + .listDot{margin-top: 2px;}
-.txtTable .divBox{width: 760px; margin: 12px 0 14px;}
-.txtTable .btnVisaMenu{height: 30px; padding: 0 10px; margin: -8px 0 -5px 8px; min-width: 124px; font-size: 13px; line-height: 28px; border: 1px solid #333;}
+.txtTable .divBox{margin: 8px 0 10px -8px;}
+.txtTable .btnVisaMenu{height: 30px; padding: 0 10px; margin: -9px 0 -7px 8px; line-height: 28px; border: 1px solid #333;}
 .txtTable + h3{margin-top: 40px;}
 
-.tableTop.btnManual{margin-top: -38px;}
-.btnManual a{padding-left: 32px; color: #333; line-height: 25px; background: url(../images/icon_document.png) no-repeat left center;}
-.btnManual a + a{margin-left: 30px;}
+.btnManual{padding: 6px 0 12px;}
+.btnManual a{position: relative; display: block; width: fit-content; padding-left: 22px; color: #333; font-size: 14px; line-height: 24px; background: url(../images/m/icon_document.png) no-repeat left center; background-size: 16px;}
+.btnManual a:after{display: inline-block; content: ''; width: 7px; height: 24px; margin-left: 7px; background: url(../images/arrow_visalist2.png) no-repeat center; vertical-align: top;}
+.btnManual a + a{margin-top: 3px;}
 
 ul[class*="list"]{text-align: left}
-ul[class*="list"] > *{position: relative; word-break: keep-all; line-height: 22px;}
+ul[class*="list"] > *{position: relative; word-break: keep-all; line-height: 1.4;}
 ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
-.listDot{margin-top: 24px;}
-.listDot > *{padding-left: 8px; color: #333}
-.listDot > *::before{content: ''; width: 2px; height: 2px; background: #8a8a8a; top: 10px;}
+.listDot{margin-top: 10px;}
+.listDot > *{padding-left: 6px; color: #333}
+.listDot > * + *{margin-top: 2px;}
+.listDot > *::before{content: ''; width: 2px; height: 2px; background: #8a8a8a; top: 8px;}
 .listDash > *{padding-left: 5px;}
-.listDash > *::before{content: '-'; top: 0px; line-height: 20px;}
+.listDash > *::before{content: '-'; top: 0px; line-height: 1.4;}
 .listNum{margin-top: 10px;}
-.listNum > li{color: #666;}
+.listNum > li{position: relative; padding-left: 16px; color: #666;}
 .listNum > li span{color: #333}
-.listNum > li i{display: inline-block; width: 15px; height: 15px; margin: 4px 4px 0 0; background-color: #888; border-radius: 50%; font-size: 11px; line-height: 15px; color: #fff; font-style: normal; text-align: center;}
+.listNum > li i{position: absolute; top: 0; left: 0; display: inline-block; width: 13px; height: 13px; margin: 3px 4px 0 0; background-color: #adadad; border-radius: 50%; font-size: 11px; line-height: 13px; color: #fff; font-style: normal; text-align: center;}
 .listNumber{margin: 14px 0 0 12px; list-style: decimal;}
 .listNumber > li + li{margin-top: 10px;}
 .listNum2 > li{margin-bottom: 2px; padding-left: 13px; text-indent: -13px;}
 .listNum2 > li ul{text-indent: 0;}
 
 
-.titleDot{position: relative; margin-bottom: 12px;}
+.titleDot{position: relative; margin-bottom: 7px; font-weight: 500;}
 .titleDot:before{display: inline-block; content: ''; width: 2px; height: 2px; margin-right: 3px; background-color: #636363; vertical-align: super;}
 .txtDash{position: relative; padding-left: 5px;}
 .txtDash:before{display: block; content: '-'; position: absolute; top: 0; left: 0;}
@@ -331,36 +337,6 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .visaDesc + .addTxt{padding: 18px;}
 
 /*Admin*/
-.admin h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700; border-bottom: 1px solid #999}
-.admin h4{padding: 24px 0 12px; font-weight: 500}
-.admin .shapeRequire{color: #bf3f44; font-weight: 400}
-.admin .header .gnb li.active a{color: #1a6fa0; border-color: #1a6fa0;}
-.admin .contents .inner{position: relative}
-.admin .aside{position: absolute; top: 0; left: 0; height: 100%; min-height: calc(100vh - 71px); float: left; background-color: #fafafa}
-.admin .cont{margin-left: 150px; padding: 0 0 50px 20px}
-.admin .currentInfo{display: inline-block; padding: 9px 0; font-size: 0; line-height: 1.4}
-.admin .currentInfo span{font-size: 13px; color: #666}
-.admin .currentInfo span + span{margin-left: 3px}
-.admin .currentInfo span em{margin: 0 1px; color: #333; font-weight: 300}
-.admin .topMenu *{font-size: 13px}
-.admin .topMenu .searchBox{width: 120px; height: 26px; margin-top: 5px; padding: 0 2px; border: 0; border-bottom: 1px solid #888}
-.admin .topMenu .searchBox:focus{border-color: #000}
-.admin .topMenu .searchBtn{width: 20px}
-.admin .searchBtn{background-size: 18px}
-.admin textarea{width: 100%; height: 118px; overflow-y: auto; padding: 20px; font-size: 13px; line-height: 1.5; border: 1px solid #d3d3d3; word-break: keep-all; transition: border .1s}
-.admin textarea:focus{border-color: #999}
-.admin textarea:disabled{color: #aaa; background-color: #f4f4f4}
-
-.wrap.login{min-width: unset; padding: 200px 10px 100px; text-align: center;}
-.logBox{display: block; max-width: 560px; margin: 0 auto; padding: 90px 100px 110px; border: 1px solid #dadada}
-.logBox strong{display: block; margin-bottom: 45px; font-size: 30px}
-.logBox strong span{margin-right: 6px; color: #1a6fa0}
-.logBox .inpT{display: block; width: 100%; height: 40px; margin-bottom: 10px;}
-.logBox .btn{display: block; width: 100%; height: 46px; line-height: 44px}
-.logBox .btn.blue{margin: 30px 0 10px;}
-.logBox .btn em.circle{width: 17px; height: 17px; margin: 2px 0 2px 3px; border: 1px solid #1a6fa0; border-radius: 50%; font-size: 12px; line-height: 15px; vertical-align: text-top;}
-
-
 .inpWrap{line-height: 36px}
 .inpWrap input{margin-right: 4px}
 .inpT{height: 36px; padding: 0 10px; border: 1px solid #d3d3d3; transition: border .1s}
@@ -442,51 +418,16 @@ hr.line{margin: 30px 0; height: 1px; background-color: #999}
 .tableTop.topRight{padding: 0}
 .tableTop .btnBorder:last-of-type{color: #1a6fa0; border-color: #1a6fa0}
 
-/*코드등록*/
-h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단border-top설정*/
-.optionTable{width: 100%; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada; font-size: 0}
-.optionTable > li{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-wrap: nowrap; flex-direction: row; width: 100%}
-.optionTable > li+li{border-top: 1px solid #dadada}
-.optionTable > li .cell{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-direction: row; /*flex: 1*/}
-.optionTable > li .cell:only-child{width: 100%}
-.optionTable > li .cell:last-of-type{flex: auto;}
-.optionTable > li .title{flex: none; width: 140px; padding: 12px 20px; font-size: 14px; line-height: 36px; background-color: #f4f4f4}
-.optionTable > li .title.short{padding: 12px 20px; width: auto}
-.optionTable > li .box{position: relative; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex: auto; min-height: 60px; padding: 12px 30px 12px 14px}
-.optionTable > li .box .inpGroup{margin-top: 10px}
-.optionTable > li .box span.txt{padding: 8px 0 0; font-size: 14px; line-height: 20px}
-.optionTable > li .box .txt.mid{margin: 0 6px;}
-.optionTable > li .box .txt.addTxt{margin-left: 6px; font-size: 13px}
-.optionTable .inpT{width: 140px}
-.optionTable input.inpNum{width: 70px; position: relative; z-index: 1}
-.optionTable input.inpNum + select{margin-left: -1px}
-.optionTable input.inpNum + select:focus{position: relative; z-index: 1}
-.optionTable input + .btn{flex: none; margin-left: 8px}
-.optionTable input.wide{width: 100%;}
-.optionTable .registBtn{flex: none; margin: 12px 18px 12px auto}
-.optionTable .searchBtn{flex: none; margin-left: 0}
-.optionTable .box.row{display: block; padding: 0}
-.optionTable .box.row .boxLine{position: relative; padding: 12px 15px}
-.optionTable .box.row .boxLine .inpGroup{margin: 10px 0}
-.optionTable .box.row .boxLine .inpGroup + .selectD{margin-left: 16px;}
-.optionTable .box.row em.subTitle{position: absolute; top: 0; right: 100%; min-width: 60px; margin-top: -1px; padding: 12px 15px; border-top: 1px solid #dadada; font-size: 14px; line-height: 36px; background-color: #f4f4f4}
-.optionTable .table + .addTxt{margin: 8px 0 10px;}
-
-/*파일등록cell*/
-.optionTable .cell.file .title{padding-right: 60px}
-.optionTable .cell.file .boxLine p{display: inline-flex; width: 100%; padding: 12px 15px}
-.optionTable .boxLine + .boxLine{border-top: 1px solid #dadada}
-
 /*table*/
 .optionTable + .table{margin-top: 25px}
 .table{font-size: 14px; text-align: center; table-layout: auto}
 .table .pad{padding-right: 5px; padding-left: 5px}
 .table thead{background-color: #dae4f0; border-top: 1px solid #cfd7e3; border-bottom: 1px solid #cfd7e3}
-.table thead th{padding: 12px 0; font-weight: 500; line-height: 16px; vertical-align: middle}
+.table thead th{padding: 11px 0; font-size: 14px; font-weight: 500; line-height: 16px; vertical-align: middle}
 .table thead tr + tr th{border-top: 1px solid #d7d7d7}
 .table tbody{font-size: 13px}
 .table tbody tr{border-bottom: 1px solid #dadada}
-.table tbody td{padding: 11px 0 12px; line-height: 16px}
+.table tbody td{padding: 11px 0; line-height: 16px}
 .table tbody td > p{padding: 0 10px}
 .table tbody td p span+span{margin-left: 3px}
 .table.input thead{background-color: #f4f4f4; border-color: #d7d7d7}
@@ -501,28 +442,11 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .table .inpGroup{display: inline-block; text-align: left; white-space: nowrap}
 .table input.inpNum{width: 60px; text-align: right}
 
-/*파일찾기*/
-.inpFileWrap{position: relative; padding-right: 98px; font-size: 0}
-.inpFileWrap .inpT{width: 314px}
-.inpFileWrap label{position: absolute; top: 0; left: 0; display: block; width: 100%; height: 36px}
-.inpFileWrap label b{display: block; width: 90px; height: 36px; margin-left: auto; padding: 0; line-height: 36px; color: #fff; background-color: #888; font-size: 14px; text-align: center}
-.inpFileWrap label input{position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0}
-
 /*테두리박스*/
-.divBox{padding: 20px; margin-bottom: 24px; border: 1px solid #dadada}
+.divBox{padding: 12px; margin-bottom: 24px; border: 1px solid #dadada; font-size: 12px;}
 .divBox p.text{font-size: 13px; line-height: 21px}
 .divBox .inpGroup{font-size: 0; margin-bottom: -14px}
 .divBox .inpGroup .inpD{width: 20%; margin-left: 0; margin-bottom: 14px;}
-
-/*에디터/첨부파일영역*/
-.editWrap{border: 1px solid #dadada}
-.editWrap .editArea{padding: 20px}
-.editWrap .attachWrap{padding: 20px; border-top: 1px solid #dadada}
-.editWrap .btnGroup{padding: 0 0 10px 86px; font-size: 0}
-.editWrap .btnGroup .btnBorder{min-width: 102px}
-.editWrap .attachBox{margin-top: 10px; font-size: 0}
-.editWrap .attachBox .inpD{margin-right: 15px; font-size: 14px}
-.editWrap .attachBox .inpD .text{line-height: 35px;}
 
 /*등록항목*/
 .registBox .titleBox{background-color: #dbe7ec; border: 1px solid #cadae0}
@@ -538,64 +462,6 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 
 /*타이틀회색상자*/
 .titleTxtBox{display: block; margin-bottom: 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; font-weight: 700; line-height: 42px; text-align: center}
-
-/*이력비교 (2단)*/
-.columnWrap{position: relative; margin-top: 25px; font-size: 0}
-.columnWrap.col2 > div{width: 50%}
-.columnWrap .red{color: #bf3f44 !important;}
-.columnWrap hr.line{margin: 24px 0;}
-.columnWrap .inpD + .inpD{margin-left: 10px;}
-.columnWrap .inpD .text{font-size: 12px}
-.columnWrap .btn{min-width: 70px; height: 30px; padding: 0 10px; line-height: 30px; font-size: 12px}
-.columnWrap .btnBorder{min-width: 70px; height: 20px; line-height: 18px; font-size: 11px}
-.columnWrap .topRight.btnGroup{margin-top: -26px;}
-.columnWrap .btnGroup > * + *{margin-left: 6px;}
-.columnWrap h4 + .optionTable{border-top: 0;}
-.columnWrap h4{padding: 18px 0 10px; font-size: 13px; border-bottom: 1px solid #999}
-.columnWrap h5{padding: 18px 0 10px; font-size: 12px; font-weight: 500}
-.columnWrap .inpT{height: 30px; padding: 0 6px; font-size: 12px}
-.columnWrap textarea{height: 70px; padding: 8px 9px; font-size: 11px; line-height: 17px}
-.columnWrap select{height: 30px; padding: 0 30px 0 10px; font-size: 12px}
-.columnWrap > div{display: inline-block; font-size: 12px}
-.columnWrap > div:first-of-type{padding-right: 22px}
-.columnWrap > div:last-of-type{padding-left: 22px}
-.columnWrap > div:last-of-type:after{position: absolute; top: 0; left: 50%; display: block; content: ''; width: 1px; height: 100%; background-color: #cecece}
-.columnWrap .titleWrap{padding: 10px 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; line-height: 18px}
-.columnWrap .titleWrap .date{float: right; font-size: 13px; color: #666}
-.columnWrap .optionTable > li .title{width: 116px; padding: 9px 12px; font-size: 12px; line-height: 30px}
-.columnWrap .optionTable > li .title.short{width: auto}
-.columnWrap .optionTable > li .box{min-height: 48px; padding: 9px 11px}
-.columnWrap .optionTable > li .box .inpGroup{margin-top: 7px}
-.columnWrap .optionTable .box.row{padding: 0;}
-.columnWrap .optionTable .box.row .boxLine{padding: 10px;}
-.columnWrap .optionTable input.wide{width: auto; flex: auto}
-.columnWrap .tabMenu button{height: 35px; font-size: 12px; padding: 0 14px}
-.columnWrap .divBox{padding: 16px}
-.columnWrap .divBox .inpGroup{margin-bottom: -10px}
-.columnWrap .divBox .inpGroup .inpD{width: 33.333%; margin-bottom: 10px; margin-left: 0; word-break: break-all}
-.columnWrap .divBox .inpGroup .inpD .icon{top: 0; margin-top: 0}
-.columnWrap .divBox p.text{line-height: 17px}
-.columnWrap .table{font-size: 12px}
-.columnWrap .table thead th{padding: 8px 0; font-size: 12px}
-.columnWrap .table tbody td{padding: 8px 0; font-size: 11px}
-.columnWrap .titleTxtBox{margin-bottom: 12px; font-size: 13px; line-height: 35px;}
-.columnWrap .viewBox + .viewBox{margin-top: 6px;}
-.columnWrap .registBox{font-size: 12px;}
-.columnWrap .registBox .titleBox{padding: 8px 14px 7px;}
-.columnWrap .registBox .contBox{padding: 14px;}
-.columnWrap .registBox .optionTable .cell .title{width: 100px; padding: 10px 12px;}
-.columnWrap .registBox .optionTable .cell.url .boxLine > .inpT{width: 100%;}
-.columnWrap .registBox .inpFileWrap{width: 100%;}
-.columnWrap .registBox .inpFileWrap .inpT{width: 100%;}
-.columnWrap .registBox .inpFileWrap label{height: 30px;}
-.columnWrap .registBox .inpFileWrap label b{height: 30px; line-height: 30px; font-size: 12px;}
-.columnWrap .registBox .boxLine.down{display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex;}
-.columnWrap .registBox .boxLine.down .inpT{width: 100%;}
-.columnWrap .addOption li{padding: 10px 12px;}
-.columnWrap .editWrap .editArea{padding: 15px;}
-.columnWrap .editWrap .attachWrap{padding: 10px 15px}
-.columnWrap .editWrap .attachBox{margin-top: 0;}
-.columnWrap .editWrap .attachBox > p{font-size: 12px; line-height: 30px;}
 
 /* paginate */
 	.paging{padding: 40px 0 0; text-align: center; font-size: 0}

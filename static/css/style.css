@@ -36,8 +36,8 @@
 .tooltip .tipTxt > em:before{display: block; content: ''; position: absolute; bottom: 100%; left: 40px; width: 16px; height: 16px; background: url(../images/arrow_tooltip.png) no-repeat;}
 .tooltip:hover .tipTxt{display: block;}
 .active .tooltip .tipIcon{background: url(../images/common/icon_tooltip_red.svg) no-repeat center; background-size: 18px;}
-.tooltip.right .tipTxt{left: unset; right: -39px;}
-.tooltip.right .tipTxt > em:before{left: unset; right: 40px;}
+.tooltip.right .tipTxt{left: inherit; right: -39px;}
+.tooltip.right .tipTxt > em:before{left: inherit; right: 40px;}
 .tooltip.center .tipTxt{left: 50%; transform: translateX(-50%);}
 .tooltip.center .tipTxt > em:before{left: 50%; margin-left: -8px;}
 
@@ -150,19 +150,19 @@
 .frontCont .btnGroup{text-align: center;}
 .frontCont .table thead{background-color: #f4f4f4; border-color: #d7d7d7}
 .frontCont .tabMenu li{width: 25%;}
-.frontCont .tabMenu button{height: 50px; padding: 0 10px; background-color: #fff; font-size: 13px;}
+.frontCont .tabMenu button{height: 50px; padding: 0 10px; background-color: #fff; font-size: 13px; overflow: visible;}
 .frontCont .tabMenu li.active button{border-color: #c6464b;}
 .tabMenu.applyTab{margin-bottom: 40px;}
 
 .finderManual{display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; flex-direction: row; width: 100%; justify-content: space-between;}
 .finderManual li{position: relative; display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex; align-items: center; width: 340px; min-height: 162px; padding: 30px 60px; background-color: #f4f4f4; border-radius: 12px;}
-.finderManual li p{padding-bottom: 4px; line-height: 22px}
+.finderManual li p{width: 120px; padding-bottom: 4px; line-height: 22px}
 .finderManual li b{display: block; margin-bottom: 8px; color: #c6464b; line-height: 17px}
 .finderManual li b em{margin-left: 2px; font-size: 17px; vertical-align: baseline;}
-.finderManual li:before{display: inline-block; flex: none; content: ''; width: 82px; height: 72px; margin: 0 18px 2px 0; background: url(../images/icon_finder.png) no-repeat;}
-.finderManual li:nth-child(1):before{background-position: 0 0px;}
-.finderManual li:nth-child(2):before{background-position: 0 -72px;}
-.finderManual li:nth-child(3):before{background-position: 0 -144px;}
+.finderManual li:before{display: inline-block; flex: none; content: ''; width: 82px; height: 72px; margin: 0 18px 2px 0;}
+.finderManual li:nth-child(1):before{background: url(../images/common/icon_finder1.svg) no-repeat center;}
+.finderManual li:nth-child(2):before{background: url(../images/common/icon_finder2.svg) no-repeat center;}
+.finderManual li:nth-child(3):before{background: url(../images/common/icon_finder3.svg) no-repeat center;}
 .finderManual li:after{display: block; content: ''; position: absolute; top: 50%; left: 100%; width: 20px; height: 18px; margin: -9px 0 0 36px; background: url(../images/split.png); background-position: -32px -100px}
 .finderManual li:last-of-type:after{display: none;}
 

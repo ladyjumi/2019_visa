@@ -3,9 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 	<title>신청절차</title>
 	<link rel="stylesheet" href="../static/css/reset.css" />
-	<link rel="stylesheet" href="../static/css/style.css" />
+	<link rel="stylesheet" href="../static/css/style_m.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
 	<script src="../static/js/ui.js"></script>
 </head>
@@ -16,38 +17,42 @@
 	<div class="header">
 		<div class="inner">
 			<h1><a href="#">비자 내비게이터</a></h1>
-			<!-- GNB -->
-			<ul class="gnb">
-				<li><a href="#">비자 검색</a></li>
-				<li><a href="#">입국목적별 비자 종류</a></li>
-				<li class="active"><a href="#">신청절차</a></li>
-				<li><a href="#">수수료</a></li>
-				<li><a href="#">입국 및 체류</a></li>
-			</ul>
-			<!-- //GNB -->
-			<div class="topMenu">
-				<!-- 언어변경 -->
-				<select class="lang">
-					<option value="">한국어</option>
-					<option value="">ENGLISH</option>
-					<option value="">中文</option>
-				</select>
-				<!-- //언어변경 -->
+			<span class="btnWrap">
 				<button type="button" class="searchBtn showsearchBar">검색버튼</button>
-			</div>
+				<button type="button" class="gnbBtn">메뉴열기</button>				
+			</span>
 		</div>
-
+		<nav class="gnbWrap">
+			<div class="navBox">
+				<!-- 언어변경 -->
+				<ul class="lang">
+					<li class="active"><a href="#">KOR</a></li>
+					<li><a href="#">ENG</a></li>
+					<li><a href="#">中文</a></li>
+				</ul>
+				<!-- //언어변경 -->
+				<!-- GNB -->
+				<ul class="gnb">
+					<li><a href="#">비자 검색</a></li>
+					<li><a href="#">입국목적별 비자 종류</a></li>
+					<li class="active"><a href="#">신청절차</a></li>
+					<li><a href="#">수수료</a></li>
+					<li><a href="#">입국 및 체류</a></li>
+				</ul>
+				<!-- //GNB -->
+				<button type="button" class="gnbClose">메뉴닫기</button>
+			</div>
+		</nav>
 		<!-- 검색창 -->
 		<div class="searchTop">
 			<div class="searchArea">
-				<div class="inner">
-					<span class="searchBox">
-						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
-						<input type="button" value="검색" class="searchBtn">
-					</span>
-				</div>
+				<span class="inputWrap">
+					<input type="text" placeholder="검색어를 입력하세요.">
+					<button type="button" class="btnDel">지우기</button>
+				</span>
+				<input type="button" value="검색" class="searchBtn">
 			</div>
-			<div class="dimmed"></div>
+			<button type="button" class="back">검색창 닫기</button>			
 		</div>
 		<!-- //검색창 -->
 	</div>
@@ -57,585 +62,612 @@
 		<div class="frontCont">
 
 			<h2>신청절차</h2>
-			<ul class="tabMenu applyTab">
-				<li class="active"><button type="button">비자포털을 통한 전자비자신청</button></li>
-				<li><button type="button">제외공관을 통한 비자신청</button></li>
-				<li><button type="button">비자포털을 통한 비자발급인정서 신청</button></li>
-				<li><button type="button">국내 출입국·외국인관서를 통한 비자발급인정서 신청</button></li>
-			</ul>
-			<div class="tabBox">
-				<h3>비자포털을 통한 전자비자 신청</h3>
-				<table class="txtTable">
-					<colgroup>
-						<col style="width: 140px">
-						<col>
-					</colgroup>
-					<tbody>
-						<tr>
-							<th>신청경로</th>
-							<td>
-								<span>비자포털 신청 메뉴</span>
-								<button type="button" class="btnVisaMenu">전자비자(개인)</button>
-							</td>
-						</tr>
-						<tr>
-							<th>신청자</th>
-							<td>
-								<p>외국인 본인 또는 초청자에 의한 대리신청</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청가능한 체류자격 <span>2014.12.08 기준</span></th>
-							<td>
-								<ul class="listDot">
-									<li>교수(E-1), 연구(E-3), 기술지도(E-4), 전문직업(E-5) 비자와 그 동반가족에게 발급하는 동반(F-3) 비자</li>
-									<li>특정활동(E-7) 비자와 그 동반가족에게 발급하는 동반(F-3) 비자 <p class="txtDash">신청요건 : 고용추천서(일명 GOLD CARD)를 받은 첨단과학기술인력</p></li>
-									<li>재외공관장이 지정(법무부장관 승인)한 국외 전담여행사가 비자신청을 대행하는 단체관광객에 대한 비자(C-3-2)</li>
-									<li>전자비자 대리신청자로 지정된 우수 외국인환자 유치기관이 초청하는 외국인 환자와 간병인에게 발급하는 의료관광(C-3-3) 또는 치료요양(G-1-10) 비자</li>
-									<li>국내 기업의 초청을 받은 자에 대한 일반상용(C-3-4) 비자  <p class="txtDash">신청요건 : 외국인 지문확인시스템을 도입한 ‘12. 1. 1. 이후 3회 이상 단기방문(C-3) 자격으로 입국한 사실이 있고 국내 체류기간 중 불법체류나 기타 범법사실이 없었던 자에 한함</p></li>
-								</ul>
-								<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>준비서류</th>
-							<td>
-								<ul class="listDot">
-									<li>비자발급신청서 (전자신청서)</li>
-									<li>여권사본 파일</li>
-									<li>사진 파일 (총천연색, 3.5cm x 4.5cm)</li>
-									<li>수수료 (전자결제가 가능한 신용카드)</li>
-									<li>각 체류자격별 제출서류 파일 <p class="txtDash red">비자내비게이터 비자종류별 제출서류 안내에서 확인하시거나, 각 재외공관 홈페이지 영사 게시판의 비자정보를 통해 확인하시기 바랍니다.</p></li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>처리절차</th>
-							<td>
-								<p class="titleDot">외국인 본인 신청절차</p>
-								<ul class="processList">
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>1. 전자신청서 작성</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>2. 전자결제</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>3. 신청 및 전송</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인(개인/기업)</span>
-										</div>
-										<div class="desc">
-											<strong>4. 초청 확인</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeRed">비자심사 담당자</span>
-										</div>
-										<div class="desc">
-											<strong>5. 접수 및 심사</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>6. 결과확인</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>7. 전자비자발급확인서 <br>출력/송부</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>8. 대한민국 입국</strong>
-										</div>
-									</li>
-								</ul>
-								<p class="titleDot">초청인 대리 신청절차</p>
-								<ul class="processList">
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>1. 로그인</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>2. 전자신청서 작성</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>3. 전자결제</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeRed">비자심사 담당자</span>
-										</div>
-										<div class="desc">
-											<strong>4. 접수 및 심사</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>5. 결과확인</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-											<em class="arrowN">to</em>
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>6. 전자비자발급확인서 <br>출력/송부</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>7. 대한민국 입국</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-								</ul>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>비자포털을 통한 전자비자신청</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>신청경로</th>
+								<td>
+									<span>비자포털 신청 메뉴</span>
+									<button type="button" class="btnVisaMenu">전자비자(개인)</button>
+								</td>
+							</tr>
+							<tr>
+								<th>신청자</th>
+								<td>
+									<p>외국인 본인 또는 초청자에 의한 대리신청</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청가능한 체류자격 <span>(2014.12.08 기준)</span></th>
+								<td>
+									<ul class="listDot">
+										<li>교수(E-1), 연구(E-3), 기술지도(E-4), 전문직업(E-5) 비자와 그 동반가족에게 발급하는 동반(F-3) 비자</li>
+										<li>특정활동(E-7) 비자와 그 동반가족에게 발급하는 동반(F-3) 비자 <p class="txtDash">신청요건 : 고용추천서(일명 GOLD CARD)를 받은 첨단과학기술인력</p></li>
+										<li>재외공관장이 지정(법무부장관 승인)한 국외 전담여행사가 비자신청을 대행하는 단체관광객에 대한 비자(C-3-2)</li>
+										<li>전자비자 대리신청자로 지정된 우수 외국인환자 유치기관이 초청하는 외국인 환자와 간병인에게 발급하는 의료관광(C-3-3) 또는 치료요양(G-1-10) 비자</li>
+										<li>국내 기업의 초청을 받은 자에 대한 일반상용(C-3-4) 비자  <p class="txtDash">신청요건 : 외국인 지문확인시스템을 도입한 ‘12. 1. 1. 이후 3회 이상 단기방문(C-3) 자격으로 입국한 사실이 있고 국내 체류기간 중 불법체류나 기타 범법사실이 없었던 자에 한함</p></li>
+									</ul>
+									<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>준비서류</th>
+								<td>
+									<ul class="listDot">
+										<li>비자발급신청서 (전자신청서)</li>
+										<li>여권사본 파일</li>
+										<li>사진 파일 (총천연색, 3.5cm x 4.5cm)</li>
+										<li>수수료 (전자결제가 가능한 신용카드)</li>
+										<li>각 체류자격별 제출서류 파일 <p class="txtDash red">비자내비게이터 비자종류별 제출서류 안내에서 확인하시거나, 각 재외공관 홈페이지 영사 게시판의 비자정보를 통해 확인하시기 바랍니다.</p></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>처리절차</th>
+								<td>
+									<p class="titleDot">외국인 본인 신청절차</p>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자신청서 작성</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자결제</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>신청 및 전송</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span class="typeBlue">초청인(개인/기업)</span>
+											</div>
+											<div class="desc">
+												<strong>초청 확인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과확인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>7</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자비자발급확인서 출력/송부</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>8</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+									<p class="titleDot">초청인 대리 신청절차</p>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>로그인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자신청서 작성</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자결제</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과확인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span><em class="arrowN">to</em><span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자비자발급확인서 출력/송부</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>7</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-			<div class="tabBox">
-				<h3>제외공관을 통한 비자신청</h3>
-				<table class="txtTable">
-					<colgroup>
-						<col style="width: 140px">
-						<col>
-					</colgroup>
-					<tbody>
-						<tr>
-							<th>신청장소</th>
-							<td>
-								<p>거주국(지역) 관할 대한민국 대사관 또는 영사관</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청자</th>
-							<td>
-								<p>외국인 본인 또는 비자신청 대행업체(지정 여행사)에 의한 대리 신청</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청가능한 체류자격 <span>2014.12.08 기준</span></th>
-							<td>
-								<ul class="listDot">
-									<li>외교(A-1), 공무(A-2) 자격 해당자에 대한 단수 또는 복수비자</li>
-									<li>일시취재(C-1), 단기방문(C-3), 단기취업(C-4) 자격 해당자에 대한 체류기간 90일 이하의 단수비자</li>
-									<li>복수비자발급협정 등이 체결된 국가 중 체류자격 일시취재(C-1) 및 단기방문(C-3) 자격 해당자에 대한 체류기간 90일 이하의 복수비자</li>
-									<li>문화예술(D-1) 자격 해당자 중 한국국제교류재단 및 한국문화예술위원회의 초청을 받아 문화예술 활동을 하고자 하는 자에 대한 체류기간 1년 이하의 단수비자 등 재외공관장에게 발급권한이 위임된 비자</li>
-								</ul>
-								<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>준비서류</th>
-							<td>
-								<ul class="listDot">
-									<li>비자발급신청서 (제17호 서식, 또는 비자포털 신청 메뉴)</li>
-									<li>여권</li>
-									<li>사진 (총천연색, 3.5cm x 4.5cm)</li>
-									<li>수수료 (원칙적으로 미화로 지불) <p class="txtDash">재외공관장이 허용한 경우, 주재국 화폐로 지불 가능합니다.</p></li>
-									<li>각 체류자격별 제출서류
-										<p class="txtDash red">비자내비게이터에 안내된 제출서류는 각국에서 적용할 수 있는 최소 범위의 공통 기준을 제시한 것입니다. <br>재외공관의 장은 보다 정확한 비자심사를 위해 주재국(관할지역)의 실정을 고려하여 제출서류를 추가하거나, 제출서류를 면제할 수 있습니다.<br>그러므로 비자내비게이터에 안내된 제출서류와 각 재외공관 홈페이지(영사 게시판)에 게시된 비자 제출서류가 다를 때에는 재외공관의 제출서류 기준에 따라 서류를 준비하시기 바랍니다.</p>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>처리절차</th>
-							<td>
-								<ul class="processList">
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>1. 신청서 제출</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeGreen">영사</span>
-										</div>
-										<div class="desc">
-											<strong>2. 접수 및 심사</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeGreen">영사</span>
-										</div>
-										<div class="desc">
-											<strong>3. 비자발급</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>4. 대한민국 입국</strong>
-										</div>
-									</li>
-								</ul>
-								<p class="red">※ 기타 궁금한 사항은 거주국(관할지역) 재외공관 영사과로 문의하시기 바랍니다.</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>제외공관을 통한 비자신청</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>신청장소</th>
+								<td>
+									<p>거주국(지역) 관할 대한민국 대사관 또는 영사관</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청자</th>
+								<td>
+									<p>외국인 본인 또는 비자신청 대행업체(지정 여행사)에 의한 대리 신청</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청가능한 체류자격 <span>(2014.12.08 기준)</span></th>
+								<td>
+									<ul class="listDot">
+										<li>외교(A-1), 공무(A-2) 자격 해당자에 대한 단수 또는 복수비자</li>
+										<li>일시취재(C-1), 단기방문(C-3), 단기취업(C-4) 자격 해당자에 대한 체류기간 90일 이하의 단수비자</li>
+										<li>복수비자발급협정 등이 체결된 국가 중 체류자격 일시취재(C-1) 및 단기방문(C-3) 자격 해당자에 대한 체류기간 90일 이하의 복수비자</li>
+										<li>문화예술(D-1) 자격 해당자 중 한국국제교류재단 및 한국문화예술위원회의 초청을 받아 문화예술 활동을 하고자 하는 자에 대한 체류기간 1년 이하의 단수비자 등 재외공관장에게 발급권한이 위임된 비자</li>
+									</ul>
+									<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>준비서류</th>
+								<td>
+									<ul class="listDot">
+										<li>비자발급신청서 (제17호 서식, 또는 비자포털 신청 메뉴)</li>
+										<li>여권</li>
+										<li>사진 (총천연색, 3.5cm x 4.5cm)</li>
+										<li>수수료 (원칙적으로 미화로 지불) <p class="txtDash">재외공관장이 허용한 경우, 주재국 화폐로 지불 가능합니다.</p></li>
+										<li>각 체류자격별 제출서류
+											<p class="txtDash red">비자내비게이터에 안내된 제출서류는 각국에서 적용할 수 있는 최소 범위의 공통 기준을 제시한 것입니다. <br>재외공관의 장은 보다 정확한 비자심사를 위해 주재국(관할지역)의 실정을 고려하여 제출서류를 추가하거나, 제출서류를 면제할 수 있습니다.<br>그러므로 비자내비게이터에 안내된 제출서류와 각 재외공관 홈페이지(영사 게시판)에 게시된 비자 제출서류가 다를 때에는 재외공관의 제출서류 기준에 따라 서류를 준비하시기 바랍니다.</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>처리절차</th>
+								<td>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>신청서 제출</strong>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+									<p class="red">※ 기타 궁금한 사항은 거주국(관할지역) 재외공관 영사과로 문의하시기 바랍니다.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-			<div class="tabBox">
-				<h3>비자포털을 통한 비자발급인정서 신청</h3>
-				<table class="txtTable">
-					<colgroup>
-						<col style="width: 140px">
-						<col>
-					</colgroup>
-					<tbody>
-						<tr>
-							<th>신청경로</th>
-							<td>
-								<span>비자포털 신청 메뉴</span>
-								<button type="button" class="btnVisaMenu">비자발급인정서</button>
-							</td>
-						</tr>
-						<tr>
-							<th>신청자</th>
-							<td>
-								<p>초청자에 의한 대리 신청</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청가능한 체류자격 <span>2014.12.08 기준</span></th>
-							<td>
-								<ul class="listDot">
-									<li>교수(E-1), 회화지도(E-2), 연구(E-3), 기술지도(E-4) 또는 전문직업(E-5) 및 그 동반가족에게 발급하는 동반(F-3) 비자</li>
-									<li>특정활동(E-7) 및 그 동반가족에게 발급하는 동반(F-3) 비자<p class="txtDash">신청요건 : 통계청이 고시한 표준직업분류의 대분류 1(관리자) 또는 2번(전문가 및 관련종사자) 직종 종사자</p></li>
-									<li>외국인환자 유치기관이 초청하는 외국인 환자와 간병인에게 발급하는 의료관광(C-3-3) 또는 치료요양(G-1-10) 비자</li>
-									<li>우대기업 초청 단기상용(C-3-6) 비자</li>
-									<li>유학(D-2), 어학연수(D-4-1) 비자</li>
-									<li>비전문취업(E-9), 선원취업(E-10) 비자</li>
-								</ul>
-								<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>준비서류</th>
-							<td>
-								<ul class="listDot">
-									<li>비자발급신청서 (전자신청서)</li>
-									<li>여권사본 파일</li>
-									<li>사진 파일 (총천연색, 3.5cm x 4.5cm)</li>
-									<li>수수료 (전자결제가 가능한 신용카드)</li>
-									<li>각 체류자격별 제출서류 파일 <p class="txtDash red">비자내비게이터 비자종류별 제출서류 안내에서 확인하시거나, 각 재외공관 홈페이지 영사 게시판의 비자정보를 통해 확인하시기 바랍니다.</p></li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>처리절차</th>
-							<td>
-								<ul class="processList">
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>1. 로그인</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>2. 전자신청서 작성</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeRed">비자심사 담당자</span>
-										</div>
-										<div class="desc">
-											<strong>3. 접수 및 심사</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>4. 결과조회</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-											<em class="arrowN">to</em>
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>5. 결과 확인 및 비자신청서 다운로드</strong>
-											<p>비자포털</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>6. 비자신청 및 수수료 결재</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeGreen">영사</span>
-										</div>
-										<div class="desc">
-											<strong>7. 비자발급</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>8. 대한민국 입국</strong>
-										</div>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>비자발급인정서 심사결과 확인</th>
-							<td>
-								<p>비자발급인정서 심사결과는 비자포털의 진행상황 조회, 신청서에 기재한 초청자의 E-MAIL 또는 <br>휴대폰 메시지, <em class="red">ARS (02-2650-6363)</em> 조회로 확인할 수 있습니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>비자신청</th>
-							<td>
-								<ul class="listDot">
-									<li>초청자는 비자포탈의 진행상황 조회 화면에서 비자발급인정서 소지자용 비자신청서 다운로드하여 피초청자에게 이메일로 송부하거나, 비자발급인정번호 및 유효기간을 알려주시기 바랍니다.</li>
-									<li>입국하려는 외국인은 대한민국의 초청자로부터 비자발급인정서 소지자용 비자신청서 또는 비자발급인정번호(유효기간)를 송부받아 대한민국 대사관 또는 영사관에 비자발급을 신청하시기 바랍니다.</li>
-								</ul>
-								<p class="red">※ 비자발급인정서의 유효기간은 3개월이며, 1회 비자발급에 한하여 그 효력이 인정됩니다.</p>
-								<p class="red">기타 궁금한 사항은 외국인종합안내센터 (국번없이 1345, 외국에서는 +82-1345)로 문의하시기 바랍니다.</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>비자포털을 통한 비자발급인정서 신청</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>신청경로</th>
+								<td>
+									<span>비자포털 신청 메뉴</span>
+									<button type="button" class="btnVisaMenu">비자발급인정서</button>
+								</td>
+							</tr>
+							<tr>
+								<th>신청자</th>
+								<td>
+									<p>초청자에 의한 대리 신청</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청가능한 체류자격 <span>(2014.12.08 기준)</span></th>
+								<td>
+									<ul class="listDot">
+										<li>교수(E-1), 회화지도(E-2), 연구(E-3), 기술지도(E-4) 또는 전문직업(E-5) 및 그 동반가족에게 발급하는 동반(F-3) 비자</li>
+										<li>특정활동(E-7) 및 그 동반가족에게 발급하는 동반(F-3) 비자<p class="txtDash">신청요건 : 통계청이 고시한 표준직업분류의 대분류 1(관리자) 또는 2번(전문가 및 관련종사자) 직종 종사자</p></li>
+										<li>외국인환자 유치기관이 초청하는 외국인 환자와 간병인에게 발급하는 의료관광(C-3-3) 또는 치료요양(G-1-10) 비자</li>
+										<li>우대기업 초청 단기상용(C-3-6) 비자</li>
+										<li>유학(D-2), 어학연수(D-4-1) 비자</li>
+										<li>비전문취업(E-9), 선원취업(E-10) 비자</li>
+									</ul>
+									<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>준비서류</th>
+								<td>
+									<ul class="listDot">
+										<li>비자발급신청서 (전자신청서)</li>
+										<li>여권사본 파일</li>
+										<li>사진 파일 (총천연색, 3.5cm x 4.5cm)</li>
+										<li>수수료 (전자결제가 가능한 신용카드)</li>
+										<li>각 체류자격별 제출서류 파일 <p class="txtDash red">비자내비게이터 비자종류별 제출서류 안내에서 확인하시거나, 각 재외공관 홈페이지 영사 게시판의 비자정보를 통해 확인하시기 바랍니다.</p></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>처리절차</th>
+								<td>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>로그인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자신청서 작성</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과조회</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+												<em class="arrowN">to</em>
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과 확인 및 비자신청서 다운로드</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>비자신청 및 수수료 결재</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>7</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>8</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>비자발급인정서 심사결과 확인</th>
+								<td>
+									<p>비자발급인정서 심사결과는 비자포털의 진행상황 조회, 신청서에 기재한 초청자의 E-MAIL 또는 <br>휴대폰 메시지, <em class="red">ARS (02-2650-6363)</em> 조회로 확인할 수 있습니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>비자신청</th>
+								<td>
+									<ul class="listDot">
+										<li>초청자는 비자포탈의 진행상황 조회 화면에서 비자발급인정서 소지자용 비자신청서 다운로드하여 피초청자에게 이메일로 송부하거나, 비자발급인정번호 및 유효기간을 알려주시기 바랍니다.</li>
+										<li>입국하려는 외국인은 대한민국의 초청자로부터 비자발급인정서 소지자용 비자신청서 또는 비자발급인정번호(유효기간)를 송부받아 대한민국 대사관 또는 영사관에 비자발급을 신청하시기 바랍니다.</li>
+									</ul>
+									<p class="red">※ 비자발급인정서의 유효기간은 3개월이며, 1회 비자발급에 한하여 그 효력이 인정됩니다.</p>
+									<p class="red">기타 궁금한 사항은 외국인종합안내센터 (국번없이 1345, 외국에서는 +82-1345)로 문의하시기 바랍니다.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-			<div class="tabBox">
-				<h3>국내 출입국·외국인관서를 통한 비자발급인정서 신청</h3>
-				<table class="txtTable">
-					<colgroup>
-						<col style="width: 140px">
-						<col>
-					</colgroup>
-					<tbody>
-						<tr>
-							<th>신청장소</th>
-							<td>
-								<p>초청자의 주소지 관할 출입국·외국인관서</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청자</th>
-							<td>
-								<p>외국인 본인, 초청자 또는 대행기관(E-9, E-10) 등에 의한 대리 신청</p>
-							</td>
-						</tr>
-						<tr>
-							<th>신청가능한 체류자격 <span>2014.11.01 기준</span></th>
-							<td>
-								<ul class="listDot">
-									<li>문화예술(D-1), 유학(D-2), 기술연수(D-3), 일반연수(D-4), 취재(D-5), 종교(D-6), 주재(D-7), 기업투자(D-8), 무역경영(D-9), 교수(E-1), 회화지도(E-2), 연구(E-3), 기술지도(E-4), 전문직업(E-5), 예술흥행(E-6), 특정활동(E-7), 비전문취업(E-9), 선원취업(E-10), 방문동거(F-1), 동반(F-3), 기타(G-1) 및 방문취업(H-2) 자격에 해당하는 자에 대한 장기비자</li>
-									<li>미수교국가 또는 특정국가의 국민 (쿠바, 시리아, 마케도니아)에 대한 장기 비자</li>
-									<li>기타 법무부장관이 특히 필요하다고 인정하는 자에 대한 비자</li>
-								</ul>
-								<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>준비서류</th>
-							<td>
-								<ul class="listDot">
-									<li>비자발급인정신청서 (서식 제21호)</li>
-									<li>여권사본</li>
-									<li>사진 (총천연색, 3.5cm x 4.5cm)</li>
-									<li>각 체류자격별 제출서류
-										<p class="txtDash red">비자내비게이터에 안내된 제출서류는 각국에서 적용할 수 있는 최소 범위의 공통 기준을 제시한 것입니다. <br>출입국 · 외국인관서의 장은 보다 정확한 비자심사를 위해 제출서류를 추가하거나, 제출서류를 면제할 수 있습니다.</p>
-									</li>
-									<li>대리인 신청 시, 위임장, 대리인 재직증명서, 대리인 신분증 사본을 추가로 제출하여야 합니다. <br>(단, 심사 시 필요한 경우 대리 신청이 제한될 수 있습니다.)</li>									
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>비자발급인정서 처리절차</th>
-							<td>
-								<ul class="processList">
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-										</div>
-										<div class="desc">
-											<strong>1. 신청서 작성</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeRed">비자심사 담당자</span>
-										</div>
-										<div class="desc">
-											<strong>2. 접수 및 심사</strong>
-											<p>관할 출입국 외국인관서</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeBlue">초청인</span>
-											<em class="arrowN">to</em>
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>3. 비자발급인정번호 송부</strong>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>4. 비자발급 신청</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span class="typeGreen">영사</span>
-										</div>
-										<div class="desc">
-											<strong>5. 비자발급</strong>
-											<p>재외 공관</p>
-										</div>
-									</li>
-									<li>
-										<div class="top">
-											<span>신청인</span>
-										</div>
-										<div class="desc">
-											<strong>6. 대한민국 입국</strong>
-										</div>
-									</li>
-								</ul>
-							</td>
-						</tr>
-						<tr>
-							<th>비자발급인정서 심사결과 통지</th>
-							<td>
-								<p>비자발급인정서 심사결과는 비자포탈의 진행상황 조회, 신청서에 기재한 초청자의 E-MAIL 또는 <br>휴대폰 메시지, <em class="red">ARS (02-2650-6363)</em> 조회로 확인할 수 있습니다.</p>
-							</td>
-						</tr>
-						<tr>
-							<th>비자발급</th>
-							<td>
-								<ul class="listDot">
-									<li>초청자는 비자포탈의 진행상황 조회 화면에서 비자발급인정서 소지자용 비자신청서 다운로드하여 피초청자에게 이메일로 송부하거나, 비자발급인정번호 및 유효기간을 알려주시기 바랍니다.</li>
-									<li>입국하려는 외국인은 대한민국의 초청자로부터 비자발급인정서 소지자용 비자신청서 또는 비자발급인정번호(유효기간)를 송부받아 대한민국 대사관 또는 영사관에 비자발급을 신청하시기 바랍니다.</li>
-								</ul>
-								<p class="red">※ 비자발급인정서의 유효기간은 3개월이며, 1회 비자발급에 한하여 그 효력이 인정됩니다.</p>
-								<p class="red">기타 궁금한 사항은 외국인종합안내센터 (국번없이 1345, 외국에서는 +82-1345)로 문의하시기 바랍니다.</p>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>국내 출입국·외국인관서를 통한 <br>비자발급인정서 신청</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>신청장소</th>
+								<td>
+									<p>초청자의 주소지 관할 출입국·외국인관서</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청자</th>
+								<td>
+									<p>외국인 본인, 초청자 또는 대행기관(E-9, E-10) 등에 의한 대리 신청</p>
+								</td>
+							</tr>
+							<tr>
+								<th>신청가능한 체류자격 <span>(2014.11.01 기준)</span></th>
+								<td>
+									<ul class="listDot">
+										<li>문화예술(D-1), 유학(D-2), 기술연수(D-3), 일반연수(D-4), 취재(D-5), 종교(D-6), 주재(D-7), 기업투자(D-8), 무역경영(D-9), 교수(E-1), 회화지도(E-2), 연구(E-3), 기술지도(E-4), 전문직업(E-5), 예술흥행(E-6), 특정활동(E-7), 비전문취업(E-9), 선원취업(E-10), 방문동거(F-1), 동반(F-3), 기타(G-1) 및 방문취업(H-2) 자격에 해당하는 자에 대한 장기비자</li>
+										<li>미수교국가 또는 특정국가의 국민 (쿠바, 시리아, 마케도니아)에 대한 장기 비자</li>
+										<li>기타 법무부장관이 특히 필요하다고 인정하는 자에 대한 비자</li>
+									</ul>
+									<p class="red">※ 신청가능한 체류자격과 제출서류에 대한 자세한 정보는 비자 내비게이터를 이용하시기 바랍니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>준비서류</th>
+								<td>
+									<ul class="listDot">
+										<li>비자발급인정신청서 (서식 제21호)</li>
+										<li>여권사본</li>
+										<li>사진 (총천연색, 3.5cm x 4.5cm)</li>
+										<li>각 체류자격별 제출서류
+											<p class="txtDash red">비자내비게이터에 안내된 제출서류는 각국에서 적용할 수 있는 최소 범위의 공통 기준을 제시한 것입니다. <br>출입국 · 외국인관서의 장은 보다 정확한 비자심사를 위해 제출서류를 추가하거나, 제출서류를 면제할 수 있습니다.</p>
+										</li>
+										<li>대리인 신청 시, 위임장, 대리인 재직증명서, 대리인 신분증 사본을 추가로 제출하여야 합니다. <br>(단, 심사 시 필요한 경우 대리 신청이 제한될 수 있습니다.)</li>									
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>비자발급인정서 처리절차</th>
+								<td>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>신청서 작성</strong>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+												<p>관할 출입국 외국인관서</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span><em class="arrowN">to</em><span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급인정번호 송부</strong>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급 신청</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>비자발급인정서 심사결과 통지</th>
+								<td>
+									<p>비자발급인정서 심사결과는 비자포탈의 진행상황 조회, 신청서에 기재한 초청자의 E-MAIL 또는 <br>휴대폰 메시지, <em class="red">ARS (02-2650-6363)</em> 조회로 확인할 수 있습니다.</p>
+								</td>
+							</tr>
+							<tr>
+								<th>비자발급</th>
+								<td>
+									<ul class="listDot">
+										<li>초청자는 비자포탈의 진행상황 조회 화면에서 비자발급인정서 소지자용 비자신청서 다운로드하여 피초청자에게 이메일로 송부하거나, 비자발급인정번호 및 유효기간을 알려주시기 바랍니다.</li>
+										<li>입국하려는 외국인은 대한민국의 초청자로부터 비자발급인정서 소지자용 비자신청서 또는 비자발급인정번호(유효기간)를 송부받아 대한민국 대사관 또는 영사관에 비자발급을 신청하시기 바랍니다.</li>
+									</ul>
+									<p class="red">※ 비자발급인정서의 유효기간은 3개월이며, 1회 비자발급에 한하여 그 효력이 인정됩니다.</p>
+									<p class="red">기타 궁금한 사항은 외국인종합안내센터 (국번없이 1345, 외국에서는 +82-1345)로 문의하시기 바랍니다.</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<div class="footer">
 		<div class="inner">
-			<span>비자 내비게이터</span>
+			<span>비자 네비게이터</span>
 			<address>
-				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 ( 외국인종합안내센터 : 국번없이 1345 )</p>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 <br>(외국인종합안내센터 : 국번없이 1345)</p>
 				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
 			</address>
 		</div>
 	</div>
-
-	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
 </div>
 	
 </body>

@@ -30,6 +30,31 @@ function topSearchM(){
 	})	
 }
 
+// 모바일 메뉴 열기
+function gnbOpenM(){
+	$('.header').find('.gnbBtn').each(function(){
+		$(this).click(function(){
+			$(this).closest('.inner')
+			.next('.gnbWrap').fadeIn(50).addClass('on')
+			.animate({right: '0'}, 300);
+			$('body').addClass('hidden');			
+		})
+	})
+	gnbCloseM();
+}
+
+// 모바일 메뉴 닫기
+function gnbCloseM(){
+	$('.header').find('.gnbClose').each(function(){
+		$(this).click(function(){
+			$(this).closest('.gnbWrap')
+			.animate({right: '-100%'}, 300)
+			.fadeOut(50)
+			.removeClass('on');
+			$('body').removeClass('hidden');			
+		})
+	})
+}
 
 function closePop(){
 	$('.popWrap').each(function(){
@@ -163,6 +188,10 @@ function viewBoxOpen(){
 			}
 		})
 	})
+
+	$('.viewBox .closeUp').click(function(){
+		$(this).closest('.contBox').hide().closest('.viewBox').removeClass('open')
+	})
 }
 
 function visaListMenu(){
@@ -188,8 +217,13 @@ function lodingClose(){
 	$('.preLoading').hide();
 }
 
-$(function(){	
+function scrollMove(Target, speed){
+	var moveTo = $(Target).offset();
+	$('body,html').animate({scrollTop: moveTo.top}, speed);
+}
 
+
+$(function(){	
 	topSearch();
 	topSearchM();
 	inputFileTxt();
@@ -200,7 +234,7 @@ $(function(){
 	visaListMenu();
 	openPop();
 	openPopS();
-
+	gnbOpenM();
 	topButtonWeb();
 	topButton();
 });

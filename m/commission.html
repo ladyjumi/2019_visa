@@ -3,9 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
 	<title>수수료</title>
 	<link rel="stylesheet" href="../static/css/reset.css" />
-	<link rel="stylesheet" href="../static/css/style.css" />
+	<link rel="stylesheet" href="../static/css/style_m.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
 	<script src="../static/js/ui.js"></script>
 </head>
@@ -23,23 +24,16 @@
 			<h3>수수료 조정 국가 및 금액</h3>
 			<div class="scrollBox">
 				<table class="table input">
-					<colgroup>
-						<col style="width: 170px" />
-						<col style="width: 160px" />
-						<col style="width: 160px" />
-						<col style="width: 110px" />
-						<col style="width: 110px" />
-					</colgroup>
 					<thead>
 						<tr>
 							<th rowspan="2">국가</th>
 							<th colspan="2">단수비자</th>
-							<th rowspan="2">더블비자</th>
-							<th rowspan="2">복수비자</th>
+							<th rowspan="2">더블<br>비자</th>
+							<th rowspan="2">복수<br>비자</th>
 						</tr>
 						<tr>
-							<th>체류기간 90일 이하</th>
-							<th>체류기간 91일 이상</th>
+							<th>체류기간<br>90일 이하</th>
+							<th>체류기간<br>91일 이상</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -137,9 +131,6 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="btnGroup">
-				<button type="button" class="btn red closePop">닫기</button>	
-			</div>
 		</div>
 	</div>
 </div>
@@ -158,7 +149,7 @@
 			<div class="scrollBox">
 				<table class="table input">
 					<colgroup>
-						<col style="width: 330px" />
+						<col style="width: 43%" />
 						<col style="width: auto" />
 					</colgroup>
 					<thead>
@@ -222,9 +213,6 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="btnGroup">
-				<button type="button" class="btn red closePop">닫기</button>		
-			</div>
 		</div>
 	</div>
 </div>
@@ -235,55 +223,58 @@
 	<div class="header">
 		<div class="inner">
 			<h1><a href="#">비자 내비게이터</a></h1>
-			<!-- GNB -->
-			<ul class="gnb">
-				<li><a href="#">비자 검색</a></li>
-				<li><a href="#">입국목적별 비자 종류</a></li>
-				<li><a href="#">신청절차</a></li>
-				<li class="active"><a href="#">수수료</a></li>
-				<li><a href="#">입국 및 체류</a></li>
-			</ul>
-			<!-- //GNB -->
-			<div class="topMenu">
-				<!-- 언어변경 -->
-				<select class="lang">
-					<option value="">한국어</option>
-					<option value="">ENGLISH</option>
-					<option value="">中文</option>
-				</select>
-				<!-- //언어변경 -->
+			<span class="btnWrap">
 				<button type="button" class="searchBtn showsearchBar">검색버튼</button>
-			</div>
+				<button type="button" class="gnbBtn">메뉴열기</button>				
+			</span>
 		</div>
-
+		<nav class="gnbWrap">
+			<div class="navBox">
+				<!-- 언어변경 -->
+				<ul class="lang">
+					<li class="active"><a href="#">KOR</a></li>
+					<li><a href="#">ENG</a></li>
+					<li><a href="#">中文</a></li>
+				</ul>
+				<!-- //언어변경 -->
+				<!-- GNB -->
+				<ul class="gnb">
+					<li><a href="#">비자 검색</a></li>
+					<li><a href="#">입국목적별 비자 종류</a></li>
+					<li><a href="#">신청절차</a></li>
+					<li class="active"><a href="#">수수료</a></li>
+					<li><a href="#">입국 및 체류</a></li>
+				</ul>
+				<!-- //GNB -->
+				<button type="button" class="gnbClose">메뉴닫기</button>
+			</div>
+		</nav>
 		<!-- 검색창 -->
 		<div class="searchTop">
 			<div class="searchArea">
-				<div class="inner">
-					<span class="searchBox">
-						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
-						<input type="button" value="검색" class="searchBtn">
-					</span>
-				</div>
+				<span class="inputWrap">
+					<input type="text" placeholder="검색어를 입력하세요.">
+					<button type="button" class="btnDel">지우기</button>
+				</span>
+				<input type="button" value="검색" class="searchBtn">
 			</div>
-			<div class="dimmed"></div>
+			<button type="button" class="back">검색창 닫기</button>			
 		</div>
 		<!-- //검색창 -->
 	</div>
-
 	<div class="contents">
 
 		<div class="frontCont">
 
 			<h2>수수료</h2>
-			<h3>비자발급 신청에 따른 기본 수수료<em>(미국달러 기준)</em></h3>
-			<div class="tableTop topRight btnManual">
+			<h3>비자발급 신청에 따른 기본 수수료 <em>(미국달러 기준)</em></h3>
+			<div class="btnManual">
 				<a href="#commisionCountry1" class="openPop">수수료 조정국가 보기</a>
 				<a href="#commisionCountry2" class="openPop">협정에 의한 수수료 면제국가 보기</a>
 			</div>
 			<table class="table">
 				<colgroup>
-					<col style="width: 60%">
+					<col style="width: 70%">
 					<col style="width: auto;">
 				</colgroup>
 				<thead>
@@ -320,30 +311,30 @@
 			</ul>
 			<hr class="line">
 			<h3>전자민원 수수료</h3>
-			<p>비자 포털 상에서 처리되는 비자 심사 <em class="red">수수료는 미국달러로 부과</em>됩니다. 신용카드로 결제할 경우 결제일과 청구일의 미국 달러화 환율에 따라 청구금액이 달라질 수 있으니 이점 유의하시기 바랍니다.</p>
+			<p class="txt">비자 포털 상에서 처리되는 비자 심사 <em class="red">수수료는 미국달러로 부과</em>됩니다. 신용카드로 결제할 경우 결제일과 청구일의 미국 달러화 환율에 따라 청구금액이 달라질 수 있으니 이점 유의하시기 바랍니다.</p>
 			<h4>추가 수수료</h4>
 			<p class="txt">비자 포탈에서 전자비자 신청 시 비자 심사 수수료 이외에 카드사용 및 전자결제 대행서비스 이용에 따른 추가 수수료가 부과됩니다.</p>
 			<h4>사용가능한 결제수단</h4>
 			<p class="txt">국제적으로 통용되는 신용카드</p>
 			<ul class="cardList">
 				<li>
-					<span><img src="../static/images/img_creditcard1.png" alt=""></span>
+					<span><img src="../static/images/m/img_creditcard1.png" alt=""></span>
 					<p>VISA</p>
 				</li>
 				<li>
-					<span><img src="../static/images/img_creditcard2.png" alt=""></span>
+					<span><img src="../static/images/m/img_creditcard2.png" alt=""></span>
 					<p>Master</p>
 				</li>
 				<li>
-					<span><img src="../static/images/img_creditcard3.png" alt=""></span>
+					<span><img src="../static/images/m/img_creditcard3.png" alt=""></span>
 					<p>JCB</p>
 				</li>
 				<li>
-					<span><img src="../static/images/img_creditcard4.png" alt=""></span>
+					<span><img src="../static/images/m/img_creditcard4.png" alt=""></span>
 					<p>American Express</p>
 				</li>
 				<li>
-					<span><img src="../static/images/img_creditcard5.png" alt=""></span>
+					<span><img src="../static/images/m/img_creditcard5.png" alt=""></span>
 					<p>Unionpay</p>
 				</li>
 			</ul>
@@ -353,15 +344,13 @@
 
 	<div class="footer">
 		<div class="inner">
-			<span>비자 내비게이터</span>
+			<span>비자 네비게이터</span>
 			<address>
-				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 ( 외국인종합안내센터 : 국번없이 1345 )</p>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 <br>(외국인종합안내센터 : 국번없이 1345)</p>
 				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
 			</address>
 		</div>
 	</div>
-
-	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
 </div>
 	
 </body>

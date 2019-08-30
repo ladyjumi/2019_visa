@@ -10,33 +10,27 @@
 /*버튼정의*/
 .btn{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; color: #fff; text-align: center; transition: background .1s}
 .btn.red{background-color: #c6464b}
-.btn.blue{background-color: #1a6fa0}
+.btn.red:active{background-color: #96181c;}
 .btn.grey{background-color: #888}
 .btn.white{background-color: #fff; color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px;}
 .btnBorder{min-width: 86px; height: 24px; padding: 0 14px; font-size: 13px; line-height: 22px; color: #333; text-align: center; border: 1px solid #bbb}
 .btnBorder.blue{border-color: #1a6fa0; color: #1a6fa0;}
-.btnGroup{position: relative; font-size: 0;}
+.btnGroup{position: relative; font-size: 0; text-align: center;}
 .btnGroup > *{display: inline-block}
 .btnGroup > * + *{margin-left: 8px}
 .btnGroup.btm{display: block; margin: 30px 0 0; text-align: center}
-.btnGroup.btm > *{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; text-align: center; transition: background .1s}
-.btnGroup.btm > *:first-of-type{color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px}
-.btnGroup.btm > *:last-of-type{background-color: #1a6fa0; color: #fff}
-.btnGroup.btm > *:only-child{background-color: #1a6fa0; color: #fff; margin-left: 0}
+.btnGroup.btm > *{height: 42px; line-height: 42px;}
+.btnGroup.btm > *:only-child{width: 100%; font-size: 16px;}
 .searchBtn{width: 36px; height: 36px; background: url(../images/m/icon_search.svg) no-repeat center; text-indent: -9999px; cursor: pointer;}
-.lineMoveBtn{width: 30px; height: 24px; background: url(../images/split.png) no-repeat; text-indent: -9999px}
-.lineMoveBtn.up{background-position: -32px -50px}
-.lineMoveBtn.dw{background-position: -32px -74px}
-.lineMoveBtn + .lineMoveBtn{margin-left: 2px;}
 
 /*툴팁*/
-.tooltip{position: relative; margin: 0 0 0 4px;}
-.tooltip .tipIcon{width: 20px; height: 20px; background: url(../images/common/icon_tooltip.svg) no-repeat center; background-size: 18px; text-indent: -9999px;}
+.tooltip{position: relative; margin: 1px 0 0 3px;}
+.tooltip .tipIcon{display: inline-block; width: 16px; height: 16px; background: url(../images/common/icon_tooltip.svg) no-repeat center; background-size: 16px; text-indent: -9999px;}
 .tooltip .tipTxt{display: none; position: absolute; top: 100%; left: -39px; width: 310px; padding-top: 20px; z-index: 1;}
 .tooltip .tipTxt > em{position: relative; padding: 16px 20px; background-color: #f4f4f4; border: 1px solid #999; color: #333; font-size: 13px; font-weight: 400; line-height: 22px; white-space: normal; text-align: left; cursor: default; box-shadow: 6px 6px 10px rgba(0,0,0,0.2);}
 .tooltip .tipTxt > em:before{display: block; content: ''; position: absolute; bottom: 100%; left: 40px; width: 16px; height: 16px; background: url(../images/arrow_tooltip.png) no-repeat;}
 .tooltip:hover .tipTxt{display: block;}
-.active .tooltip .tipIcon{background: url(../images/common/icon_tooltip_red.svg) no-repeat center; background-size: 18px;}
+.active .tooltip .tipIcon{background: url(../images/common/icon_tooltip_red.svg) no-repeat center; background-size: 16px;}
 .tooltip.right .tipTxt{left: unset; right: -39px;}
 .tooltip.right .tipTxt > em:before{left: unset; right: 40px;}
 .tooltip.center .tipTxt{left: 50%; transform: translateX(-50%);}
@@ -47,18 +41,34 @@
 .topButtonArea.fix{position: fixed; bottom: 0;}
 .backTop{display: block; position: absolute; bottom: 0; right: -36px; z-index: 999; width: 36px; height: 36px; text-indent: -9999px; background: #2a2b2c url(../images/btn_top.png) no-repeat; transition: background .1s; cursor: pointer;}
 
+/*탭메뉴*/
+.tabMenu{display: inline-flex; width: 100%;}
+.tabMenu em.red{color: #666}
+.tabMenu li{flex: 1;}
+.tabMenu button{width: 100%; border: 1px solid #dadada; font-size: 13px; color: #666; outline: 0;}
+.tabMenu li + li{margin-left: -1px}
+.tabMenu li.active{position: relative; z-index: 1}
+.tabMenu li.active em.red{color: #bf3f44}
+.tabBox + .tabBox{display: none}
+.tabBox{margin-top: -1px}
+.viewBox .tabMenu{margin: 26px -3px 23px 0;}
+.viewBox .tabMenu li button{padding: 9px 10px; height: 54px; font-weight: 500; line-height: 1.38; white-space: normal; text-align: left;}
+.viewBox .tabMenu li.active button{border-color: #c6464b; color: #c6464b;}
+
 /*뷰박스*/
 .viewBox{margin: 0 -20px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada}
 .viewBox + .viewBox{border-top: 0;}
 .viewBox.open{border-color: #333;}
-.viewBox .titleBox{position: relative; padding: 11px 20px; cursor: pointer;}
-.viewBox .titleBox p{font-size: 14px; font-weight: 500; line-height: 1.45}
+.viewBox .titleBox{position: relative; padding: 12.5px 20px; cursor: pointer;}
+.viewBox .titleBox p{font-size: 15px; line-height: 20px}
 .viewBox .titleBox .openBtn{display: block; position: absolute; top: 0; right: 0; width: 42px; height: 100%; padding: 0 21px; text-align: center;}
 .viewBox .titleBox .openBtn:before,
 .viewBox .titleBox .openBtn:after{position: absolute; top: 50%; left: 50%; content: ''; display: block; width: 11px; height: 1px; margin: -0.5px 0 0 -5.5px; background-color: #444; transition: .1s;}
 .viewBox .titleBox .openBtn:after{transform: rotate(-90deg);}
 .viewBox.open .titleBox .openBtn:after{transform: rotate(0deg);}
-.viewBox .contBox{display: none; padding: 20px; border-top: 1px solid #dadada;}
+.viewBox.open .titleBox p{font-weight: 500;}
+.viewBox .contBox{display: none; padding: 20px; border-top: 1px solid #dadada; line-height: 1.4}
+.viewBox .closeUp{display: block; width: 100%; padding: 8px 0 9px; margin:  10px 0 -20px; border-top: 1px solid #dadada;}
 .viewBox .txtTable{border-bottom: 0}
 .viewBox .addTxt{margin-top: 8px; color: #333}
 .viewBox.open .titleBox{background-color: #333; border-color: #333}
@@ -68,12 +78,33 @@
 .viewBox .listNum2{margin: 8px 0 0;}
 .viewBox .listNumber{margin-top: 0;}
 .viewBox .listNumber > li + li{margin-top: 2px;}
-.viewBox .fileDown{margin: -4px 0;}
-.viewBox .fileDown .btn{height: 30px; line-height: 30px; font-size: 13px; font-weight: 400}
-.viewBox .tabMenu{margin: 30px -3px 30px 0;}
-.viewBox .tabMenu li{width: 33.3333%}
-.viewBox .tabMenu li button{font-size: 14px}
-.viewBox .tabMenu li.active button{color: #c6464b}
+.viewBox .fileDown{display: inline-flex; width: calc(100% + 24px); margin: 0 -12px;}
+.viewBox .fileDown .btn{flex: 1; min-width: auto; height: 50px; padding: 8px 10px; line-height: 1.38; font-size: 13px; font-weight: 400; white-space: normal;}
+.viewBox .fileDown .btn + .btn{margin-left: 3px;}
+.resultVisa + .resultVisa{border-top: 10px solid #f4f4f4;}
+.resultVisa + .resultVisa .titleBox{border-top: 1px solid #dadada}
+.resultVisa.viewBox.open{border-bottom: 1px solid #dadada;}
+
+/*Front*/
+.frontCont{margin: 0 auto; padding: 30px 20px 50px;}
+.frontCont h2{margin-bottom: 24px; font-size: 20px; font-weight: 500; text-transform: uppercase;}
+.frontCont h3{margin-bottom: 10px; font-size: 16px; font-weight: 500}
+.frontCont h3 em{margin-left: 2px; font-size: 13px; color: #666; vertical-align: baseline; white-space: nowrap;}
+.frontCont h3 + p.txt{line-height: 1.38}
+.frontCont h4{margin: 30px 0 10px; font-size: 15px; font-weight: 500}
+.frontCont h4 + p.txt{line-height: 1.38; color: #666}
+hr.line{margin: 32px 0; height: 1px; background-color: #dadada}
+.addTxt{font-size: 13px; color: #666}
+
+/*table*/
+.table{text-align: center; table-layout: auto}
+.table .pad{padding-right: 5px; padding-left: 5px}
+.table thead{background-color: #f4f4f4; border-top: 1px solid #d7d7d7; border-bottom: 1px solid #d7d7d7}
+.table thead th{padding: 10px 0; font-size: 14px; font-weight: 500; line-height: 16px; vertical-align: middle}
+.table thead tr + tr th{border-top: 1px solid #d7d7d7}
+.table tbody tr{border-bottom: 1px solid #dadada}
+.table tbody td{padding: 10px 0; line-height: 16px}
+.table tbody td > p{padding: 0 10px}
 
 /*레이아웃*/
 .wrap{position: relative;}
@@ -81,17 +112,16 @@
 .header{position: relative; border-bottom: 1px solid #cecece}
 .header > .inner{position: relative; padding: 16px 86px; text-align: center;}
 .header h1{display: inline-block}
-.header h1 a{display: block; font-size: 19px; font-weight: 500; line-height: 24px;}
+.header h1 a{display: block; font-size: 20px; font-weight: 500; line-height: 24px; color: #000}
 .header .btnWrap{position: absolute; top: 0; right: 0; height: 100%; padding: 0 15px; font-size: 0;}
 .header .btnWrap button{height: 56px;}
-.header .searchBtn{width: 32px; background-size: 18px}
-.header .gnbBtn{width: 32px; background: url(../images/m/btn_gnb.png) no-repeat center; background-size: 22px auto; text-indent: -9999px;}
-
+.header .searchBtn{width: 32px; background-size: 17px}
+.header .gnbBtn{width: 32px; background: url(../images/m/btn_gnb.svg) no-repeat center; background-size: 22px auto; text-indent: -9999px;}
 .footer{padding: 22px 0 26px; background-color: #efefef; border-top: 1px solid #dcdcdc; color: #666}
 .footer span{display: block; margin-bottom: 8px; font-size: 13px; font-weight: 500}
 .footer address{font-size: 12px; line-height: 1.5}
 
-nav{position: absolute; top: 0; right: 0; width: 100%; height: 100%; display: none;}
+nav{position: absolute; top: 0; right: -100%; width: 100%; height: 100%; z-index: 10; display: none;}
 nav:before{display: block; content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7);}
 nav .navBox{position: absolute; top: 0; right: 0; width: 70%; max-width: 400px; min-width: 210px; height: 100vh; background-color: #f5f5f5; color: #000; text-align: left; overflow: hidden; z-index: 1}
 nav .lang{padding: 13px 20px; font-size: 0}
@@ -103,35 +133,30 @@ nav .lang .active a{color: #000}
 nav .gnb{padding: 5px 20px 20px;}
 nav .gnb li a{display: block; padding: 10px 0; color: #666; font-size: 17px;}
 nav .gnb li.active a{color: #000; font-weight: 500}
-nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; background: url(../images/common/btn_x_black2.svg) no-repeat center; background-size: 14px auto; text-indent: -9999px; z-index: 1}	
-
-
-
+nav .gnbClose{position: absolute; top: 0; right: 0; width: 56px; height: 56px; background: url(../images/common/btn_x_black2.svg) no-repeat center; background-size: 14px auto; text-indent: -9999px; z-index: 1}	
 
 .searchTop{display: none; position: absolute; top: 0; right: 100%; width: 100%; background-color: #fff; border-bottom: 1px solid #c6464b; z-index: 10}
 .searchTop .back{position: absolute; top: 0; left: 0; width: 56px; height: 56px; background: url(../images/m/btn_back.png) no-repeat center; background-size: 23px; text-indent: -9999px;}
 .searchTop .searchArea{position: relative; padding: 0 45px 0 56px;}
 .searchTop .inputWrap{position: relative; width: 100%; padding-right: 30px;}
 .searchTop input[type="text"]{width: 100%; height: 56px; font-size: 16px;}
-.searchTop .btnDel{position: absolute; top: 0; right: 0; width: 30px; height: 100%; background: url(../images/common/btn_close_search.svg) no-repeat center; background-size: 14px; text-indent: -9999px;}
+.searchTop .btnDel{position: absolute; top: 0; right: 0; width: 30px; height: 100%; background: url(../images/common/btn_x_black.svg) no-repeat center; background-size: 14px; text-indent: -9999px;}
 .searchTop .searchBtn{position: absolute; top: 0; right: 15px; display: block; width: 30px; height: 100%;}
-.searchTop .btnClose{display: block; width: 26px; height: 26px; position: absolute; top: 8px; left: 100%; background: url(../images/common/btn_close_search.svg) no-repeat center; text-indent: -9999px}
-.searchTop .dimmed{position: fixed; top: 71px; left: 0; width: 100%; height: 100%; background: #000; opacity: .7; z-index: 8}
 
-.topVisual{padding: 30px 0 0; background: url(../images/m/bg_visual.png) no-repeat center 0; color: #fff; background-size: 1650px;}
+.topVisual{padding: 30px 0 0; margin-bottom: 20px; background: url(../images/m/bg_visual.png) no-repeat center 0; color: #fff; background-size: 1650px;}
 .topVisual .inner{position: relative;}
-.topVisual .inner:before{display: block; content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 66px; background-color: #fff;}
+.topVisual .inner:before{display: block; content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 58px; background-color: #fff;}
 .topVisual .title{font-size: 22px; line-height: 1.45}
 .topVisual .desc{padding: 16px 10px 0 0; font-size: 14px; line-height: 1.45}
-.topVisual .linkMore{height: 40px; margin: 16px 0 0; padding: 0 26px; border: 1px solid #fff; font-size: 15px; line-height: 38px; transition: background .1s}
+.topVisual .linkMore{height: 40px; margin: 16px 0 0; padding: 0 23px; border: 1px solid #fff; font-size: 15px; line-height: 38px; transition: background .1s}
 .topVisual .linkMore:after{content: ''; display: inline-block; width: 24px; height: 14px; margin: 0 0 0 16px; background: url(../images/btn_arrow_link.png) no-repeat center top; vertical-align: middle;}
 .topVisual .linkMore:active{background-color: rgba(0,0,0,0.3);}
-.finderWrap{position: relative; margin-top: 30px; z-index: 1}
+.finderWrap{position: relative; margin-top: 18px; padding-top: 12px; z-index: 1}
 .stepNavi{padding: 0 12px; background-color: rgba(255,255,255,0.7); border-radius: 10px; overflow: hidden; box-shadow: 5px 5px 10px rgba(0,0,0,0.3)}
 .stepNavi p{display: inline-flex; width: 100%; height: 20px; align-items: center;}
 .stepNavi p > *{display: inline-block; font-size: 11px; line-height: 20px; white-space: nowrap;}
 .stepNavi .step{margin-right: 9px; line-height: 21px; color: #c6464b; text-transform: uppercase;}
-.stepNavi .step b{margin-left: 3px; font-size: 12px; line-height: 20px;}
+.stepNavi .step b{margin-left: 3px; font-size: 13px; line-height: 20px;}
 .stepNavi .bar{position: relative; width: 100%;}
 .stepNavi .bar:after{	display: block; content: ''; height: 7px; border-radius: 5px;
 	background: #dd6065;
@@ -147,41 +172,24 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; b
 .stepNavi .num em{color: #333}
 
 .finder{margin: 12px 0 0; padding: 20px 20px 0; color: #333; background-color: #fff; border-radius: 4px 4px 6px 6px; box-shadow: 0px 5px 9px rgba(0,0,0,0.32)}
-.finder select{width: 100%; height: 36px; padding: 0 40px 0 10px; border: 1px solid #dd5c61; letter-spacing: -.02em;	background: #fff url(../images/selectbox1.png) no-repeat right 14px center;}
+.finder select{width: 100%; height: 36px; padding: 0 40px 0 10px; border: 1px solid #dd5c61; font-size: 14px; letter-spacing: -.02em;	background: #fff url(../images/selectbox1.png) no-repeat right 14px center;}
 .finder .line{position: relative; display: inline-flex; width: 100%; line-height: 36px; text-align: left; font-size: 0;}
 .finder .line + .line{margin-top: 14px; padding-top: 14px; border-top: 1px solid #dadada}
 .finder .line > *{font-size: 14px;}
 .finder .line span{flex: none;}
 .finder .line select{margin: 0 8px 0 10px;}
-.finder .line + .text{padding-top: 11px;}
+.finder .line + .text{padding-top: 11px; font-size: 14px;}
 .finder .line.disabled{opacity: .5;}
 .finder .line.disabled .NextBtn{display: none;}
 .finder .line.disabled select, .finder select:disabled{border-color: #888;}
 .finder .line.disabled + .text{opacity: .5;}
 .finder .NextBtn{display: block; width: calc(100% + 40px); height: 44px; margin: 22px -20px 0; font-size: 16px; line-height: 44px; border-radius: 0 0 4px 4px; background-color: #c6464b; color: #fff; font-weight: 700; text-align: center; transition: .1s}
 .finder .NextBtn:active{background-color: #96181c;}
-
 .finder .detail{margin: 14px 0 0; padding: 14px 0 0; font-size: 0; line-height: 16px; border-top: 1px solid #dadada}
 .finder .detail .detailOption{position: relative; display: inline-block; width: 50%; font-size: 14px;}
 .finder .detail .detailOption em{display: block; margin: 0 0 6px; font-weight: 500;}
 .finder .detail .detailOption:first-of-type{padding-right: 7px;}
 .finder .detail .detailOption:last-of-type{padding-left: 7px;}
-
-/*Front*/
-.frontCont{margin: 0 auto; padding: 50px 20px 50px;}
-.frontCont hr.line{height: 1px; margin: 32px 0; background-color: #dadada;}
-.frontCont h2{margin-bottom: 20px; font-size: 20px; font-weight: 500; text-transform: uppercase;}
-.frontCont h3{margin-bottom: 10px; font-size: 16px; font-weight: 500}
-.frontCont h3 em{margin-left: 2px; font-size: 13px; color: #666; vertical-align: baseline; white-space: nowrap;}
-.frontCont h3 + p.txt{line-height: 1.38}
-.frontCont h4{margin: 30px 0 10px; font-size: 15px; font-weight: 500}
-.frontCont h4 + p.txt{line-height: 1.38; color: #666}
-.frontCont .btnGroup{text-align: center;}
-.frontCont .table thead{background-color: #f4f4f4; border-color: #d7d7d7}
-.frontCont .tabMenu li{width: 25%;}
-.frontCont .tabMenu button{height: 50px; padding: 0 10px; background-color: #fff; font-size: 13px;}
-.frontCont .tabMenu li.active button{border-color: #c6464b;}
-.tabMenu.applyTab{margin-bottom: 40px;}
 
 /*Quick Finder*/
 .finderManual{width: 100%;}
@@ -197,15 +205,28 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; b
 .finderManual li:last-of-type:after{display: none;}
 .finderManual li + li{margin-top: 39px;}
 
-
-
 /*비자리스트*/
 .visaList .inBox{position: relative; display: block; width: 100%;}
 .visaList .name{display: block; font-size: 0;}
 .visaList .name .icon{width: 50px; height: 50px; background-image: url(../images/m/icon_visa.png); background-repeat: no-repeat;}
 .visaList .name em{font-size: 17px;}
 .visaList .desc{display: block; margin-top: 12px; color: #666; font-size: 13px; line-height: 1.7;}
-
+/*비자icon*/
+.visa01 .icon{background-position: 0 0;}								/*01.관광단기방문*/
+.visa02 .icon{background-position: 0 25%;} 					/*02.전문직취업*/
+.visa03 .icon{background-position: 0 50%;} 					/*03.투자*/
+.visa04 .icon{background-position: 0 75%;} 					/*04.방문취업*/
+.visa05 .icon{background-position: 0 100%;} 				/*05.연수*/
+.visa06 .icon{background-position: 50% 0;} 					/*06.치료요양*/
+.visa07 .icon{background-position: 50% 25%;}			/*07.주재*/
+.visa08 .icon{background-position: 50% 50%;} 			/*08.무역경영*/
+.visa09 .icon{background-position: 50% 75%;} 			/*09.가족방문동거*/
+.visa10 .icon{background-position: 50% 100%;}		/*10.비전문직취업*/
+.visa11 .icon{background-position: 100% 0;} 				/*11.유학어학연수*/
+.visa12 .icon{background-position: 100% 25%;} 		/*12.취재종교*/
+.visa13 .icon{background-position: 100% 50%;} 		/*13.재외동포*/
+.visa14 .icon{background-position: 100% 75%;} 		/*14.결혼이민*/
+.visa15 .icon{background-position: 100% 100%;} 	/*15.외교공무*/
 /*part*/
 .visaList.part li + li{margin-top: 10px;}
 .visaList.part .inBox{padding: 18px 22px 20px; border: 1px solid #dadada}
@@ -213,19 +234,18 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; b
 .visaList.part .name em{margin-left: 4px; font-size: 17px; line-height: 50px}
 /*effect*/
 .visaList.part li .inBox:before,
-.visaList.part li .inBox:after{display: block; content: ''; position: absolute; width: 0; height: 0; opacity: 0; transition: .2s;}
-.visaList.part li .inBox:before{top: -1px; left: -1px; border-top: 2px solid #c6464b; border-left: 2px solid #c6464b;}
-.visaList.part li .inBox:after{bottom: -1px; right: -1px; border-bottom: 2px solid #c6464b; border-right: 2px solid #c6464b;}
+.visaList.part li .inBox:after{display: block; content: ''; position: absolute; width: 0; height: 0; opacity: 0; transition: .1s;}
+.visaList.part li .inBox:before{top: -1px; left: -1px; border-top: 1px solid #c6464b; border-left: 1px solid #c6464b;}
+.visaList.part li .inBox:after{bottom: -1px; right: -1px; border-bottom: 1px solid #c6464b; border-right: 1px solid #c6464b;}
 .visaList.part li .inBox:active:before,
 .visaList.part li .inBox:active:after{width: 100%; height: 100%; opacity: 1;}
-
 /*total*/
 .visaList.total{margin: 0 -20px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada}
 .visaList.total > li + li{border-top: 1px solid #dadada}
 .visaList.total .inBox{height: 45px; padding: 0 19px; text-align: left; outline: 0; overflow: visible;}
-.visaList.total .icon{width: 24px; height: 24px;}
+.visaList.total .icon{width: 24px; height: 24px; background-image: url(../images/m/icon_visa_s.png); background-repeat: no-repeat; background-size: 72px;}
 .visaList.total .name{position: relative;}
-.visaList.total .name em{margin-left: 16px; font-size: 15px; line-height: 24px; font-weight: 400; color: #333}
+.visaList.total .name em{margin-left: 12px; font-size: 15px; line-height: 24px; font-weight: 400; color: #333}
 .visaList.total .name:before{display: block; content: ''; position: absolute; top: 0; right: 0; width: 15px; height: 100%; background: url(../images/arrow_visalist.png) no-repeat center; transition: .2s}
 .visaList.total .open .name:before{transform: rotate(180deg);}
 .visaList.total .open .name em{font-weight: 500}
@@ -235,23 +255,6 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; b
 .visaList .visaType li a{display: block; padding: 10px 11px; line-height: 1.45}
 
 
-
-/*비자icon*/
-.visa01 .icon{background-position: 0 0px;}								/*01.관광단기방문*/
-.visa02 .icon{background-position: 0 -50px;} 						/*02.전문직취업*/
-.visa03 .icon{background-position: 0 -100px;} 					/*03.투자*/
-.visa04 .icon{background-position: 0 -150px;} 					/*04.방문취업*/
-.visa05 .icon{background-position: 0 -200px;} 					/*05.연수*/
-.visa06 .icon{background-position: -50px 0px;} 				/*06.치료요양*/
-.visa07 .icon{background-position: -50px -50px;} 			/*07.주재*/
-.visa08 .icon{background-position: -50px -100px;} 		/*08.무역경영*/
-.visa09 .icon{background-position: -50px -150px;} 		/*09.가족방문동거*/
-.visa10 .icon{background-position: -50px -200px;} 		/*10.비전문직취업*/
-.visa11 .icon{background-position: -100px 0px;} 				/*11.유학어학연수*/
-.visa12 .icon{background-position: -100px -50px;} 		/*12.취재종교*/
-.visa13 .icon{background-position: -100px -100px;} 	/*13.재외동포*/
-.visa14 .icon{background-position: -100px -150px;} 	/*14.결혼이민*/
-.visa15 .icon{background-position: -100px -200px;} 	/*15.외교공무*/
 
 /*신용카드*/
 .cardList{margin: 14px -3px -6px; font-size: 0;}
@@ -264,7 +267,7 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; b
 .processList li{position: relative; min-height: 80px; padding: 10px 6px; font-size: 13px;}
 .processList li + li{border-top: 1px solid #e4e4e4}
 .processList li:last-of-type .desc strong{color: #467fc6; font-weight: 500}
-.processList i{position: absolute; top: 50%; left: -25px; display: block; width: 18px; height: 18px; margin: -6.5px 0 0; font-style: normal; font-size: 12px; font-weight: 500; line-height: 16.5px; background-color: #fff; border: 1px solid #333; border-radius: 50%; text-align: center;}
+.processList i{position: absolute; top: 50%; left: -25px; display: block; width: 18px; height: 18px; margin: -6.5px 0 0; font-style: normal; font-size: 12px; font-weight: 500; line-height: 18px; color: #fff; background-color: #adadad; border-radius: 50%; text-align: center;}
 .processList .top{padding-bottom: 6px; line-height: 17px; font-size: 0;}
 .processList .top span{padding-left: 20px; font-size: 12px; background: url(../images/icon_person.png) no-repeat; background-size: 17px auto}
 .processList .top span.typeBlue{background-position: 0 -17px; color: #467fc6}
@@ -287,7 +290,7 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 54px; height: 54px; b
 .txtTable .listDot{margin: 0 0 4px;}
 .txtTable * + .listDot{margin-top: 2px;}
 .txtTable .divBox{margin: 8px 0 10px -8px;}
-.txtTable .btnVisaMenu{height: 30px; padding: 0 10px; margin: -9px 0 -7px 8px; line-height: 28px; border: 1px solid #333;}
+.txtTable .btnVisaMenu{height: 30px; padding: 0 10px; margin: -9px 0 -7px 8px; line-height: 28px; border: 1px solid #999;}
 .txtTable + h3{margin-top: 40px;}
 
 .btnManual{padding: 6px 0 12px;}
@@ -313,205 +316,75 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .listNum2 > li{margin-bottom: 2px; padding-left: 13px; text-indent: -13px;}
 .listNum2 > li ul{text-indent: 0;}
 
-
 .titleDot{position: relative; margin-bottom: 7px; font-weight: 500;}
 .titleDot:before{display: inline-block; content: ''; width: 2px; height: 2px; margin-right: 3px; background-color: #636363; vertical-align: super;}
 .txtDash{position: relative; padding-left: 5px;}
 .txtDash:before{display: block; content: '-'; position: absolute; top: 0; left: 0;}
 
 /*검색결과*/
-.resultTxt{margin-top: -20px; color: #666}
-.resultTxt b{color: #333}
-.searchResult{margin-top: 40px; border-bottom: 1px solid #dadada}
-.searchResult li{padding: 12px 40px 16px 20px; border-top: 1px solid #dadada;}
-.searchResult li a{padding: 8px 17px 8px 0; font-size: 14px; font-weight: 500; background: url(../images/arrow_visalist2.png) no-repeat right center;}
-.searchResult li p{padding: 2px 10px 0; font-size: 13px; line-height: 1.4; color: #666; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.resultTxt{color: #666; font-size: 15px}
+.resultTxt b{color: #333; font-weight: 500}
+.searchResult{margin-top: 20px; border-bottom: 1px solid #dadada}
+.searchResult li{padding: 8px 0 14px; border-top: 1px solid #dadada;}
+.searchResult li a{padding: 7px 9px; font-size: 14px; line-height: 1; font-weight: 500;}
+.searchResult li a:after{display: inline-block; content: ''; width: 7px; height: 14px; margin: 0 0 0 7px; background: url(../images/arrow_visalist2.png) no-repeat center; background-size: 7px auto; vertical-align: top}
+.searchResult li a em{display: inline-block; line-height: 14px;}
+.searchResult li p{display: -webkit-box; padding: 0 9px 0 20px; font-size: 13px; line-height: 1.38; color: #666; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
 
 /*비자전체리스트*/
 .table.visaAll{table-layout: fixed;}
-.visaAll td p{display: inline-block; min-width: 155px; text-align: left;}
-.visaAll td a{display: inline-block; min-width: 50px; font-size: 13px;  background: url(../images/arrow_visalist2.png) no-repeat right center; text-align: left;}
+.visaAll td{vertical-align: middle; text-align: left;}
+.visaAll td:first-of-type{white-space: nowrap;}
+.visaAll td:last-of-type{text-align: center;}
+.visaAll td p{display: inline-block; text-align: left;}
+.visaAll td a{display: inline-block; min-width: 50px; background: url(../images/arrow_visalist2.png) no-repeat right center; text-align: left;}
 
-.visaDesc{padding: 18px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada}
-.visaDesc p.txt{line-height: 22px; margin: 3px 0;}
-.visaDesc + .addTxt{padding: 18px;}
-
-/*Admin*/
-.inpWrap{line-height: 36px}
-.inpWrap input{margin-right: 4px}
-.inpT{height: 36px; padding: 0 10px; border: 1px solid #d3d3d3; transition: border .1s}
-.inpT:focus{border-color: #999}
-.inpT:disabled{color: #aaa; background-color: #f4f4f4}
-.inpNum{width: 70px}
-.selectD{height: 36px; padding: 0 30px 0 10px; background: #fff url(../images/selectbox1.png) no-repeat right 10px center; border: 1px solid #d3d3d3}
-.selectD:disabled{background-color: #f4f4f4; opacity: .8;}
-.selectD:focus{border-color: #999}
-.selectD + .selectD{margin-left: 10px;}
-.inpD{position: relative; display: inline-block; padding-left: 23px; font-size: 13px; line-height: 16px; min-width: 16px; min-height: 16px; text-align: left}
-.inpD .inp{position: absolute; top: 1px; left: 1px; width: 14px; height: 14px}
-.inpD .icon{position: absolute; top: 50%; left: 0; display: block; width: 16px; height: 16px; margin-top: -8px; background: url(../images/split.png) no-repeat center;}
-.inpD .text{line-height: 16px}
-.inpD input:disabled ~ .text{color: #aaa;}
-.inpD input[type="radio"] + .icon{background-position: 0 0;}
-.inpD input[type="radio"]:checked + .icon{background-position: 0 -16px}
-.inpD input[type="radio"]:disabled{background-position: 0 0;}
-.inpD input[type="radio"]:checked:disabled + .icon{background-position: 0 -32px}
-.inpD input[type="checkbox"] + .icon{background-position: -16px 0}
-.inpD input[type="checkbox"]:checked + .icon{background-position: -16px -16px}
-.inpD input[type="checkbox"]:disabled + .icon{background-position: -16px 0}
-.inpD input[type="checkbox"]:checked:disabled + .icon{background-position: -16px -32px}
-
-.inpD + .inpD{margin-left: 16px}
-
-/*탭메뉴*/
-.tabMenu{font-size: 0}
-.tabMenu em.red{color: #666}
-.tabMenu li{display: inline-block}
-.tabMenu button{width: 100%; padding: 0 20px; height: 44px; border: 1px solid #dadada; background-color: #f4f4f4; font-weight: 500; color: #666; outline: 0}
-.tabMenu li + li{margin-left: -1px}
-.tabMenu li.active{position: relative; z-index: 1}
-.tabMenu li.active button{background-color: #fff; border-color: #1a6fa0; color: #333}
-.tabMenu li.active em.red{color: #bf3f44}
-.tabBox + .tabBox{display: none}
-.tabBox{margin-top: -1px}
-/*작은타입*/
-.typeSmall{flex: none;}
-.typeSmall .tabMenu li{width: 33.3333%}
-.typeSmall .tabMenu button{font-size: 13px; height: 24px}
-.typeSmall .tabBox{padding: 0 2.5px 0 0; border: 0}
-.typeSmall .tabBox .inpT{width: 100%; height: 34px; font-size: 13px}
-
-hr.line{margin: 30px 0; height: 1px; background-color: #999}
-.addTxt{font-size: 13px; color: #666}
-
-/*LNB*/
-.aside .lnb{width: 150px; border-bottom: 1px solid #ebebeb}
-.aside .lnb li > a, 
-.aside .lnb li > span{display: block; padding: 0 16px; cursor: pointer; transition: background .05s}
-.aside .lnb li > a:hover, 
-.aside .lnb li > span:hover{background-color: rgba(0,0,0,0.11);}
-.aside .lnb li > span{position: relative;}
-.aside .lnb li > span:after{display: block; content: ''; position: absolute; right: 10px; top: 50%; width: 10px; height: 6px; margin: -3px 0 0; background: url(../images/btn_lnb.png) no-repeat center; transition: .2s}
-.aside .lnb li.active > a,
-.aside .lnb li.active > span{color: #1a6fa0;}
-.aside .lnb li.open > span:after{transform: rotate(180deg)}
-/*1depth*/
-.aside .lnb > li + li{border-top: 1px solid #ebebeb}
-.aside .lnb > li > a,
-.aside .lnb > li > span{padding-top: 1px; line-height: 40px}
-.aside .lnb > li.active > span,
-.aside .lnb > li.active > a{height: 41px; font-weight: 500; line-height: 42px}
-/*2depth*/
-.aside .depth2{padding: 8px 0; background-color: #ebebeb; display: none}
-.aside .depth2 > li > a,
-.aside .depth2 > li > span{padding: 6px 20px 7px; font-size: 13px; color: #666}
-/*3depth*/
-.aside .depth3{padding: 10px 0; margin: 6px 0; background-color: #ddd; display: none}
-.aside .depth3 > li > a{padding: 5px 25px 6px; font-size: 13px; color: #666}
-
-
-/*타이틀 옆 텍스트*/
-.topRight{float: right; text-align: right; margin: -24px 0 0; color: #666; font-size: 13px}
-.topRight.btnGroup{font-size: 0; margin: -32px 0 0px;}
-
-.tableTop{padding: 18px 0 8px; text-align: right;}
-.tableTop.topRight{padding: 0}
-.tableTop .btnBorder:last-of-type{color: #1a6fa0; border-color: #1a6fa0}
-
-/*table*/
-.optionTable + .table{margin-top: 25px}
-.table{font-size: 14px; text-align: center; table-layout: auto}
-.table .pad{padding-right: 5px; padding-left: 5px}
-.table thead{background-color: #dae4f0; border-top: 1px solid #cfd7e3; border-bottom: 1px solid #cfd7e3}
-.table thead th{padding: 11px 0; font-size: 14px; font-weight: 500; line-height: 16px; vertical-align: middle}
-.table thead tr + tr th{border-top: 1px solid #d7d7d7}
-.table tbody{font-size: 13px}
-.table tbody tr{border-bottom: 1px solid #dadada}
-.table tbody td{padding: 11px 0; line-height: 16px}
-.table tbody td > p{padding: 0 10px}
-.table tbody td p span+span{margin-left: 3px}
-.table.input thead{background-color: #f4f4f4; border-color: #d7d7d7}
-.table tbody tr.selected{background-color: #f1f6fb}
-.table tbody td input.wide{width: 340px;}
-.table tbody td select{margin: -10px 0; border: 0; background-color: transparent}
-.table tbody td textarea{min-height: 60px; height: 60px; padding: 10px; font-size: 13px; line-height: 1.5; resize: vertical}
-.table tbody td.btnCell{padding: 7px 0 8px}
-.table tbody td.btnCell .btnBorder{min-width: 62px}
-.table .inpCell{vertical-align: middle}
-.table .inpCell .inpD{padding-left: 0}
-.table .inpGroup{display: inline-block; text-align: left; white-space: nowrap}
-.table input.inpNum{width: 60px; text-align: right}
+/*비자 상세 내용*/
+.visaDesc{margin: 6px 0 12px; padding: 10px 8px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada; line-height: 1.4}
+.visaDesc p.txt{margin: 3px 0;}
+.visaDesc + .addTxt{padding: 0 8px; line-height: 1.4}
 
 /*테두리박스*/
 .divBox{padding: 12px; margin-bottom: 24px; border: 1px solid #dadada; font-size: 12px;}
 .divBox p.text{font-size: 13px; line-height: 21px}
-.divBox .inpGroup{font-size: 0; margin-bottom: -14px}
-.divBox .inpGroup .inpD{width: 20%; margin-left: 0; margin-bottom: 14px;}
-
-/*등록항목*/
-.registBox .titleBox{background-color: #dbe7ec; border: 1px solid #cadae0}
-.registBox textarea{height: 80px; padding: 6px 10px; line-height: 21px}
-.registBox strong.title{display: block; padding: 20px 0 14px}
-.registBox .optionTable .cell .title{padding: 12px 20px}
-.registBox .optionTable .cell .boxLine{width: 100%}
-.registBox .optionTable .cell.url .boxLine > .inpT{width: 412px}
-.registBox .tabWrap{display: inline-block; width: 306px; margin-left: 20px}
-.addOption{padding: 2px 0}
-.addOption li{padding: 14px 20px}
-.addOption li + li{border-top: 1px solid #dadada}
-
-/*타이틀회색상자*/
-.titleTxtBox{display: block; margin-bottom: 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; font-weight: 700; line-height: 42px; text-align: center}
-
-/* paginate */
-	.paging{padding: 40px 0 0; text-align: center; font-size: 0}
-	.paging a{display: inline-block; min-width: 28px; height: 28px; padding: 0 3px; line-height: 28px;}
-	.paging .num{border-color: #fff; font-weight: 300}
-	.paging .num + .num{margin: 0 0 0 2px}
-	.paging .direction{width: 28px; min-width: unset; padding: 0; background: url(../images/split.png) no-repeat center; background-position: 0 -1px; text-indent: -9999px}
-	.paging .direction + .direction{margin-left: 6px}
-	.paging .direction + .num, .paging .num + .direction{margin-left: 12px}
-	.paging .prev{background-position: 0 -50px}
-	.paging .prev + .prev{background-position: 0 -78px}
-	.paging .next{background-position: 0 -106px}
-	.paging .next + .next{background-position: 0 -134px}
-	.paging a:hover{color: #000; outline-offset: -1px; outline: 1px solid #aaa}
-	.paging a.active{color: #1a6fa0; font-weight: 500; text-decoration: underline}
 
 /* popup */
 	.popWrap{display: none; position:absolute;top:0;left:0;width:100%;height:100%; z-index: 1000}/*레이어박스높이가짧을경우:fixed*/
-	.popWrap .popDim{position:fixed;top:0;left:0;width:100%;height:100%;background:black;opacity:0.6;filter:alpha(opacity=60)}
-	.popWrap .popBox{position: fixed; top: 50%; left: 50%; width: 900px; padding-bottom: 50px; background-color: #fff; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%)}
-	.popWrap .popBox{min-width: 400px}
-	.popWrap .closePopBtn{position: absolute; bottom: 100%; right: -10px; width: 42px; height: 42px;background: url(../images/common/btn_x_white.svg) no-repeat center; background-size: 22px; text-indent: -9999px; outline: 0}
-	.popWrap .titleWrap{padding: 15px 30px 14px; border-bottom: 1px solid #dadada; text-align: center;}
-	.popWrap h2{font-size: 22px; font-weight: 500; line-height: 1.4}
-	.popWrap h3{margin-bottom: 18px; font-size: 17px; line-height: 20px; font-weight: 500;}
-	.popWrap .popArea{padding: 40px 20px 0;}
-	.popWrap .scrollBox{max-height: 480px; overflow-y: auto;}
+	.popWrap .popDim{position:fixed;top:0;left:0;width:100%;height:100%;background:black;opacity:0.7;}
+	.popWrap .popBox{position: fixed; top: 50%; left: 50%; width: 90%; padding-bottom: 30px; background-color: #fff; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%)}
+	.popWrap .closePopBtn{position: absolute; bottom: 100%; right: -10px; width: 40px; height: 40px;background: url(../images/common/btn_x_white.svg) no-repeat center; background-size: 20px; text-indent: -9999px; outline: 0}
+	.popWrap .popArea{padding: 20px 10px 0;}
+	.popWrap .titleWrap{padding: 12px 30px 11px; border-bottom: 1px solid #dadada; text-align: center;}
+	.popWrap h2{font-size: 18px; font-weight: 500; line-height: 1.4}
+	.popWrap h3{margin-bottom: 12px; font-size: 15px; line-height: 20px; font-weight: 500;}
+	.popWrap .scrollBox{max-height: 50vh; overflow-y: auto;}
 	.popWrap .btnGroup{margin: 30px auto 0; text-align: center;}
-	.countryList table td{vertical-align: middle;}
-	.countryList table td > p{padding: 0 20px; line-height: 22px;}
+	
+	.countryList table thead tr:nth-of-type(2) th{font-size: 12px;}
+	.countryList table th{font-size: 13px;}
+	.countryList table td{font-size: 12px; vertical-align: middle;}
+	.countryList table td > p{padding: 0 5px; line-height: 1.4;}
+	.countryList table td:first-of-type p{text-align: left;}
 
 	/*small popup*/
-	.openPopS{outline: 0;}
-	.popS.popWrap{top: 100%; right: 0; left: inherit; width: auto; height: auto; min-width: 240px; max-width: 400px; text-align: left; z-index: 5;}
-	.popS .closePopBtn{position: absolute; top: 0; right: 0; width: 44px; height: 43px;background: url(../images/common/btn_x_white.svg) no-repeat center; background-size: 17px; text-indent: -9999px; outline: 0}
-	.popS .scrollBox{overflow-y: scroll; max-height: auto}
-	.popS .popArea{padding: 0; background: #fff; border: 1px solid #7f94a9; box-shadow: 10px 10px 10px rgba(0,0,0,0.1)}
-	.popS .popTitle{padding: 11px 20px 12px; background-color: #7f94a9;}
-	.popS .popTitle p{color: #fff; font-size: 17px; line-height: 26px}
-	.popS .popCont{padding: 20px;}
-	.popS .popCont .search{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #dadada}
-	.popS .popCont .search span.txt{margin-right: 10px;}
-	.popS .popCont .search .inpT{width: 100%}
-	.popS .selectItem p + p{margin-top: 10px;}
-	.popS .selectItem.nation{width: 360px; height: 95px;}
-	.popS .selectedList{margin-top: 20px; padding: 16px 13px; background-color: #f4f4f4; height: 95px; overflow-y: scroll;}
-	.popS .selectedList span{font-size: 13px;}
-	.popS .selectedList span + span{margin-left: 4px;}
-	.popS .btnGroup.btm{margin-top: 20px;}
-	.box .popS{margin: 0 30px 0 0; transform: translateY(-12px);}
+		.openPopS{outline: 0;}
+		.popS.popWrap{top: 100%; right: 0; left: inherit; width: auto; height: auto; min-width: 240px; max-width: 400px; text-align: left; z-index: 5;}
+		.popS .closePopBtn{position: absolute; top: 0; right: 0; width: 44px; height: 43px;background: url(../images/common/btn_x_white.svg) no-repeat center; background-size: 17px; text-indent: -9999px; outline: 0}
+		.popS .scrollBox{overflow-y: scroll; max-height: auto}
+		.popS .popArea{padding: 0; background: #fff; border: 1px solid #7f94a9; box-shadow: 10px 10px 10px rgba(0,0,0,0.1)}
+		.popS .popTitle{padding: 11px 20px 12px; background-color: #7f94a9;}
+		.popS .popTitle p{color: #fff; font-size: 17px; line-height: 26px}
+		.popS .popCont{padding: 20px;}
+		.popS .popCont .search{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #dadada}
+		.popS .popCont .search span.txt{margin-right: 10px;}
+		.popS .popCont .search .inpT{width: 100%}
+		.popS .selectItem p + p{margin-top: 10px;}
+		.popS .selectItem.nation{width: 360px; height: 95px;}
+		.popS .selectedList{margin-top: 20px; padding: 16px 13px; background-color: #f4f4f4; height: 95px; overflow-y: scroll;}
+		.popS .selectedList span{font-size: 13px;}
+		.popS .selectedList span + span{margin-left: 4px;}
+		.popS .btnGroup.btm{margin-top: 20px;}
+		.box .popS{margin: 0 30px 0 0; transform: translateY(-12px);}
 
 
 /*미디어쿼리*/

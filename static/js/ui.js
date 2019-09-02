@@ -242,10 +242,9 @@ function lodingClose(){
 	$('.preLoading').hide();
 }
 
-function scrollMove(Target, speed){	
-	var moveTo = $(Target).offset();
-	var movePosition = moveTo.top
-	$('html').animate({scrollTop: movePosition}, speed);
+function scrollMove(target, speed){	
+	var moveTo = $(target).offset();
+	$('html').animate({scrollTop: moveTo.top}, speed);
 }
 
 

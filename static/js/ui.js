@@ -30,6 +30,31 @@ function topSearchM(){
 	})	
 }
 
+function inputTextDel(){
+	$('.inputWrap .btnDel').click(function(){
+		$(this).siblings('input').val('').focus();
+		return false;
+	});
+};
+
+// 모바일 툴팁
+function tooltipM(){
+	$('.tipIcon').click(function(){
+		$('.tooltip').removeClass('on').find('.tipTxt').hide();
+		$(this).closest('.tooltip').addClass('on');
+		$(this).next('.tipTxt').fadeIn(50);
+	})
+	$('.tipTxt .closeTip').click(function(){
+		$(this).closest('.tipTxt').hide().closest('.tooltip').removeClass('on');
+	})
+	$('body').mouseup(function(e){
+		var container = $(".tipTxt");
+		if(container.has(e.target).length === 0){
+			$('.tooltip').removeClass('on').find('.tipTxt').hide();
+		}
+	})	
+}
+
 // 모바일 메뉴 열기
 function gnbOpenM(){
 	$('.header').find('.gnbBtn').each(function(){
@@ -217,13 +242,15 @@ function lodingClose(){
 	$('.preLoading').hide();
 }
 
-function scrollMove(Target, speed){
+function scrollMove(Target, speed){	
 	var moveTo = $(Target).offset();
-	$('body,html').animate({scrollTop: moveTo.top}, speed);
+	var movePosition = moveTo.top
+	$('html').animate({scrollTop: movePosition}, speed);
 }
 
 
 $(function(){	
+	inputTextDel();
 	topSearch();
 	topSearchM();
 	inputFileTxt();
@@ -234,7 +261,10 @@ $(function(){
 	visaListMenu();
 	openPop();
 	openPopS();
-	gnbOpenM();
+	gnbOpenM();	
 	topButtonWeb();
 	topButton();
+	if($('.closeTip').length != 0){
+		tooltipM();
+	}
 });

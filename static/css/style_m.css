@@ -24,17 +24,15 @@
 .searchBtn{width: 36px; height: 36px; background: url(../images/m/icon_search.svg) no-repeat center; text-indent: -9999px; cursor: pointer;}
 
 /*툴팁*/
-.tooltip{position: relative; margin: 1px 0 0 3px;}
-.tooltip .tipIcon{display: inline-block; width: 16px; height: 16px; background: url(../images/common/icon_tooltip.svg) no-repeat center; background-size: 16px; text-indent: -9999px;}
-.tooltip .tipTxt{display: none; position: absolute; top: 100%; left: -39px; width: 310px; padding-top: 20px; z-index: 1;}
-.tooltip .tipTxt > em{position: relative; padding: 16px 20px; background-color: #f4f4f4; border: 1px solid #999; color: #333; font-size: 13px; font-weight: 400; line-height: 22px; white-space: normal; text-align: left; cursor: default; box-shadow: 6px 6px 10px rgba(0,0,0,0.2);}
-.tooltip .tipTxt > em:before{display: block; content: ''; position: absolute; bottom: 100%; left: 40px; width: 16px; height: 16px; background: url(../images/arrow_tooltip.png) no-repeat;}
-.tooltip:hover .tipTxt{display: block;}
+.tooltip{margin: 1px 0 0 3px;}
+.tooltip .tipIcon{position: relative; display: inline-block; width: 16px; height: 16px; background: url(../images/common/icon_tooltip.svg) no-repeat center; background-size: 16px; text-indent: -9999px;}
+.tooltip .tipIcon:after{display: none; content: ''; position: absolute; top: 20px; left: 0; width: 16px; height: 16px; background: url(../images/arrow_tooltip.png) no-repeat; z-index: 2}
+.tooltip .tipTxt{display: none; position: absolute; top: 100%; left: 0; width: 100%; margin-top: 8px; z-index: 1;}
+.tooltip .tipTxt > em{position: relative; display: inline-block; padding: 14px 30px 14px 16px; background-color: #f4f4f4; border: 1px solid #999; color: #333; font-size: 12.5px; font-weight: 400; line-height: 1.38; white-space: normal; text-align: left; cursor: default; box-shadow: 1px 3px 5px rgba(0,0,0,0.2);}
+.tooltip .tipTxt .closeTip{width: 30px; height: 30px; position: absolute; top: 0; right: 1px; background: url(../images/common/btn_x_black.svg) no-repeat center; background-size: 13px; text-indent: -9999px;}
+.tooltip.on .tipIcon:after{display: block;}
 .active .tooltip .tipIcon{background: url(../images/common/icon_tooltip_red.svg) no-repeat center; background-size: 16px;}
-.tooltip.right .tipTxt{left: unset; right: -39px;}
-.tooltip.right .tipTxt > em:before{left: unset; right: 40px;}
-.tooltip.center .tipTxt{left: 50%; transform: translateX(-50%);}
-.tooltip.center .tipTxt > em:before{left: 50%; margin-left: -8px;}
+
 
 /*탑버튼*/
 .topButtonArea{position: absolute; left: 50%; width: 1200px; margin-left: -600px;}
@@ -42,18 +40,19 @@
 .backTop{display: block; position: absolute; bottom: 0; right: -36px; z-index: 999; width: 36px; height: 36px; text-indent: -9999px; background: #2a2b2c url(../images/btn_top.png) no-repeat; transition: background .1s; cursor: pointer;}
 
 /*탭메뉴*/
-.tabMenu{display: inline-flex; width: 100%;}
+.tabMenu{position: relative; display: inline-flex; width: 100%; margin: 26px 0 23px;}
 .tabMenu em.red{color: #666}
-.tabMenu li{flex: 1;}
-.tabMenu button{width: 100%; border: 1px solid #dadada; font-size: 13px; color: #666; outline: 0;}
-.tabMenu li + li{margin-left: -1px}
-.tabMenu li.active{position: relative; z-index: 1}
+.tabMenu li{flex: 1; border: 1px solid #dadada; border-right: 0; outline-offset: -1px;}
+.tabMenu li:last-of-type{border-right: 1px solid #dadada;}
+.tabMenu button{width: 100%; font-size: 13px; color: #666; }
+.tabMenu li.active + li{border-left: 1px solid #fff}
 .tabMenu li.active em.red{color: #bf3f44}
-.tabBox + .tabBox{display: none}
+.tabMenu li.active{outline: 1px solid #c6464b;}
+.tabMenu li.active button{color: #c6464b;}
 .tabBox{margin-top: -1px}
-.viewBox .tabMenu{margin: 26px -3px 23px 0;}
+.tabBox + .tabBox{display: none}
+
 .viewBox .tabMenu li button{padding: 9px 10px; height: 54px; font-weight: 500; line-height: 1.38; white-space: normal; text-align: left;}
-.viewBox .tabMenu li.active button{border-color: #c6464b; color: #c6464b;}
 
 /*뷰박스*/
 .viewBox{margin: 0 -20px; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada}
@@ -110,7 +109,7 @@ hr.line{margin: 32px 0; height: 1px; background-color: #dadada}
 .wrap{position: relative;}
 .inner{margin: 0 auto; padding: 0 20px;}
 .header{position: relative; border-bottom: 1px solid #cecece}
-.header > .inner{position: relative; padding: 16px 86px; text-align: center;}
+.header > .inner{position: relative; height: 56px; padding: 16px 86px; text-align: center;}
 .header h1{display: inline-block}
 .header h1 a{display: block; font-size: 20px; font-weight: 500; line-height: 24px; color: #000}
 .header .btnWrap{position: absolute; top: 0; right: 0; height: 100%; padding: 0 15px; font-size: 0;}
@@ -143,11 +142,11 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 56px; height: 56px; b
 .searchTop .btnDel{position: absolute; top: 0; right: 0; width: 30px; height: 100%; background: url(../images/common/btn_x_black.svg) no-repeat center; background-size: 14px; text-indent: -9999px;}
 .searchTop .searchBtn{position: absolute; top: 0; right: 15px; display: block; width: 30px; height: 100%;}
 
-.topVisual{padding: 30px 0 0; margin-bottom: 20px; background: url(../images/m/bg_visual.png) no-repeat center 0; color: #fff; background-size: 1650px;}
+.topVisual{padding: 30px 0 0; margin-bottom: 20px; background: url(../images/m/bg_visual.png) repeat-x center 0; color: #fff; background-size: 1650px;}
 .topVisual .inner{position: relative;}
 .topVisual .inner:before{display: block; content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 58px; background-color: #fff;}
 .topVisual .title{font-size: 22px; line-height: 1.45}
-.topVisual .desc{padding: 16px 10px 0 0; font-size: 14px; line-height: 1.45}
+.topVisual .desc{height: 116px; padding: 16px 0 0; font-size: 14px; line-height: 1.45}
 .topVisual .linkMore{height: 40px; margin: 16px 0 0; padding: 0 23px; border: 1px solid #fff; font-size: 15px; line-height: 38px; transition: background .1s}
 .topVisual .linkMore:after{content: ''; display: inline-block; width: 24px; height: 14px; margin: 0 0 0 16px; background: url(../images/btn_arrow_link.png) no-repeat center top; vertical-align: middle;}
 .topVisual .linkMore:active{background-color: rgba(0,0,0,0.3);}
@@ -156,14 +155,14 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 56px; height: 56px; b
 .stepNavi p{display: inline-flex; width: 100%; height: 20px; align-items: center;}
 .stepNavi p > *{display: inline-block; font-size: 11px; line-height: 20px; white-space: nowrap;}
 .stepNavi .step{margin-right: 9px; line-height: 21px; color: #c6464b; text-transform: uppercase;}
-.stepNavi .step b{margin-left: 3px; font-size: 13px; line-height: 20px;}
+.stepNavi .step b{margin-left: 3px; font-size: 13px; line-height: 21px;}
 .stepNavi .bar{position: relative; width: 100%;}
 .stepNavi .bar:after{	display: block; content: ''; height: 7px; border-radius: 5px;
 	background: #dd6065;
 	background: -moz-linear-gradient(left,  #dd6065 0%, #961b1f 100%);
 	background: -webkit-linear-gradient(left,  #dd6065 0%,#961b1f 100%);
 	background: linear-gradient(to right,  #dd6065 0%,#961b1f 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd6065', endColorstr='#961b1f',GradientType=1 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd6065', endColorstr='#961b1f',GradientType=1);
 }
 .stepNavi.step1 .bar:after{width: 33%;}
 .stepNavi.step2 .bar:after{width: 66%;}
@@ -388,5 +387,7 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 
 
 /*미디어쿼리*/
-@media screen and (max-width:1000px){}
+@media screen and (min-width:360px){
+	.topVisual .desc{height: 76px;}
+}
 

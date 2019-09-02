@@ -10,11 +10,11 @@
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
 	<script src="../static/js/ui.js"></script>
 	<script>
-		$(function(){
+		$(document).ready(function(){
 			// 페이지 진입시 퀵파인더 위치로 이동
-			scrollMove('.finderWrap', 600);
+			scrollMove('.finderWrap', 500);
 		})
-	</script>
+	</script>		
 </head>
 <body>
 
@@ -68,7 +68,10 @@
 		<div class="topVisual">
 			<div class="inner">
 				<p class="title">비자 종류와 정보를 쉽게 <br>확인하세요.</p>
-				<p class="desc">현재 국적으로 보유한 국가를 선택하고 목적 국가를 입력하면 최적화된 비자발급과 관련한 정보가 보여집니다. <br>해당되지 않을 경우 전체 리스트를 통해 확인할 수 있습니다.</p>
+				<p class="desc">
+					현재 국적으로 보유한 국가를 선택하고 목적 국가를 입력하면 최적화된 비자발급과 관련한 정보가 보여집니다. <br>
+					해당되지 않을 경우 전체 리스트를 통해 확인할 수 있습니다.
+				</p>
 				<a href="#" class="linkMore">비자 전체리스트</a>
 				<div class="finderWrap">
 					<div class="stepNavi step3">
@@ -183,7 +186,7 @@
 		<div class="frontCont">
 			<h2>검색 결과</h2>
 
-			<div class="resultVisa viewBox open">
+			<div class="resultVisa viewBox">
 				
 				<div class="titleBox">
 					<p>사증면제<em>(B-1)</em></p>
@@ -209,26 +212,29 @@
 									<em class="tipIcon">설명</em>
 									<span class="tipTxt">
 										<em>거주국(지역) 관할 대한민국 대사관 또는 영사관을 방문하여 비자를 신청하고 발급 받을 수 있습니다.</em>
+										<span class="closeTip">닫기</span>
 									</span>
 								</span>
 							</button>
 						</li>
 						<li>
 							<button type="button">전자비자 신청대상
-								<span class="tooltip center">
+								<span class="tooltip">
 									<em class="tipIcon">설명</em>
 									<span class="tipTxt">
 										<em>대한민국 비자를 받고자 하는 신청인의 재외공관 방문에 따른 불편을 해소하기 위해 일부 비자에 대하여 비자 포털을 통해 신청하고 발급받는 비자를 말합니다.</em>
+										<span class="closeTip">닫기</span>
 									</span>
 								</span>
 							</button>
 						</li>
 						<li>
 							<button type="button">비자발급인정서 신청대상
-								<span class="tooltip right">
+								<span class="tooltip">
 									<em class="tipIcon">설명</em>
 									<span class="tipTxt">
 										<em>초청자 또는 대행기관이 국내 출입국·외국인관서를 방문하지 않고 비자 포털을 통해 비자발급인정서 신청을 완료하고 그 승인내용을 근거로 재외공관에서 신속하게 비자를 발급 받을 수 있는 제도를 말합니다.</em>
+										<span class="closeTip">닫기</span>
 									</span>
 								</span>
 							</button>
@@ -436,7 +442,7 @@
 						</li>
 						<li>
 							<button type="button">전자비자 신청대상
-								<span class="tooltip center">
+								<span class="tooltip">
 									<em class="tipIcon">설명</em>
 									<span class="tipTxt">
 										<em>대한민국 비자를 받고자 하는 신청인의 재외공관 방문에 따른 불편을 해소하기 위해 일부 비자에 대하여 비자 포털을 통해 신청하고 발급받는 비자를 말합니다.</em>
@@ -446,7 +452,7 @@
 						</li>
 						<li>
 							<button type="button">비자발급인정서 신청대상
-								<span class="tooltip right">
+								<span class="tooltip">
 									<em class="tipIcon">설명</em>
 									<span class="tipTxt">
 										<em>초청자 또는 대행기관이 국내 출입국·외국인관서를 방문하지 않고 비자 포털을 통해 비자발급인정서 신청을 완료하고 그 승인내용을 근거로 재외공관에서 신속하게 비자를 발급 받을 수 있는 제도를 말합니다.</em>
@@ -656,7 +662,7 @@
 						</li>
 						<li>
 							<button type="button">전자비자 신청대상
-								<span class="tooltip center">
+								<span class="tooltip">
 									<em class="tipIcon">설명</em>
 									<span class="tipTxt">
 										<em>대한민국 비자를 받고자 하는 신청인의 재외공관 방문에 따른 불편을 해소하기 위해 일부 비자에 대하여 비자 포털을 통해 신청하고 발급받는 비자를 말합니다.</em>
@@ -666,7 +672,7 @@
 						</li>
 						<li>
 							<button type="button">비자발급인정서 신청대상
-								<span class="tooltip right">
+								<span class="tooltip">
 									<em class="tipIcon">설명</em>
 									<span class="tipTxt">
 										<em>초청자 또는 대행기관이 국내 출입국·외국인관서를 방문하지 않고 비자 포털을 통해 비자발급인정서 신청을 완료하고 그 승인내용을 근거로 재외공관에서 신속하게 비자를 발급 받을 수 있는 제도를 말합니다.</em>
@@ -857,6 +863,6 @@
 		</div>
 	</div>
 </div>
-	
+
 </body>
 </html>

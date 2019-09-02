@@ -244,7 +244,7 @@ function lodingClose(){
 
 function scrollMove(target, speed){	
 	var moveTo = $(target).offset();
-	$('html').animate({scrollTop: moveTo.top}, speed);
+	$('html, body').animate({scrollTop: moveTo.top}, speed);
 }
 
 

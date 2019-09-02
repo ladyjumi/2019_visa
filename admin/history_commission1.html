@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>이력-수수료변경리스트</title>
+	<title>이력-수수료변경이력(MAIN)</title>
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
@@ -98,67 +98,109 @@
 
 			<div class="cont">
 
-				<h3>수수료 변경 이력 (MAIN)</h3>
-				<ul class="optionTable">
-					<li>
-						<div class="cell">
-							<p class="title">검색</p>
-							<div class="box">
-								<input type="text" class="inpT wide">
-								<button type="button" class="searchBtn">검색하기</button>
-							</div>
+				<h3>수수료 변경 이력</h3>
+				
+				<!-- 2단영역 -->
+				<div class="columnWrap col2">
+
+					<!-- 비교계정1 -->
+					<div class="account">
+						<div class="titleWrap">
+							<b>관리계정 : <em>Admin1</em></b>
+							<span class="date">작성일 : 2019-09-28</span>
 						</div>
-					</li>
-				</ul>
 
-				<!-- //table 내 링크 영역 미정 -->
-				<table class="table">
-					<colgroup>
-						<col style="width: 56px" />
-						<col style="width: auto" />
-						<col style="width: 160px" />
-						<col style="width: 160px" />
-					</colgroup>
-					<thead>
-						<tr>
-							<th>순서</th>
-							<th>변경사유</th>
-							<th>관리 계정</th>
-							<th>등록일</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="red">
-							<td>1</td>
-							<td><p>비자 발급 기본 수수료 변경</p></td>
-							<td><p>Admin</p></td>
-							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td><p>비자발급 신청에 따른 기본 수수료 설정 내용 변경</p></td>
-							<td><p>Admin2</p></td>
-							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
-						</tr>
-					</tbody>
-				</table>
+						<h4>비자발급 신청에 따른 기본 수수료 설정</h4>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>비자구분</th>
+									<th>금액(미국달러 기준)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>체류기간 90일 이하의 단수비자</td>
+									<td><em>40</em>달러</td>
+								</tr>
+								<tr>
+									<td>체류기간 91일 이상의 단수비자</td>
+									<td><em>60</em>달러</td>
+								</tr>
+								<tr>
+									<td>2회까지 입국할 수 있는 더블비자</td>
+									<td><em>70</em>달러</td>
+								</tr>
+								<tr>
+									<td>입국횟수에 제한이 없는 복수비자</td>
+									<td><em>80</em>달러</td>
+								</tr>
+							</tbody>
+						</table>
 
-				<div class="paging">
-					<a href="#" class="direction prev">처음</a>
-					<a href="#" class="direction prev">이전</a>
-					<a href="#" class="num active">1</a>
-					<a href="#" class="num">2</a>
-					<a href="#" class="num">3</a>
-					<a href="#" class="num">4</a>
-					<a href="#" class="num">5</a>
-					<a href="#" class="num">6</a>
-					<a href="#" class="num">7</a>
-					<a href="#" class="num">8</a>
-					<a href="#" class="num">9</a>
-					<a href="#" class="num">10</a>
-					<a href="#" class="direction next">다음</a>
-					<a href="#" class="direction next">끝</a>
+						<div class="editWrap">
+							<!-- 에디터영역 -->
+							<div class="editArea">에디터 영역</div>
+							<!-- //에디터영역 -->
+						</div>
+
+						<h5><em class="red">*</em>등록사유</h5>
+						<textarea disabled>수정전</textarea>
+					</div>
+					<!-- //비교계정1 -->
+					
+					<!-- 비교계정2 -->
+					<div class="account">
+						<div class="titleWrap">
+							<b>관리계정 : <em>Admin2</em></b>
+							<span class="date">작성일 : 2019-09-28</span>
+						</div>
+
+						<h4>비자발급 신청에 따른 기본 수수료 설정</h4>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>비자구분</th>
+									<th>금액(미국달러 기준)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>체류기간 90일 이하의 단수비자</td>
+									<td><em class="red">50</em>달러</td>
+								</tr>
+								<tr>
+									<td>체류기간 91일 이상의 단수비자</td>
+									<td><em>60</em>달러</td>
+								</tr>
+								<tr>
+									<td>2회까지 입국할 수 있는 더블비자</td>
+									<td><em>70</em>달러</td>
+								</tr>
+								<tr>
+									<td>입국횟수에 제한이 없는 복수비자</td>
+									<td><em>80</em>달러</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="editWrap">
+							<!-- 에디터영역 -->
+							<div class="editArea">에디터 영역</div>
+							<!-- //에디터영역 -->
+						</div>
+
+						<h5><em class="red">*</em>등록사유</h5>
+						<textarea class="red">비자 발급 기본 수수료 변경</textarea>
+					</div>			
+					<!-- //비교계정2 -->
+
 				</div>
+				<!-- //2단영역 -->
+
+				<span class="btnGroup btm">
+					<button type="button" class="btn">목록</button>
+				</span>
 
 			</div>
 

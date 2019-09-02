@@ -560,7 +560,16 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap .optionTable > li .box .inpGroup{margin-top: 7px}
 .columnWrap .optionTable .box.row{padding: 0;}
 .columnWrap .optionTable .box.row .boxLine{padding: 10px;}
+.columnWrap .optionTable .inpFileWrap{padding-right: 78px;}
+.columnWrap .optionTable .inpFileWrap .inpT{width: 278px;}
+.columnWrap .optionTable .inpFileWrap label{height: 30px;}
+.columnWrap .optionTable .inpFileWrap label b{width: 70px; height: 30px; line-height: 30px; font-size: 12px;}
+.columnWrap .optionTable .box.row .boxLine .inpGroup{margin: 10px 0}
+.columnWrap .optionTable .box.row .boxLine .inpGroup + .selectD{margin-left: 16px;}
+.columnWrap .optionTable .box.row em.subTitle{position: absolute; top: 0; right: 100%; min-width: 50px; margin-top: -1px; padding: 10px; border-top: 1px solid #dadada; font-size: 12px; line-height: 30px; background-color: #f4f4f4}
 .columnWrap .optionTable input.wide{width: auto; flex: auto}
+.columnWrap .boxLine.down{width: 100%; display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex;}
+.columnWrap .boxLine.down .inpT{width: 100%;}
 .columnWrap .tabMenu button{height: 35px; font-size: 12px; padding: 0 14px}
 .columnWrap .divBox{padding: 16px}
 .columnWrap .divBox .inpGroup{margin-bottom: -10px}
@@ -568,8 +577,11 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap .divBox .inpGroup .inpD .icon{top: 0; margin-top: 0}
 .columnWrap .divBox p.text{line-height: 17px}
 .columnWrap .table{font-size: 12px}
+.columnWrap .table .pad{padding-right: 4px; padding-left: 4px;}
 .columnWrap .table thead th{padding: 8px 0; font-size: 12px}
 .columnWrap .table tbody td{padding: 8px 0; font-size: 11px}
+.columnWrap .table tbody td textarea{font-size: 12px; padding: 5px 8px;}
+.columnWrap .table tbody td select{margin: -13px 0 -11px 0; vertical-align: middle; font-size: 11px;}
 .columnWrap .titleTxtBox{margin-bottom: 12px; font-size: 13px; line-height: 35px;}
 .columnWrap .viewBox + .viewBox{margin-top: 6px;}
 .columnWrap .registBox{font-size: 12px;}
@@ -581,9 +593,8 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap .registBox .inpFileWrap .inpT{width: 100%;}
 .columnWrap .registBox .inpFileWrap label{height: 30px;}
 .columnWrap .registBox .inpFileWrap label b{height: 30px; line-height: 30px; font-size: 12px;}
-.columnWrap .registBox .boxLine.down{display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex;}
-.columnWrap .registBox .boxLine.down .inpT{width: 100%;}
 .columnWrap .addOption li{padding: 10px 12px;}
+.columnWrap .table + .editWrap{margin-top: 20px;}
 .columnWrap .editWrap .editArea{padding: 15px;}
 .columnWrap .editWrap .attachWrap{padding: 10px 15px}
 .columnWrap .editWrap .attachBox{margin-top: 0;}

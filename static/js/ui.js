@@ -19,11 +19,11 @@ function topSearchM(){
 	$('.btnWrap .showsearchBar').each(function(){
 		$(this).click(function(){
 			$(this).closest('.header')
-			.find('.searchTop').show().animate({right:0},200)
+			.find('.searchTop').show().animate({right:0},400)
 			.find('input[type="text"]').focus();
 		})
 		$('.searchTop .back').click(function(){
-			$(this).closest('.searchTop').animate({right:"100%"},200,function(){
+			$(this).closest('.searchTop').animate({right:"100%"},400,function(){
 				$(this).hide();
 			});
 		})
@@ -189,7 +189,7 @@ function selectedTableLine(){
 function adminLNB(){
 	$('.lnb').each(function(){
 		$('.subM > .active').parents('li').addClass('active');
-		$('.lnb > .active .subM').show().closest('li').addClass('open');
+		$('.lnb .active > .subM').show().parent('li').addClass('open');
 		$('.lnb li > span').click(function(){
 			if ($(this).closest('li').hasClass('open')) {
 				$(this).siblings('.subM').slideUp(200)

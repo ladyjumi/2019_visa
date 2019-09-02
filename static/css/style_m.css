@@ -24,7 +24,7 @@
 .searchBtn{width: 36px; height: 36px; background: url(../images/m/icon_search.svg) no-repeat center; text-indent: -9999px; cursor: pointer;}
 
 /*툴팁*/
-.tooltip{margin: 1px 0 0 3px;}
+.tooltip{margin: 0 0 0 3px;}
 .tooltip .tipIcon{position: relative; display: inline-block; width: 16px; height: 16px; background: url(../images/common/icon_tooltip.svg) no-repeat center; background-size: 16px; text-indent: -9999px;}
 .tooltip .tipIcon:after{display: none; content: ''; position: absolute; top: 20px; left: 0; width: 16px; height: 16px; background: url(../images/arrow_tooltip.png) no-repeat; z-index: 2}
 .tooltip .tipTxt{display: none; position: absolute; top: 100%; left: 0; width: 100%; margin-top: 8px; z-index: 1;}
@@ -154,8 +154,8 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 56px; height: 56px; b
 .stepNavi{padding: 0 12px; background-color: rgba(255,255,255,0.7); border-radius: 10px; overflow: hidden; box-shadow: 5px 5px 10px rgba(0,0,0,0.3)}
 .stepNavi p{display: inline-flex; width: 100%; height: 20px; align-items: center;}
 .stepNavi p > *{display: inline-block; font-size: 11px; line-height: 20px; white-space: nowrap;}
-.stepNavi .step{margin-right: 9px; line-height: 21px; color: #c6464b; text-transform: uppercase;}
-.stepNavi .step b{margin-left: 3px; font-size: 13px; line-height: 21px;}
+.stepNavi .step{margin-right: 9px; color: #c6464b; text-transform: uppercase;}
+.stepNavi .step b{margin-left: 3px; font-size: 13px; line-height: 20px;}
 .stepNavi .bar{position: relative; width: 100%;}
 .stepNavi .bar:after{	display: block; content: ''; height: 7px; border-radius: 5px;
 	background: #dd6065;

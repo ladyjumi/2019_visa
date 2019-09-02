@@ -47,7 +47,7 @@ function tooltipM(){
 	$('.tipTxt .closeTip').click(function(){
 		$(this).closest('.tipTxt').hide().closest('.tooltip').removeClass('on');
 	})
-	$('body').mouseup(function(e){
+	$('body, html').mouseup(function(e){
 		var container = $(".tipTxt");
 		if(container.has(e.target).length === 0){
 			$('.tooltip').removeClass('on').find('.tipTxt').hide();

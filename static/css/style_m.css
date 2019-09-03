@@ -116,7 +116,7 @@ hr.line{margin: 32px 0; height: 1px; background-color: #dadada}
 .header .btnWrap button{height: 56px;}
 .header .searchBtn{width: 32px; background-size: 17px}
 .header .gnbBtn{width: 32px; background: url(../images/m/btn_gnb.svg) no-repeat center; background-size: 22px auto; text-indent: -9999px;}
-.footer{padding: 22px 0 26px; background-color: #efefef; border-top: 1px solid #dcdcdc; color: #666}
+.footer{padding: 22px 0 26px; background-color: #efefef; color: #666}
 .footer span{display: block; margin-bottom: 8px; font-size: 13px; font-weight: 500}
 .footer address{font-size: 12px; line-height: 1.5}
 
@@ -134,7 +134,7 @@ nav .gnb li a{display: block; padding: 10px 0; color: #666; font-size: 17px;}
 nav .gnb li.active a{color: #000; font-weight: 500}
 nav .gnbClose{position: absolute; top: 0; right: 0; width: 56px; height: 56px; background: url(../images/common/btn_x_black2.svg) no-repeat center; background-size: 14px auto; text-indent: -9999px; z-index: 1}	
 
-.searchTop{display: none; position: absolute; top: 0; right: 100%; width: 100%; background-color: #fff; border-bottom: 1px solid #c6464b; z-index: 10}
+.searchTop{display: none; position: absolute; top: 0; right: 0; width: 100%; background-color: #fff; border-bottom: 1px solid #c6464b; z-index: 10}
 .searchTop .back{position: absolute; top: 0; left: 0; width: 56px; height: 56px; background: url(../images/m/btn_back.png) no-repeat center; background-size: 23px; text-indent: -9999px;}
 .searchTop .searchArea{position: relative; padding: 0 45px 0 56px;}
 .searchTop .inputWrap{position: relative; width: 100%; padding-right: 30px;}
@@ -291,6 +291,7 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 56px; height: 56px; b
 .txtTable .divBox{margin: 8px 0 10px -8px;}
 .txtTable .btnVisaMenu{height: 30px; padding: 0 10px; margin: -9px 0 -7px 8px; line-height: 28px; border: 1px solid #999;}
 .txtTable + h3{margin-top: 40px;}
+.txtTable td p.title{margin-bottom: 7px; font-weight: 500;}
 
 .btnManual{padding: 6px 0 12px;}
 .btnManual a{position: relative; display: block; width: fit-content; padding-left: 22px; color: #333; font-size: 14px; line-height: 24px; background: url(../images/m/icon_document.png) no-repeat left center; background-size: 16px;}

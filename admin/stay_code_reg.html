@@ -98,7 +98,11 @@
 
 			<div class="cont">
 
-				<h3>체류자격 코드 등록</h3>
+				<!-- 화면잠김 딤처리-->
+				<div class="lock"><div><span>화면잠김</span></div></div>
+				<!-- //화면잠김 딤처리-->
+
+				<h3>체류자격 코드 수정</h3>
 
 				<span class="topRight"><em class="red">*</em>필수항목</span>
 				<ul class="optionTable">
@@ -138,7 +142,7 @@
 						</div>
 						<div class="cell">
 							<p class="title">검색키워드</p>
-							<div class="box"><input type="text" class="inpT"></div>
+							<div class="box"><input type="text" class="inpT wide"></div>
 						</div>
 					</li>
 
@@ -150,29 +154,17 @@
 						<div class="cell">
 							<p class="title"><em class="red">*</em>발급 사증종류</p>
 							<div class="box">
-								<div class="inpGroup">
-									<label class="inpD">
-										<input type="radio" name="visatype" class="inp">
-										<span class="icon"></span>
-										<span class="text">복수</span>
-									</label>
-									<label class="inpD">
-										<input type="radio" name="visatype" class="inp">
-										<span class="icon"></span>
-										<span class="text">단수</span>
-									</label>
-									<label class="inpD">
-										<input type="radio" name="visatype" class="inp">
-										<span class="icon"></span>
-										<span class="text">더블</span>
-									</label>
-								</div>
+								<select class="selectD">
+									<option value="">복수</option>
+									<option value="">단수</option>
+									<option value="">더블</option>
+								</select>
 							</div>
 						</div>
 					</li>
 
 					<li>
-						<div class="cell">
+						<div class="cell autoF">
 							<p class="title">적용국가</p>
 							<div class="box">
 								<input type="text" class="inpT wide">
@@ -236,7 +228,7 @@
 					</li>
 
 					<li>
-						<div class="cell">
+						<div class="cell autoF">
 							<p class="title">제외국가</p>
 							<div class="box">
 								<input type="text" class="inpT wide">
@@ -395,11 +387,12 @@
 					<div class="tabBox"><textarea>3</textarea></div>
 				</div>
 
-				<h4><em class="red">*</em>등록사유<em class="red">(필수)</em></h4>
+				<h4><em class="red">*</em>수정사유<em class="red">(필수)</em></h4>
 				<textarea></textarea>
 				
 				<span class="btnGroup btm">
-					<button type="button" class="btn">등록하기</button>
+					<button type="button" class="btn">목록으로 이동</button>
+					<button type="button" class="btn">수정하기</button>
 				</span>
 
 			</div>

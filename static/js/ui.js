@@ -19,13 +19,11 @@ function topSearchM(){
 	$('.btnWrap .showsearchBar').each(function(){
 		$(this).click(function(){
 			$(this).closest('.header')
-			.find('.searchTop').show().animate({right:0},400)
+			.find('.searchTop').show()
 			.find('input[type="text"]').focus();
 		})
 		$('.searchTop .back').click(function(){
-			$(this).closest('.searchTop').animate({right:"100%"},400,function(){
-				$(this).hide();
-			});
+			$(this).closest('.searchTop').hide();
 		})
 	})	
 }
@@ -159,8 +157,9 @@ function tabMenu(){
 	$('.tabMenu').each(function(){
 		$(this).find('button').click(function(){
 			var idx = $(this).parents('li').index();
-			$(this).parents('li').addClass('active').siblings().removeClass('active');
+			$(this).parent('li').addClass('active').siblings().removeClass('active');
 			$(this).closest('.tabMenu').siblings('.tabBox').eq(idx).show().siblings('.tabBox').hide();
+			$(this).closest('.box').find('.tabBoxWrap').children('.tabBox').eq(idx).show().siblings('.tabBox').hide();
 		});
 	})
 }

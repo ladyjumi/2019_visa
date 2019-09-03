@@ -102,7 +102,7 @@
 				<ul class="optionTable">
 					<li>
 						<div class="cell">
-							<p class="title short">체류자격</p>
+							<p class="title">체류자격</p>
 							<div class="box">
 								<select class="selectD">
 									<option value="">전체</option>
@@ -126,81 +126,82 @@
 							</div>
 						</div>
 						<div class="cell">
-							<p class="title short">검색</p>
+							<p class="title short">사용여부</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+									<option value="">사용</option>
+									<option value="">미사용</option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title">검색</p>
 							<div class="box">
 								<input type="text" class="inpT wide">
 								<button type="button" class="searchBtn">검색하기</button>
 							</div>
 						</div>
-						<button type="button" class="btn blue registBtn">체류자격 등록</button>
 					</li>
 				</ul>
 
 				<table class="table">
 					<colgroup>
 						<col style="width: 56px" />
-						<col style="width: 170px" />
-						<col style="width: 170px" />
+						<col style="width: 160px" />
+						<col style="width: 160px" />
 						<col style="width: auto" />
 						<col style="width: auto" />
 						<col style="width: 160px" />
+						<col style="width: 120px" />
 					</colgroup>
 					<thead>
 						<tr>
-							<th>선택</th>
+							<th>번호</th>
 							<th>체류자격(대분류)</th>
 							<th>체류자격(소분류)</th>
 							<th>체류자격명</th>
 							<th>작성자</th>
 							<th>작성일</th>
+							<th>사용설정</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td class="inpCell">
-								<label class="inpD">
-									<input type="radio" name="select" class="inp">
-									<span class="icon"></span>
-								</label>
-							</td>
-							<td>C3</td>
-							<td>01</td>
-							<td>단기일반</td>
+							<td>1</td>
+							<td><a href="#" class="link">C3</a></td>
+							<td><a href="#" class="link">01</a></td>
+							<td><a href="#" class="link">단기일반</a></td>
 							<td>Admin</td>
 							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
+							<td>
+								<select class="selectD">
+									<option value="">사용</option>
+									<option value="">미사용</option>
+								</select>
+							</td>
 						</tr>
 						<tr>
-							<td class="inpCell">
-								<label class="inpD">
-									<input type="radio" name="select" class="inp">
-									<span class="icon"></span>
-								</label>
-							</td>
-							<td>C3</td>
-							<td>01</td>
-							<td>단기일반</td>
+							<td>2</td>
+							<td><a href="#" class="link">E3</a></td>
+							<td><a href="#" class="link">01</a></td>
+							<td><a href="#" class="link">특정활동</a></td>
 							<td>Admin</td>
 							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
-						</tr>
-						<tr>
-							<td class="inpCell">
-								<label class="inpD">
-									<input type="radio" name="select" class="inp">
-									<span class="icon"></span>
-								</label>
+							<td>
+								<select class="selectD">
+									<option value="">사용</option>
+									<option value="">미사용</option>
+								</select>
 							</td>
-							<td>C3</td>
-							<td>01</td>
-							<td>단기일반</td>
-							<td>Admin</td>
-							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
 						</tr>
 					</tbody>
 				</table>
 
 				<span class="btnGroup btm">
-					<button type="button" class="btn">수정</button>
-					<button type="button" class="btn">삭제</button>
+					<button type="button" class="btn">체류자격 등록</button>
 				</span>
 
 				<div class="paging">

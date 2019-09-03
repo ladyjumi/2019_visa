@@ -109,36 +109,42 @@
 								<button type="button" class="searchBtn">검색하기</button>
 							</div>
 						</div>
-						<button type="button" class="btn blue registBtn">체류자격 항목 등록</button>
+						<div class="cell">
+							<p class="title short">사용여부</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+									<option value="">사용</option>
+									<option value="">미사용</option>
+								</select>
+							</div>
+						</div>						
 					</li>
 				</ul>
 
 				<table class="table">
 					<colgroup>
 						<col style="width: 56px" />
-						<col style="width: 200px" />
-						<col style="width: 160px" />
-						<col style="width: 140px" />
 						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: 410px" />
+						<col style="width: 100px" />
 					</colgroup>
 					<thead>
 						<tr>
-							<th>선택</th>
+							<th>순서</th>
 							<th>항목명</th>
 							<th>작성자</th>
 							<th>작성일</th>
 							<th>작성 폼 선택</th>
+							<th>사용 여부</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td class="inpCell">
-								<label class="inpD">
-									<input type="radio" name="select" class="inp">
-									<span class="icon"></span>
-								</label>
-							</td>
-							<td><p>기본 체류기간 30일 이하</p></td>
+							<td>1</td>
+							<td><p><a href="#" class="link">기본 체류기간 영주</a></p></td>
 							<td><p>Admin</p></td>
 							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
 							<td>
@@ -169,16 +175,17 @@
 										<span class="text">URL</span>
 									</label>
 								</div>
+							</td>
+							<td>
+								<select class="selectD">
+									<option value="">사용</option>
+									<option value="">미사용</option>
+								</select>
 							</td>
 						</tr>
 						<tr>
-							<td class="inpCell">
-								<label class="inpD">
-									<input type="radio" name="select" class="inp">
-									<span class="icon"></span>
-								</label>
-							</td>
-							<td><p>기본 체류기간 30일 이하</p></td>
+							<td>2</td>
+							<td><p><a href="" class="link">기본 체류기간 30일 이하</a></p></td>
 							<td><p>Admin</p></td>
 							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
 							<td>
@@ -209,14 +216,19 @@
 										<span class="text">URL</span>
 									</label>
 								</div>
+							</td>
+							<td>
+								<select class="selectD">
+									<option value="">사용</option>
+									<option value="">미사용</option>
+								</select>
 							</td>
 						</tr>
 					</tbody>
 				</table>
 
 				<span class="btnGroup btm">
-					<button type="button" class="btn">수정</button>
-					<button type="button" class="btn">삭제</button>
+					<button type="button" class="btn">체류자격 항목 등록</button>
 				</span>
 
 				<div class="paging">

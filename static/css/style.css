@@ -17,11 +17,12 @@
 .btnGroup{position: relative; font-size: 0;}
 .btnGroup > *{display: inline-block}
 .btnGroup > * + *{margin-left: 8px}
-.btnGroup.btm{display: block; margin: 30px 0 0; text-align: center}
-.btnGroup.btm > *{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; text-align: center; transition: background .1s}
-.btnGroup.btm > *:first-of-type{color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px}
+.btnGroup.btm{display: inline-flex; justify-content: space-between; width: 100%; height: 36px; margin: 25px 0 0; text-align: center; overflow: hidden;}
+.btnGroup.btm > *{min-width: 90px; height: 36px; padding: 0 20px; line-height: 34px; font-weight: 700; text-align: center; transition: background .1s}
+.btnGroup.btm > *:first-of-type{color: #1a6fa0; border: 1px solid #1a6fa0;}
+.btnGroup.btm > *:nth-of-type(2){margin-left: auto; color: #1a6fa0; border: 1px solid #1a6fa0;}
 .btnGroup.btm > *:last-of-type{background-color: #1a6fa0; color: #fff}
-.btnGroup.btm > *:only-child{background-color: #1a6fa0; color: #fff; margin-left: 0}
+.btnGroup.btm > *:only-child{margin-left: auto; background-color: #1a6fa0; color: #fff;}
 .searchBtn{width: 36px; height: 36px; background: url(../images/common/icon_search.svg) no-repeat center; text-indent: -9999px; cursor: pointer;}
 .lineMoveBtn{width: 30px; height: 24px; background: url(../images/split.png) no-repeat; text-indent: -9999px}
 .lineMoveBtn.up{background-position: -32px -50px}
@@ -323,13 +324,16 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .visaDesc + .addTxt{padding: 18px;}
 
 /*Admin*/
+.lock{position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 111px); padding: 50px 0 0 20px; z-index: 2;}
+.lock > div{display: flex; flex-direction: column; justify-content: center; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); text-align: center;}
+.lock span{font-size: 16px; color: #fff; font-weight: 500;}
 .admin h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700; border-bottom: 1px solid #999}
 .admin h4{padding: 24px 0 12px; font-weight: 500}
 .admin .shapeRequire{color: #bf3f44; font-weight: 400}
 .admin .header .gnb li.active a{color: #1a6fa0; border-color: #1a6fa0;}
 .admin .contents .inner{position: relative}
 .admin .aside{position: absolute; top: 0; left: 0; height: 100%; min-height: calc(100vh - 71px); float: left; background-color: #fafafa}
-.admin .cont{margin-left: 150px; padding: 0 0 50px 20px}
+.admin .cont{position: relative; margin-left: 150px; padding: 0 0 50px 20px}
 .admin .currentInfo{display: inline-block; padding: 9px 0; font-size: 0; line-height: 1.4}
 .admin .currentInfo span{font-size: 13px; color: #666}
 .admin .currentInfo span + span{margin-left: 3px}
@@ -439,9 +443,12 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .optionTable{width: 100%; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada; font-size: 0}
 .optionTable > li{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-wrap: nowrap; flex-direction: row; width: 100%}
 .optionTable > li+li{border-top: 1px solid #dadada}
-.optionTable > li .cell{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-direction: row; /*flex: 1*/}
+.optionTable > li .cell{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-direction: row; /*flex: 1*/ }
 .optionTable > li .cell:only-child{width: 100%}
-.optionTable > li .cell:last-of-type{flex: auto;}
+.optionTable > li .cell:only-child input.wide{max-width: 200px;}
+/*.optionTable > li .cell:last-of-type{flex: auto;}*/
+.optionTable > li .cell.autoF{flex: auto}
+.optionTable > li .cell.autoF input.wide{max-width: inherit;}
 .optionTable > li .title{flex: none; width: 140px; padding: 12px 20px; font-size: 14px; line-height: 36px; background-color: #f4f4f4}
 .optionTable > li .title.short{padding: 12px 20px; width: auto}
 .optionTable > li .box{position: relative; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex: auto; min-height: 60px; padding: 12px 30px 12px 14px}
@@ -454,7 +461,7 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .optionTable input.inpNum + select{margin-left: -1px}
 .optionTable input.inpNum + select:focus{position: relative; z-index: 1}
 .optionTable input + .btn{flex: none; margin-left: 8px}
-.optionTable input.wide{width: 100%;}
+.optionTable input.wide{width: 100%; max-width: 310px}
 .optionTable .registBtn{flex: none; margin: 12px 18px 12px auto}
 .optionTable .searchBtn{flex: none; margin-left: 0}
 .optionTable .box.row{display: block; padding: 0}
@@ -463,6 +470,12 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .optionTable .box.row .boxLine .inpGroup + .selectD{margin-left: 16px;}
 .optionTable .box.row em.subTitle{position: absolute; top: 0; right: 100%; min-width: 60px; margin-top: -1px; padding: 12px 15px; border-top: 1px solid #dadada; font-size: 14px; line-height: 36px; background-color: #f4f4f4}
 .optionTable .table + .addTxt{margin: 8px 0 10px;}
+/*첨부파일 등록*/
+.optionTable.fileReg > li .title{width: 214px; padding-right: 130px;}
+.optionTable.fileReg em.subTitle{width: 130px;}
+.optionTable.fileReg .tabWrap{width: 310px;}
+.optionTable.fileReg .inpFileWrap{width: 310px;}
+
 
 /*파일등록cell*/
 .optionTable .cell.file .title{padding-right: 60px}
@@ -471,20 +484,22 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 
 /*table*/
 .optionTable + .table{margin-top: 25px}
-.table{font-size: 14px; text-align: center; table-layout: auto}
+.table{text-align: center; table-layout: auto}
 .table .pad{padding-right: 5px; padding-left: 5px}
 .table thead{background-color: #dae4f0; border-top: 1px solid #cfd7e3; border-bottom: 1px solid #cfd7e3}
-.table thead th{padding: 12px 0; font-weight: 500; line-height: 16px; vertical-align: middle}
+.table thead th{padding: 10px 0; font-weight: 500; line-height: 18px; vertical-align: middle}
 .table thead tr + tr th{border-top: 1px solid #d7d7d7}
 .table tbody{font-size: 13px}
 .table tbody tr{border-bottom: 1px solid #dadada}
-.table tbody td{padding: 11px 0 12px; line-height: 16px}
+.table tbody td{padding: 10px 0 11px; line-height: 18px}
 .table tbody td > p{padding: 0 10px}
+.table tbody td .link{display: inline-block; padding: 0 13px 0 4px; font-size: 13px; background: url(../images/arrow_visalist2.png) no-repeat right 1px center;}
+.table tbody td .link:hover{text-decoration: underline;}
 .table tbody td p span+span{margin-left: 3px}
 .table.input thead{background-color: #f4f4f4; border-color: #d7d7d7}
 .table tbody tr.selected{background-color: #f1f6fb}
-.table tbody td input.wide{width: 340px;}
-.table tbody td select{margin: -10px 0; border: 0; background-color: transparent}
+.table tbody td input.wide{width: 100%; max-width: 340px;}
+.table tbody td select{margin: -9px 0; border: 0; font-size: 13px; background-color: transparent;}
 .table tbody td textarea{min-height: 60px; height: 60px; padding: 10px; font-size: 13px; line-height: 1.5; resize: vertical}
 .table tbody td.btnCell{padding: 7px 0 8px}
 .table tbody td.btnCell .btnBorder{min-width: 62px}
@@ -494,9 +509,9 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .table input.inpNum{width: 60px; text-align: right}
 
 /*파일찾기*/
-.inpFileWrap{position: relative; padding-right: 98px; font-size: 0}
-.inpFileWrap .inpT{width: 314px}
-.inpFileWrap label{position: absolute; top: 0; left: 0; display: block; width: 100%; height: 36px}
+.inpFileWrap{position: relative; display: inline-flex; font-size: 0;}
+.inpFileWrap .inpT{width: 100%;}
+.inpFileWrap label{display: inline-block; height: 36px; margin-left: 8px;}
 .inpFileWrap label b{display: block; width: 90px; height: 36px; margin-left: auto; padding: 0; line-height: 36px; color: #fff; background-color: #888; font-size: 14px; text-align: center}
 .inpFileWrap label input{position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0}
 
@@ -510,11 +525,14 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .editWrap{border: 1px solid #dadada}
 .editWrap .editArea{padding: 20px}
 .editWrap .attachWrap{padding: 20px; border-top: 1px solid #dadada}
-.editWrap .btnGroup{padding: 0 0 10px 86px; font-size: 0}
+.editWrap .btnGroup{padding: 0 0 0 88px; font-size: 0}
 .editWrap .btnGroup .btnBorder{min-width: 102px}
 .editWrap .attachBox{margin-top: 10px; font-size: 0}
 .editWrap .attachBox .inpD{margin-right: 15px; font-size: 14px}
-.editWrap .attachBox .inpD .text{line-height: 35px;}
+.editWrap .attachBox .inpD .text{width: 50px; line-height: 35px;}
+.editWrap .attachBox .tabWrap{margin-left: 20px; display: inline-block;}
+.editWrap .attachBox .tabBoxWrap{display: inline-block;}
+.editWrap .attachBox .inpFileWrap{width: 310px;}
 
 /*등록항목*/
 .registBox .titleBox{background-color: #dbe7ec; border: 1px solid #cadae0}
@@ -523,7 +541,6 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .registBox .optionTable .cell .title{padding: 12px 20px}
 .registBox .optionTable .cell .boxLine{width: 100%}
 .registBox .optionTable .cell.url .boxLine > .inpT{width: 412px}
-.registBox .tabWrap{display: inline-block; width: 306px; margin-left: 20px}
 .addOption{padding: 2px 0}
 .addOption li{padding: 14px 20px}
 .addOption li + li{border-top: 1px solid #dadada}
@@ -542,8 +559,8 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap .btnBorder{min-width: 70px; height: 20px; line-height: 18px; font-size: 11px}
 .columnWrap .topRight.btnGroup{margin-top: -26px;}
 .columnWrap .btnGroup > * + *{margin-left: 6px;}
-.columnWrap h4 + .optionTable{border-top: 0;}
-.columnWrap h4{padding: 18px 0 10px; font-size: 13px; border-bottom: 1px solid #999}
+.columnWrap h4 + .optionTable{border-top: 0; border-top: 1px solid #999}
+.columnWrap h4{padding: 18px 0 10px; font-size: 13px; /*border-bottom: 1px solid #999*/}
 .columnWrap h5{padding: 18px 0 10px; font-size: 12px; font-weight: 500}
 .columnWrap .inpT{height: 30px; padding: 0 6px; font-size: 12px}
 .columnWrap textarea{height: 70px; padding: 8px 9px; font-size: 11px; line-height: 17px}
@@ -554,6 +571,7 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap > div:last-of-type:after{position: absolute; top: 0; left: 50%; display: block; content: ''; width: 1px; height: 100%; background-color: #cecece}
 .columnWrap .titleWrap{padding: 10px 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; line-height: 18px}
 .columnWrap .titleWrap .date{float: right; font-size: 13px; color: #666}
+.columnWrap .titleWrap + .optionTable{margin-top: 18px;}
 .columnWrap .optionTable > li .title{width: 116px; padding: 9px 12px; font-size: 12px; line-height: 30px}
 .columnWrap .optionTable > li .title.short{width: auto}
 .columnWrap .optionTable > li .box{min-height: 48px; padding: 9px 11px}
@@ -648,6 +666,7 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 	.popS .selectedList span{font-size: 13px;}
 	.popS .selectedList span + span{margin-left: 4px;}
 	.popS .btnGroup.btm{margin-top: 20px;}
+	.popS .btnGroup.btm > *{float: none;}
 	.box .popS{margin: 0 30px 0 0; transform: translateY(-12px);}
 
 

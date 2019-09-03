@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>비자표출관리</title>
+	<title>첨부파일리스트</title>
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
@@ -59,7 +59,7 @@
 							<li><a href="#">체류자격 등록 관리</a></li>
 						</ul>
 					</li>
-					<li><a href="#">첨부파일 관리</a></li>
+					<li class="active"><a href="#">첨부파일 관리</a></li>
 					<li>
 						<span>수수료 관리</span>
 						<ul class="subM depth2">
@@ -71,7 +71,7 @@
 					<li>
 						<span>비자표출 관리</span>
 						<ul class="subM depth2">
-							<li class="active"><a href="#">법무부</a></li>
+							<li><a href="#">법무부</a></li>
 							<li><a href="#">중국(광저우)</a></li>
 						</ul>
 					</li>
@@ -98,52 +98,46 @@
 
 			<div class="cont">
 
-				<h3>비자표출 관리(법무부)</h3>
+				<h3>첨부파일 관리</h3>
+				<span class="topRight"><em class="red">*</em>필수항목</span>
 				<ul class="optionTable">
 					<li>
 						<div class="cell">
-							<p class="title short">국가</p>
+							<p class="title short">대상</p>
 							<div class="box">
 								<select class="selectD">
 									<option value="">전체</option>
-									<option value="">중국</option>
-									<option value="">베트남</option>
-									<option value="">인도네시아</option>
+									<option value="">공관장발급</option>
+									<option value="">전자사증</option>
+									<option value="">사증발급인정서</option>
 								</select>
 							</div>
 						</div>
 						<div class="cell">
-							<p class="title short">센터/공관</p>
+							<p class="title">체류자격</p>
 							<div class="box">
 								<select class="selectD">
 									<option value="">전체</option>
-									<option value="">칭다오</option>
-									<option value="">베이징</option>
-									<option value="">청도</option>
+								</select>
+								<select class="selectD">
+									<option value="">전체</option>
 								</select>
 							</div>
 						</div>
 						<div class="cell">
-							<p class="title short">목적</p>
-							<div class="box">
-								<select class="selectD">
-									<option value="">주재</option>
-									<option value="">치료요양</option>
-									<option value="">관광 등 단기방문</option>
-									<option value="">유학/어학연수</option>
-								</select>
-							</div>
-						</div>
-						<div class="cell">
-							<p class="title short">사용여부</p>
+							<p class="title short">체류자격명</p>
 							<div class="box">
 								<select class="selectD">
 									<option value="">전체</option>
-									<option value="">사용</option>
-									<option value="">미사용</option>
+									<option value="">단기일반</option>
+									<option value="">일반관광</option>
+									<option value="">FTA독립</option>
+									<option value="">학사유학</option>
+									<option value="">DE계열 6개월이상 체류자</option>
 								</select>
 							</div>
 						</div>
+						
 					</li>
 				</ul>
 
@@ -154,89 +148,54 @@
 						<col style="width: auto" />
 						<col style="width: auto" />
 						<col style="width: auto" />
-						<col style="width: 120px" />
-						<col style="width: 120px" />
+						<col style="width: auto" />
+						<col style="width: 160px" />
 					</colgroup>
 					<thead>
 						<tr>
-							<th>번호</th>
-							<th>목적</th>
-							<th>사증</th>
-							<th>체류기간</th>
-							<th>작성자</th>
-							<th>작성일</th>
-							<th>사용여부</th>
+							<th>순서</th>
+							<th>제목</th>
+							<th>대상</th>
+							<th>체류자격</th>
+							<th>체류자격명</th>
+							<th>관리계정</th>
+							<th>등록일</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>1</td>
-							<td><a href="#" class="link">주재</a></td>
-							<td><a href="#" class="link">단수</a></td>
-							<td><a href="#" class="link">90일 이하</a></td>
-							<td><p>Admin</p></td>
-							<td>2019-07-31</td>
-							<td>
-								<select class="selectD">
-									<option value="">전체</option>
-									<option value="">사용</option>
-									<option value="">미사용</option>
-								</select>
-							</td>
+							<td>국제협상을 통한 비자신청 양식 변경</td>
+							<td>제외공관</td>
+							<td>D-5-1</td>
+							<td>의료관광</td>
+							<td>Admin</td>
+							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
 						</tr>
 						<tr>
 							<td>2</td>
-							<td><a href="#" class="link">주재</a></td>
-							<td><a href="#" class="link">단수</a></td>
-							<td><a href="#" class="link">90일 이하</a></td>
-							<td><p>Admin</p></td>
-							<td>2019-07-31</td>
-							<td>
-								<select class="selectD">
-									<option value="">전체</option>
-									<option value="">사용</option>
-									<option value="">미사용</option>
-								</select>
-							</td>
+							<td>국제협상을 통한 비자신청 양식 변경</td>
+							<td>공관장발급</td>
+							<td>D-5-1</td>
+							<td>의료관광</td>
+							<td>Admin</td>
+							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
 						</tr>
 						<tr>
 							<td>3</td>
-							<td><a href="#" class="link">주재</a></td>
-							<td><a href="#" class="link">단수</a></td>
-							<td><a href="#" class="link">90일 이하</a></td>
-							<td><p>Admin</p></td>
-							<td>2019-07-31</td>
-							<td>
-								<select class="selectD">
-									<option value="">전체</option>
-									<option value="">사용</option>
-									<option value="">미사용</option>
-								</select>
-							</td>
+							<td>국제협상을 통한 비자신청 양식 변경</td>
+							<td>전체</td>
+							<td>D-5-1</td>
+							<td>의료관광</td>
+							<td>Admin</td>
+							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
 						</tr>
 					</tbody>
 				</table>
 
 				<span class="btnGroup btm">
-					<button type="button" class="btn">비자표출 등록</button>
+					<button type="button" class="btn">파일등록</button>
 				</span>
-
-				<div class="paging">
-					<a href="#" class="direction prev">처음</a>
-					<a href="#" class="direction prev">이전</a>
-					<a href="#" class="num active">1</a>
-					<a href="#" class="num">2</a>
-					<a href="#" class="num">3</a>
-					<a href="#" class="num">4</a>
-					<a href="#" class="num">5</a>
-					<a href="#" class="num">6</a>
-					<a href="#" class="num">7</a>
-					<a href="#" class="num">8</a>
-					<a href="#" class="num">9</a>
-					<a href="#" class="num">10</a>
-					<a href="#" class="direction next">다음</a>
-					<a href="#" class="direction next">끝</a>
-				</div>
 			</div>
 
 		</div>

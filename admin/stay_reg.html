@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>체류자격등록관리</title>
+	<title>체류자격등록</title>
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
@@ -98,6 +98,10 @@
 
 			<div class="cont">
 
+				<!-- 화면잠김 딤처리-->
+				<!-- <div class="lock"><div><span>화면잠김</span></div></div> -->
+				<!-- //화면잠김 딤처리-->
+
 				<h3>체류자격 등록 관리</h3>
 				<span class="topRight"><em class="red">*</em>필수항목</span>
 				<ul class="optionTable">
@@ -105,7 +109,7 @@
 						<div class="cell">
 							<p class="title short">체류자격</p>
 							<div class="box">
-								<input type="text" class="inpT">
+								<input type="text" class="inpT wide">
 							</div>
 						</div>
 					</li>
@@ -183,7 +187,7 @@
 									<span class="icon"></span>
 								</label>
 							</td>
-							<td><input type="text" class="inpT"></td>
+							<td><input type="text" class="inpT wide"></td>
 						</tr>
 						<tr>
 							<td class="inpCell">
@@ -192,7 +196,7 @@
 									<span class="icon"></span>
 								</label>
 							</td>
-							<td><input type="text" class="inpT"></td>
+							<td><input type="text" class="inpT wide"></td>
 						</tr>
 					</tbody>
 				</table>
@@ -231,16 +235,13 @@
 								</label>
 							</li>
 						</ul>
-						<ul class="optionTable">
+						<ul class="optionTable fileReg">
 							<li>
-								<div class="cell file">
-									<p class="title">첨부파일</p>
+								<div class="cell">
+									<p class="title">파일등록</p>
 									<div class="box row">
 										<div class="boxLine">
-											<span class="inpFileWrap">
-												<input type="text" readonly="" class="inpT">
-												<label for=""><b>파일 찾기</b><input type="file"></label>
-											</span>
+											<em class="subTitle">첨부파일 버튼명</em>
 											<div class="tabWrap typeSmall">
 												<ul class="tabMenu">
 													<li class="active"><button type="button">버튼명(국문)</button></li>
@@ -259,24 +260,25 @@
 											</div>
 										</div>
 										<div class="boxLine">
-											<span class="inpFileWrap">
-												<input type="text" readonly="" class="inpT">
-												<label for=""><b>파일 찾기</b><input type="file"></label>
-											</span>
-											<div class="tabWrap typeSmall">
-												<ul class="tabMenu">
-													<li class="active"><button type="button">버튼명(국문)</button></li>
-													<li><button type="button">버튼명(중문)</button></li>
-													<li><button type="button">버튼명(영문)</button></li>
-												</ul>
+											<em class="subTitle">첨부파일 등록</em>
+											<div class="tabBoxWrap">
 												<div class="tabBox">
-													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+													<span class="inpFileWrap">
+														<input type="text" readonly="" class="inpT" placeholder="국문 파일을 등록해주세요.">
+														<label for=""><b>파일 찾기</b><input type="file"></label>
+													</span>
 												</div>
 												<div class="tabBox">
-													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+													<span class="inpFileWrap">
+														<input type="text" readonly="" class="inpT" placeholder="중문 파일을 등록해주세요.">
+														<label for=""><b>파일 찾기</b><input type="file"></label>
+													</span>
 												</div>
 												<div class="tabBox">
-													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+													<span class="inpFileWrap">
+														<input type="text" readonly="" class="inpT" placeholder="영문 파일을 등록해주세요.">
+														<label for=""><b>파일 찾기</b><input type="file"></label>
+													</span>
 												</div>
 											</div>
 										</div>
@@ -284,46 +286,33 @@
 								</div>
 							</li>
 							<li>
-								<div class="cell url">
-									<p class="title">URL 입력</p>
+								<div class="cell">
+									<p class="title">URL</p>
 									<div class="box row">
 										<div class="boxLine">
-											<input type="text" class="inpT">
-											<div class="tabWrap typeSmall">
-												<ul class="tabMenu">
-													<li class="active"><button type="button">버튼명(국문)</button></li>
-													<li><button type="button">버튼명(중문)</button></li>
-													<li><button type="button">버튼명(영문)</button></li>
-												</ul>
-												<div class="tabBox">
-													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+											<em class="subTitle">버튼명</em>
+											<p>									
+												<div class="tabWrap typeSmall">
+													<ul class="tabMenu">
+														<li class="active"><button type="button">버튼명(국문)</button></li>
+														<li><button type="button">버튼명(중문)</button></li>
+														<li><button type="button">버튼명(영문)</button></li>
+													</ul>
+													<div class="tabBox">
+														<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+													</div>
+													<div class="tabBox">
+														<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+													</div>
+													<div class="tabBox">
+														<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+													</div>
 												</div>
-												<div class="tabBox">
-													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
-												</div>
-												<div class="tabBox">
-													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
-												</div>
-											</div>
+											</p>
 										</div>
 										<div class="boxLine">
-											<input type="text" class="inpT">
-											<div class="tabWrap typeSmall">
-												<ul class="tabMenu">
-													<li class="active"><button type="button">버튼명(국문)</button></li>
-													<li><button type="button">버튼명(중문)</button></li>
-													<li><button type="button">버튼명(영문)</button></li>
-												</ul>
-												<div class="tabBox">
-													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
-												</div>
-												<div class="tabBox">
-													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
-												</div>
-												<div class="tabBox">
-													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
-												</div>
-											</div>
+											<em class="subTitle">입력</em>
+											<p><input type="text" class="inpT wide"></p>
 										</div>
 									</div>
 								</div>
@@ -425,96 +414,32 @@
 									<button type="button" class="btnBorder">선택삭제</button>
 									<button type="button" class="btnBorder">첨부파일 추가</button>
 								</span>
-								<div class="attachBox">
+								<div class="attachBox box">
 									<label class="inpD">
 										<input type="radio" name="attach1" class="inp">
 										<span class="icon"></span>
 										<span class="text">첨부파일</span>
 									</label>
-									<span class="inpFileWrap">
-										<input type="text" readonly="" class="inpT">
-										<label for=""><b>파일 찾기</b><input type="file"></label>
-									</span>
-									<div class="tabWrap typeSmall">
-										<ul class="tabMenu">
-											<li class="active"><button type="button">버튼명(국문)</button></li>
-											<li><button type="button">버튼명(중문)</button></li>
-											<li><button type="button">버튼명(영문)</button></li>
-										</ul>
+									<div class="tabBoxWrap">
 										<div class="tabBox">
-											<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+											<span class="inpFileWrap">
+												<input type="text" readonly="" class="inpT" placeholder="국문 파일을 등록해주세요.">
+												<label for=""><b>파일 찾기</b><input type="file"></label>
+											</span>
 										</div>
 										<div class="tabBox">
-											<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+											<span class="inpFileWrap">
+												<input type="text" readonly="" class="inpT" placeholder="중문 파일을 등록해주세요.">
+												<label for=""><b>파일 찾기</b><input type="file"></label>
+											</span>
 										</div>
 										<div class="tabBox">
-											<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+											<span class="inpFileWrap">
+												<input type="text" readonly="" class="inpT" placeholder="영문 파일을 등록해주세요.">
+												<label for=""><b>파일 찾기</b><input type="file"></label>
+											</span>
 										</div>
 									</div>
-								</div>
-							</div>
-						</div>
-
-						<strong class="title">베트남</strong>
-						<div class="editWrap">
-							<!-- 에디터영역 -->
-							<div class="editArea">에디터 영역</div>
-							<!-- //에디터영역 -->
-							<div class="attachWrap">
-								<span class="btnGroup">
-									<button type="button" class="btnBorder">선택삭제</button>
-									<button type="button" class="btnBorder">첨부파일 추가</button>
-								</span>
-								<div class="attachBox">
-									<label class="inpD">
-										<input type="radio" name="attach1" class="inp">
-										<span class="icon"></span>
-										<span class="text">첨부파일</span>
-									</label>
-									<span class="inpFileWrap">
-										<input type="text" readonly="" class="inpT">
-										<label for=""><b>파일 찾기</b><input type="file"></label>
-									</span>
-									<div class="tabWrap typeSmall">
-										<ul class="tabMenu">
-											<li class="active"><button type="button">버튼명(국문)</button></li>
-											<li><button type="button">버튼명(중문)</button></li>
-											<li><button type="button">버튼명(영문)</button></li>
-										</ul>
-										<div class="tabBox">
-											<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
-										</div>
-										<div class="tabBox">
-											<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
-										</div>
-										<div class="tabBox">
-											<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<strong class="title">인도네시아</strong>
-						<div class="editWrap">
-							<!-- 에디터영역 -->
-							<div class="editArea">에디터 영역</div>
-							<!-- //에디터영역 -->
-							<div class="attachWrap">
-								<span class="btnGroup">
-									<button type="button" class="btnBorder">선택삭제</button>
-									<button type="button" class="btnBorder">첨부파일 추가</button>
-								</span>
-								<div class="attachBox">
-									<label class="inpD">
-										<input type="radio" name="attach1" class="inp">
-										<span class="icon"></span>
-										<span class="text">첨부파일</span>
-									</label>
-									<span class="inpFileWrap">
-										<input type="text" readonly="" class="inpT">
-										<label for=""><b>파일 찾기</b><input type="file"></label>
-									</span>
 									<div class="tabWrap typeSmall">
 										<ul class="tabMenu">
 											<li class="active"><button type="button">버튼명(국문)</button></li>
@@ -541,6 +466,7 @@
 				<textarea></textarea>
 				
 				<span class="btnGroup btm">
+					<button type="button" class="btn">목록으로 이동</button>
 					<button type="button" class="btn">미리보기</button>
 					<button type="button" class="btn">등록하기</button>
 				</span>

@@ -99,8 +99,9 @@
 .topVisual .title{font-size: 28px}
 .topVisual .desc{padding: 30px 0 0; font-size: 13px; line-height: 22px}
 .topVisual .linkMore{height: 30px; margin: 26px 0 0; padding: 0 22px; border: 1px solid #fff; font-size: 13px; line-height: 28px; transition: background .1s}
-.topVisual .linkMore:after{content: ''; display: inline-block; width: 24px; height: 14px; margin: 9px 0 0 7px; background: url(../images/btn_arrow_link.png) no-repeat center top; vertical-align: top;}
-.topVisual .linkMore:hover{background-color: rgba(0,0,0,0.3);}
+.topVisual .linkMore:after{content: ''; display: inline-block; width: 25px; height: 7px; margin: 9px 0 0 7px; background: url(../images/btn_arrow_link.png) no-repeat; vertical-align: top;}
+.topVisual .linkMore:hover{background-color: #fff; color: #c6464b}
+.topVisual .linkMore:hover:after{background-position: 0 -7px}
 .finderWrap{position: absolute; top: 0; right: 0; width: 600px;}
 .stepNavi{padding: 0 30px; background-color: rgba(255,255,255,0.7); border-radius: 13px; overflow: hidden; box-shadow: 15px 15px 32px rgba(0,0,0,0.3)}
 .stepNavi p{font-size: 0;}
@@ -212,9 +213,8 @@
 .visaList .visaType li{background: url(../images/arrow_visalist2.png) no-repeat right 10px center;}
 .visaList .visaType li + li{border-top: 1px solid #dadada}
 .visaList .visaType li a{display: block; padding: 12px 10px; font-weight: 500; line-height: 1.4}
-.visaList.total > li.open .inBox{border: 2px solid #c6464b;}
 .visaList.total > li.open .inBox:before,
-.visaList.total > li.open .inBox:after{display: none;}
+.visaList.total > li.open .inBox:after{display: block; width: 100%; height: 100%; opacity: 1;}
 
 /*effect*/
 .visaList li .inBox:before,.visaList li .inBox:after{display: block; content: ''; position: absolute; width: 0; height: 0; opacity: 0; transition: .2s;}
@@ -493,8 +493,7 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .table tbody tr{border-bottom: 1px solid #dadada}
 .table tbody td{padding: 10px 0 11px; line-height: 18px}
 .table tbody td > p{padding: 0 10px}
-.table tbody td .link{display: inline-block; padding: 0 13px 0 4px; font-size: 13px; background: url(../images/arrow_visalist2.png) no-repeat right 1px center;}
-.table tbody td .link:hover{text-decoration: underline;}
+.table tbody td .link{display: inline-block; font-size: 13px; border-bottom: 1px solid #333; margin-bottom: -1px;}
 .table tbody td p span+span{margin-left: 3px}
 .table.input thead{background-color: #f4f4f4; border-color: #d7d7d7}
 .table tbody tr.selected{background-color: #f1f6fb}
@@ -505,7 +504,7 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .table tbody td.btnCell .btnBorder{min-width: 62px}
 .table .inpCell{vertical-align: middle}
 .table .inpCell .inpD{padding-left: 0}
-.table .inpGroup{display: inline-block; text-align: left; white-space: nowrap}
+.table .inpGroup{display: inline-block; text-align: left; white-space: nowrap; margin-top: 1px; height: 16px;}
 .table input.inpNum{width: 60px; text-align: right}
 
 /*파일찾기*/
@@ -645,8 +644,23 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 	.popWrap .popArea{padding: 40px 20px 0;}
 	.popWrap .scrollBox{max-height: 480px; overflow-y: auto;}
 	.popWrap .btnGroup{margin: 30px auto 0; text-align: center;}
+	
+	/*수수료국가금액팝업*/
+	.countryList table thead{background-color: #f4f4f4; border-color: #d7d7d7;}
+	.countryList table tr{width: 100%;}
 	.countryList table td{vertical-align: middle;}
 	.countryList table td > p{padding: 0 20px; line-height: 22px;}
+	/*tbody에 스크롤*/
+	.countryList table{table-layout: fixed; display: block;}	
+	.countryList table tbody{display: block; overflow-y: scroll; width: 100%; height: 399px;}
+	.countryList table.country1 td:nth-of-type(1){width: 320px;}
+	.countryList table.country1 td:nth-of-type(2){width: 160px;}
+	.countryList table.country1 td:nth-of-type(3){width: 160px;}
+	.countryList table.country1 td:nth-of-type(4){width: 110px;}
+	.countryList table.country1 td:nth-of-type(5){width: 110px;}
+	.countryList table.country2 tbody{height: 440px;}
+	.countryList table.country2 td:nth-of-type(1){width: 330px;}
+	.countryList table.country2 td:nth-of-type(2){width: 530px;}
 
 	/*small popup*/
 	.openPopS{outline: 0;}

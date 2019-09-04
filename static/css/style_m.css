@@ -35,9 +35,10 @@
 
 
 /*탑버튼*/
-.topButtonArea{position: absolute; left: 50%; width: 1200px; margin-left: -600px;}
+.topButtonArea{position: absolute; right: 0; bottom: 0; z-index: 50;}
 .topButtonArea.fix{position: fixed; bottom: 0;}
-.backTop{display: block; position: absolute; bottom: 0; right: -36px; z-index: 999; width: 36px; height: 36px; text-indent: -9999px; background: #2a2b2c url(../images/btn_top.png) no-repeat; transition: background .1s; cursor: pointer;}
+.backTop{display: block; position: absolute; bottom: -30px; right: 0; z-index: 999; width: 36px; height: 36px; text-indent: -9999px; background: #2a2b2c url(../images/btn_top.png) no-repeat; transition: background .1s; cursor: pointer;}
+.topButtonArea.fix .backTop{/*bottom: 0;*/}
 
 /*탭메뉴*/
 .tabMenu{position: relative; display: inline-flex; width: 100%; margin: 26px 0 23px;}
@@ -147,9 +148,10 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 56px; height: 56px; b
 .topVisual .inner:before{display: block; content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 58px; background-color: #fff;}
 .topVisual .title{font-size: 22px; line-height: 1.45}
 .topVisual .desc{height: 116px; padding: 16px 0 0; font-size: 14px; line-height: 1.45}
-.topVisual .linkMore{height: 40px; margin: 16px 0 0; padding: 0 23px; border: 1px solid #fff; font-size: 15px; line-height: 38px; transition: background .1s}
-.topVisual .linkMore:after{content: ''; display: inline-block; width: 24px; height: 14px; margin: 0 0 0 16px; background: url(../images/btn_arrow_link.png) no-repeat center top; vertical-align: middle;}
-.topVisual .linkMore:active{background-color: rgba(0,0,0,0.3);}
+.topVisual .linkMore{height: 40px; margin: 16px 0 0; padding: 0 23px; border: 1px solid #fff; font-size: 15px; line-height: 38px; transition: background .1s, color .1s;}
+.topVisual .linkMore:after{content: ''; display: inline-block; width: 32px; height: 9px; margin: 12px 0 0 18px; background: url(../images/m/btn_arrow_link.png) no-repeat center top; background-size: 32px; vertical-align: top; transition: none}
+.topVisual .linkMore:active{background-color: #fff; color: #c6464b}
+.topVisual .linkMore:active:after{background-position: 0 -9px;}
 .finderWrap{position: relative; margin-top: 18px; padding-top: 12px; z-index: 1}
 .stepNavi{padding: 0 12px; background-color: rgba(255,255,255,0.7); border-radius: 10px; overflow: hidden; box-shadow: 5px 5px 10px rgba(0,0,0,0.3)}
 .stepNavi p{display: inline-flex; width: 100%; height: 20px; align-items: center;}
@@ -200,7 +202,7 @@ nav .gnbClose{position: absolute; top: 0; right: 0; width: 56px; height: 56px; b
 .finderManual li:nth-child(1):before{background-image: url(../images/common/icon_finder1.svg);}
 .finderManual li:nth-child(2):before{background-image: url(../images/common/icon_finder2.svg);}
 .finderManual li:nth-child(3):before{background-image: url(../images/common/icon_finder3.svg);}
-.finderManual li:after{display: block; content: ''; position: absolute; top: 100%; left: 50%; width: 14px; height: 15px; margin: 12px 0 0; background: url(../images/m/split.png); background-position: 0 0; background-size: 200px; transform: translateX(-50%);}
+.finderManual li:after{display: block; content: ''; position: absolute; top: 100%; left: 50%; width: 14px; height: 15px; margin: 12px 0 0; background: url(../images/m/arrow_bottom2.png); background-size: 14px; transform: translateX(-50%);}
 .finderManual li:last-of-type:after{display: none;}
 .finderManual li + li{margin-top: 39px;}
 
@@ -363,8 +365,28 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 	.countryList table thead tr:nth-of-type(2) th{font-size: 12px;}
 	.countryList table th{font-size: 13px;}
 	.countryList table td{font-size: 12px; vertical-align: middle;}
-	.countryList table td > p{padding: 0 5px; line-height: 1.4;}
+	.countryList table td > p{padding: 0 5px; line-height: 1.4; word-break: break-all;}
 	.countryList table td:first-of-type p{text-align: left;}
+	/*tbody에 스크롤*/
+	.countryList table{table-layout: fixed; display: block;}	
+	.countryList table tr{width: 100%;}
+	.countryList table thead{display: table; width: 100%}
+	.countryList table tbody{display: block; overflow-y: scroll; width: 100%; height: 40vh;}
+	.countryList table tbody tr{display: table;}	
+	.countryList table.country1 td{width: 20%;}
+	.countryList table.country1 thead tr:first-of-type th:nth-of-type(1){width: 28%;}
+	.countryList table.country1 thead tr:first-of-type th:nth-of-type(2){width: 36%;}
+	.countryList table.country1 thead tr:first-of-type th:nth-of-type(3){width: 18%;}
+	.countryList table.country1 thead tr:first-of-type th:nth-of-type(4){width: 18%;}
+	.countryList table.country1 tbody td:nth-of-type(1){width: 28%;}
+	.countryList table.country1 tbody td:nth-of-type(2){width: 18%;}
+	.countryList table.country1 tbody td:nth-of-type(3){width: 18%;}
+	.countryList table.country1 tbody td:nth-of-type(4){width: 18%;}
+	.countryList table.country1 tbody td:nth-of-type(5){width: 18%;}
+	.countryList table.country2 th:nth-of-type(1){width: 43%;}
+	.countryList table.country2 th:nth-of-type(2){width: 57%;}
+	.countryList table.country2 td:nth-of-type(1){width: 43%;}
+	.countryList table.country2 td:nth-of-type(2){width: 57%;}
 
 	/*small popup*/
 		.openPopS{outline: 0;}

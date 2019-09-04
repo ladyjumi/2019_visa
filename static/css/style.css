@@ -454,6 +454,7 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .optionTable > li .box{position: relative; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex: auto; min-height: 60px; padding: 12px 30px 12px 14px}
 .optionTable > li .box .inpGroup{margin-top: 10px}
 .optionTable > li .box span.txt{padding: 8px 0 0; font-size: 14px; line-height: 20px}
+.optionTable > li .box span.txt:only-child{min-width: 100px;}
 .optionTable > li .box .txt.mid{margin: 0 6px;}
 .optionTable > li .box .txt.addTxt{margin-left: 6px; font-size: 13px}
 .optionTable .inpT{width: 140px}

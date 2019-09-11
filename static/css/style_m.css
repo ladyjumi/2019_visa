@@ -354,6 +354,7 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 	.popWrap{display: none; position:absolute;top:0;left:0;width:100%;height:100%; z-index: 1000}/*레이어박스높이가짧을경우:fixed*/
 	.popWrap .popDim{position:fixed;top:0;left:0;width:100%;height:100%;background:black;opacity:0.7;}
 	.popWrap .popBox{position: fixed; top: 50%; left: 50%; width: 90%; padding-bottom: 30px; background-color: #fff; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%)}
+	.popWrap .warnMark{width: 32px; height: 32px; margin-bottom: 12px; background: url(../images/common/icon_warning_red.svg);}
 	.popWrap .closePopBtn{position: absolute; bottom: 100%; right: -10px; width: 40px; height: 40px;background: url(../images/common/btn_x_white.svg) no-repeat center; background-size: 20px; text-indent: -9999px; outline: 0}
 	.popWrap .popArea{padding: 20px 10px 0;}
 	.popWrap .titleWrap{padding: 12px 30px 11px; border-bottom: 1px solid #dadada; text-align: center;}
@@ -387,6 +388,13 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 	.countryList table.country2 th:nth-of-type(2){width: 57%;}
 	.countryList table.country2 td:nth-of-type(1){width: 43%;}
 	.countryList table.country2 td:nth-of-type(2){width: 57%;}
+
+	/*경고창팝업*/
+	.popWrap .popText{position: fixed; top: 50%; left: 50%; width: 260px; padding: 22px 0 0; background-color: #fff; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); text-align: center;}
+	.popWrap .popText .text{padding: 0 20px; font-size: 14px; line-height: 20px; font-weight: 500}
+	.popWrap .popText .btnGroup{margin-top: 17px; border-top: 1px solid #dadada;}
+	.popWrap .popText .btnGroup .btn{height: 44px; color: #c6464b; line-height: 44px; font-size: 16px; font-weight: 700}
+	.popWrap .popText .btnGroup .btn:only-child{width: 100%;}
 
 	/*small popup*/
 		.openPopS{outline: 0;}

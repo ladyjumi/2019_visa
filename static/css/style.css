@@ -9,7 +9,7 @@
 /*버튼정의*/
 .btn{min-width: 90px; height: 36px; padding: 0 20px; line-height: 36px; font-weight: 700; color: #fff; text-align: center; transition: background .1s}
 .btn.red{background-color: #c6464b}
-.btn.blue{background-color: #1a6fa0}
+.btn.blue{background-color: #1a6fa0; color: #fff;}
 .btn.grey{background-color: #888}
 .btn.white{background-color: #fff; color: #1a6fa0; border: 1px solid #1a6fa0; line-height: 34px;}
 .btnBorder{min-width: 86px; height: 24px; padding: 0 14px; font-size: 13px; line-height: 22px; color: #333; text-align: center; border: 1px solid #bbb}
@@ -23,11 +23,19 @@
 .btnGroup.btm > *:nth-of-type(2){margin-left: auto; color: #1a6fa0; border: 1px solid #1a6fa0;}
 .btnGroup.btm > *:last-of-type{background-color: #1a6fa0; color: #fff}
 .btnGroup.btm > *:only-child{margin-left: auto; background-color: #1a6fa0; color: #fff;}
+.btnGroup.right{display: block; text-align: right;}
+.btnGroup.btm > .left{margin-right: auto; margin-left: 8px;}
+/*하단 필수항목텍스트*/
+.btnGroup.btm > .text{margin-left: auto; background-color: transparent; border: 0; color: #333; font-size: 13px; font-weight: 400}
+.btnGroup.btm > .text + .btn{margin-left: 0;}
+
 .searchBtn{width: 36px; height: 36px; background: url(../images/common/icon_search.svg) no-repeat center; text-indent: -9999px; cursor: pointer;}
+.lineMove{margin-top: 9px;}
 .lineMoveBtn{width: 30px; height: 24px; background: url(../images/split.png) no-repeat; text-indent: -9999px}
 .lineMoveBtn.up{background-position: -32px -50px}
 .lineMoveBtn.dw{background-position: -32px -74px}
 .lineMoveBtn + .lineMoveBtn{margin-left: 2px;}
+.optionTable + .btnGroup{margin-top: 30px;}
 
 /*툴팁*/
 .tooltip{position: relative; margin: 0 0 0 4px;}
@@ -56,7 +64,10 @@
 .viewBox .titleBox .openBtn:after{transform: rotate(-90deg);}
 .viewBox .contBox{display: none; padding: 20px; border: 1px solid #dadada; border-top: 0}
 .viewBox.open .titleBox .openBtn:after{transform: rotate(0deg);}
-.viewBox.open .contBox{border-color: #999}
+
+.textList{}
+.textList li{line-height: 1.45;}
+.textList li + li{margin-top: 4px;}
 
 /*레이아웃*/
 .wrap{position: relative; min-width: 1200px}
@@ -80,6 +91,7 @@
 .header .topMenu select.lang option{background-color: #f5f6fa}
 .header .topMenu select.lang + .searchBtn{width: 21px;background-size: 21px; outline: 0;}
 .header .topMenu select.lang + .searchBtn:before{left: -13px}
+.contents{min-height: calc(100vh - 168px);}
 .footer{padding: 26px 0; background-color: #efefef; border-top: 1px solid #dcdcdc;}
 .footer .inner{color: #666}
 .footer span{line-height: 22px}
@@ -126,7 +138,7 @@
 .finder .line + .line{margin-top: 16px;}
 .finder .line > *{font-size: 14px;}
 .finder .line > span:first-of-type{min-width: 36px; text-align: right;}
-.finder select{width: 220px; height: 36px; margin: 0 12px 0 10px; padding: 0 40px 0 14px; border: 1px solid #dd5c61; letter-spacing: -.02em;	background: #fff url(../images/selectbox1.png) no-repeat right 14px center;}
+.finder select{width: 220px; height: 36px; margin: 0 12px 0 10px; padding: 0 40px 0 14px; border: 1px solid #dd5c61; line-height: 34px; letter-spacing: -.02em;	background: #fff url(../images/selectbox1.png) no-repeat right 14px center;}
 .finder .NextBtn{position: absolute; top: 0; right: 0; height: 36px; padding: 0 20px; line-height: 36px; background-color: #c6464b; color: #fff; font-weight: 700; text-align: center;}
 .finder .line.disabled{opacity: .5;}
 .finder .line.disabled .NextBtn{display: none;}
@@ -177,6 +189,7 @@
 .resultVisa.open .titleBox p{color: #fff}
 .resultVisa.open .titleBox .openBtn:before, 
 .resultVisa.open .titleBox .openBtn:after{background-color: #fff}
+.resultVisa.open .contBox{border-color: #999}
 .resultVisa .listNum2{margin: 8px 0 0;}
 .resultVisa .listNumber{margin-top: 0;}
 .resultVisa .listNumber > li + li{margin-top: 2px;}
@@ -186,7 +199,6 @@
 .resultVisa .tabMenu li{width: 33.3333%}
 .resultVisa .tabMenu li button{font-size: 14px}
 .resultVisa .tabMenu li.active button{color: #c6464b}
-
 
 /*비자리스트*/
 .visaList .inBox{position: relative; display: block; width: 100%; border: 1px solid #dadada}
@@ -256,13 +268,13 @@
 .processList li:last-of-type .desc{padding: 13px 20px 11px; margin: 0; background-color: #f2f0ed;}
 .processList li:last-of-type:after{display: none;}
 .processList .top{padding: 10px 0 9px; margin: 0 20px; line-height: 19px; font-size: 0;}
-.processList .top span{padding-left: 25px; font-size: 13px; background: url(../images/icon_person.png) no-repeat;}
+.processList .top span{padding-left: 22px; font-size: 13px; background: url(../images/icon_person.png) no-repeat;}
 .processList .top span.typeBlue{background-position: 0 -19px; color: #467fc6}
 .processList .top span.typeRed{background-position: 0 -38px; color: #c6464b}
 .processList .top span.typeGreen{background-position: 0 -57px; color: #31abaf}
 .processList .top span + span{margin-left: 12px;}
-.processList .desc{min-height: 100px; padding: 13px 0 11px; margin: 0 20px; border-top: 1px solid #dadada;}
-.processList .desc strong{display: block; min-height: 53px; font-size: 14px; line-height: 22px}
+.processList .desc{min-height: 113px; padding: 13px 0 11px; margin: 0 20px; border-top: 1px solid #dadada;}
+.processList .desc strong{display: block; min-height: 66px; font-size: 14px; line-height: 22px}
 .processList .desc p{color: #666}
 .processList .arrowN{width: 22px; height: 11px; margin-top: 5px; background: url(../images/arrow_visalist2.png) no-repeat center; text-indent: -9999px; opacity: .7}
 .processList + p{margin-top: 20px;}
@@ -271,7 +283,7 @@
 .txtTable tbody tr{border-top: 1px solid #dadada;}
 .txtTable tbody th{padding: 22px 20px; background-color: #f4f4f4; font-weight: 500; line-height: 22px; vertical-align: top; text-align: left; word-break: keep-all;}
 .txtTable tbody th span{font-size: 12px; color: #666}
-.txtTable tbody td{padding: 22px 20px; line-height: 22px;}
+.txtTable tbody td{padding: 22px 20px; line-height: 22px; vertical-align: middle;}
 .txtTable .imgWrap{display: inline-block; margin: 24px 0 10px -5px}
 .txtTable .imgWrap p{margin-top: 5px; text-align: center;}
 .txtTable .listDot{margin: 0 0 4px;}
@@ -324,11 +336,15 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .visaDesc p.txt{line-height: 22px; margin: 3px 0;}
 .visaDesc + .addTxt{padding: 18px;}
 
-/*Admin*/
+
+/*////////////////////////////////////////////////Admin///////////////////////////////////////////////////////*/
+
 .lock{position: absolute; top: 0; left: 0; width: 100%; height: calc(100% - 111px); padding: 50px 0 0 20px; z-index: 2;}
 .lock > div{display: flex; flex-direction: column; justify-content: center; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); text-align: center;}
 .lock span{font-size: 16px; color: #fff; font-weight: 500;}
+.lock.type2{height: calc(100% - 227px);}
 .admin h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700; border-bottom: 1px solid #999}
+.admin h3 + .descText{padding: 20px;}
 .admin h4{padding: 24px 0 12px; font-weight: 500}
 .admin .shapeRequire{color: #bf3f44; font-weight: 400}
 .admin .header .gnb li.active a{color: #1a6fa0; border-color: #1a6fa0;}
@@ -347,6 +363,15 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .admin textarea{width: 100%; height: 118px; overflow-y: auto; padding: 20px; font-size: 13px; line-height: 1.5; border: 1px solid #d3d3d3; word-break: keep-all; transition: border .1s}
 .admin textarea:focus{border-color: #999}
 .admin textarea:disabled{color: #aaa; background-color: #f4f4f4; resize: none;}
+.admin div.textarea{width: 100%; height: 118px; overflow-y: auto; padding: 20px; font-size: 13px; line-height: 1.5; border: 1px solid #d3d3d3; word-break: keep-all; transition: border .1s; background-color: #f4f4f4}
+
+
+/*검색박스 자동완성*/
+.searchWords{position: relative; display: inline-block;}
+.searchWords .list{position: absolute; top: 100%; left: 0; width: 100%; margin: 0px 0 0; text-align: left; background-color: #fff; border: 1px solid #d3d3d3; border-top: 0; z-index: 1;}
+.searchWords .list{overflow-y: auto; max-height: 145px;}
+.searchWords .list li a{display: block; padding: 7px 10px;}
+.searchWords .list li:hover{background-color: #eee}
 
 .wrap.login{min-width: unset; padding: 200px 10px 100px; text-align: center;}
 .logBox{display: block; max-width: 560px; margin: 0 auto; padding: 90px 100px 110px; border: 1px solid #dadada}
@@ -357,6 +382,15 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .logBox .btn.blue{margin: 30px 0 10px;}
 .logBox .btn em.circle{width: 17px; height: 17px; margin: 2px 0 2px 3px; border: 1px solid #1a6fa0; border-radius: 50%; font-size: 12px; line-height: 15px; vertical-align: text-top;}
 
+.error{min-width: unset; padding: 200px 10px 100px; text-align: center;}
+.error .descBox{display: block; max-width: 560px; margin: 0 auto; padding: 70px 100px; border: 1px solid #dadada}
+.descBox .title{display: block; font-size: 30px; color: #1a6fa0; text-transform: uppercase; line-height: 1.2}
+.descBox .title.mark{padding-top: 65px; background: url(../images/error.png) no-repeat center top;}
+.descBox .title span{margin-left: 6px; color: #333;}
+.descBox .title em{display: block; color: #333;}
+.descBox .txt{margin-top: 28px; font-size: 14px; line-height: 24px; color: #666;}
+.descBox .txt strong{display: block;}
+.descBox .btn.blue{margin-top: 30px; width: 200px; height: 46px; line-height: 46px;}
 
 .inpWrap{line-height: 36px}
 .inpWrap input{margin-right: 4px}
@@ -365,13 +399,13 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .inpT:disabled{color: #aaa; background-color: #f4f4f4}
 .inpNum{width: 70px}
 .selectD{height: 36px; padding: 0 30px 0 10px; background: #fff url(../images/selectbox1.png) no-repeat right 10px center; border: 1px solid #d3d3d3}
-.selectD:disabled{background-color: #f4f4f4; opacity: .8;}
+.selectD:disabled{background-color: #f4f4f4;}
 .selectD:focus{border-color: #999}
 .selectD + .selectD{margin-left: 10px;}
 .inpD{position: relative; display: inline-block; padding-left: 23px; font-size: 13px; line-height: 16px; min-width: 16px; min-height: 16px; text-align: left}
 .inpD .inp{position: absolute; top: 1px; left: 1px; width: 14px; height: 14px}
 .inpD .icon{position: absolute; top: 50%; left: 0; display: block; width: 16px; height: 16px; margin-top: -8px; background: url(../images/split.png) no-repeat center;}
-.inpD .text{line-height: 16px}
+.inpD .text{line-height: 16px; vertical-align: top;}
 .inpD input:disabled ~ .text{color: #aaa;}
 .inpD input[type="radio"] + .icon{background-position: 0 0;}
 .inpD input[type="radio"]:checked + .icon{background-position: 0 -16px}
@@ -397,13 +431,23 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .tabBox{margin-top: -1px}
 /*작은타입*/
 .typeSmall{flex: none;}
-.typeSmall .tabMenu li{width: 33.3333%}
+.typeSmall .tabMenu li{width: 33.4%}
 .typeSmall .tabMenu button{font-size: 13px; height: 24px}
-.typeSmall .tabBox{padding: 0 2.5px 0 0; border: 0}
-.typeSmall .tabBox .inpT{width: 100%; height: 34px; font-size: 13px}
-
+.typeSmall .tabBox{padding: 0 2px 0 0; border: 0}
+.typeSmall .tabBox > .inpT{width: 100%; height: 34px; font-size: 13px}
+/*수수료페이지 탭박스*/
+.cmsTab{margin-top: 24px;}
+.cmsTab .tabMenu{display: inline-flex; width: 304px;}
+.cmsTab .tabMenu li{flex: auto}
+.cmsTab .tabMenu li button{width: 100%; height: 24px; font-size: 13px;}
+.cmsTab .tabBox > .inpT{width: 304px; height: 34px; margin-bottom: 9px; font-size: 13px;}
+.cmsTab .tabBox .topRight{display: inline-block; margin: 11px 0 0}
 hr.line{margin: 30px 0; height: 1px; background-color: #999}
 .addTxt{font-size: 13px; color: #666}
+/*언어별탭*/
+.langTab{margin: 24px 0;}
+.langTab .tabMenu{width: 304px; margin-bottom: 6px;}
+.langTab .tabMenu button{border-color: #bbb}
 
 /*LNB*/
 .aside .lnb{width: 150px; border-bottom: 1px solid #ebebeb}
@@ -425,57 +469,80 @@ hr.line{margin: 30px 0; height: 1px; background-color: #999}
 /*2depth*/
 .aside .depth2{padding: 8px 0; background-color: #ebebeb; display: none}
 .aside .depth2 > li > a,
-.aside .depth2 > li > span{padding: 6px 20px 7px; font-size: 13px; color: #666}
+.aside .depth2 > li > span{padding: 6px 10px 7px 20px; font-size: 13px; color: #666; letter-spacing: -1.6px}
 /*3depth*/
 .aside .depth3{padding: 10px 0; margin: 6px 0; background-color: #ddd; display: none}
 .aside .depth3 > li > a{padding: 5px 25px 6px; font-size: 13px; color: #666}
 
 
 /*타이틀 옆 텍스트*/
-.topRight{float: right; text-align: right; margin: -24px 0 0; color: #666; font-size: 13px}
-.topRight.btnGroup{font-size: 0; margin: -32px 0 0px;}
+.topRight{float: right; margin: -40px 0; padding: 7px 0; color: #666; font-size: 13px; text-align: right}
+h4 + .topRight{margin: -33px 0;}
+span.topRight{margin: -30px 0;}
+.topRight.btnGroup{font-size: 0;}
+.topRight > *{vertical-align: bottom;}
+.topRight .selectWrap .txt{margin-right: 7px; color: #2a2b2c; line-height: 26px; font-size: 14px; font-weight: 500;}
+.topRight .selectWrap .selectD{height: 26px; line-height: 24px; border-color: #dadada; background-position: right 7px center;}
+.topRight .selectWrap + span{margin-left: 13px; line-height: 20px;}
 
 .tableTop{padding: 18px 0 8px; text-align: right;}
 .tableTop.topRight{padding: 0}
 .tableTop .btnBorder:last-of-type{color: #1a6fa0; border-color: #1a6fa0}
 
 /*코드등록*/
-h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단border-top설정*/
+h3 + .optionTable, .topRight + .optionTable{margin-top: -1px;} /*테이블상단border-top설정*/
 .optionTable{width: 100%; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada; font-size: 0}
 .optionTable > li{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-wrap: nowrap; flex-direction: row; width: 100%}
 .optionTable > li+li{border-top: 1px solid #dadada}
 .optionTable > li .cell{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex-direction: row; /*flex: 1*/ }
 .optionTable > li .cell:only-child{width: 100%}
-.optionTable > li .cell:only-child input.wide{max-width: 200px;}
+/*.optionTable > li .cell:only-child input.wide{max-width: 240px;}*/
 /*.optionTable > li .cell:last-of-type{flex: auto;}*/
 .optionTable > li .cell.autoF{flex: auto}
 .optionTable > li .cell.autoF input.wide{max-width: inherit;}
+.optionTable > li .cell.right{margin-left: auto;}
+.optionTable > li:only-child .cell.right{min-width: auto}
+.optionTable > li .cell.right .box{min-width: 240px;}
+/*.optionTable > li .cell.right .box{width: 212px;}*/
 .optionTable > li .title{flex: none; width: 140px; padding: 12px 20px; font-size: 14px; line-height: 36px; background-color: #f4f4f4}
+.optionTable > li .title .inpD{margin: 10px 0; font-size: 14px}
 .optionTable > li .title.short{padding: 12px 20px; width: auto}
-.optionTable > li .box{position: relative; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex: auto; min-height: 60px; padding: 12px 30px 12px 14px}
+.optionTable > li .box{position: relative; display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; flex: auto; min-height: 60px; min-width: 180px; padding: 12px 30px 12px 14px}
 .optionTable > li .box .inpGroup{margin-top: 10px}
 .optionTable > li .box span.txt{padding: 8px 0 0; font-size: 14px; line-height: 20px}
 .optionTable > li .box span.txt:only-child{min-width: 100px;}
-.optionTable > li .box .txt.mid{margin: 0 6px;}
+.optionTable > li .box .txt.mid{padding: 0; margin: 0 8px; line-height: 34px;}
 .optionTable > li .box .txt.addTxt{margin-left: 6px; font-size: 13px}
+.optionTable > li .box textarea{padding: 10px; font-size: 14px;}
+.optionTable > li .box.auto{min-width: inherit;}
+.optionTable > li .box .inTxt{padding: 8px; font-size: 14px; line-height: 20px;}
+.optionTable > li .box .inTxt.txtarea{padding: 7px 8px; font-size: 13px; line-height: 21px;}
 .optionTable .inpT{width: 140px}
-.optionTable input.inpNum{width: 70px; position: relative; z-index: 1}
-.optionTable input.inpNum + select{margin-left: -1px}
-.optionTable input.inpNum + select:focus{position: relative; z-index: 1}
-.optionTable input + .btn{flex: none; margin-left: 8px}
+.optionTable .ipNum{height: 36px; font-size: 14px; line-height: 38px; color: #000; letter-spacing: -.02em}
+.optionTable .ipNum + .inpT{width: 50px; margin-left: 3px;}
+.optionTable .mid + .ipNum{width: 80px;}
+.optionTable .inpT.inpNum{min-width: auto; width: 70px; position: relative; z-index: 1}
+.optionTable .inpT.inpNum + select{margin-left: -1px}
+.optionTable .inpT.inpNum + select:focus{position: relative; z-index: 1}
+.optionTable .selectD{min-width: 80px}
+.optionTable .selectD + .inpT{margin-left: 9px;}
+.optionTable input + .btn,
+.optionTable .inpT + .btn{flex: none; margin-left: 5px}
 .optionTable input.wide{width: 100%; max-width: 310px}
+.optionTable input.max{width: 100%; max-width: 100%;}
 .optionTable .registBtn{flex: none; margin: 12px 18px 12px auto}
 .optionTable .searchBtn{flex: none; margin-left: 0}
 .optionTable .box.row{display: block; padding: 0}
 .optionTable .box.row .boxLine{position: relative; padding: 12px 15px}
 .optionTable .box.row .boxLine .inpGroup{margin: 10px 0}
 .optionTable .box.row .boxLine .inpGroup + .selectD{margin-left: 16px;}
-.optionTable .box.row em.subTitle{position: absolute; top: 0; right: 100%; min-width: 60px; margin-top: -1px; padding: 12px 15px; border-top: 1px solid #dadada; font-size: 14px; line-height: 36px; background-color: #f4f4f4}
+.optionTable .box.row em.subTitle{position: absolute; top: 0; right: 100%; height: 100%; min-width: 60px; margin-top: -1px; padding: 12px 15px; border-top: 1px solid #dadada; font-size: 14px; line-height: 36px; background-color: #f4f4f4}
 .optionTable .table + .addTxt{margin: 8px 0 10px;}
+.optionTable + .tabWrap{margin-top: 25px;}
 /*첨부파일 등록*/
-.optionTable.fileReg > li .title{width: 214px; padding-right: 130px;}
+.optionTable.fileReg > li .cell:first-of-type .title{width: 214px; padding-right: 130px;}
 .optionTable.fileReg em.subTitle{width: 130px;}
-.optionTable.fileReg .tabWrap{width: 310px;}
+.optionTable.fileReg .tabWrap{width: 312px;}
 .optionTable.fileReg .inpFileWrap{width: 310px;}
 
 
@@ -488,15 +555,16 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .optionTable + .table{margin-top: 25px}
 .table{text-align: center; table-layout: auto}
 .table .pad{padding-right: 5px; padding-left: 5px}
+.table div.inpT{text-align: left;}
 .table thead{background-color: #dae4f0; border-top: 1px solid #cfd7e3; border-bottom: 1px solid #cfd7e3}
-.table thead th{padding: 10px 0; font-weight: 500; line-height: 18px; vertical-align: middle}
+.table thead th{padding: 11px 0 10px; font-size: 14px; font-weight: 500; line-height: 18px; vertical-align: middle}
 .table thead tr + tr th{border-top: 1px solid #d7d7d7}
 .table tbody{font-size: 13px}
 .table tbody tr{border-bottom: 1px solid #dadada}
-.table tbody td{padding: 10px 0 11px; line-height: 18px}
+.table tbody td{padding: 10px 0 11px; line-height: 18px; vertical-align: middle;}
 .table tbody td > p{padding: 0 10px}
 .table tbody td .link{display: inline-block; font-size: 13px; border-bottom: 1px solid #333; margin-bottom: -1px;}
-.table tbody td p span+span{margin-left: 3px}
+.table tbody td > p span + span{margin-left: 3px}
 .table.input thead{background-color: #f4f4f4; border-color: #d7d7d7}
 .table tbody tr.selected{background-color: #f1f6fb}
 .table tbody td input.wide{width: 100%; max-width: 340px;}
@@ -504,10 +572,15 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .table tbody td textarea{min-height: 60px; height: 60px; padding: 10px; font-size: 13px; line-height: 1.5; resize: vertical}
 .table tbody td.btnCell{padding: 7px 0 8px}
 .table tbody td.btnCell .btnBorder{min-width: 62px}
+.table tbody p.mail{-ms-word-break: break-all;word-break: break-all;}
+.table tbody p.date span{display: block; margin: 0}
 .table .inpCell{vertical-align: middle}
 .table .inpCell .inpD{padding-left: 0}
 .table .inpGroup{display: inline-block; text-align: left; white-space: nowrap; margin-top: 1px; height: 16px;}
 .table input.inpNum{width: 60px; text-align: right}
+/*수수료 면제국가 관리 테이블*/
+.table td .box{position: relative;}
+.table td .box .popS{transform: translateY(0);}
 
 /*파일찾기*/
 .inpFileWrap{position: relative; display: inline-flex; font-size: 0;}
@@ -515,12 +588,14 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .inpFileWrap label{display: inline-block; height: 36px; margin-left: 8px;}
 .inpFileWrap label b{display: block; width: 90px; height: 36px; margin-left: auto; padding: 0; line-height: 36px; color: #fff; background-color: #888; font-size: 14px; text-align: center}
 .inpFileWrap label input{position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0}
+.inpFileWrap + .btn{margin-left: 6px;}
 
 /*테두리박스*/
 .divBox{padding: 20px; margin-bottom: 24px; border: 1px solid #dadada}
 .divBox p.text{font-size: 13px; line-height: 21px}
 .divBox .inpGroup{font-size: 0; margin-bottom: -14px}
 .divBox .inpGroup .inpD{width: 20%; margin-left: 0; margin-bottom: 14px;}
+.divBox + h4{padding-top: 0;}
 
 /*에디터/첨부파일영역*/
 .editWrap{border: 1px solid #dadada}
@@ -534,17 +609,42 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .editWrap .attachBox .tabWrap{margin-left: 20px; display: inline-block;}
 .editWrap .attachBox .tabBoxWrap{display: inline-block;}
 .editWrap .attachBox .inpFileWrap{width: 310px;}
+.editWrap .attachBox .btnName{margin-left: 20px;}
+.editWrap .attachBox .btnName span{margin-right: 8px; font-size: 14px; line-height: 36px;}
+.editWrap .attachBox .btnName .inpT{width: 200px}
+.optionTable + .editWrap{margin-top: 8px;}
 
 /*등록항목*/
 .registBox .titleBox{background-color: #dbe7ec; border: 1px solid #cadae0}
 .registBox textarea{height: 80px; padding: 6px 10px; line-height: 21px}
 .registBox strong.title{display: block; padding: 20px 0 14px}
+.registBox strong.title + .optionTable{border-top: 1px solid #999}
 .registBox .optionTable .cell .title{padding: 12px 20px}
 .registBox .optionTable .cell .boxLine{width: 100%}
 .registBox .optionTable .cell.url .boxLine > .inpT{width: 412px}
-.addOption{padding: 2px 0}
-.addOption li{padding: 14px 20px}
+.registBox .divBox{margin-bottom: 0;}
+.registBox .btnSet{width: 304px;}
+.registBox .langTab{margin: 14px 0 0;}
+.registBox .langTab .btn.blue{width: 100%;}
+.registBox .fileSet .tabMenu{margin-bottom: 0;}
+.registBox .fileSet .tabBox{font-size: 0}
+.registBox .fileSet .urlTxt{width: 302px; padding: 8px; border: 1px solid #bbb; font-size: 14px; line-height: 18px; text-align: center;}
+.registBox .fileSet .btn{margin-left: 10px;}
+.addOption{margin: 20px 0; border-top: 1px solid #bbb; border-bottom: 1px solid #bbb}
+.addOption li{padding: 14px 20px;}
 .addOption li + li{border-top: 1px solid #dadada}
+
+.moddable{padding: 0 20px 20px;}
+.moddable strong.title{padding-top: 15px; font-size: 16px; font-weight: 700;}
+
+/*동기화*/
+.syncTxt{padding: 20px; border-bottom: 1px solid #dadada}
+.syncTxt > p{line-height: 18px;}
+.syncTxt > p + p{margin-top: 8px;}
+.syncTxt > p b{margin-right: 10px;}
+.syncTxt > p span{margin-left: 6px;}
+.syncTxt + .textList{margin: 20px 0;}
+.syncTxt ~ *{padding: 0 20px;}
 
 /*타이틀회색상자*/
 .titleTxtBox{display: block; margin-bottom: 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; font-weight: 700; line-height: 42px; text-align: center}
@@ -563,9 +663,18 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap h4 + .optionTable{border-top: 0; border-top: 1px solid #999}
 .columnWrap h4{padding: 18px 0 10px; font-size: 13px; /*border-bottom: 1px solid #999*/}
 .columnWrap h5{padding: 18px 0 10px; font-size: 12px; font-weight: 500}
-.columnWrap .inpT{height: 30px; padding: 0 6px; font-size: 12px}
-.columnWrap textarea{height: 70px; padding: 8px 9px; font-size: 11px; line-height: 17px}
+.columnWrap .inpT{height: 30px; padding: 0 6px; font-size: 12px; line-height: 28px;}
+.columnWrap div.inpT{position: relative; display: inline-block; min-width: 112px; background-color: #f4f4f4; color: graytext;}
+.columnWrap div.inpT.wide{width: 100%; max-width: 283px; flex: auto}
+.columnWrap div.inpT .text{max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.columnWrap div.inpT .cutMark{display: none; position: absolute; top: -1px; right: -1px; width: 12px; height: 12px; background: url(../images/cutmark.png) no-repeat; outline: none}
+.columnWrap div.inpT .overBox{display: none; position: absolute; bottom: 100%; left: 100%; width: fit-content; max-width: 200px; min-width: 100px; max-height: 100px; margin: 0 0 4px -99px; padding: 8px 10px; border: 1px solid #bf3f44; background-color: #fff; overflow-y: auto; font-size: 11px; line-height: 1.4; z-index: 1;}
+.columnWrap div.textarea,
+.columnWrap textarea{height: 70px; padding: 8px 9px; font-size: 11px; line-height: 1.5}
 .columnWrap select{height: 30px; padding: 0 30px 0 10px; font-size: 12px}
+.columnWrap .optionTable .inpT{width: auto; ;}
+.columnWrap .optionTable .inpT + .btn{margin-left: 5px}
+.columnWrap .optionTable .inpT + .inpT{margin-left: 12px;}
 .columnWrap > div{display: inline-block; font-size: 12px}
 .columnWrap > div:first-of-type{padding-right: 22px}
 .columnWrap > div:last-of-type{padding-left: 22px}
@@ -573,10 +682,11 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap .titleWrap{padding: 10px 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; line-height: 18px}
 .columnWrap .titleWrap .date{float: right; font-size: 13px; color: #666}
 .columnWrap .titleWrap + .optionTable{margin-top: 18px;}
-.columnWrap .optionTable > li .title{width: 116px; padding: 9px 12px; font-size: 12px; line-height: 30px}
+.columnWrap .optionTable > li .title{width: 113px; padding: 9px 12px; font-size: 12px; line-height: 30px}
 .columnWrap .optionTable > li .title.short{width: auto}
-.columnWrap .optionTable > li .box{min-height: 48px; padding: 9px 11px}
+.columnWrap .optionTable > li .box{min-width: auto; min-height: 48px; padding: 9px 11px}
 .columnWrap .optionTable > li .box .inpGroup{margin-top: 7px}
+.columnWrap .optionTable > li .title .inpD{margin: 7px 0;}
 .columnWrap .optionTable .box.row{padding: 0;}
 .columnWrap .optionTable .box.row .boxLine{padding: 10px;}
 .columnWrap .optionTable .inpFileWrap{padding-right: 78px;}
@@ -585,6 +695,7 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap .optionTable .inpFileWrap label b{width: 70px; height: 30px; line-height: 30px; font-size: 12px;}
 .columnWrap .optionTable .box.row .boxLine .inpGroup{margin: 10px 0}
 .columnWrap .optionTable .box.row .boxLine .inpGroup + .selectD{margin-left: 16px;}
+.columnWrap .optionTable + .optionTable{margin-top: 13px;}
 .columnWrap .optionTable .box.row em.subTitle{position: absolute; top: 0; right: 100%; min-width: 50px; margin-top: -1px; padding: 10px; border-top: 1px solid #dadada; font-size: 12px; line-height: 30px; background-color: #f4f4f4}
 .columnWrap .optionTable input.wide{width: auto; flex: auto}
 .columnWrap .boxLine.down{width: 100%; display: -webkit-inline-flex; display: -moz-inline-flex; display: -ms-inline-flex; display: -o-inline-flex; display: inline-flex;}
@@ -595,11 +706,13 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap .divBox .inpGroup .inpD{width: 33.333%; margin-bottom: 10px; margin-left: 0; word-break: break-all}
 .columnWrap .divBox .inpGroup .inpD .icon{top: 0; margin-top: 0}
 .columnWrap .divBox p.text{line-height: 17px}
+.columnWrap .divBox + h5{padding-top: 0;}
 .columnWrap .table{font-size: 12px}
 .columnWrap .table .pad{padding-right: 4px; padding-left: 4px;}
 .columnWrap .table thead th{padding: 8px 0; font-size: 12px}
 .columnWrap .table tbody td{padding: 8px 0; font-size: 11px}
 .columnWrap .table tbody td textarea{font-size: 12px; padding: 5px 8px;}
+.columnWrap .table tbody td .textarea{font-size: 12px; padding: 5px 8px; height: 60px; overflow-y: auto; text-align: left;}
 .columnWrap .table tbody td select{margin: -13px 0 -11px 0; vertical-align: middle; font-size: 11px;}
 .columnWrap .titleTxtBox{margin-bottom: 12px; font-size: 13px; line-height: 35px;}
 .columnWrap .viewBox + .viewBox{margin-top: 6px;}
@@ -608,6 +721,7 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap .registBox .contBox{padding: 14px;}
 .columnWrap .registBox .optionTable .cell .title{width: 100px; padding: 10px 12px;}
 .columnWrap .registBox .optionTable .cell.url .boxLine > .inpT{width: 100%;}
+.columnWrap .registBox .optionTable .selectD{min-width: auto;}
 .columnWrap .registBox .inpFileWrap{width: 100%;}
 .columnWrap .registBox .inpFileWrap .inpT{width: 100%;}
 .columnWrap .registBox .inpFileWrap label{height: 30px;}
@@ -618,7 +732,22 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 .columnWrap .editWrap .attachWrap{padding: 10px 15px}
 .columnWrap .editWrap .attachBox{margin-top: 0;}
 .columnWrap .editWrap .attachBox > p{font-size: 12px; line-height: 30px;}
-
+/*.columnWrap h4 + .cmsTab{margin-top: 10px;}*/
+.columnWrap .cmsTab{margin: 0 0 20px;}
+.columnWrap .cmsTab .tabMenu button{font-size: 12px;}
+.columnWrap .cmsTab .tabBox > .inpT{font-size: 12px; margin-bottom: 0; padding: 0 15px; line-height: 33px;}
+.columnWrap .cmsTab .topRight.btnGroup{margin-top: 14px;}
+.columnWrap .cmsTab .table{margin-top: 10px;}
+.columnWrap .langTab{margin: 0 0 14px;}
+.columnWrap .langTab .tabMenu{width: 304px; margin-bottom: 8px;}
+.columnWrap .langTab .tabMenu li{width: 33.333%}
+.columnWrap .langTab .tabMenu button{height: 24px;}
+.columnWrap .useSet{margin: -7px 0 0;}
+.columnWrap .useSet > *{vertical-align: top; font-size: 12px;}
+.columnWrap .useSet strong{line-height: 24px;}
+.columnWrap .useSet span{display: inline-block; min-width: 80px; margin-left: 4px; padding: 0 15px; line-height: 22px; border: 1px solid #ddd; text-align: center;}
+.columnWrap .moddable{padding: 0 10px 10px;}
+.columnWrap .moddable strong.title{padding-top: 10px; font-size: 14px;}
 /* paginate */
 	.paging{padding: 40px 0 0; text-align: center; font-size: 0}
 	.paging a{display: inline-block; min-width: 28px; height: 28px; padding: 0 3px; line-height: 28px;}
@@ -650,17 +779,18 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 
 	/*수수료국가금액팝업*/
 	.countryList table thead{background-color: #f4f4f4; border-color: #d7d7d7;}
+	.countryList table thead tr:first-of-type th:last-of-type{}
 	.countryList table tr{width: 100%;}
 	.countryList table td{vertical-align: middle;}
 	.countryList table td > p{padding: 0 20px; line-height: 22px;}
 	/*tbody에 스크롤*/
 	.countryList table{table-layout: fixed; display: block;}	
 	.countryList table tbody{display: block; overflow-y: scroll; width: 100%; height: 399px;}
-	.countryList table.country1 td:nth-of-type(1){width: 320px;}
+	.countryList table.country1 td:nth-of-type(1){width: 260px;}
 	.countryList table.country1 td:nth-of-type(2){width: 160px;}
 	.countryList table.country1 td:nth-of-type(3){width: 160px;}
-	.countryList table.country1 td:nth-of-type(4){width: 110px;}
-	.countryList table.country1 td:nth-of-type(5){width: 110px;}
+	.countryList table.country1 td:nth-of-type(4){width: 130px;}
+	.countryList table.country1 td:nth-of-type(5){width: 130px;}
 	.countryList table.country2 tbody{height: 440px;}
 	.countryList table.country2 td:nth-of-type(1){width: 330px;}
 	.countryList table.country2 td:nth-of-type(2){width: 530px;}
@@ -681,17 +811,60 @@ h3 + .optionTable, .topRight + .optionTable{border-top: 0;} /*테이블상단bor
 	.popS .popTitle p{color: #fff; font-size: 17px; line-height: 26px}
 	.popS .popCont{padding: 20px;}
 	.popS .popCont .search{display: -webkit-flex; display: -moz-flex; display: -ms-flex; display: -o-flex; display: flex; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #dadada}
-	.popS .popCont .search span.txt{margin-right: 10px;}
+	.popS .popCont .search span.txt{margin-right: 10px; padding: 0; font-size: 14px; line-height: 36px;}
 	.popS .popCont .search .inpT{width: 100%}
+	.popS .popCont .search .searchBtn{flex: none;}
+	.popS .btnGroup{display: block;}
+	.popS .selectItem p{line-height: 16px;}
 	.popS .selectItem p + p{margin-top: 10px;}
-	.popS .selectItem.nation{width: 360px; height: 95px;}
-	.popS .selectedList{margin-top: 20px; padding: 16px 13px; background-color: #f4f4f4; height: 95px; overflow-y: scroll;}
+	.popS .selectItem p .text span:after{display: inline-block; content: '/'; margin: -1px 1px 0 2px; vertical-align: top;}
+	.popS .selectItem p .text span:last-of-type:after{display: none;}
+	.popS .selectItem p .icon{top: 0px; margin-top: 0px;}
+	.popS .selectItem .inpD{width: 100%;}
+	.popS .selectItem .inpD:hover .text{color: #000; font-weight: 500}
+	.popS .selectItem.nation{width: 360px; max-height: 115px;}
+	.popS .selectItem.nation + .btnGroup{height: inherit; padding-top: 20px; border-top: 1px solid #dadada;}
+	.popS .selectedList{margin-top: 20px; padding: 13px; background-color: #f4f4f4; height: 75px; overflow-y: scroll; font-size: 0}
 	.popS .selectedList span{font-size: 13px;}
-	.popS .selectedList span + span{margin-left: 4px;}
+	.popS .selectedList span + span{margin-left: 3px;}
 	.popS .btnGroup.btm{margin-top: 20px;}
 	.popS .btnGroup.btm > *{float: none;}
-	.box .popS{margin: 0 30px 0 0; transform: translateY(-12px);}
+	.box .popS{/*margin: 0 30px 0 0;*/ transform: translateY(-12px);}
+	.btnGroup .popWrap{margin-left: 0;}
 
+	/*업로드*/
+	.popWrap.upload{position: absolute; top: 40%; left: 50%; right: inherit; width: 400px; transform: translate(-50%, -50%); text-align: center;}
+	.upload .popCont{padding: 40px 0 60px;}
+	.upload .popCont p{margin-top: 29px; font-size: 14px; line-height: 27px;}
+	.upload .popCont .iconUpload{width: 28px; height: 22px; background: url(../images/icon_upload.png) no-repeat center;}
+
+/* calender */
+	.datePicker{font-size: 0; vertical-align: top}
+	.datePicker .calenderBox{position: relative}
+	.datePicker .calenderBox .inpT{display: inline-block; width: 110px; padding-left: 32px; cursor: pointer;}
+	.datePicker .calenderBox .inpT:focus{border-color: #d3d3d3}
+	.datePicker .calenderBox button{position: absolute; top: -1px; right: 0; width: 100%; height: 100%; background: url(../images/icon_calendar.png) no-repeat 10px 10px; outline: 0; text-indent: -9999px}
+	.ui-datepicker{width: 165px; margin: -1px 0 0; background: #fff; border: 1px solid #dadada; text-align: center;}
+	.ui-datepicker-header{position: relative; padding: 6px 30px; background-color: #f4f4f4}
+	.ui-datepicker-header > .ui-corner-all{position: absolute; top: 0; width: 30px; height: 30px; cursor: pointer;}
+	.ui-datepicker-header .ui-datepicker-prev{left: 24px;  text-indent: -9999px; background: url(../images/arrow_left.png) no-repeat center;}
+	.ui-datepicker-header .ui-datepicker-next{right: 24px;  text-indent: -9999px; background: url(../images/arrow_right.png) no-repeat center;}
+	.ui-datepicker-title{display: inline-flex; flex-direction: row-reverse; text-align: center;}
+	.ui-datepicker-title > *{font-size: 13px; line-height: 18px; background-color: transparent;}
+	.ui-datepicker-title select + select{margin-right: 4px;}
+	.ui-datepicker-month{text-align: right;}
+	.ui-datepicker-year:after{display: inline-block; content: '.';}
+	.ui-datepicker-calendar{width: 150px; margin: 6px auto;}
+	.ui-datepicker-calendar thead span{padding: 4px 0 6px; font-size: 13px; font-weight: normal; color: #000;}
+	.ui-datepicker-calendar tbody td{color: #666;}
+	.ui-datepicker-calendar tbody a{width: 20px; font-size: 12px;}
+	.ui-datepicker-calendar tbody a:hover{background-color: #ddd;}
+	.ui-datepicker-calendar tbody tr > td:first-of-type{color: #bf3f44;}
+	.ui-datepicker-calendar tbody tr > td:last-of-type{color: #1a6fa0;}
+	.ui-state-default{line-height: 20px;}
+	.ui-state-highlight{background: #eee}
+	.ui-state-active,	.ui-button:active,
+	.ui-button.ui-state-active:hover {background: #888; color: #ffffff;}
 
 /*미디어쿼리*/
 @media screen and (max-width:1000px){}

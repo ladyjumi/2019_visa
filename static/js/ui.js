@@ -99,13 +99,28 @@ function openPop(){
 	closePop();
 }
 
-function openPopS(){
-	$('.openPopS').each(function(){
-		$(this).click(function(){
-			$(this).next('.popS').slideDown(200);
-		})
+function popSposition(){
+	$('.box .openPopS').each(function(){
+		var boxP = $(this).closest('.box').innerWidth();
+		var buttonW = $(this).innerWidth();
+		var buttonPositon = $(this).position();
+		var lastNum = buttonW + buttonPositon.left + 5;
+		$(this).next('.popS').css('right', boxP - lastNum);
 	})
-	closePop();
+}
+
+function openPopS(){
+	$('.openPopS').click(function(){	
+		popSposition();
+		$(this).parents('.wrap').find('.popS').hide();
+		$(this).next('.popS').slideDown(200);
+		closePop();
+	})
+	$('table.table .box textarea').click(function(){
+		$(this).closest('tr').siblings('tr').find('.popS').fadeOut(120);
+		$(this).next('.popS').slideDown(200);
+		closePop();
+	})
 }
 
 function topButton(){
@@ -230,6 +245,20 @@ function visaListMenu(){
 	})
 }
 
+// admin 국가명 넘칠때
+function shortCut(){
+	$('div.inpT > .text').each(function(){
+		var textW = $(this).width();
+		var boxW = $(this).closest('.inpT').width();
+		if (textW >= boxW ) {
+			$(this).next('.cutMark').show();
+		}		
+	})
+	$('.cutMark').click(function(){
+		$(this).next('.overBox').fadeToggle(100);
+	})
+}
+
 //로딩바 show
 function lodingLoad(){
 	$('body').css('overflow','hidden');
@@ -246,8 +275,22 @@ function scrollMove(target, speed){
 	$('html, body').animate({scrollTop: moveTo.top}, speed);
 }
 
+function calendarSet(){
+	$('.datePicker').find('.inpT').datepicker({
+		showOn: 'button',
+		dateFormat: 'yy.mm.dd',
+		nextText: '다음 달',
+		prevText: '이전 달',
+		currentText: '오늘 날짜', 
+		dayNamesMin: ['일','월', '화', '수', '목', '금', '토'], 
+		// monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		monthNames: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+	})
+}
+
 
 $(function(){	
+	shortCut();
 	inputTextDel();
 	topSearch();
 	topSearchM();
@@ -265,4 +308,5 @@ $(function(){
 	if($('.closeTip').length != 0){
 		tooltipM();
 	}
+	if($('.datePicker').length > 0){calendarSet()}
 });

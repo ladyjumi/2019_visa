@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>이력-체류자격코드</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body class="admin">
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
+
+			<!-- GNB -->
+			<ul class="gnb">
+				<li class="active"><a href="#">콘텐츠관리</a></li>
+				<li><a href="#">계정관리</a></li>
+			</ul>
+			<!-- //GNB -->
+
+			<div class="topMenu">
+				<p class="currentInfo">
+					<span><em>Admin1234</em>접속 중</span>
+					<span>
+						[최종접속시간 
+						<em>2019.07.08</em>
+						<em>12:13:15</em>]
+					</span>
+				</p>
+				<a href="#">로그아웃</a>
+				<a href="#">비밀번호 변경</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="contents">
+		<div class="inner">
+
+			<!-- LNB -->
+			<div class="aside">
+				<ul class="lnb">
+					<li>
+						<span>체류자격 관리</span>
+						<ul class="subM depth2">
+							<li><a href="#">체류자격 코드 관리</a></li>
+							<li><a href="#">체류자격 항목 관리</a></li>
+							<li><a href="#">체류자격 등록 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="#">첨부파일 관리</a></li>
+					<li>
+						<span>수수료 관리</span>
+						<ul class="subM depth2">
+							<li><a href="#">MAIN 관리</a></li>
+							<li><a href="#">수수료 조정국가 관리</a></li>
+							<li><a href="#">수수료 면제국가 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="">비자표출 관리</a></li>
+					<li>
+						<span>변경 이력 확인</span>
+						<ul class="subM depth2">
+							<li class="active"><a href="#">STEP1. 코드 생성 이력</a></li>
+							<li><a href="#">STEP2. 기본정보관리 이력</a></li>
+							<li><a href="#">STEP3. 항목관리 이력</a></li>
+							<li><a href="#">STEP4. 노출관리 이력</a></li>
+							<li><span>수수료 변경 이력</span>
+								<ul class="subM depth3">
+									<li><a href="#">MAIN</a></li>
+									<li><a href="#">수수료 조정국가</a></li>
+									<li><a href="#">수수료 면제국가</a></li>
+								</ul>
+							</li>
+							<li><a href="#">비자표출 관리 이력</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- //LNB -->
+
+
+			<div class="cont">
+
+				<h3>STEP1. 코드 생성 이력</h3>
+				<ul class="optionTable">
+					<li>
+						<div class="cell">
+							<p class="title short">체류자격</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+								</select>
+								<select class="selectD">
+									<option value="">전체</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title short">체류자격명</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+									<option value="">단기일반</option>
+									<option value="">일반관광</option>
+									<option value="">FTA독립</option>
+									<option value="">학사유학</option>
+									<option value="">DE계열 6개월이상 체류자</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title short">검색</p>
+							<div class="box">
+								<input type="text" class="inpT wide">
+								<button type="button" class="searchBtn">검색하기</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<!-- table 내 링크 영역 미정 -->
+				<!-- 변경 이력 tr태그에 클래스 "red" 추가하면 텍스트 색상 변경됩니다. -->
+
+				<table class="table">
+					<colgroup>
+						<col style="width: 80px" />
+						<col style="width: 140px" />
+						<col style="width: 140px" />
+						<col style="width: auto" />
+						<col style="width: 200px" />
+						<col style="width: 160px" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>시퀀스</th>
+							<th>체류자격(대분류)</th>
+							<th>체류자격(소분류)</th>
+							<th>체류자격명</th>
+							<th>작성자</th>
+							<th>작성일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="red">
+							<td>99</td>
+							<td>C3</td>
+							<td>02</td>
+							<td><p>단체관광</p></td>
+							<td><p>Admin2</p></td>
+							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
+						</tr>
+						<tr>
+							<td>98</td>
+							<td>E7</td>
+							<td>01</td>
+							<td><p>특정활동</p></td>
+							<td><p>Admin</p></td>
+							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="paging">
+					<a href="#" class="direction prev">처음</a>
+					<a href="#" class="direction prev">이전</a>
+					<a href="#" class="num active">1</a>
+					<a href="#" class="num">2</a>
+					<a href="#" class="num">3</a>
+					<a href="#" class="num">4</a>
+					<a href="#" class="num">5</a>
+					<a href="#" class="num">6</a>
+					<a href="#" class="num">7</a>
+					<a href="#" class="num">8</a>
+					<a href="#" class="num">9</a>
+					<a href="#" class="num">10</a>
+					<a href="#" class="direction next">다음</a>
+					<a href="#" class="direction next">끝</a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	
+</body>
+</html>

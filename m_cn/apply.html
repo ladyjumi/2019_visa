@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<title>신청절차</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style_m.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">签证导航</a></h1>
+			<span class="btnWrap">
+				<button type="button" class="searchBtn showsearchBar">검색버튼</button>
+				<button type="button" class="gnbBtn">메뉴열기</button>				
+			</span>
+		</div>
+		<nav class="gnbWrap">
+			<div class="navBox">
+				<!-- 언어변경 -->
+				<ul class="lang">
+					<li class="active"><a href="#">KOR</a></li>
+					<li><a href="#">ENG</a></li>
+					<li><a href="#">中文</a></li>
+				</ul>
+				<!-- //언어변경 -->
+				<!-- GNB -->
+				<ul class="gnb">
+					<li><a href="#">签证 搜索</a></li>
+					<li><a href="#">入境目的与签证种类</a></li>
+					<li class="active"><a href="#">签证申请程序介绍</a></li>
+					<li><a href="#">签证费介绍</a></li>
+					<li><a href="#">入境及滞留</a></li>
+				</ul>
+				<!-- //GNB -->
+				<button type="button" class="gnbClose">关闭</button>
+			</div>
+		</nav>
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<span class="inputWrap">
+					<input type="text" placeholder="검색어를 입력하세요.">
+					<button type="button" class="btnDel">지우기</button>
+				</span>
+				<input type="button" value="검색" class="searchBtn">
+			</div>
+			<button type="button" class="back">关闭</button>			
+		</div>
+		<!-- //검색창 -->
+	</div>
+
+	<div class="contents">
+
+		<div class="frontCont">
+
+			<h2>签证申请程序介绍</h2>
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>通过签证网站申请电子签证</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>申请途径</th>
+								<td>
+									<span>签证网站 申请 </span>
+									<button type="button" class="btnVisaMenu">电子签证(个人)</button>
+								</td>
+							</tr>
+							<tr>
+								<th>申请人</th>
+								<td>
+									<p>外国人本人申请或由邀请人代理申请</p>
+								</td>
+							</tr>
+							<tr>
+								<th>可申请的滞留资格 <span>(以2014.12.8为准 )</span></th>
+								<td>
+									<ul class="listDot">
+										<li>教授(E-1), 研究(E-3), 技术指导(E-4), 专门职业(E-5) 签证与给其随行家属签发的随同(F-3)签证</li>
+										<li>特定活动(E-7)签证和向其签证和向其随行家属签发的随同(F-3)签证 <p class="txtDash">申请条件 : 收到雇用推荐书(又名:GOLD CARD)尖端科学技术人才</p></li>
+										<li>对可以通过指定旅行社代办签证申请的中国团体游客签发团体观光(C-3-2)签证</li>
+										<li>被指定为电子签证代理申请方的优秀外籍患者招募机构邀请的外籍患者和看护人，可获发的医疗观光(C-3-3)或治疗疗养(G-1-10)签证</li>
+										<li>向受韩国企业邀请的人员签发的短期商务(C-3-4)签证  <p class="txtDash">签发条件 : 启用针对入境外国人的指纹采集系统 (2012年1月1日) 后以短期访问(C-3)资格入境3次以上，且在韩期间无非法居留或其他犯罪事实的人员</p></li>
+									</ul>
+									<p class="red">※ 关于可以申请的滞留资格详情，请通过签证导航查询</p>
+								</td>
+							</tr>
+							<tr>
+								<th>所需材料</th>
+								<td>
+									<ul class="listDot">
+										<li>签证申请书 (电子版表格)</li>
+										<li>护照复印件</li>
+										<li>照片 (彩色3.5cm x 4.5cm)</li>
+										<li>手续费(可实现在线支付的信用卡)</li>
+										<li>各类滞留资格签证所需材料<p class="txtDash red">可在签证导航各类签证所需材料中查询, 也可访问各驻外使领馆官网领事业务中的签证信息页面查询。</p></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>处理程序</th>
+								<td>
+									<p class="title">外国人本人申请程序</p>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자신청서 작성</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자결제</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>신청 및 전송</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span class="typeBlue">초청인(개인/기업)</span>
+											</div>
+											<div class="desc">
+												<strong>초청 확인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과확인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>7</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자비자발급확인서 출력/송부</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>8</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+									<p class="title">邀请人代理申请流程</p>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>로그인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자신청서 작성</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자결제</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과확인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span><em class="arrowN">to</em><span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자비자발급확인서 출력/송부</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>7</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>通过签证网站申请“签证发给认定书"</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>申请途径</th>
+								<td>
+									<p>居住国(地区)所属领区大韩民国大使馆或总领事馆</p>
+								</td>
+							</tr>
+							<tr>
+								<th>申请人</th>
+								<td>
+									<p>外国人本人申请或通过签证代办机构(指定旅行社)代理申请</p>
+								</td>
+							</tr>
+							<tr>
+								<th>可申请的滞留资格 <span>(以2014.12.8为准 )</span></th>
+								<td>
+									<ul class="listDot">
+										<li>符合外交(A-1)、公务(A-2)资格条件者，可获发单次或多次签证</li>
+										<li>符合短期采访(C-1)、短期访问(C-3)、短期就业(C-4)资格条件者,可获发滞留期为90天以内的单次签证</li>
+										<li>在已签订多次签证协定的国家公民中，符合短期采访(C-1) 及短期访问(C-3)资格条件者，可获发90天以内的多次签证</li>
+										<li>在符合文化艺术(D-1)资格条件者中，应韩国国际交流财团及韩国文化艺术委员会的邀请赴韩开展文化艺术活动的人员，可获发滞留期为1年以内的单次签证等权限委任给驻外公馆长的签证</li>
+									</ul>
+									<p class="red">※ 关于可以申请的滞留资格详情，请通过签证导航查询</p>
+								</td>
+							</tr>
+							<tr>
+								<th>所需材料</th>
+								<td>
+									<ul class="listDot">
+										<li>签证申请表 (第17号 表格, 或者签证网站申请 选单 >> 填写电子版表格)</li>
+										<li>护照</li>
+										<li>照片（彩色, 3.5cm x 4.5cm）</li>
+										<li>手续费（原则上收取美元） <p class="txtDash">如驻外使领馆馆长同意，可用所在国货币支付。</p></li>
+										<li>각 체류자격별 제출서류
+											<p class="txtDash red">签证导航所介绍的材料为在各国均适用的最少范围内的共同材料。 <br>为进行更加准确的签证审核，驻外使领馆馆长可根据所在国(领区)的实际情况，增加或减少所需材料。<br>  因此，签证导航介绍的材料与各驻外使领馆官网(领事公告)介绍的材料如有不同，应根据驻外使领馆要求提交材料。</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>처리절차</th>
+								<td>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>신청서 제출</strong>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+									<p class="red">※ 如欲了解其他事项，请致电所在国(领区)驻外使领馆领事部门咨询。</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>通过驻外使领馆申请签证</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>申请途径</th>
+								<td>
+									<span>签证门户网站 申请 选单</span>
+									<button type="button" class="btnVisaMenu">签证发给认定书</button>
+								</td>
+							</tr>
+							<tr>
+								<th>申请人</th>
+								<td>
+									<p>由邀请方代理申请</p>
+								</td>
+							</tr>
+							<tr>
+								<th>可申请的滞留资格 <span>(以2014.12.8为准 )</span></th>
+								<td>
+									<ul class="listDot">
+										<li>教师(E-1)、会话指导(E-2)、研究(E-3)、技术指导(E-4)、专门职业(E-5)和向其随行家属签发的随同(F-3)签证</li>
+										<li>特定活动(E-7)签证和向其签证和向其随行家属签发的随同(F-3)签证<p class="txtDash">申请条件: 统计局告示的标准职业分流的大分类1(管理者)或2号(专家及相关从事者)行业从事人员</p></li>
+										<li>向受外国人患者招募机构邀请的外国患者及其随行看护人签发的医疗观光(C-3-3) 或治疗疗养(G-1-10) 签证</li>
+										<li>优待企业邀请短期商务(C-3-6)签证</li>
+										<li>留学(D-2) 语言研修(D-4-1)签证</li>
+										<li>非专门就业(E-9)船员就业(E-10)签证</li>
+									</ul>
+									<p class="red">※ 关于可以申请的滞留资格详情，请通过签证导航查询</p>
+								</td>
+							</tr>
+							<tr>
+								<th>所需材料</th>
+								<td>
+									<ul class="listDot">
+										<li>签证发给认定申请书 (电子版表格)</li>
+										<li>护照复印件</li>
+										<li>照片（彩色, 3.5cm x 4.5cm)</li>
+										<li>手续费(可实现在线支付的信用卡)</li>
+										<li>各类滞留资格签证所需材料 <p class="txtDash red">可在签证导航系统各类签证所需材料中查询, 也可访问各驻外使领馆官网领事业务页面查询。</p></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>处理程序</th>
+								<td>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>로그인</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>전자신청서 작성</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과조회</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+												<em class="arrowN">to</em>
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>결과 확인 및 비자신청서 다운로드</strong>
+												<p>비자포털</p>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>비자신청 및 수수료 결재</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>7</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>8</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>确认“签证发给认定书”审核结果</th>
+								<td>
+									<p>“签证发给认定书”审核结果，可进入签证网站内查询进度，也可通过申请表上的邀请人E-MAIL或手机短信以及致电ARS (02-2650-6363)查询。</p>
+								</td>
+							</tr>
+							<tr>
+								<th>签证申请</th>
+								<td>
+									<ul class="listDot">
+										<li>邀请人应在签证网站的进度查询页面下载“签证发给认定书”持有人用签证申请书，并用电子邮件发送给被邀请人，或者也可以告知签证发给认定号码及有效期。</li>
+										<li>拟入境的外国人，在得到大韩民国的邀请人提供的“签证发给认定书”持有人用签证申请书或签证发放认定号码(有效期)后，向大韩民国大使馆或总领事馆申请签证。</li>
+									</ul>
+									<p class="red">※ “签证发给认定书”的有效期为3个月，仅限申请一次。</p>
+									<p class="red">欲了解其他事项，请致电外国人综合服务中心(无需加区号直拨1345, 从国外拨打时+82-1345)咨询。</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="viewBox">
+				<div class="titleBox">
+					<p>通过韩国内出入境 · 外国人事务管理部门申请“签证发给认定书”</p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				<div class="contBox">
+					<table class="txtTable">
+						<tbody>
+							<tr>
+								<th>申请地点</th>
+								<td>
+									<p>邀请方地址所属出入境管理事务所</p>
+								</td>
+							</tr>
+							<tr>
+								<th>申请人</th>
+								<td>
+									<p>外外国人本人申请，也可以通过邀请方或代办机构(E-9, E-10)代理申请</p>
+								</td>
+							</tr>
+							<tr>
+								<th>可申请的滞留资格 <span>(以2014.12.8为准)</span></th>
+								<td>
+									<ul class="listDot">
+										<li>文化艺术(D-1), 留学(D-2), 技术研修(D-3), 一般研修(D-4), 采访(D-5), 宗教(D-6), 派驻(D-7), 企业投资(D-8), 贸易经营(D-9), 教授(E-1), 会话指导(E-2), 研究(E-3), 技术指导(E-4), 专门职业(E-5), 艺术演出(E-6), 特定活动(E-7), 非专门就业(E-9), 海员就业(E-10), 访问同居(F-1), 随同(F-3), 其他(G-1)与访问就业 (H-2) 资格条件者 可获发长期签证</li>
+										<li>对于未与韩国建交的国家或特定国家的公民(古巴、叙利亚 、科索沃、马其顿共和国)签发的长期签证</li>
+										<li>对法务部长官认定有特别需要的外国人发放的签证</li>
+									</ul>
+									<p class="red">※ 关于可以申请的滞留资格的详细信息，请用签证导航查询。</p>
+								</td>
+							</tr>
+							<tr>
+								<th>所需材料</th>
+								<td>
+									<ul class="listDot">
+										<li>签证发给认定申请书(附表 第21号)</li>
+										<li>护照复印件</li>
+										<li>照片 (彩色, 3.5cm x 4.5cm)</li>
+										<li>各类滞留资格签证所需材料
+											<p class="txtDash red">签证导航所介绍的材料为在各国均适用的最少范围内的共同材料。<br>  为进行更加准确的签证审核，出入国管理事务所负责人可以增加或减少所需材料。</p>
+										</li>
+										<li>如属代办，请提交委托书、代办人在职证明、代办人身份证复印件 <br>(但，必要时可能不允许代办)</li>									
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>处理程序</th>
+								<td>
+									<ul class="processList">
+										<li>
+											<i>1</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span>
+											</div>
+											<div class="desc">
+												<strong>신청서 작성</strong>
+											</div>
+										</li>
+										<li>
+											<i>2</i>
+											<div class="top">
+												<span class="typeRed">비자심사 담당자</span>
+											</div>
+											<div class="desc">
+												<strong>접수 및 심사</strong>
+												<p>관할 출입국 외국인관서</p>
+											</div>
+										</li>
+										<li>
+											<i>3</i>
+											<div class="top">
+												<span class="typeBlue">초청인</span><em class="arrowN">to</em><span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급인정번호 송부</strong>
+											</div>
+										</li>
+										<li>
+											<i>4</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급 신청</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>5</i>
+											<div class="top">
+												<span class="typeGreen">영사</span>
+											</div>
+											<div class="desc">
+												<strong>비자발급</strong>
+												<p>재외 공관</p>
+											</div>
+										</li>
+										<li>
+											<i>6</i>
+											<div class="top">
+												<span>신청인</span>
+											</div>
+											<div class="desc">
+												<strong>대한민국 입국</strong>
+											</div>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th>通知“签证发给认定书”审核结果</th>
+								<td>
+									<p>“签证发发认定书”审核结果，可进入签证网站内查询进度，也可通过申请表上的邀请人E-MAIL或手机短信以及致电ARS (02-2650-6363)查询。</p>
+								</td>
+							</tr>
+							<tr>
+								<th>签证申请</th>
+								<td>
+									<ul class="listDot">
+										<li>邀请人应在签证网站的进度查询页面下载“签证发给认定书”持有人用签证申请表(表格第17之3)，并用电子邮件发送给被邀请人，或者也可以告知签证发给认定号码及有效期。</li>
+										<li>拟入境的外国人，在得到大韩民国的邀请人提供的“签证发给认定书”持有人用签证申请表或签证发给认定号码(有效期)后，向大韩民国大使馆或总领事馆申请签证。</li>
+									</ul>
+									<p class="red">※ “签证发给认定书”的有效期为3个月，仅限申请一次。</p>
+									<p class="red">欲了解其他事项，请致电外国人综合服务中心(无需加区号直拨1345, 从国外拨打时+82-1345)咨询。</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>签证导航</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 <br>(외국인종합안내센터 : 국번없이 1345)</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+
+	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
+</div>
+	
+</body>
+</html>

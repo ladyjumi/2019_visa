@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>체류자격코드등록</title>
+	<title>체류자격코드등록2</title>
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
@@ -15,7 +15,7 @@
 
 	<div class="header">
 		<div class="inner">
-			<h1><a href="#">비자네비게이터 Admin</a></h1>
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
 
 			<!-- GNB -->
 			<ul class="gnb">
@@ -30,17 +30,11 @@
 					<span>
 						[최종접속시간 
 						<em>2019.07.08</em>
-						<em>12:13:15</em>
-						/
-						<em>106.247.228.114</em>]
+						<em>12:13:15</em>]
 					</span>
 				</p>
 				<a href="#">로그아웃</a>
 				<a href="#">비밀번호 변경</a>
-				<span>
-					<input type="text" placeholder="검색" class="searchBox">
-					<button type="button" class="searchBtn">검색버튼</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -54,9 +48,10 @@
 					<li>
 						<span>체류자격 관리</span>
 						<ul class="subM depth2">
-							<li class="active"><a href="#">체류자격 코드 관리</a></li>
-							<li><a href="#">체류자격 항목 관리</a></li>
-							<li><a href="#">체류자격 등록 관리</a></li>
+							<li><a href="#">STEP1. 코드관리</a></li>
+							<li class="active"><a href="#">STEP2. 기본정보관리</a></li>
+							<li><a href="#">STEP3. 항목관리</a></li>
+							<li><a href="#">STEP4. 노출관리 </a></li>
 						</ul>
 					</li>
 					<li><a href="#">첨부파일 관리</a></li>
@@ -68,13 +63,7 @@
 							<li><a href="#">수수료 면제국가 관리</a></li>
 						</ul>
 					</li>
-					<li>
-						<span>비자표출 관리</span>
-						<ul class="subM depth2">
-							<li><a href="#">법무부</a></li>
-							<li><a href="#">중국(광저우)</a></li>
-						</ul>
-					</li>
+					<li><a href="">비자표출 관리</a></li>
 					<li>
 						<span>변경 이력 확인</span>
 						<ul class="subM depth2">
@@ -99,18 +88,60 @@
 			<div class="cont">
 
 				<!-- 화면잠김 딤처리-->
-				<div class="lock"><div><span>화면잠김</span></div></div>
+				<div class="lock" style="display: none;"><div><span>화면잠김</span></div></div>
 				<!-- //화면잠김 딤처리-->
 
-				<h3>체류자격 코드 수정</h3>
-
-				<span class="topRight"><em class="red">*</em>필수항목</span>
+				<h3>STEP2. 기본정보관리</h3>
+				
+				<div class="topRight">
+					<span class="selectWrap">
+						<span class="txt">사용설정</span>
+						<select class="selectD">
+							<option value="">미사용</option>
+							<option value="">사용</option>
+						</select>
+					</span>
+				</div>
+				
 				<ul class="optionTable">
 					<li>
 						<div class="cell">
-							<p class="title">체류자격 대분류</p>
-							<div class="box"><input type="text" class="inpT"></div>
+							<p class="title">체류자격</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+								</select>
+								<select class="selectD">
+									<option value="">전체</option>
+								</select>
+							</div>
 						</div>
+						<div class="cell">
+							<p class="title short">체류자격명</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+									<option value="">단기일반</option>
+									<option value="">일반관광</option>
+									<option value="">FTA독립</option>
+									<option value="">학사유학</option>
+									<option value="">DE계열 6개월이상 체류자</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title short">시퀀스</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+									<option value="">1</option>
+									<option value="">2</option>
+								</select>
+							</div>
+						</div>
+					</li>
+
+					<li>
 						<div class="cell">
 							<p class="title"><em class="red">*</em>신청대상</p>
 							<div class="box">
@@ -130,6 +161,11 @@
 										<span class="icon"></span>
 										<span class="text">비자발급인증서</span>
 									</label>
+									<label class="inpD">
+										<input type="radio" name="application" class="inp">
+										<span class="icon"></span>
+										<span class="text">신청절차 없음</span>
+									</label>
 								</div>
 							</div>
 						</div>
@@ -137,26 +173,21 @@
 
 					<li>
 						<div class="cell">
-							<p class="title">체류자격 소분류</p>
-							<div class="box"><input type="text" class="inpT"></div>
-						</div>
-						<div class="cell">
-							<p class="title">검색키워드</p>
-							<div class="box"><input type="text" class="inpT wide"></div>
-						</div>
-					</li>
-
-					<li>
-						<div class="cell">
-							<p class="title">체류자격명</p>
-							<div class="box"><input type="text" class="inpT"></div>
+							<p class="title"><em class="red">*</em>체류기간</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">90일 이하(단기/단기무사증)</option>
+									<option value="">91일 이상(장기사증)</option>
+									<option value="">영주(영주/특수사증)</option>
+								</select>
+							</div>
 						</div>
 						<div class="cell">
 							<p class="title"><em class="red">*</em>발급 사증종류</p>
 							<div class="box">
 								<select class="selectD">
-									<option value="">복수</option>
 									<option value="">단수</option>
+									<option value="">복수</option>
 									<option value="">더블</option>
 								</select>
 							</div>
@@ -165,7 +196,15 @@
 
 					<li>
 						<div class="cell autoF">
-							<p class="title">적용국가</p>
+							<!-- 1016 수정 -->
+							<p class="title">
+								<label class="inpD">
+									<input type="radio" name="country" class="inp">
+									<span class="icon"></span>
+									<span class="text">적용국가</span>
+								</label>
+							</p>
+							<!-- //1016 수정 -->
 							<div class="box">
 								<input type="text" class="inpT wide">
 								<button type="button" class="btn grey openPopS">국가찾기</button>
@@ -184,30 +223,47 @@
 													<label class="inpD">
 														<input type="checkbox" class="inp">
 														<span class="icon"></span>
-														<span class="text">이스라엘 <span>(Israel)</span></span>
+														<span class="text">
+															<span>아랍 에미리트 연방</span>
+															<span>The UnitedArab Emirates</span>
+															<span>阿拉伯联合酋长国</span>
+														</span>
 													</label>
 												</p>
 												<p>
 													<label class="inpD">
 														<input type="checkbox" class="inp">
 														<span class="icon"></span>
-														<span class="text">이란 <span>(Iran)</span></span>
+														<span class="text">
+															<span>아르헨티나</span>
+															<span>Argentina</span>
+															<span>阿根廷</span>
+														</span>
 													</label>
 												</p>
 												<p>
 													<label class="inpD">
 														<input type="checkbox" class="inp">
 														<span class="icon"></span>
-														<span class="text">이라크 <span>(Iraq)</span></span>
+														<span class="text">
+															<span>알바니아</span>
+															<span>Albania</span>
+															<span>阿尔巴尼亚 </span>
+														</span>
 													</label>
 												</p>
 												<p>
 													<label class="inpD">
 														<input type="checkbox" class="inp">
 														<span class="icon"></span>
-														<span class="text">이탈리아 <span>(Italy)</span></span>
+														<span class="text">
+															<span>보스니아-헤르체고비나</span>
+															<span>Bosnia and Herzegovina</span>
+															<span>波斯尼亚和黑塞哥维那 </span>
+														</span>
 													</label>
-												</p>
+												</p>	
+												
 											</div>
 											<div class="selectedList">
 												<span>이스라엘</span>
@@ -222,14 +278,22 @@
 							</div>
 						</div>
 						<div class="cell">
-							<p class="title short">국가코드</p>
-							<div class="box"><input type="text" class="inpT"></div>
+							<p class="title">국가코드</p> <!-- 0924 클래스제거 -->
+							<div class="box"><input type="text" class="inpT wide"></div>
 						</div>
 					</li>
 
 					<li>
 						<div class="cell autoF">
-							<p class="title">제외국가</p>
+							<!-- 1016 수정 -->
+							<p class="title">
+								<label class="inpD">
+									<input type="radio" name="country" class="inp">
+									<span class="icon"></span>
+									<span class="text">제외국가</span>
+								</label>
+							</p>
+							<!-- //1016 수정 -->
 							<div class="box">
 								<input type="text" class="inpT wide">
 								<button type="button" class="btn grey openPopS">국가찾기</button>
@@ -248,30 +312,47 @@
 													<label class="inpD">
 														<input type="checkbox" class="inp">
 														<span class="icon"></span>
-														<span class="text">이스라엘 <span>(Israel)</span></span>
+														<span class="text">
+															<span>아랍 에미리트 연방</span>
+															<span>The UnitedArab Emirates</span>
+															<span>阿拉伯联合酋长国</span>
+														</span>
 													</label>
 												</p>
 												<p>
 													<label class="inpD">
 														<input type="checkbox" class="inp">
 														<span class="icon"></span>
-														<span class="text">이란 <span>(Iran)</span></span>
+														<span class="text">
+															<span>아르헨티나</span>
+															<span>Argentina</span>
+															<span>阿根廷</span>
+														</span>
 													</label>
 												</p>
 												<p>
 													<label class="inpD">
 														<input type="checkbox" class="inp">
 														<span class="icon"></span>
-														<span class="text">이라크 <span>(Iraq)</span></span>
+														<span class="text">
+															<span>알바니아</span>
+															<span>Albania</span>
+															<span>阿尔巴尼亚 </span>
+														</span>
 													</label>
 												</p>
 												<p>
 													<label class="inpD">
 														<input type="checkbox" class="inp">
 														<span class="icon"></span>
-														<span class="text">이탈리아 <span>(Italy)</span></span>
+														<span class="text">
+															<span>보스니아-헤르체고비나</span>
+															<span>Bosnia and Herzegovina</span>
+															<span>波斯尼亚和黑塞哥维那 </span>
+														</span>
 													</label>
-												</p>
+												</p>	
+												
 											</div>
 											<div class="selectedList">
 												<span>이스라엘</span>
@@ -286,8 +367,30 @@
 							</div>
 						</div>
 						<div class="cell">
-							<p class="title short">국가코드</p>
-							<div class="box"><input type="text" class="inpT"></div>
+							<p class="title">국가코드</p> <!-- 0924 클래스제거 -->
+							<div class="box"><input type="text" class="inpT wide"></div>
+						</div>
+					</li>
+
+					<li>
+						<div class="cell">
+							<p class="title">1차구분</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">신분</option>
+									<option value="">체류목적</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title">2차구분</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">동반자 신분</option>
+									<option value="">재외동포</option>
+									<option value="">주재원, 전근자</option>
+								</select>
+							</div>
 						</div>
 					</li>
 				</ul>
@@ -374,25 +477,14 @@
 					</div>
 				</div>
 
-				<div class="tabWrap">
-					<ul class="tabMenu">
-						<li class="active"><button type="button"><em class="red">*</em>기본발급대상(국문)</button></li>
-						<li><button type="button"><em class="red">*</em>기본발급대상(중문)</button></li>
-						<li><button type="button"><em class="red">*</em>기본발급대상(영문)</button></li>
-					</ul>
-					<div class="tabBox">
-						<textarea>체류기간 경과시 대행사(여행사)가 책임을 지는 보증개별, 단체관광 등 관광, 공항만 소무역활동 등을 목적으로 입국하려는 자 체류기간 경과시 대행사(여행사)가 책임을 지는 보증개별, 단체관광 등 관광, 공항만 소무역활동 등을 목적으로 입국하려는 자</textarea>
-					</div>
-					<div class="tabBox"><textarea>2</textarea></div>
-					<div class="tabBox"><textarea>3</textarea></div>
-				</div>
-
-				<h4><em class="red">*</em>수정사유<em class="red">(필수)</em></h4>
+				<h4><em class="red">*</em>등록사유</h4>
 				<textarea></textarea>
 				
 				<span class="btnGroup btm">
-					<button type="button" class="btn">목록으로 이동</button>
-					<button type="button" class="btn">수정하기</button>
+					<button type="button" class="btn">목록</button>
+					<span class="text"><em class="red">*</em>필수항목</span>
+					<button type="button" class="btn">미리보기</button>
+					<button type="button" class="btn">등록하기</button>
 				</span>
 
 			</div>

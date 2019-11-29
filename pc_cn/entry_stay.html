@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>입국및체류</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">签证导航</a></h1>
+			<!-- GNB -->
+			<ul class="gnb">
+				<li><a href="#">签证 搜索</a></li>
+				<li><a href="#">入境目的与签证种类</a></li>
+				<li><a href="#">签证申请程序介绍</a></li>
+				<li><a href="#">签证费介绍</a></li>
+				<li class="active"><a href="#">入境及滞留</a></li>
+			</ul>
+			<!-- //GNB -->
+			<div class="topMenu">
+				<!-- 언어변경 -->
+				<select class="lang">
+					<option value="">한국어</option>
+					<option value="">ENGLISH</option>
+					<option value="">中文</option>
+				</select>
+				<!-- //언어변경 -->
+				<button type="button" class="searchBtn showsearchBar">검색버튼</button>
+			</div>
+		</div>
+
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<div class="inner">
+					<span class="searchBox">
+						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
+						<input type="button" value="검색" class="searchBtn">
+					</span>
+				</div>
+			</div>
+			<div class="dimmed"></div>
+		</div>
+		<!-- //검색창 -->
+	</div>
+
+	<div class="contents">
+
+		<div class="frontCont">
+			<h2>入境及滞留</h2>
+
+			<h3>入境程序</h3>
+			<table class="txtTable">
+				<colgroup>
+					<col style="width: 140px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>入境条件</th>
+						<td>
+							<p>拟入境大韩民国的外国人应具备下列入境条件。</p>
+							<ul class="listDot">
+								<li>应持效护照 <br>无法持有效期已满、伪造或变造的护照入境。</li>
+								<li>应持有效签证. <br>应在签证有效期内入境, 如所获签证和访问目的不一致，将被拒绝入境
+									<div class="divBox">
+										<p class="red">※ 但，以下人员可无签证入境。</p>
+										<ul class="listDash">
+											<li>作为已获再入境许可的人员或免办再入境许可的人员，在许可或免办期到期之前入境时</li>
+											<li>作为与大韩民国签署免签协定的国家公民，根据此协定成为免签对象时</li>
+											<li>出于国际友谊、旅游或为大韩民国的利益入境的人员，同时根据总统令规定已另行获得入境许可时</li>
+											<li>获发难民旅行证件后出境，并在有效期满前入境的人员</li>
+										</ul>
+									</div>
+								</li>
+								<li>不具有出入境管理法所规定的禁止入境情形</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>签证的类型和有效期</th>
+						<td>
+							<p>
+								单次签证 : 有效期内只能入境1次<br>
+								两次签证 : 有效期(6个月)内入境2次<br>
+								多次签证 : 有效期(1年、3年、5年)内不限次数地入境<br>
+							</p>
+							<div class="imgWrap">
+								<img src="../static/images/img_visa.jpg" alt="대한민국 비자 견본이미지(다음내용 참고)">
+								<p>대한민국 비자</p>
+							</div>
+							<ol class="listNum">
+								<li><span><i>1</i>비자번호</span> : 비자발급 일련번호</li>
+								<li><span><i>2</i>체류자격</span> : 외국인이 국내에 체류하면서 행할 수 있는 사회적인 활동이나 신분의 종류</li>
+								<li><span><i>3</i>체류기간</span> : 대한민국 입국일로부터 기산하여 체류할 수 있는 기간</li>
+								<li><span><i>4</i>종류</span> : 비자의 종류(S: 단수비자, D: 더블비자, M: 복수비자)</li>
+								<li><span><i>5</i>발급일</span> : 비자 발급일자를 의미</li>
+								<li><span><i>6</i>입국만료일</span> : 비자유효기간을 의미 (만료일까지 한국에 입구하여야 하며, 만료일이 지난 비자는 무효임)</li>
+								<li><span><i>7</i>발급지</span> : 비자를 발금한 재외공관에 대한 정보</li>
+							</ol>
+						</td>
+					</tr>
+					<tr>
+						<th>入境申告书(入境卡)</th>
+						<td>
+							<p>入境大韩民国的外国人需在大韩民国出入境口岸接受出入境审查官的入境审查<br>接受入境审查时应出示填写旅行目的和国内滞留地等内容的大韩民国入境卡(表格第41之2号)和护照。</p>
+							<div class="imgWrap">
+								<img src="../static/images/img_arrivalcard.jpg" alt="대한민국 입국신고서(서식 제41의2호) 이미지">
+								<p>대한민국 입국신고서</p>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>外国人登记对象及程序</h3>
+			<table class="txtTable">
+				<colgroup>
+					<col style="width: 140px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>外国人登记对象</th>
+						<td>
+							<p>下列外国人应自入境之日起90天内在居住地所属出入境管理事务所办理外国人登记。</p>
+							<ul class="listDot">
+								<li>自入境之日起拟在韩滞留90天以上的外国人</li>
+								<li>丧失大韩民国国籍并已取得外国国籍的外国人，或在韩国出生的外国人被赋予滞留资格后从当日起拟在韩滞留90天以上的外国</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>外国人登录事项变更申报义务</th>
+						<td>
+							<p>外国人登记的事项中，信息发生变更的，要在变更之日起14天内，由本人或代理人到管辖的出入境管理事务所办理外国人登记事项变更申报 <br>（外国人登记事项变更日起14天内不到管辖出入境管理事务所申报的，按照《出入境管理法》第35条处以罚款）</p>
+							<ul class="listNumber">
+								<li>申报事由
+									<ul class="listDot">
+										<li>变更姓名、性别、出生日期及国籍时</li>
+										<li>护照号码、签发日期及有效期有变化时</li>
+										<li>文化艺术(D-1)、留学(D-2)、一般研修(D-4)至贸易经营(D-9)资格外国人所属机关或团体有变化(包括变更名称)时</li>
+										<li>采访(D-5)、宗教(D-6)、常驻(D-7)、企业投资(D-8)、贸易经营(D-9) 资格外国人所属机关或团体名称有变化时</li>
+									</ul>
+								</li>
+								<li>申报所需材料
+									<ul class="listDot">
+										<li>护照及外国人登录证</li>
+										<li>外国人登录事项变更申请表</li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>外国人的活动范围和就业</h3>
+			<table class="txtTable">
+				<colgroup>
+					<col style="width: 140px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>外国人的活动范围和就业</th>
+						<td>
+							<ul class="listDot">
+								<li>外国人应遵守签证上面记载的或入境时被赋予的滞留资格和滞留期的范围。</li>
+								<li>如欲在大韩民国就业，应持有允许就业的滞留资格，并只限在指定工作地点工作。</li>
+								<li>允许就业的滞留资格如下：
+									<div class="divBox">
+										<p>短期就业(C-4)、教师(E-1)、会话指导(E-2)、研究(E-3)技术指导(E-4)、专门职业(E-5) 、艺术演出(E-6)、特定活动(E-7)、<br>非专门就业(E-9)、船员就业(E-10)、居住(F-2)、在外同胞(F-4)、永住(F-5)、结婚移民(F-6)、观光就业(H-1)、访问就业(H-2)</p>
+									</div>
+								</li>
+								<li>在未提前办理出入国管理事务所的许可及登记手续的情况下，同办签证时签约的雇主之外的其他雇主另行签订雇佣合约并进行就业活动，即便持有允许就业的滞留资格，上述行为原则上也属于违反签证条件的行为。</li>
+								<li>变更雇主、工作地时，须向所属出入国管理事务所或外国人综合服务中心(无区号直拨1345)咨询相关程序，并提前或一定期限内向出入境管理事务所办理手续。</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>签证导航</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 ( 외국인종합안내센터 : 국번없이 1345 )</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+
+	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<title>수수료</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style_m.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body>
+
+<!-- 수수료 조정 국가 및 금액 -->
+<div class="popWrap" id="commisionCountry1">
+	<div class="popDim"></div>
+	<div class="popBox countryList">
+		<button type="button" class="closePopBtn closePop">close</button>
+		<div class="titleWrap">
+			<h2>Countries with Adjusted Visa Fees</h2>
+		</div>
+		<div class="popArea">
+			<h3>Countries with Adjusted Visa Fees</h3>
+			<table class="table country1">
+				<colgroup>
+					<col style="width: 28%" />
+					<col style="width: 18%" />
+					<col style="width: 18%" />
+					<col style="width: 18%" />
+					<col style="width: 18%" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th rowspan="2">Country</th>
+						<th colspan="2">Single-entry Visa</th>
+						<th rowspan="2">Double-entry<br>Visa</th>
+						<th rowspan="2">Multiple-entry<br>Visa</th>
+					</tr>
+					<tr>
+						<th>90 days<br>or less</th>
+						<th>91 days<br>or longer</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><p>Ghana</p></td>
+						<td>USD 50</td>
+						<td>USD 80</td>
+						<td>USD 90</td>
+						<td>USD 100</td>
+					</tr>
+					<tr>
+						<td><p>Russia</p></td>
+						<td>USD 50</td>
+						<td>USD 80</td>
+						<td>USD 90</td>
+						<td>USD 120</td>
+					</tr>
+					<tr>
+						<td><p>Vietnam</p></td>
+						<td>USD 20</td>
+						<td>USD 50</td>
+						<td>USD 60</td>
+						<td>USD 80</td>
+					</tr>	
+					<tr>
+						<td><p>Senegal</p></td>
+						<td>USD 50</td>
+						<td>USD 100</td>
+						<td>USD 120</td>
+						<td>USD 150</td>
+					</tr>
+					<tr>
+						<td><p>Azerbaijan</p></td>
+						<td>USD 50</td>
+						<td>USD 80</td>
+						<td>USD 120</td>
+						<td>USD 150</td>
+					</tr>
+					<tr>
+						<td><p>United Kingdom</p></td>
+						<td>USD 130</td>
+						<td>USD 200</td>
+						<td>USD 220</td>
+						<td>USD 250</td>
+					</tr>
+					<tr>
+						<td><p>Austria</p></td>
+						<td>USD 50</td>
+						<td>USD 50</td>
+						<td>USD 70</td>
+						<td>USD 80</td>
+					</tr>
+					<tr>
+						<td><p>Uzbekistan</p></td>
+						<td>USD 50</td>
+						<td>USD 70</td>
+						<td>USD 80</td>
+						<td>USD 100</td>
+					</tr>
+					<tr>
+						<td><p>Iran</p></td>
+						<td>USD 50</td>
+						<td>USD 80</td>
+						<td>USD 90</td>
+						<td>USD 120</td>
+					</tr>
+					<tr>
+						<td><p>Kyrgyz Republic</p></td>
+						<td>USD 50</td>
+						<td>USD 70</td>
+						<td>USD 80</td>
+						<td>USD 100</td>
+					</tr>
+					<tr>
+						<td><p>Tajikistan</p></td>
+						<td>USD 50</td>
+						<td>USD 50</td>
+						<td>USD 70</td>
+						<td>USD 80</td>
+					</tr>
+					<tr>
+						<td><p>Australia</p></td>
+						<td>USD 80</td>
+						<td>USD 120</td>
+						<td>USD 130</td>
+						<td>USD 150</td>
+					</tr>
+					<tr>
+						<td><p>U.S.</p></td>
+						<td>USD 45</td>
+						<td>USD 45</td>
+						<td>USD 45</td>
+						<td>USD 45</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- //수수료 조정 국가 및 금액 -->
+
+<!-- 협정에 의한 수수료 면제 국가 -->
+<div class="popWrap" id="commisionCountry2">
+	<div class="popDim"></div>
+	<div class="popBox countryList">
+		<button type="button" class="closePopBtn closePop">닫기</button>
+		<div class="titleWrap">
+			<h2>Countries with Exempted Visa Fees</h2>
+		</div>
+		<div class="popArea">
+			<h3>Countries with Exempted Visa Fees</h3>
+			<table class="table country2">
+				<colgroup>
+					<col style="width: 43%" />
+					<col style="width: 57%" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Country</th>
+						<th>Conditions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="taL"><p>Spain, Italy, Taiwan, Japan, Chinese Taipei, Ukraine, Barbados, Colombia, Peru, Liberia, Dominican Rep.</p></td>
+						<td class="taL"><p>All visas regardless of the period of stay</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>Sweden</p></td>
+						<td class="taL"><p>90 days or less Visa</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>Israel</p></td>
+						<td class="taL"><p>91 days or longer Visa</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>Paraguay, Benin, Romania, Brazil, Uruguay, Cyprus, Mexico, Algeria, Guatemala</p></td>
+						<td class="taL"><p>91 days or longer visa for a diplomatic or official passport holder</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>Mongolia</p></td>
+						<td class="taL"><p>31 days or longer visa for a diplomatic or official passport holder <br>90 days or less visa for a regular passport holder</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>Venezuela</p></td>
+						<td class="taL"><p>31 days or longer visa for a diplomatic or official passport holder</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>Philippines</p></td>
+						<td class="taL"><p>59 days or less visa for business or tour (All of C-3)</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>Australia</p></td>
+						<td class="taL"><p>Multiple visa under 90 days for short-term commercial (C-3-4)</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>Germany</p></td>
+						<td class="taL"><p>Student (D-2), Korean Language Trainee (D-4) for a student with an admission to a university (D-4), Intra-Company Transferee (D-7), Corporate/Foreign Investor (D-8), International Trade (D-9), Foreign National of Special Ability (E-7) for a person who engages in marketing</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>China</p></td>
+						<td class="taL">
+							<p>Diplomatic officials and accompanying family (a spouse, minor children, parents, and parents-in-law) : A-1, incumbency: 3 years</p>
+							<p>Diplomatic officials and family (a spouse, children, parents, and parents-in-law) : C-3-1 multiple-entry visa valid for 1 year, with the period of stay of 90 days</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="taL"><p>Japan, Hong Kong, France</p></td>	
+						<td class="taL"><p>Working Holiday (H-1)</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>U.S.</p></td>	
+						<td class="taL"><p>Diplomat (A-1), Foreign Government Official (A-2), and International Agreement (A-3)</p></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- //협정에 의한 수수료 면제 국가 -->
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">Visa Navigator</a></h1>
+			<span class="btnWrap">
+				<button type="button" class="searchBtn showsearchBar">Search Button</button>
+				<button type="button" class="gnbBtn">Open Menu</button>				
+			</span>
+		</div>
+		<nav class="gnbWrap">
+			<div class="navBox">
+				<!-- 언어변경 -->
+				<ul class="lang">
+					<li class="active"><a href="#">KOR</a></li>
+					<li><a href="#">ENG</a></li>
+					<li><a href="#">中文</a></li>
+				</ul>
+				<!-- //언어변경 -->
+				<!-- GNB -->
+				<ul class="gnb">
+					<li><a href="#">Searching Visa</a></li>
+					<li><a href="#">Visa type by purpose of entry</a></li>
+					<li><a href="#">How to apply</a></li>
+					<li class="active"><a href="#">Visa Fees</a></li>
+					<li><a href="#">Entry & Stay</a></li>
+				</ul>
+				<!-- //GNB -->
+				<button type="button" class="gnbClose">Close Menu</button>
+			</div>
+		</nav>
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<span class="inputWrap">
+					<input type="text" placeholder="검색어를 입력하세요.">
+					<button type="button" class="btnDel">Delete</button>
+				</span>
+				<input type="button" value="검색" class="searchBtn">
+			</div>
+			<button type="button" class="back">Close Searching</button>			
+		</div>
+		<!-- //검색창 -->
+	</div>
+	<div class="contents">
+
+		<div class="frontCont">
+
+			<h2>Visa Fees</h2>
+			<h3>Visa Application Fee for Each Visa Type <em>(in USD)</em></h3>
+			<div class="btnManual">
+				<a href="#commisionCountry1" class="openPop">Countries with Adjusted Visa Fees</a>
+				<a href="#commisionCountry2" class="openPop">Countries with Exempted Visa Fees</a>
+			</div>
+			<table class="table">
+				<colgroup>
+					<col style="width: 70%">
+					<col style="width: auto;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Type of Visa</th>
+						<th>Fee</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>90 days or less Single-entry visa</td>
+						<td>USD 40</td>
+					</tr>
+					<tr>
+						<td>91 days or longer Single-entry visa</td>
+						<td>USD 60</td>
+					</tr>
+					<tr>
+						<td>Double-entry visa usable up to 2 times</td>
+						<td>USD 70</td>
+					</tr>
+					<tr>
+						<td>Multiple-entry visa</td>
+						<td>USD 90</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul class="listDot">
+				<li>Despite the standard visa fee regulations, fees may be differently applied according to international practices, the principle of reciprocity, national agreements, <br>or in the cases deemed necessary by the Enforcement Decree of the Ministry of Justice.</li>
+				<li>Visa fee for a Chinese group tourist whose visa is applied by a designated travel agency is USD 15/person.</li>
+				<li>Visa fee for a C-3 single visa for Vietnamese is approximately USD 30.</li>
+				<li>Since the visa fee covers the costs related to the visa application review such as processing and evaluation, your application fee will not be refundable even if your application is denied.</li>
+			</ul>
+			<hr class="line">
+			<h3>e-Application fee</h3>
+			<p>Visa application fees processed on the Visa Portal must be paid in USD. If you pay your visa application fee with a credit card, the amount that you pay may be different from the amount you are billed according to the exchange rate.</p>
+			<h4>Surcharge</h4>
+			<p class="txt">If you pay your visa fee on the Visa portal, you will be charged additional fees for credit card usage and electronic payment services.</p>
+			<h4>Payment Methods</h4>
+			<p class="txt">International Credit Card</p>
+			<ul class="cardList">
+				<li>
+					<span><img src="../static/images/m/img_creditcard1.png" alt=""></span>
+					<p>VISA</p>
+				</li>
+				<li>
+					<span><img src="../static/images/m/img_creditcard2.png" alt=""></span>
+					<p>Master</p>
+				</li>
+				<li>
+					<span><img src="../static/images/m/img_creditcard3.png" alt=""></span>
+					<p>JCB</p>
+				</li>
+				<li>
+					<span><img src="../static/images/m/img_creditcard4.png" alt=""></span>
+					<p>American Express</p>
+				</li>
+				<li>
+					<span><img src="../static/images/m/img_creditcard5.png" alt=""></span>
+					<p>Unionpay</p>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>Visa Navigator</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 <br>(외국인종합안내센터 : 국번없이 1345)</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+
+	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
+</div>
+	
+</body>
+</html>

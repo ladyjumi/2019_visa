@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>수수료</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body>
+
+<!-- 수수료 조정 국가 및 금액 -->
+<div class="popWrap" id="commisionCountry1">
+	<div class="popDim"></div>
+	<div class="popBox countryList">
+		<button type="button" class="closePopBtn closePop">关闭</button>
+		<div class="titleWrap">
+			<h2>手续费调整的国家 查询 </h2>
+		</div>
+		<div class="popArea">
+			<h3>手续费调整的国家 查询 </h3>
+			<table class="table country1">
+				<colgroup>
+					<col style="width: 320px" />
+					<col style="width: 160px" />
+					<col style="width: 160px" />
+					<col style="width: 110px" />
+					<col style="width: 110px" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th rowspan="2">国家</th>
+						<th colspan="2">单次签证</th>
+						<th rowspan="2">两次签证</th>
+						<th rowspan="2">多次签证</th>
+					</tr>
+					<tr>
+						<th>滞留期90天以内</th>
+						<th>滞留期91天以上</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><p>加纳</p></td>
+						<td>50 美元</td>
+						<td>80 美元</td>
+						<td>90 美元</td>
+						<td>100 美元</td>
+					</tr>
+					<tr>
+						<td><p>러시아</p></td>
+						<td>50 美元</td>
+						<td>80 美元</td>
+						<td>90 美元</td>
+						<td>120 美元</td>
+					</tr>
+					<tr>
+						<td><p>베트남</p></td>
+						<td>20 美元</td>
+						<td>50 美元</td>
+						<td>60 美元</td>
+						<td>80 美元</td>
+					</tr>	
+					<tr>
+						<td><p>세네갈</p></td>
+						<td>50 美元</td>
+						<td>100 美元</td>
+						<td>120 美元</td>
+						<td>150 美元</td>
+					</tr>
+					<tr>
+						<td><p>아제르바이잔</p></td>
+						<td>50 美元</td>
+						<td>80 美元</td>
+						<td>120 美元</td>
+						<td>150 美元</td>
+					</tr>
+					<tr>
+						<td><p>영국</p></td>
+						<td>130 美元</td>
+						<td>200 美元</td>
+						<td>220 美元</td>
+						<td>250 美元</td>
+					</tr>
+					<tr>
+						<td><p>오스트리아</p></td>
+						<td>50 美元</td>
+						<td>50 美元</td>
+						<td>70 美元</td>
+						<td>80 美元</td>
+					</tr>
+					<tr>
+						<td><p>우즈베키스탄</p></td>
+						<td>50 美元</td>
+						<td>70 美元</td>
+						<td>80 美元</td>
+						<td>100 美元</td>
+					</tr>
+					<tr>
+						<td><p>이란</p></td>
+						<td>50 美元</td>
+						<td>80 美元</td>
+						<td>90 美元</td>
+						<td>120 美元</td>
+					</tr>
+					<tr>
+						<td><p>키르기즈</p></td>
+						<td>50 美元</td>
+						<td>70 美元</td>
+						<td>80 美元</td>
+						<td>100 美元</td>
+					</tr>
+					<tr>
+						<td><p>타지키스탄</p></td>
+						<td>50 美元</td>
+						<td>50 美元</td>
+						<td>70 美元</td>
+						<td>80 美元</td>
+					</tr>
+					<tr>
+						<td><p>호주</p></td>
+						<td>80 美元</td>
+						<td>120 美元</td>
+						<td>130 美元</td>
+						<td>150 美元</td>
+					</tr>
+					<tr>
+						<td><p>미국</p></td>
+						<td>45 美元</td>
+						<td>45 美元</td>
+						<td>45 美元</td>
+						<td>45 美元</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btnGroup">
+				<button type="button" class="btn red closePop">关闭</button>	
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //수수료 조정 국가 및 금액 -->
+
+<!-- 협정에 의한 수수료 면제 국가 -->
+<div class="popWrap" id="commisionCountry2">
+	<div class="popDim"></div>
+	<div class="popBox countryList">
+		<button type="button" class="closePopBtn closePop">关闭</button>
+		<div class="titleWrap">
+			<h2>签订免除签证费协定的国家</h2>
+		</div>
+		<div class="popArea">
+			<h3>签订免除签证费协定的国家</h3>
+			<table class="table country2">
+				<colgroup>
+					<col style="width: 330px" />
+					<col style="width: 530px" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>免除对象国</th>
+						<th>免除条件</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="taL"><p>西班牙、意大利、泰国、日本、台湾、乌克兰、巴巴多斯、哥伦比亚、贝鲁、利比里亚、多米尼家共和国</p></td>
+						<td class="taL"><p>所有签证(与滞留时限无关)</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>스웨덴</p></td>
+						<td class="taL"><p>체류기간을 90일 이하로 발급하는 비자</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>이스라엘</p></td>
+						<td class="taL"><p>체류기간 91일 이상으로 발급하는 비자</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>파라과이, 베냉, 루마니아, 브라질, 우루과이, 과테말라, 사이프러스, 멕시코, 알제리</p></td>
+						<td class="taL"><p>외교&middot;관용여권 소지자에 대하여 체류기간 91일 이상으로 발급하는 비자</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>몽골</p></td>
+						<td class="taL"><p>외교&middot;관용여권 소지자로 체류기간을 31일 이상으로 발급하는 비자<br />일반여권 소지자에 대하여 체류기간 90일 이하로 발급하는 비자</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>베네수엘라</p></td>
+						<td class="taL"><p>외교&middot;관용여권 소지자에 대하여 체류기간 31일 이상으로 발급하는 비자</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>필리핀</p></td>
+						<td class="taL"><p>상용 또는 관광 목적(C-3 계열 전체)으로 체류기간 59일 이하로 발급하는 비자</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>호주</p></td>
+						<td class="taL"><p>일반상용(C-3-4) 목적의 체류기간을 90일 이하로 발급하는 유효기간 1년의 복수비자</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>독일</p></td>
+						<td class="taL"><p>유학(D-2), 대학입학허가를 받아 대학진학을 목적으로 어학연수과정을 이수하는 학생에 대한 일반연수(D-4), 주재(D-7), 기업투자(D-8), 무역경영(D-9), 마케팅 분야 종사 특정활동(E-7)자격의 비자</p></td>			
+					</tr>
+					<tr>
+						<td class="taL"><p>중국</p></td>
+						<td class="taL">
+							<p>외교공관원 또는 영사관원과 그들의 동반 배우자, 미성년자녀, 부모 및 배우자의 부모  : A-1, 재임기간, 3년</p>
+							<p>외교공관원 또는 영사관원의 비동반 배우자ּ, 자녀, 부모 및 배우자의 부모에 대하여 발급하는 체류기간 90일, 유효기간 1년 단기일반(C-3-1) 복수비자</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="taL"><p>일본, 홍콩, 프랑스</p></td>	
+						<td class="taL"><p>H-1(관광취업)</p></td>
+					</tr>
+					<tr>
+						<td class="taL"><p>미국</p></td>	
+						<td class="taL"><p>외교(A-1), 관용(A-2) 내지 협정(A-3)</p></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btnGroup">
+				<button type="button" class="btn red closePop">关闭</button>		
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //협정에 의한 수수료 면제 국가 -->
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">签证导航</a></h1>
+			<!-- GNB -->
+			<ul class="gnb">
+				<li><a href="#">签证 搜索</a></li>
+				<li><a href="#">入境目的与签证种类</a></li>
+				<li><a href="#">签证申请程序介绍</a></li>
+				<li class="active"><a href="#">签证费介绍</a></li>
+				<li><a href="#">入境及滞留</a></li>
+			</ul>
+			<!-- //GNB -->
+			<div class="topMenu">
+				<!-- 언어변경 -->
+				<select class="lang">
+					<option value="">한국어</option>
+					<option value="">ENGLISH</option>
+					<option value="">中文</option>
+				</select>
+				<!-- //언어변경 -->
+				<button type="button" class="searchBtn showsearchBar">검색버튼</button>
+			</div>
+		</div>
+
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<div class="inner">
+					<span class="searchBox">
+						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
+						<input type="button" value="검색" class="searchBtn">
+					</span>
+				</div>
+			</div>
+			<div class="dimmed"></div>
+		</div>
+		<!-- //검색창 -->
+	</div>
+
+	<div class="contents">
+
+		<div class="frontCont">
+
+			<h2>수수료</h2>
+			<h3>申请签证的基本手续费<em>(单位：美元)</em></h3>
+			<div class="tableTop topRight btnManual">
+				<a href="#commisionCountry1" class="openPop">手续费调整的国家 查询</a>
+				<a href="#commisionCountry2" class="openPop">手续费调整的国家及金额</a>
+			</div>
+			<table class="table">
+				<colgroup>
+					<col style="width: 60%">
+					<col style="width: auto;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>签证区分</th>
+						<th>金额</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>滞留期90天以内的单次签证</td>
+						<td>40 美元</td>
+					</tr>
+					<tr>
+						<td>滞留期91天以上的单次签证</td>
+						<td>60 美元</td>
+					</tr>
+					<tr>
+						<td>有效期内入境2次的两次签证</td>
+						<td>70 美元</td>
+					</tr>
+					<tr>
+						<td>有效期内不限入境次数的多次签证</td>
+						<td>90 美元</td>
+					</tr>
+				</tbody>
+			</table>
+			<ul class="listDot">
+				<li>按照相关规定将征收签证手续费，但若根据国际惯例或相互主义原则以及其他法务部所认可的特殊理由，可免收签证费或者另订手续费 另外，两国间协议有对签证费另行规定的，将根据协议内容收取签证费。</li>
+				<li>指定旅行社的团体旅游签证审查费：相当于15美元/人次</li>
+				<li>越南公民C-3系列单次签证：相当于30美元</li>
+				<li>签证费是处理签证审查业务所需费用，所以不管签证能否签发，申请时必须缴纳。签证拒签也不退还所交费用。</li>
+			</ul>
+			<hr class="line">
+			<h3>电子签证费</h3>
+			<p>签证网站上需用美元缴纳签证审查费。 如用信用卡付费，由于支付日期与还款日期的汇率浮动，应付金额会有所不同，敬请留意。</p>
+			<h4>追加手续费</h4>
+			<p class="txt">在签证网站上申请电子签证时，除了签证审查手续费以外，还将产生刷卡或电子支付代办服务的追加手续费。</p>
+			<h4>可使用的支付方式</h4>
+			<p class="txt">国际通用信用卡</p>
+			<ul class="cardList">
+				<li>
+					<span><img src="../static/images/img_creditcard1.png" alt=""></span>
+					<p>VISA</p>
+				</li>
+				<li>
+					<span><img src="../static/images/img_creditcard2.png" alt=""></span>
+					<p>Master</p>
+				</li>
+				<li>
+					<span><img src="../static/images/img_creditcard3.png" alt=""></span>
+					<p>JCB</p>
+				</li>
+				<li>
+					<span><img src="../static/images/img_creditcard4.png" alt=""></span>
+					<p>American Express</p>
+				</li>
+				<li>
+					<span><img src="../static/images/img_creditcard5.png" alt=""></span>
+					<p>Unionpay</p>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>签证导航</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 ( 외국인종합안내센터 : 국번없이 1345 )</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+
+	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
+</div>
+	
+</body>
+</html>

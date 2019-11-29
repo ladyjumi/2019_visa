@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
 	<script src="../static/js/ui.js"></script>
 </head>
 <body class="admin">
@@ -15,7 +16,7 @@
 
 	<div class="header">
 		<div class="inner">
-			<h1><a href="#">비자네비게이터 Admin</a></h1>
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
 
 			<!-- GNB -->
 			<ul class="gnb">
@@ -30,17 +31,11 @@
 					<span>
 						[최종접속시간 
 						<em>2019.07.08</em>
-						<em>12:13:15</em>
-						/
-						<em>106.247.228.114</em>]
+						<em>12:13:15</em>]
 					</span>
 				</p>
 				<a href="#">로그아웃</a>
 				<a href="#">비밀번호 변경</a>
-				<span>
-					<input type="text" placeholder="검색" class="searchBox">
-					<button type="button" class="searchBtn">검색버튼</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -68,19 +63,14 @@
 							<li><a href="#">수수료 면제국가 관리</a></li>
 						</ul>
 					</li>
-					<li>
-						<span>비자표출 관리</span>
-						<ul class="subM depth2">
-							<li><a href="#">법무부</a></li>
-							<li><a href="#">중국(광저우)</a></li>
-						</ul>
-					</li>
+					<li><a href="">비자표출 관리</a></li>
 					<li>
 						<span>변경 이력 확인</span>
 						<ul class="subM depth2">
-							<li><a href="#">체류자격 코드 이력</a></li>
-							<li><a href="#">체류자격 항목 이력</a></li>
-							<li class="active"><a href="#">체류자격 등록 이력</a></li>
+							<li><a href="#">STEP1. 코드 생성 이력</a></li>
+							<li><a href="#">STEP2. 기본정보관리 이력</a></li>
+							<li><a href="#">STEP3. 항목관리 이력</a></li>
+							<li class="active"><a href="#">STEP4. 노출관리 이력</a></li>
 							<li><a href="#">첨부파일 등록 이력</a></li>
 							<li><span>수수료 변경 이력</span>
 								<ul class="subM depth3">
@@ -98,7 +88,7 @@
 
 			<div class="cont">
 
-				<h3>체류자격 등록 이력</h3>
+				<h3>STEP4. 노출관리 이력</h3>
 
 				<!-- 2단영역 -->
 				<div class="columnWrap col2">
@@ -106,20 +96,61 @@
 					<!-- 비교계정1 -->
 					<div class="account">
 						
-						<div class="titleWrap">
-							<b>관리계정 : <em>Admin1</em></b>
-							<span class="date">작성일 : 2019-09-28</span>
-						</div>
-
-						<h4>체류자격 등록 관리</h4>
+						<!-- 작성정보 공통영역 -->
 						<ul class="optionTable">
 							<li>
 								<div class="cell">
-									<p class="title">체류자격</p>
-									<div class="box"><input type="text" class="inpT" value="단기일반" disabled></div>
+									<p class="title">계정종류</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">법무부</option>
+											<option value="">공관</option>
+											<option value="">센터</option>
+										</select>
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">중국/광저우</option>
+											<option value="">인도네시아/자카르타</option>
+											<option value="">베트남/호치민2</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">관리계정</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">visanavadmin4@moj.go.kr</option>
+											<option value="">abc123@moj.go.ke</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">작성일</p>
+									<div class="box">
+										<span class="datePicker">
+											<span class="calenderBox">
+												<input type="text" class=" dateFrom inpT" name="from" readonly="" value="날짜선택">
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title">작성시간</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">21:43:22</option>
+										</select>
+									</div>
 								</div>
 							</li>
 						</ul>
+						<!-- 작성정보 공통영역 -->
 
 						<h5>항목등록</h5>
 						<table class="table">
@@ -162,7 +193,7 @@
 								<button type="button" class="openBtn"></button>
 							</div>
 							<div class="contBox">
-								<textarea placeholder="내용을 입력하세요." disabled></textarea>
+								<div class="textarea">내용을 입력하세요.</div>
 								<ul class="addOption">
 									<li>
 										<label class="inpD">
@@ -195,11 +226,11 @@
 											<p class="title">첨부파일</p>
 											<div class="box row">
 												<div class="boxLine down">
-													<input type="text" readonly="" class="inpT" disabled>
+													<div class="inpT"></div>
 													<button type="button" class="btn grey">파일 다운로드</button>
 												</div>
 												<div class="boxLine down">
-													<input type="text" readonly="" class="inpT" disabled>
+													<div class="inpT"></div>
 													<button type="button" class="btn grey">파일 다운로드</button>
 												</div>
 											</div>
@@ -210,10 +241,10 @@
 											<p class="title">URL 입력</p>
 											<div class="box row">
 												<div class="boxLine">
-													<input type="text" class="inpT" disabled>
+													<div class="inpT"></div>
 												</div>
 												<div class="boxLine">
-													<input type="text" class="inpT" disabled>
+													<div class="inpT"></div>
 												</div>
 											</div>
 										</div>
@@ -239,8 +270,12 @@
 								</label>
 							</div>
 						</div>
+
 						<hr class="line">
+
 						<strong class="titleTxtBox">재외공관 신청발급 대상</strong>
+
+						<!-- 국문 -->
 						<div class="registBox viewBox open">
 							<div class="titleBox">
 								<p class="taC">국문</p>
@@ -252,12 +287,7 @@
 										<div class="cell">
 											<p class="title">기간</p>
 											<div class="box">
-												<input type="text" class="inpT inpNum" value="90" disabled>
-												<select class="selectD" disabled>
-													<option value="">일</option>
-													<option value="">월</option>
-													<option value="">년</option>
-												</select>
+												<div class="inpT"><span>333</span> 일</div>
 											</div>
 										</div>
 									</li>
@@ -265,20 +295,7 @@
 										<div class="cell">
 											<p class="title">유효기간</p>
 											<div class="box">
-												<input type="text" class="inpT inpNum" value="3" disabled>
-												<select class="selectD" disabled>
-													<option value="">일</option>
-													<option value="" selected="">월</option>
-													<option value="">년</option>
-												</select>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="cell">
-											<p class="title">연령</p>
-											<div class="box">
-												<input type="text" class="inpT inpNum" value="13" disabled>
+												<div class="inpT"><span>333</span> 일</div>
 											</div>
 										</div>
 									</li>
@@ -286,41 +303,191 @@
 										<div class="cell">
 											<p class="title">대상</p>
 											<div class="box">
-												<textarea disabled>체류기간대한민국과 관광취업에 관한 협정이나 양해각서를 체결한 국가의 국민으로서 관광을 주된 목적으로 하면서 이에 수반되는 관광경비 충당을 위하여공항만 단기간 취업 활동을 하려는 자</textarea>
+												<div class="textarea">체류기간대한민국과 관광취업에 관한 협정이나 양해각서를 체결한 국가의 국민으로서 관광을 주된 목적으로 하면서 이에 수반되는 관광경비 충당을 위하여공항만 단기간 취업 활동을 하려는 자</div>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="cell">
 											<p class="title">첨부서류</p>
-											<div class="box"><textarea disabled>① 사증발급신청서 (별지 제17호 서식), 여권, 표준규격사진 1매, 수수료
-② 교육기관 사업자등록증 (또는 고유번호증) 사본*
-③ 특정 연구과정임을 입증하는 서류(외국인연구생 확인서)</textarea></div>
+											<div class="box">
+												<div class="textarea">
+													① 사증발급신청서 (별지 제17호 서식), 여권, 표준규격사진 1매, 수수료 <br>
+													② 교육기관 사업자등록증 (또는 고유번호증) 사본* <br>
+													③ 특정 연구과정임을 입증하는 서류(외국인연구생 확인서)
+												</div>
+											</div>
 										</div>
 									</li>
 									<li>
 										<div class="cell">
 											<p class="title">체류기간 설명</p>
-											<div class="box"><textarea disabled>3년간 유효한 복수 비자를 신청할 수 있습니다. 비자발급 시 체류기간은 최대 90일까지 부여됩니다.</textarea></div>
+											<div class="box">
+												<div class="textarea">3년간 유효한 복수 비자를 신청할 수 있습니다. 비자발급 시 체류기간은 최대 90일까지 부여됩니다.</div>
+											</div>
 										</div>
 									</li>
 									<li>
 										<div class="cell">
 											<p class="title">참고</p>
-											<div class="box"><textarea disabled></textarea></div>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
 										</div>
 									</li>
 								</ul>
+							</div>
+						</div>
+						<!-- //국문 -->
+
+						<!-- 중문 -->
+						<div class="registBox viewBox">
+							<div class="titleBox">
+								<p class="taC">중문</p>
+								<button type="button" class="openBtn"></button>
+							</div>
+							<div class="contBox">
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title">기간</p>
+											<div class="box">
+												<div class="inpT"><span>333</span> 일</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">유효기간</p>
+											<div class="box">
+												<div class="inpT"><span>333</span> 일</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">대상</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">첨부서류</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">체류기간 설명</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">참고</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //중문 -->
+
+						<!-- 영문 -->
+						<div class="registBox viewBox">
+							<div class="titleBox">
+								<p class="taC">영문</p>
+								<button type="button" class="openBtn"></button>
+							</div>
+							<div class="contBox">
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title">기간</p>
+											<div class="box">
+												<div class="inpT"><span>333</span> 일</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">유효기간</p>
+											<div class="box">
+												<div class="inpT"><span>333</span> 일</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">대상</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">첨부서류</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">체류기간 설명</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">참고</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //영문 -->
+
+						<!-- 1127 수정 -->
+						<hr class="line">
+
+						<strong class="titleTxtBox">EDIT</strong>
+
+						<div class="moddable">
+							<div class="registBox">
 								<strong class="title">광저우</strong>
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title">제목</p>
+											<div class="box">
+												<div class="inpT">title text</div>
+											</div>
+										</div>
+									</li>
+								</ul>
 								<div class="editWrap">
 									<!-- 에디터영역 -->
-									<div class="editArea">에디터 영역</div>
+									<div class="editArea"></div>
 									<!-- //에디터영역 -->
 									<div class="attachWrap">
 										<div class="attachBox">
-											<p>첨부파일</p>
 											<span class="inpFileWrap">
-												<input type="text" readonly="" class="inpT" disabled>
+												<div class="inpT"></div>
 												<label for=""><b>파일 찾기</b><input type="file" disabled></label>
 											</span>
 										</div>
@@ -329,28 +496,99 @@
 							</div>
 						</div>
 
+						<div class="moddable">
+							<div class="registBox">
+								<strong class="title">광저우 비자 센터</strong>
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title">제목</p>
+											<div class="box">
+												<div class="inpT">title text</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="editWrap">
+									<!-- 에디터영역 -->
+									<div class="editArea"></div>
+									<!-- //에디터영역 -->
+									<div class="attachWrap">
+										<div class="attachBox">
+											<span class="inpFileWrap">
+												<div class="inpT"></div>
+												<label for=""><b>파일 찾기</b><input type="file" disabled></label>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //1127 수정 -->
+
 						<h5><em class="red">*</em>등록사유</h5>
-						<textarea disabled>신규등록</textarea>
+						<div class="textarea">신규등록</div>
 					</div>
 					<!-- //비교계정1 -->
 
 					<!-- 비교계정2 -->
 					<div class="account">
 						
-						<div class="titleWrap">
-							<b>관리계정 : <em>Admin2</em></b>
-							<span class="date">작성일 : 2019-09-28</span>
-						</div>
-
-						<h4>체류자격 등록 관리</h4>
+						<!-- 작성정보 공통영역 -->
 						<ul class="optionTable">
 							<li>
 								<div class="cell">
-									<p class="title">체류자격</p>
-									<div class="box"><input type="text" class="inpT" value="단기일반" disabled></div>
+									<p class="title">계정종류</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">법무부</option>
+											<option value="">공관</option>
+											<option value="">센터</option>
+										</select>
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">중국/광저우</option>
+											<option value="">인도네시아/자카르타</option>
+											<option value="">베트남/호치민2</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">관리계정</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">visanavadmin4@moj.go.kr</option>
+											<option value="">abc123@moj.go.ke</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">작성일</p>
+									<div class="box">
+										<span class="datePicker">
+											<span class="calenderBox">
+												<input type="text" class=" dateFrom inpT" name="from" readonly="" value="날짜선택">
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title">작성시간</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">21:43:22</option>
+										</select>
+									</div>
 								</div>
 							</li>
 						</ul>
+						<!-- 작성정보 공통영역 -->
 
 						<h5>항목등록</h5>
 						<table class="table">
@@ -393,7 +631,7 @@
 								<button type="button" class="openBtn"></button>
 							</div>
 							<div class="contBox">
-								<textarea placeholder="내용을 입력하세요." disabled></textarea>
+								<div class="textarea"></div>								
 								<ul class="addOption">
 									<li>
 										<label class="inpD">
@@ -426,11 +664,11 @@
 											<p class="title">첨부파일</p>
 											<div class="box row">
 												<div class="boxLine down">
-													<input type="text" readonly="" class="inpT" disabled>
+													<div class="inpT"></div>
 													<button type="button" class="btn grey">파일 다운로드</button>
 												</div>
 												<div class="boxLine down">
-													<input type="text" readonly="" class="inpT" disabled>
+													<div class="inpT"></div>
 													<button type="button" class="btn grey">파일 다운로드</button>
 												</div>
 											</div>
@@ -441,10 +679,10 @@
 											<p class="title">URL 입력</p>
 											<div class="box row">
 												<div class="boxLine">
-													<input type="text" class="inpT" disabled>
+													<div class="inpT"></div>
 												</div>
 												<div class="boxLine">
-													<input type="text" class="inpT" disabled>
+													<div class="inpT"></div>
 												</div>
 											</div>
 										</div>
@@ -470,8 +708,12 @@
 								</label>
 							</div>
 						</div>
+
 						<hr class="line">
+
 						<strong class="titleTxtBox">재외공관 신청발급 대상</strong>
+
+						<!-- 국문 -->
 						<div class="registBox viewBox open">
 							<div class="titleBox">
 								<p class="taC">국문</p>
@@ -483,12 +725,7 @@
 										<div class="cell">
 											<p class="title">기간</p>
 											<div class="box">
-												<input type="text" class="inpT inpNum" value="90" disabled>
-												<select class="selectD" disabled>
-													<option value="">일</option>
-													<option value="">월</option>
-													<option value="">년</option>
-												</select>
+												<div class="inpT"><span>333</span> 일</div>
 											</div>
 										</div>
 									</li>
@@ -496,20 +733,7 @@
 										<div class="cell">
 											<p class="title">유효기간</p>
 											<div class="box">
-												<input type="text" class="inpT inpNum" value="3" disabled>
-												<select class="selectD" disabled>
-													<option value="">일</option>
-													<option value="" selected="">월</option>
-													<option value="">년</option>
-												</select>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="cell">
-											<p class="title">연령</p>
-											<div class="box">
-												<input type="text" class="inpT inpNum" value="13" disabled>
+												<div class="inpT"><span>333</span> 일</div>
 											</div>
 										</div>
 									</li>
@@ -517,7 +741,7 @@
 										<div class="cell">
 											<p class="title">대상</p>
 											<div class="box">
-												<textarea disabled>체류기간대한민국과 관광취업에 관한 협정이나 양해각서를 체결한 국가의 국민으로서 관광을 주된 목적으로 하면서 이에 수반되는 관광경비 충당을 위하여공항만 단기간 취업 활동을 하려는 자</textarea>
+												<div class="textarea">체류기간대한민국과 관광취업에 관한 협정이나 양해각서를 체결한 국가의 국민으로서 관광을 주된 목적으로 하면서 이에 수반되는 관광경비 충당을 위하여공항만 단기간 취업 활동을 하려는 자</div>
 											</div>
 										</div>
 									</li>
@@ -525,35 +749,183 @@
 										<div class="cell">
 											<p class="title">첨부서류</p>
 											<div class="box">
-												<textarea disabled>① 사증발급신청서 (별지 제17호 서식), 여권, 표준규격사진 1매, 수수료
-② 교육기관 사업자등록증 (또는 고유번호증) 사본*
-③ 특정 연구과정임을 입증하는 서류(외국인연구생 확인서)</textarea></div>
+												<div class="textarea">
+													① 사증발급신청서 (별지 제17호 서식), 여권, 표준규격사진 1매, 수수료 <br>
+													② 교육기관 사업자등록증 (또는 고유번호증) 사본* <br>
+													③ 특정 연구과정임을 입증하는 서류(외국인연구생 확인서)
+												</div>
+											</div>
 										</div>
 									</li>
 									<li>
 										<div class="cell">
 											<p class="title">체류기간 설명</p>
 											<div class="box">
-												<textarea disabled>3년간 유효한 복수 비자를 신청할 수 있습니다. 비자발급 시 체류기간은 최대 90일까지 부여됩니다.</textarea></div>
+												<div class="textarea">3년간 유효한 복수 비자를 신청할 수 있습니다. 비자발급 시 체류기간은 최대 90일까지 부여됩니다.</div>
+											</div>
 										</div>
 									</li>
 									<li>
 										<div class="cell">
 											<p class="title">참고</p>
-											<div class="box"><textarea disabled></textarea></div>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
 										</div>
 									</li>
 								</ul>
+							</div>
+						</div>
+						<!-- //국문 -->
+
+						<!-- 중문 -->
+						<div class="registBox viewBox">
+							<div class="titleBox">
+								<p class="taC">중문</p>
+								<button type="button" class="openBtn"></button>
+							</div>
+							<div class="contBox">
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title">기간</p>
+											<div class="box">
+												<div class="inpT"><span>333</span> 일</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">유효기간</p>
+											<div class="box">
+												<div class="inpT"><span>333</span> 일</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">대상</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">첨부서류</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">체류기간 설명</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">참고</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //중문 -->
+
+						<!-- 영문 -->
+						<div class="registBox viewBox">
+							<div class="titleBox">
+								<p class="taC">영문</p>
+								<button type="button" class="openBtn"></button>
+							</div>
+							<div class="contBox">
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title">기간</p>
+											<div class="box">
+												<div class="inpT"><span>333</span> 일</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">유효기간</p>
+											<div class="box">
+												<div class="inpT"><span>333</span> 일</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">대상</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">첨부서류</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">체류기간 설명</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">참고</p>
+											<div class="box">
+												<div class="textarea"></div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //영문 -->
+
+						<!-- 1127 수정 -->
+						<hr class="line">
+
+						<strong class="titleTxtBox">EDIT</strong>
+
+						<div class="moddable">
+							<div class="registBox">
 								<strong class="title">광저우</strong>
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title">제목</p>
+											<div class="box">
+												<div class="inpT">title text</div>
+											</div>
+										</div>
+									</li>
+								</ul>
 								<div class="editWrap">
 									<!-- 에디터영역 -->
-									<div class="editArea">에디터 영역</div>
+									<div class="editArea"></div>
 									<!-- //에디터영역 -->
 									<div class="attachWrap">
 										<div class="attachBox">
-											<p>첨부파일</p>
 											<span class="inpFileWrap">
-												<input type="text" readonly="" class="inpT" disabled>
+												<div class="inpT"></div>
 												<label for=""><b>파일 찾기</b><input type="file" disabled></label>
 											</span>
 										</div>
@@ -562,8 +934,38 @@
 							</div>
 						</div>
 
+						<div class="moddable">
+							<div class="registBox">
+								<strong class="title">광저우 비자 센터</strong>
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title">제목</p>
+											<div class="box">
+												<div class="inpT">title text</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="editWrap">
+									<!-- 에디터영역 -->
+									<div class="editArea"></div>
+									<!-- //에디터영역 -->
+									<div class="attachWrap">
+										<div class="attachBox">
+											<span class="inpFileWrap">
+												<div class="inpT"></div>
+												<label for=""><b>파일 찾기</b><input type="file" disabled></label>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //1127 수정 -->
+
 						<h5><em class="red">*</em>수정사유</h5>
-						<textarea class="red" disabled>체류기간 선택항목 변경</textarea>
+						<div class="textarea"><em class="red">체류기간 선택항목 변경</em></div>
 					</div>
 					<!-- //비교계정2 -->
 					

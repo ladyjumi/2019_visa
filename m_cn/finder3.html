@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<title>비자검색3</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style_m.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+	<script>
+		$(function(){
+			// 페이지 진입시 퀵파인더 위치로 이동
+			scrollMove('.finderWrap', 500);
+		})
+	</script>		
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">签证导航</a></h1>
+			<span class="btnWrap">
+				<button type="button" class="searchBtn showsearchBar">검색버튼</button>
+				<button type="button" class="gnbBtn">메뉴열기</button>				
+			</span>
+		</div>
+		<nav class="gnbWrap">
+			<div class="navBox">
+				<!-- 언어변경 -->
+				<ul class="lang">
+					<li class="active"><a href="#">KOR</a></li>
+					<li><a href="#">ENG</a></li>
+					<li><a href="#">中文</a></li>
+				</ul>
+				<!-- //언어변경 -->
+				<!-- GNB -->
+				<ul class="gnb">
+					<li class="active"><a href="#">签证 搜索</a></li>
+					<li><a href="#">入境目的与签证种类</a></li>
+					<li><a href="#">签证申请程序介绍</a></li>
+					<li><a href="#">签证费介绍</a></li>
+					<li><a href="#">入境及滞留</a></li>
+				</ul>
+				<!-- //GNB -->
+				<button type="button" class="gnbClose">关闭</button>
+			</div>
+		</nav>
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<span class="inputWrap">
+					<input type="text" placeholder="검색어를 입력하세요.">
+					<button type="button" class="btnDel">지우기</button>
+				</span>
+				<input type="button" value="검색" class="searchBtn">
+			</div>
+			<button type="button" class="back">关闭</button>			
+		</div>
+		<!-- //검색창 -->
+	</div>
+
+	<div class="contents">
+
+		<div class="topVisual">
+			<div class="inner">
+				<p class="title">确认签证种类和信息</p>
+				<p class="desc">选择目前国籍，输入目的地国家，将看到优化的签证签发相关信息。<br>若情况不符，请通过所有列表进行确认</p>
+				<a href="#" class="linkMore">所有签证列表</a>
+				<div class="finderWrap">
+					<div class="stepNavi step3">
+						<p>
+							<em class="step">Step <b>3</b></em>
+							<span class="bar"></span>
+							<span class="num"><em>3</em>/3</span>
+						</p>
+					</div>
+					<div class="finder">
+						<p class="line">
+							<span>我</span>
+							<select>
+								<option value="">哪个国家</option>
+								<option value="">AFGHANISTAN</option>
+								<option value="">BAHRAIN</option>
+								<option value="">BANGLADESH</option>
+								<option value="">BHUTAN</option>
+								<option value="">BRUNEI</option>
+								<option value="">CAMBODIA</option>
+								<option value="">CHINA P. R.</option>
+								<option value="">CHINA P. R.(HONG KONG)</option>
+								<option value="">CHINA P. R.(MACAO)</option>
+								<option value="">CHINA(TAIWAN)</option>
+								<option value="">CYPRUS</option>
+								<option value="">EAST-TIMOR</option>
+								<option value="">HONG KONG ID.</option>
+								<option value="">INDIA</option>
+								<option value="">INDONESIA</option>
+								<option value="">IRAN</option>
+								<option value="">IRAQ</option>
+								<option value="">ISRAEL</option>
+								<option value="">JAPAN</option>
+								<option value="">JORDAN</option>
+								<option value="">KAZAKHSTAN</option>
+								<option value="">KUWAIT</option>
+								<option value="">KYRGYZ REPUBLIC</option>
+								<option value="">LAOS</option>
+								<option value="">LEBANON</option>
+								<option value="">MALAYSIA</option>
+								<option value="">MALDIVES</option>
+								<option value="">MONGOLIA</option>
+								<option value="">MYANMAR</option>
+								<option value="">NEPAL</option>
+								<option value="">OMAN</option>
+								<option value="">PAKISTAN</option>
+								<option value="">PALESTINE</option>
+								<option value="">PHILIPPINES</option>
+								<option value="">QATAR</option>
+								<option value="">SAUDI ARABIA</option>
+								<option value="">SINGAPORE</option>
+								<option value="">SRI LANKA</option>
+								<option value="">SYRIA</option>
+								<option value="">TAJIKISTAN</option>
+								<option value="">THAILAND</option>
+								<option value="">TURKEY</option>
+								<option value="">TURKMENISTAN</option>
+								<option value="">U.A.E</option>
+								<option value="">UZBEKISTAN</option>
+								<option value="">VIETNAM</option>
+								<option value="">YEMEN</option>
+							</select>
+							<span>人,</span>
+						</p>
+						<p class="line">
+							<span>韩国</span>
+							<select>
+								<option value="">访问目的</option>
+								<option value="">관광 등 단기방문</option>
+								<option value="">치료요양</option>
+								<option value="">유학/어학연수</option>
+								<option value="">전문직 취업</option>
+								<option value="">주재</option>
+								<option value="">취재/종교</option>
+								<option value="">투자</option>
+								<option value="">무역경영</option>
+								<option value="">재외동포</option>
+								<option value="">방문취업</option>
+								<option value="">가족방문/동거</option>
+								<option value="">결혼이민</option>
+								<option value="">연수</option>
+								<option value="">비전문직 취업</option>
+								<option value="">외교, 공무</option>
+							</select>							
+						</p>
+						<span class="text">预计以…访问</span>
+						<div class="detail">
+							<div class="detailOption">
+								<em>停留期间</em>
+								<select>
+									<option value="">90天以下</option>
+									<option value="">91天以上</option>
+									<option value="">永驻</option>
+								</select>
+							</div>
+							<div class="detailOption">
+								<em>签证种类</em>
+								<select>
+									<option value="">单次</option>
+									<option value="">两次</option>
+									<option value="">多次</option>
+								</select>
+							</div>
+						</div>
+						<button type="button" class="NextBtn" onclick="scrollMove('.frontCont', 600);">搜索</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="frontCont">
+			<h2>搜索结果</h2>
+
+			<div class="resultVisa viewBox">
+				
+				<div class="titleBox">
+					<p>Visa Exempted<em>(B-1)</em></p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				
+				<div class="contBox">
+					<p>아래 조건에 해당하는 자는 관광ㆍ통과 등의 목적으로 대한민국에 비자없이 방문할 수 있습니다. 입국 시 최대 30일의 체류기간이 부여됩니다.</p>
+					<ul class="listNum2">
+						<li>1) 빈번 출입국자 : 최근 2년 이내에 4회 이상 입국하였거나, 통산 10회 이상 입국한 사실이 있는 외국인으로 국내 체류 기간 중 불법체류나 기타 범법사실이 없는 자</li>
+						<li>2) 제3국 여행 통과여객
+							<ul class="listDash">
+								<li>미국, 캐나다, 호주, 뉴질랜드의 입국비자(재입국허가서 포함)을 소지하고 한국을 경유하여 미국, 캐나다, 호주, 뉴질랜드로 가는 자 </li>
+								<li>미국, 캐나다, 호주, 뉴질랜드에서 합법적으로 체류 후 동 국가에서 출발한 한국행 직항 항공편을 이용, 한국을 경유하여 국적국 또는 제3국으로 가는 자 </li>
+							</ul>
+						</li>
+					</ul>
+					<p class="addTxt">※ 무비자 입국요건 및 허가조건에 보다 상세한 정보는 입국목적별 비자종류에서 일반무비자(B-2-1) 하단의 안내 자료를 참고하시기 바랍니다.</p>
+					<ul class="tabMenu">
+						<li class="active">
+							<button type="button">제외공관<br>신청대상
+								<span class="tooltip">
+									<em class="tipIcon">설명</em>
+									<span class="tipTxt">
+										<em>거주국(지역) 관할 대한민국 대사관 또는 영사관을 방문하여 비자를 신청하고 발급 받을 수 있습니다.</em>
+										<span class="closeTip">关闭</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li>
+							<button type="button">전자비자<br>신청대상
+								<span class="tooltip">
+									<em class="tipIcon">설명</em>
+									<span class="tipTxt">
+										<em>대한민국 비자를 받고자 하는 신청인의 재외공관 방문에 따른 불편을 해소하기 위해 일부 비자에 대하여 비자 포털을 통해 신청하고 발급받는 비자를 말합니다.</em>
+										<span class="closeTip">关闭</span>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li>
+							<button type="button">비자발급인정서<br>신청대상
+								<span class="tooltip">
+									<em class="tipIcon">설명</em>
+									<span class="tipTxt">
+										<em>초청자 또는 대행기관이 국내 출입국·외국인관서를 방문하지 않고 비자 포털을 통해 비자발급인정서 신청을 완료하고 그 승인내용을 근거로 재외공관에서 신속하게 비자를 발급 받을 수 있는 제도를 말합니다.</em>
+										<span class="closeTip">关闭</span>
+									</span>
+								</span>
+							</button>
+						</li>
+					</ul>
+					<div class="tabBox">
+						<table class="txtTable">
+							<tbody>
+								<tr>
+									<th>신청요건</th>
+									<td>
+										<ul class="listNumber">
+											<li>국내에서 개최되는 친선경기, 행사, 회의에 참가하고자 하는 자 <br>- 입상하여야만 상금을 받을 수 있는 골프, 축구 등 경기 참가자 및 방송출연자 포함<br>* 주최 측이 항공료와 체재비를 지원하는 경우는 포함하나, 상금과는 별개로 체재비를 상회하는 보수를 받거나 받기로 하고 초청을 받아 참가하는 자는 단기취업사증(C-4) 신청대상</li>										<li>정부, 기업 등에서 기술이나 기능을 연마하기 위해 단기간 체류하고자 하는 자 <br>* 체재비를 초과하지 않는 보수를 받는 경우는 포함하나, 사실상 근로대가로서 보수를 받고 기술이나 기능을 습득하는 활동은 기술연수(D-3-1) 대상</li>
+											<li>병간호, 가족사망, 결혼식 참석 등의 목적으로 방문하려는 자</li>
+											<li>국내의 친인척으로부터 초청을 받아 단기간 방문하려는 자</li>
+											<li>단기 어학연수를 하려는 자</li>
+											<li>국외에 생활근거지가 있는 대한민국 국민이 인도적 사유로 현지에서 채용된 가사보조인과 함께 단기간(90일 미만) 국내에 동반입국할 필요가 있는 할 경우<br>- 대한민국 국민의 출산으로 인한 육아 양육, 수술로 인한 간병, 장례절차 진행을 위한 육아양육 및 이에 준하는 인도적 사유</li>
+											<li>난민법 제37조에 따라 대한민국이 난민임을 인정한 자의 법적 배우자 및 미성년자녀에 한하여 가족결합을 목적으로 사증발급을 신청한 경우</li>
+											<li>1~7의 사유 이외에도 순수관광(C-3-2), 의료관광(C-3-3), 일반상용(C-3-4), 협정상 단기상용(C-3-5), 우대기업초청 단기상용(C-3-6), 동포방문(C-3-8), 일반관광(C-3-9)을 제외한 단기방문(C-3) 활동 범위 내 목적으로 입국하는 자(영리 또는 취업활동을 목적은 해당 사증을 받아야 함)</li>										 
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부서류</th>
+									<td>
+										<p>① 사증발급신청서(별지 제17호 서식), 여권, 표준규격사진1매, 수수료</p>
+										<p>② 초청장 등 입국목적(행사, 일반연수 등)을 소명하는 서류</p>
+										<p class="addTxt">※ 재외공관의 장은 사증심사를 위하여 필요한 경우 주재국(관할구역) 실정에 맞게 제출서류를 일부 가감할 수 있습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th>비자유형 및 체류기간</th>
+									<td>
+										단수비자(유효기간 3개월) 또는 더블비자(유효기간 6개월)를 신청할 수 있습니다. <br>
+										비자발급 시 체류기간은 단수비자는 최대 90일까지, 더블비자는 최대 30일까지 부여됩니다.
+									</td>
+								</tr>
+								<tr>
+									<th>수수료</th>
+									<td>
+										<ul class="listDot">
+											<li>체류기간 90일 이하의 단수비자 : 40달러</li>
+											<li>체류기간 91일 이상의 단수비자 : 60달러</li>
+											<li>2회까지 입국할 수 있는 더블비자 : 70달러</li>
+											<li>입국횟수에 제한이 없는 복수비자 : 90달러</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>신청</th>
+									<td>
+										<span class="btnGroup fileDown">
+											<button type="button" class="btn red">전자서식 (비자신청서)</button>
+											<button type="button" class="btn red">신청서 다운로드</button>
+											<button type="button" class="btn red">추가 신청서 다운로드</button>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tabBox">
+						<table class="txtTable">
+							<tbody>
+								<tr>
+									<th>신청요건</th>
+									<td>
+										<ul class="listNumber">
+											<li>국내에서 개최되는 친선경기, 행사, 회의에 참가하고자 하는 자 <br>- 입상하여야만 상금을 받을 수 있는 골프, 축구 등 경기 참가자 및 방송출연자 포함<br>* 주최 측이 항공료와 체재비를 지원하는 경우는 포함하나, 상금과는 별개로 체재비를 상회하는 보수를 받거나 받기로 하고 초청을 받아 참가하는 자는 단기취업사증(C-4) 신청대상</li>										<li>정부, 기업 등에서 기술이나 기능을 연마하기 위해 단기간 체류하고자 하는 자 <br>* 체재비를 초과하지 않는 보수를 받는 경우는 포함하나, 사실상 근로대가로서 보수를 받고 기술이나 기능을 습득하는 활동은 기술연수(D-3-1) 대상</li>
+											<li>병간호, 가족사망, 결혼식 참석 등의 목적으로 방문하려는 자</li>
+											<li>국내의 친인척으로부터 초청을 받아 단기간 방문하려는 자</li>
+											<li>단기 어학연수를 하려는 자</li>
+											<li>국외에 생활근거지가 있는 대한민국 국민이 인도적 사유로 현지에서 채용된 가사보조인과 함께 단기간(90일 미만) 국내에 동반입국할 필요가 있는 할 경우<br>- 대한민국 국민의 출산으로 인한 육아 양육, 수술로 인한 간병, 장례절차 진행을 위한 육아양육 및 이에 준하는 인도적 사유</li>
+											<li>난민법 제37조에 따라 대한민국이 난민임을 인정한 자의 법적 배우자 및 미성년자녀에 한하여 가족결합을 목적으로 사증발급을 신청한 경우</li>
+											<li>1~7의 사유 이외에도 순수관광(C-3-2), 의료관광(C-3-3), 일반상용(C-3-4), 협정상 단기상용(C-3-5), 우대기업초청 단기상용(C-3-6), 동포방문(C-3-8), 일반관광(C-3-9)을 제외한 단기방문(C-3) 활동 범위 내 목적으로 입국하는 자(영리 또는 취업활동을 목적은 해당 사증을 받아야 함)</li>										 
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부서류</th>
+									<td>
+										<p>① 사증발급신청서(별지 제17호 서식), 여권, 표준규격사진1매, 수수료</p>
+										<p>② 초청장 등 입국목적(행사, 일반연수 등)을 소명하는 서류</p>
+										<p class="addTxt">※ 재외공관의 장은 사증심사를 위하여 필요한 경우 주재국(관할구역) 실정에 맞게 제출서류를 일부 가감할 수 있습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th>비자유형 및 체류기간</th>
+									<td>
+										단수비자(유효기간 3개월) 또는 더블비자(유효기간 6개월)를 신청할 수 있습니다. <br>
+										비자발급 시 체류기간은 단수비자는 최대 90일까지, 더블비자는 최대 30일까지 부여됩니다.
+									</td>
+								</tr>
+								<tr>
+									<th>수수료</th>
+									<td>
+										<ul class="listDot">
+											<li>체류기간 90일 이하의 단수비자 : 40달러</li>
+											<li>체류기간 91일 이상의 단수비자 : 60달러</li>
+											<li>2회까지 입국할 수 있는 더블비자 : 70달러</li>
+											<li>입국횟수에 제한이 없는 복수비자 : 90달러</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>신청</th>
+									<td>
+										<span class="btnGroup fileDown">
+											<button type="button" class="btn red">전자서식(비자신청서)</button>
+											<button type="button" class="btn red">신청서 다운로드</button>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tabBox">
+						<table class="txtTable">
+							<tbody>
+								<tr>
+									<th>신청요건</th>
+									<td>
+										<ul class="listNumber">
+											<li>국내에서 개최되는 친선경기, 행사, 회의에 참가하고자 하는 자 <br>- 입상하여야만 상금을 받을 수 있는 골프, 축구 등 경기 참가자 및 방송출연자 포함<br>* 주최 측이 항공료와 체재비를 지원하는 경우는 포함하나, 상금과는 별개로 체재비를 상회하는 보수를 받거나 받기로 하고 초청을 받아 참가하는 자는 단기취업사증(C-4) 신청대상</li>										<li>정부, 기업 등에서 기술이나 기능을 연마하기 위해 단기간 체류하고자 하는 자 <br>* 체재비를 초과하지 않는 보수를 받는 경우는 포함하나, 사실상 근로대가로서 보수를 받고 기술이나 기능을 습득하는 활동은 기술연수(D-3-1) 대상</li>
+											<li>병간호, 가족사망, 결혼식 참석 등의 목적으로 방문하려는 자</li>
+											<li>국내의 친인척으로부터 초청을 받아 단기간 방문하려는 자</li>
+											<li>단기 어학연수를 하려는 자</li>
+											<li>국외에 생활근거지가 있는 대한민국 국민이 인도적 사유로 현지에서 채용된 가사보조인과 함께 단기간(90일 미만) 국내에 동반입국할 필요가 있는 할 경우<br>- 대한민국 국민의 출산으로 인한 육아 양육, 수술로 인한 간병, 장례절차 진행을 위한 육아양육 및 이에 준하는 인도적 사유</li>
+											<li>난민법 제37조에 따라 대한민국이 난민임을 인정한 자의 법적 배우자 및 미성년자녀에 한하여 가족결합을 목적으로 사증발급을 신청한 경우</li>
+											<li>1~7의 사유 이외에도 순수관광(C-3-2), 의료관광(C-3-3), 일반상용(C-3-4), 협정상 단기상용(C-3-5), 우대기업초청 단기상용(C-3-6), 동포방문(C-3-8), 일반관광(C-3-9)을 제외한 단기방문(C-3) 활동 범위 내 목적으로 입국하는 자(영리 또는 취업활동을 목적은 해당 사증을 받아야 함)</li>										 
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부서류</th>
+									<td>
+										<p>① 사증발급신청서(별지 제17호 서식), 여권, 표준규격사진1매, 수수료</p>
+										<p>② 초청장 등 입국목적(행사, 일반연수 등)을 소명하는 서류</p>
+										<p class="addTxt">※ 재외공관의 장은 사증심사를 위하여 필요한 경우 주재국(관할구역) 실정에 맞게 제출서류를 일부 가감할 수 있습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th>비자유형 및 체류기간</th>
+									<td>
+										단수비자(유효기간 3개월) 또는 더블비자(유효기간 6개월)를 신청할 수 있습니다. <br>
+										비자발급 시 체류기간은 단수비자는 최대 90일까지, 더블비자는 최대 30일까지 부여됩니다.
+									</td>
+								</tr>
+								<tr>
+									<th>수수료</th>
+									<td>
+										<ul class="listDot">
+											<li>체류기간 90일 이하의 단수비자 : 40달러</li>
+											<li>체류기간 91일 이상의 단수비자 : 60달러</li>
+											<li>2회까지 입국할 수 있는 더블비자 : 70달러</li>
+											<li>입국횟수에 제한이 없는 복수비자 : 90달러</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>신청</th>
+									<td>
+										<span class="btnGroup fileDown">
+											<button type="button" class="btn red">전자서식(비자신청서)</button>
+											<button type="button" class="btn red">신청서 다운로드</button>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button class="closeUp">关闭</button>
+				</div>
+			</div>
+
+			<div class="resultVisa viewBox">
+				
+				<div class="titleBox">
+					<p>일반무사증<em>(B-2-1)</em></p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				
+				<div class="contBox">
+					<p>아래 조건에 해당하는 자는 관광ㆍ통과 등의 목적으로 대한민국에 비자없이 방문할 수 있습니다. 입국 시 최대 30일의 체류기간이 부여됩니다.</p>
+					<ul class="listNum2">
+						<li>1) 빈번 출입국자 : 최근 2년 이내에 4회 이상 입국하였거나, 통산 10회 이상 입국한 사실이 있는 외국인으로 국내 체류 기간 중 불법체류나 기타 범법사실이 없는 자</li>
+						<li>2) 제3국 여행 통과여객
+							<ul class="listDash">
+								<li>미국, 캐나다, 호주, 뉴질랜드의 입국비자(재입국허가서 포함)을 소지하고 한국을 경유하여 미국, 캐나다, 호주, 뉴질랜드로 가는 자 </li>
+								<li>미국, 캐나다, 호주, 뉴질랜드에서 합법적으로 체류 후 동 국가에서 출발한 한국행 직항 항공편을 이용, 한국을 경유하여 국적국 또는 제3국으로 가는 자 </li>
+							</ul>
+						</li>
+					</ul>
+					<p class="addTxt">※ 무비자 입국요건 및 허가조건에 보다 상세한 정보는 입국목적별 비자종류에서 일반무비자(B-2-1) 하단의 안내 자료를 참고하시기 바랍니다.</p>
+					<ul class="tabMenu">
+						<li class="active">
+							<button type="button">제외공관 <br>신청대상
+								<span class="tooltip">
+									<em class="tipIcon">설명</em>
+									<span class="tipTxt">
+										<em>거주국(지역) 관할 대한민국 대사관 또는 영사관을 방문하여 비자를 신청하고 발급 받을 수 있습니다.</em>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li>
+							<button type="button">전자비자 <br>신청대상
+								<span class="tooltip">
+									<em class="tipIcon">설명</em>
+									<span class="tipTxt">
+										<em>대한민국 비자를 받고자 하는 신청인의 재외공관 방문에 따른 불편을 해소하기 위해 일부 비자에 대하여 비자 포털을 통해 신청하고 발급받는 비자를 말합니다.</em>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li>
+							<button type="button">비자발급인정서 <br>신청대상
+								<span class="tooltip">
+									<em class="tipIcon">설명</em>
+									<span class="tipTxt">
+										<em>초청자 또는 대행기관이 국내 출입국·외국인관서를 방문하지 않고 비자 포털을 통해 비자발급인정서 신청을 완료하고 그 승인내용을 근거로 재외공관에서 신속하게 비자를 발급 받을 수 있는 제도를 말합니다.</em>
+									</span>
+								</span>
+							</button>
+						</li>
+					</ul>
+					<div class="tabBox">
+						<table class="txtTable">
+							<tbody>
+								<tr>
+									<th>신청요건</th>
+									<td>
+										<ul class="listNumber">
+											<li>국내에서 개최되는 친선경기, 행사, 회의에 참가하고자 하는 자 <br>- 입상하여야만 상금을 받을 수 있는 골프, 축구 등 경기 참가자 및 방송출연자 포함<br>* 주최 측이 항공료와 체재비를 지원하는 경우는 포함하나, 상금과는 별개로 체재비를 상회하는 보수를 받거나 받기로 하고 초청을 받아 참가하는 자는 단기취업사증(C-4) 신청대상</li>										<li>정부, 기업 등에서 기술이나 기능을 연마하기 위해 단기간 체류하고자 하는 자 <br>* 체재비를 초과하지 않는 보수를 받는 경우는 포함하나, 사실상 근로대가로서 보수를 받고 기술이나 기능을 습득하는 활동은 기술연수(D-3-1) 대상</li>
+											<li>병간호, 가족사망, 결혼식 참석 등의 목적으로 방문하려는 자</li>
+											<li>국내의 친인척으로부터 초청을 받아 단기간 방문하려는 자</li>
+											<li>단기 어학연수를 하려는 자</li>
+											<li>국외에 생활근거지가 있는 대한민국 국민이 인도적 사유로 현지에서 채용된 가사보조인과 함께 단기간(90일 미만) 국내에 동반입국할 필요가 있는 할 경우<br>- 대한민국 국민의 출산으로 인한 육아 양육, 수술로 인한 간병, 장례절차 진행을 위한 육아양육 및 이에 준하는 인도적 사유</li>
+											<li>난민법 제37조에 따라 대한민국이 난민임을 인정한 자의 법적 배우자 및 미성년자녀에 한하여 가족결합을 목적으로 사증발급을 신청한 경우</li>
+											<li>1~7의 사유 이외에도 순수관광(C-3-2), 의료관광(C-3-3), 일반상용(C-3-4), 협정상 단기상용(C-3-5), 우대기업초청 단기상용(C-3-6), 동포방문(C-3-8), 일반관광(C-3-9)을 제외한 단기방문(C-3) 활동 범위 내 목적으로 입국하는 자(영리 또는 취업활동을 목적은 해당 사증을 받아야 함)</li>										 
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부서류</th>
+									<td>
+										<p>① 사증발급신청서(별지 제17호 서식), 여권, 표준규격사진1매, 수수료</p>
+										<p>② 초청장 등 입국목적(행사, 일반연수 등)을 소명하는 서류</p>
+										<p class="addTxt">※ 재외공관의 장은 사증심사를 위하여 필요한 경우 주재국(관할구역) 실정에 맞게 제출서류를 일부 가감할 수 있습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th>비자유형 및 체류기간</th>
+									<td>
+										단수비자(유효기간 3개월) 또는 더블비자(유효기간 6개월)를 신청할 수 있습니다. <br>
+										비자발급 시 체류기간은 단수비자는 최대 90일까지, 더블비자는 최대 30일까지 부여됩니다.
+									</td>
+								</tr>
+								<tr>
+									<th>수수료</th>
+									<td>
+										<ul class="listDot">
+											<li>체류기간 90일 이하의 단수비자 : 40달러</li>
+											<li>체류기간 91일 이상의 단수비자 : 60달러</li>
+											<li>2회까지 입국할 수 있는 더블비자 : 70달러</li>
+											<li>입국횟수에 제한이 없는 복수비자 : 90달러</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>신청</th>
+									<td>
+										<span class="btnGroup fileDown">
+											<button type="button" class="btn red">전자서식(비자신청서)</button>
+											<button type="button" class="btn red">신청서 다운로드</button>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tabBox">
+						<table class="txtTable">
+							<tbody>
+								<tr>
+									<th>신청요건</th>
+									<td>
+										<ul class="listNumber">
+											<li>국내에서 개최되는 친선경기, 행사, 회의에 참가하고자 하는 자 <br>- 입상하여야만 상금을 받을 수 있는 골프, 축구 등 경기 참가자 및 방송출연자 포함<br>* 주최 측이 항공료와 체재비를 지원하는 경우는 포함하나, 상금과는 별개로 체재비를 상회하는 보수를 받거나 받기로 하고 초청을 받아 참가하는 자는 단기취업사증(C-4) 신청대상</li>										<li>정부, 기업 등에서 기술이나 기능을 연마하기 위해 단기간 체류하고자 하는 자 <br>* 체재비를 초과하지 않는 보수를 받는 경우는 포함하나, 사실상 근로대가로서 보수를 받고 기술이나 기능을 습득하는 활동은 기술연수(D-3-1) 대상</li>
+											<li>병간호, 가족사망, 결혼식 참석 등의 목적으로 방문하려는 자</li>
+											<li>국내의 친인척으로부터 초청을 받아 단기간 방문하려는 자</li>
+											<li>단기 어학연수를 하려는 자</li>
+											<li>국외에 생활근거지가 있는 대한민국 국민이 인도적 사유로 현지에서 채용된 가사보조인과 함께 단기간(90일 미만) 국내에 동반입국할 필요가 있는 할 경우<br>- 대한민국 국민의 출산으로 인한 육아 양육, 수술로 인한 간병, 장례절차 진행을 위한 육아양육 및 이에 준하는 인도적 사유</li>
+											<li>난민법 제37조에 따라 대한민국이 난민임을 인정한 자의 법적 배우자 및 미성년자녀에 한하여 가족결합을 목적으로 사증발급을 신청한 경우</li>
+											<li>1~7의 사유 이외에도 순수관광(C-3-2), 의료관광(C-3-3), 일반상용(C-3-4), 협정상 단기상용(C-3-5), 우대기업초청 단기상용(C-3-6), 동포방문(C-3-8), 일반관광(C-3-9)을 제외한 단기방문(C-3) 활동 범위 내 목적으로 입국하는 자(영리 또는 취업활동을 목적은 해당 사증을 받아야 함)</li>										 
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부서류</th>
+									<td>
+										<p>① 사증발급신청서(별지 제17호 서식), 여권, 표준규격사진1매, 수수료</p>
+										<p>② 초청장 등 입국목적(행사, 일반연수 등)을 소명하는 서류</p>
+										<p class="addTxt">※ 재외공관의 장은 사증심사를 위하여 필요한 경우 주재국(관할구역) 실정에 맞게 제출서류를 일부 가감할 수 있습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th>비자유형 및 체류기간</th>
+									<td>
+										단수비자(유효기간 3개월) 또는 더블비자(유효기간 6개월)를 신청할 수 있습니다. <br>
+										비자발급 시 체류기간은 단수비자는 최대 90일까지, 더블비자는 최대 30일까지 부여됩니다.
+									</td>
+								</tr>
+								<tr>
+									<th>수수료</th>
+									<td>
+										<ul class="listDot">
+											<li>체류기간 90일 이하의 단수비자 : 40달러</li>
+											<li>체류기간 91일 이상의 단수비자 : 60달러</li>
+											<li>2회까지 입국할 수 있는 더블비자 : 70달러</li>
+											<li>입국횟수에 제한이 없는 복수비자 : 90달러</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>신청</th>
+									<td>
+										<span class="btnGroup fileDown">
+											<button type="button" class="btn red">전자서식(비자신청서)</button>
+											<button type="button" class="btn red">신청서 다운로드</button>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tabBox">
+						<table class="txtTable">
+							<tbody>
+								<tr>
+									<th>신청요건</th>
+									<td>
+										<ul class="listNumber">
+											<li>국내에서 개최되는 친선경기, 행사, 회의에 참가하고자 하는 자 <br>- 입상하여야만 상금을 받을 수 있는 골프, 축구 등 경기 참가자 및 방송출연자 포함<br>* 주최 측이 항공료와 체재비를 지원하는 경우는 포함하나, 상금과는 별개로 체재비를 상회하는 보수를 받거나 받기로 하고 초청을 받아 참가하는 자는 단기취업사증(C-4) 신청대상</li>										<li>정부, 기업 등에서 기술이나 기능을 연마하기 위해 단기간 체류하고자 하는 자 <br>* 체재비를 초과하지 않는 보수를 받는 경우는 포함하나, 사실상 근로대가로서 보수를 받고 기술이나 기능을 습득하는 활동은 기술연수(D-3-1) 대상</li>
+											<li>병간호, 가족사망, 결혼식 참석 등의 목적으로 방문하려는 자</li>
+											<li>국내의 친인척으로부터 초청을 받아 단기간 방문하려는 자</li>
+											<li>단기 어학연수를 하려는 자</li>
+											<li>국외에 생활근거지가 있는 대한민국 국민이 인도적 사유로 현지에서 채용된 가사보조인과 함께 단기간(90일 미만) 국내에 동반입국할 필요가 있는 할 경우<br>- 대한민국 국민의 출산으로 인한 육아 양육, 수술로 인한 간병, 장례절차 진행을 위한 육아양육 및 이에 준하는 인도적 사유</li>
+											<li>난민법 제37조에 따라 대한민국이 난민임을 인정한 자의 법적 배우자 및 미성년자녀에 한하여 가족결합을 목적으로 사증발급을 신청한 경우</li>
+											<li>1~7의 사유 이외에도 순수관광(C-3-2), 의료관광(C-3-3), 일반상용(C-3-4), 협정상 단기상용(C-3-5), 우대기업초청 단기상용(C-3-6), 동포방문(C-3-8), 일반관광(C-3-9)을 제외한 단기방문(C-3) 활동 범위 내 목적으로 입국하는 자(영리 또는 취업활동을 목적은 해당 사증을 받아야 함)</li>										 
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부서류</th>
+									<td>
+										<p>① 사증발급신청서(별지 제17호 서식), 여권, 표준규격사진1매, 수수료</p>
+										<p>② 초청장 등 입국목적(행사, 일반연수 등)을 소명하는 서류</p>
+										<p class="addTxt">※ 재외공관의 장은 사증심사를 위하여 필요한 경우 주재국(관할구역) 실정에 맞게 제출서류를 일부 가감할 수 있습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th>비자유형 및 체류기간</th>
+									<td>
+										단수비자(유효기간 3개월) 또는 더블비자(유효기간 6개월)를 신청할 수 있습니다. <br>
+										비자발급 시 체류기간은 단수비자는 최대 90일까지, 더블비자는 최대 30일까지 부여됩니다.
+									</td>
+								</tr>
+								<tr>
+									<th>수수료</th>
+									<td>
+										<ul class="listDot">
+											<li>체류기간 90일 이하의 단수비자 : 40달러</li>
+											<li>체류기간 91일 이상의 단수비자 : 60달러</li>
+											<li>2회까지 입국할 수 있는 더블비자 : 70달러</li>
+											<li>입국횟수에 제한이 없는 복수비자 : 90달러</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>신청</th>
+									<td>
+										<span class="btnGroup fileDown">
+											<button type="button" class="btn red">전자서식(비자신청서)</button>
+											<button type="button" class="btn red">신청서 다운로드</button>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button class="closeUp">关闭</button>
+				</div>
+			</div>
+
+			<div class="resultVisa viewBox">
+				
+				<div class="titleBox">
+					<p>DE계열 6개월 이상  체류자<em>(F-4-13)</em></p>
+					<button type="button" class="openBtn"></button>
+				</div>
+				
+				<div class="contBox">
+					<p>아래 조건에 해당하는 자는 관광ㆍ통과 등의 목적으로 대한민국에 비자없이 방문할 수 있습니다. 입국 시 최대 30일의 체류기간이 부여됩니다.</p>
+					<ul class="listNum2">
+						<li>1) 빈번 출입국자 : 최근 2년 이내에 4회 이상 입국하였거나, 통산 10회 이상 입국한 사실이 있는 외국인으로 국내 체류 기간 중 불법체류나 기타 범법사실이 없는 자</li>
+						<li>2) 제3국 여행 통과여객
+							<ul class="listDash">
+								<li>미국, 캐나다, 호주, 뉴질랜드의 입국비자(재입국허가서 포함)을 소지하고 한국을 경유하여 미국, 캐나다, 호주, 뉴질랜드로 가는 자 </li>
+								<li>미국, 캐나다, 호주, 뉴질랜드에서 합법적으로 체류 후 동 국가에서 출발한 한국행 직항 항공편을 이용, 한국을 경유하여 국적국 또는 제3국으로 가는 자 </li>
+							</ul>
+						</li>
+					</ul>
+					<p class="addTxt">※ 무비자 입국요건 및 허가조건에 보다 상세한 정보는 입국목적별 비자종류에서 일반무비자(B-2-1) 하단의 안내 자료를 참고하시기 바랍니다.</p>
+					<ul class="tabMenu">
+						<li class="active">
+							<button type="button">제외공관 <br>신청대상
+								<span class="tooltip">
+									<em class="tipIcon">설명</em>
+									<span class="tipTxt">
+										<em>거주국(지역) 관할 대한민국 대사관 또는 영사관을 방문하여 비자를 신청하고 발급 받을 수 있습니다.</em>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li>
+							<button type="button">전자비자 <br>신청대상
+								<span class="tooltip">
+									<em class="tipIcon">설명</em>
+									<span class="tipTxt">
+										<em>대한민국 비자를 받고자 하는 신청인의 재외공관 방문에 따른 불편을 해소하기 위해 일부 비자에 대하여 비자 포털을 통해 신청하고 발급받는 비자를 말합니다.</em>
+									</span>
+								</span>
+							</button>
+						</li>
+						<li>
+							<button type="button">비자발급인정서 <br>신청대상
+								<span class="tooltip">
+									<em class="tipIcon">설명</em>
+									<span class="tipTxt">
+										<em>초청자 또는 대행기관이 국내 출입국·외국인관서를 방문하지 않고 비자 포털을 통해 비자발급인정서 신청을 완료하고 그 승인내용을 근거로 재외공관에서 신속하게 비자를 발급 받을 수 있는 제도를 말합니다.</em>
+									</span>
+								</span>
+							</button>
+						</li>
+					</ul>
+					<div class="tabBox">
+						<table class="txtTable">
+							<tbody>
+								<tr>
+									<th>신청요건</th>
+									<td>
+										<ul class="listNumber">
+											<li>국내에서 개최되는 친선경기, 행사, 회의에 참가하고자 하는 자 <br>- 입상하여야만 상금을 받을 수 있는 골프, 축구 등 경기 참가자 및 방송출연자 포함<br>* 주최 측이 항공료와 체재비를 지원하는 경우는 포함하나, 상금과는 별개로 체재비를 상회하는 보수를 받거나 받기로 하고 초청을 받아 참가하는 자는 단기취업사증(C-4) 신청대상</li>										<li>정부, 기업 등에서 기술이나 기능을 연마하기 위해 단기간 체류하고자 하는 자 <br>* 체재비를 초과하지 않는 보수를 받는 경우는 포함하나, 사실상 근로대가로서 보수를 받고 기술이나 기능을 습득하는 활동은 기술연수(D-3-1) 대상</li>
+											<li>병간호, 가족사망, 결혼식 참석 등의 목적으로 방문하려는 자</li>
+											<li>국내의 친인척으로부터 초청을 받아 단기간 방문하려는 자</li>
+											<li>단기 어학연수를 하려는 자</li>
+											<li>국외에 생활근거지가 있는 대한민국 국민이 인도적 사유로 현지에서 채용된 가사보조인과 함께 단기간(90일 미만) 국내에 동반입국할 필요가 있는 할 경우<br>- 대한민국 국민의 출산으로 인한 육아 양육, 수술로 인한 간병, 장례절차 진행을 위한 육아양육 및 이에 준하는 인도적 사유</li>
+											<li>난민법 제37조에 따라 대한민국이 난민임을 인정한 자의 법적 배우자 및 미성년자녀에 한하여 가족결합을 목적으로 사증발급을 신청한 경우</li>
+											<li>1~7의 사유 이외에도 순수관광(C-3-2), 의료관광(C-3-3), 일반상용(C-3-4), 협정상 단기상용(C-3-5), 우대기업초청 단기상용(C-3-6), 동포방문(C-3-8), 일반관광(C-3-9)을 제외한 단기방문(C-3) 활동 범위 내 목적으로 입국하는 자(영리 또는 취업활동을 목적은 해당 사증을 받아야 함)</li>										 
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부서류</th>
+									<td>
+										<p>① 사증발급신청서(별지 제17호 서식), 여권, 표준규격사진1매, 수수료</p>
+										<p>② 초청장 등 입국목적(행사, 일반연수 등)을 소명하는 서류</p>
+										<p class="addTxt">※ 재외공관의 장은 사증심사를 위하여 필요한 경우 주재국(관할구역) 실정에 맞게 제출서류를 일부 가감할 수 있습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th>비자유형 및 체류기간</th>
+									<td>
+										단수비자(유효기간 3개월) 또는 더블비자(유효기간 6개월)를 신청할 수 있습니다. <br>
+										비자발급 시 체류기간은 단수비자는 최대 90일까지, 더블비자는 최대 30일까지 부여됩니다.
+									</td>
+								</tr>
+								<tr>
+									<th>수수료</th>
+									<td>
+										<ul class="listDot">
+											<li>체류기간 90일 이하의 단수비자 : 40달러</li>
+											<li>체류기간 91일 이상의 단수비자 : 60달러</li>
+											<li>2회까지 입국할 수 있는 더블비자 : 70달러</li>
+											<li>입국횟수에 제한이 없는 복수비자 : 90달러</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>신청</th>
+									<td>
+										<span class="btnGroup fileDown">
+											<button type="button" class="btn red">전자서식(비자신청서)</button>
+											<button type="button" class="btn red">신청서 다운로드</button>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tabBox">
+						<table class="txtTable">
+							<tbody>
+								<tr>
+									<th>신청요건</th>
+									<td>
+										<ul class="listNumber">
+											<li>국내에서 개최되는 친선경기, 행사, 회의에 참가하고자 하는 자 <br>- 입상하여야만 상금을 받을 수 있는 골프, 축구 등 경기 참가자 및 방송출연자 포함<br>* 주최 측이 항공료와 체재비를 지원하는 경우는 포함하나, 상금과는 별개로 체재비를 상회하는 보수를 받거나 받기로 하고 초청을 받아 참가하는 자는 단기취업사증(C-4) 신청대상</li>										<li>정부, 기업 등에서 기술이나 기능을 연마하기 위해 단기간 체류하고자 하는 자 <br>* 체재비를 초과하지 않는 보수를 받는 경우는 포함하나, 사실상 근로대가로서 보수를 받고 기술이나 기능을 습득하는 활동은 기술연수(D-3-1) 대상</li>
+											<li>병간호, 가족사망, 결혼식 참석 등의 목적으로 방문하려는 자</li>
+											<li>국내의 친인척으로부터 초청을 받아 단기간 방문하려는 자</li>
+											<li>단기 어학연수를 하려는 자</li>
+											<li>국외에 생활근거지가 있는 대한민국 국민이 인도적 사유로 현지에서 채용된 가사보조인과 함께 단기간(90일 미만) 국내에 동반입국할 필요가 있는 할 경우<br>- 대한민국 국민의 출산으로 인한 육아 양육, 수술로 인한 간병, 장례절차 진행을 위한 육아양육 및 이에 준하는 인도적 사유</li>
+											<li>난민법 제37조에 따라 대한민국이 난민임을 인정한 자의 법적 배우자 및 미성년자녀에 한하여 가족결합을 목적으로 사증발급을 신청한 경우</li>
+											<li>1~7의 사유 이외에도 순수관광(C-3-2), 의료관광(C-3-3), 일반상용(C-3-4), 협정상 단기상용(C-3-5), 우대기업초청 단기상용(C-3-6), 동포방문(C-3-8), 일반관광(C-3-9)을 제외한 단기방문(C-3) 활동 범위 내 목적으로 입국하는 자(영리 또는 취업활동을 목적은 해당 사증을 받아야 함)</li>										 
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부서류</th>
+									<td>
+										<p>① 사증발급신청서(별지 제17호 서식), 여권, 표준규격사진1매, 수수료</p>
+										<p>② 초청장 등 입국목적(행사, 일반연수 등)을 소명하는 서류</p>
+										<p class="addTxt">※ 재외공관의 장은 사증심사를 위하여 필요한 경우 주재국(관할구역) 실정에 맞게 제출서류를 일부 가감할 수 있습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th>비자유형 및 체류기간</th>
+									<td>
+										단수비자(유효기간 3개월) 또는 더블비자(유효기간 6개월)를 신청할 수 있습니다. <br>
+										비자발급 시 체류기간은 단수비자는 최대 90일까지, 더블비자는 최대 30일까지 부여됩니다.
+									</td>
+								</tr>
+								<tr>
+									<th>수수료</th>
+									<td>
+										<ul class="listDot">
+											<li>체류기간 90일 이하의 단수비자 : 40달러</li>
+											<li>체류기간 91일 이상의 단수비자 : 60달러</li>
+											<li>2회까지 입국할 수 있는 더블비자 : 70달러</li>
+											<li>입국횟수에 제한이 없는 복수비자 : 90달러</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>신청</th>
+									<td>
+										<span class="btnGroup fileDown">
+											<button type="button" class="btn red">전자서식(비자신청서)</button>
+											<button type="button" class="btn red">신청서 다운로드</button>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tabBox">
+						<table class="txtTable">
+							<tbody>
+								<tr>
+									<th>신청요건</th>
+									<td>
+										<ul class="listNumber">
+											<li>국내에서 개최되는 친선경기, 행사, 회의에 참가하고자 하는 자 <br>- 입상하여야만 상금을 받을 수 있는 골프, 축구 등 경기 참가자 및 방송출연자 포함<br>* 주최 측이 항공료와 체재비를 지원하는 경우는 포함하나, 상금과는 별개로 체재비를 상회하는 보수를 받거나 받기로 하고 초청을 받아 참가하는 자는 단기취업사증(C-4) 신청대상</li>										<li>정부, 기업 등에서 기술이나 기능을 연마하기 위해 단기간 체류하고자 하는 자 <br>* 체재비를 초과하지 않는 보수를 받는 경우는 포함하나, 사실상 근로대가로서 보수를 받고 기술이나 기능을 습득하는 활동은 기술연수(D-3-1) 대상</li>
+											<li>병간호, 가족사망, 결혼식 참석 등의 목적으로 방문하려는 자</li>
+											<li>국내의 친인척으로부터 초청을 받아 단기간 방문하려는 자</li>
+											<li>단기 어학연수를 하려는 자</li>
+											<li>국외에 생활근거지가 있는 대한민국 국민이 인도적 사유로 현지에서 채용된 가사보조인과 함께 단기간(90일 미만) 국내에 동반입국할 필요가 있는 할 경우<br>- 대한민국 국민의 출산으로 인한 육아 양육, 수술로 인한 간병, 장례절차 진행을 위한 육아양육 및 이에 준하는 인도적 사유</li>
+											<li>난민법 제37조에 따라 대한민국이 난민임을 인정한 자의 법적 배우자 및 미성년자녀에 한하여 가족결합을 목적으로 사증발급을 신청한 경우</li>
+											<li>1~7의 사유 이외에도 순수관광(C-3-2), 의료관광(C-3-3), 일반상용(C-3-4), 협정상 단기상용(C-3-5), 우대기업초청 단기상용(C-3-6), 동포방문(C-3-8), 일반관광(C-3-9)을 제외한 단기방문(C-3) 활동 범위 내 목적으로 입국하는 자(영리 또는 취업활동을 목적은 해당 사증을 받아야 함)</li>										 
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부서류</th>
+									<td>
+										<p>① 사증발급신청서(별지 제17호 서식), 여권, 표준규격사진1매, 수수료</p>
+										<p>② 초청장 등 입국목적(행사, 일반연수 등)을 소명하는 서류</p>
+										<p class="addTxt">※ 재외공관의 장은 사증심사를 위하여 필요한 경우 주재국(관할구역) 실정에 맞게 제출서류를 일부 가감할 수 있습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th>비자유형 및 체류기간</th>
+									<td>
+										단수비자(유효기간 3개월) 또는 더블비자(유효기간 6개월)를 신청할 수 있습니다. <br>
+										비자발급 시 체류기간은 단수비자는 최대 90일까지, 더블비자는 최대 30일까지 부여됩니다.
+									</td>
+								</tr>
+								<tr>
+									<th>수수료</th>
+									<td>
+										<ul class="listDot">
+											<li>체류기간 90일 이하의 단수비자 : 40달러</li>
+											<li>체류기간 91일 이상의 단수비자 : 60달러</li>
+											<li>2회까지 입국할 수 있는 더블비자 : 70달러</li>
+											<li>입국횟수에 제한이 없는 복수비자 : 90달러</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>신청</th>
+									<td>
+										<span class="btnGroup fileDown">
+											<button type="button" class="btn red">전자서식(비자신청서)</button>
+											<button type="button" class="btn red">신청서 다운로드</button>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<button class="closeUp">关闭</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>签证导航</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 <br>(외국인종합안내센터 : 국번없이 1345)</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+
+	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
+</div>
+
+</body>
+</html>

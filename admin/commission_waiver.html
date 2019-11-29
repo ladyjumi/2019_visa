@@ -15,7 +15,7 @@
 
 	<div class="header">
 		<div class="inner">
-			<h1><a href="#">비자네비게이터 Admin</a></h1>
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
 
 			<!-- GNB -->
 			<ul class="gnb">
@@ -30,17 +30,11 @@
 					<span>
 						[최종접속시간 
 						<em>2019.07.08</em>
-						<em>12:13:15</em>
-						/
-						<em>106.247.228.114</em>]
+						<em>12:13:15</em>]
 					</span>
 				</p>
 				<a href="#">로그아웃</a>
 				<a href="#">비밀번호 변경</a>
-				<span>
-					<input type="text" placeholder="검색" class="searchBox">
-					<button type="button" class="searchBtn">검색버튼</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -68,13 +62,7 @@
 							<li class="active"><a href="#">수수료 면제국가 관리</a></li>
 						</ul>
 					</li>
-					<li>
-						<span>비자표출 관리</span>
-						<ul class="subM depth2">
-							<li><a href="#">법무부</a></li>
-							<li><a href="#">중국(광저우)</a></li>
-						</ul>
-					</li>
+					<li><a href="">비자표출 관리</a></li>
 					<li>
 						<span>변경 이력 확인</span>
 						<ul class="subM depth2">
@@ -99,52 +87,586 @@
 			<div class="cont">
 
 				<h3>수수료 면제국가 관리</h3>
-				<span class="topRight"><em class="red">*</em>필수항목</span>
-				<div class="tableTop btnGroup">
-					<button type="button" class="btnBorder">선택삭제</button>
-					<button type="button" class="btnBorder">대상 추가</button>
+
+				<div class="tabWrap cmsTab">
+					<ul class="tabMenu">
+						<li class="active"><button type="button">국문</button></li>
+						<li><button type="button">중문</button></li>
+						<li><button type="button">영문</button></li>
+					</ul>
+					<div class="tabBox">
+						<input type="text" placeholder="국문 제목을 입력해주세요." class="inpT" value="수수료 면제 국가">
+						<div class="topRight tableTop btnGroup">
+							<button type="button" class="btnBorder">선택삭제</button>
+							<button type="button" class="btnBorder">대상 추가</button>
+						</div>
+						<table class="table input">
+							<colgroup>
+								<col style="width: 56px" />
+								<col style="width: 320px" />
+								<col style="width: " />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>선택</th>
+									<th>면제대상국가</th>
+									<th>면제조건</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="select" class="inp">
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td class="pad">
+										<div class="box">
+											<textarea>스페인, 이탈리아, 태국, 일본, 대만, 우크라이나, 바베이도스, 콜롬비아, 페루, 라이베리아</textarea>
+											<!-- 국가찾기 팝업 -->
+											<div class="popWrap popS">
+												<div class="popArea">
+													<button type="button" class="closePopBtn closePop">닫기</button>
+													<div class="popTitle"><p>국가찾기</p></div>
+													<div class="popCont">
+														<p class="search">
+															<span class="txt">국가명</span>
+															<input type="text" class="inpT">
+															<button type="button" class="searchBtn">검색하기</button>
+														</p>
+														<div class="selectItem scrollBox nation">
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아랍 에미리트 연방</span>
+																		<span>The UnitedArab Emirates</span>
+																		<span>阿拉伯联合酋长国</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아르헨티나</span>
+																		<span>Argentina</span>
+																		<span>阿根廷</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>알바니아</span>
+																		<span>Albania</span>
+																		<span>阿尔巴尼亚 </span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>보스니아-헤르체고비나</span>
+																		<span>Bosnia and Herzegovina</span>
+																		<span>波斯尼亚和黑塞哥维那 </span>
+																	</span>
+																</label>
+															</p>	
+															
+														</div>
+														<div class="selectedList">
+															<span>이스라엘</span>
+															<span>이라크</span>
+														</div>
+														<p class="btnGroup btm">
+															<button type="button" class="closePop">저장</button>
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- //국가찾기 팝업 -->
+										</div>
+									</td>
+									<td class="pad"><textarea>체류기간에 관계없이 모든 비자</textarea></td>
+								</tr>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="select" class="inp">
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td class="pad">
+										<div class="box">
+											<textarea>미국</textarea>
+											<!-- 국가찾기 팝업 -->
+											<div class="popWrap popS">
+												<div class="popArea">
+													<button type="button" class="closePopBtn closePop">닫기</button>
+													<div class="popTitle"><p>국가찾기</p></div>
+													<div class="popCont">
+														<p class="search">
+															<span class="txt">국가명</span>
+															<input type="text" class="inpT">
+															<button type="button" class="searchBtn">검색하기</button>
+														</p>
+														<div class="selectItem scrollBox nation">
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아랍 에미리트 연방</span>
+																		<span>The UnitedArab Emirates</span>
+																		<span>阿拉伯联合酋长国</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아르헨티나</span>
+																		<span>Argentina</span>
+																		<span>阿根廷</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>알바니아</span>
+																		<span>Albania</span>
+																		<span>阿尔巴尼亚 </span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>보스니아-헤르체고비나</span>
+																		<span>Bosnia and Herzegovina</span>
+																		<span>波斯尼亚和黑塞哥维那 </span>
+																	</span>
+																</label>
+															</p>	
+															
+														</div>
+														<div class="selectedList">
+															<span>이스라엘</span>
+															<span>이라크</span>
+														</div>
+														<p class="btnGroup btm">
+															<button type="button" class="closePop">저장</button>
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- //국가찾기 팝업 -->
+										</div>
+									</td>
+									<td class="pad"><textarea>외교(A-1), 관용(A-2) 내지 협정(A-3)</textarea></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tabBox">
+						<input type="text" placeholder="중문 제목을 입력해주세요." class="inpT">
+						<div class="topRight tableTop btnGroup">
+							<button type="button" class="btnBorder">선택삭제</button>
+							<button type="button" class="btnBorder">대상 추가</button>
+						</div>
+						<table class="table input">
+							<colgroup>
+								<col style="width: 56px" />
+								<col style="width: 320px" />
+								<col style="width: " />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>선택</th>
+									<th>면제대상국가</th>
+									<th>면제조건</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="select" class="inp">
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td class="pad">
+										<div class="box">
+											<textarea>태국, 일본, 대만, 우크라이나, 바베이도스, 콜롬비아, 페루, 라이베리아</textarea>
+											<!-- 국가찾기 팝업 -->
+											<div class="popWrap popS">
+												<div class="popArea">
+													<button type="button" class="closePopBtn closePop">닫기</button>
+													<div class="popTitle"><p>국가찾기</p></div>
+													<div class="popCont">
+														<p class="search">
+															<span class="txt">국가명</span>
+															<input type="text" class="inpT">
+															<button type="button" class="searchBtn">검색하기</button>
+														</p>
+														<div class="selectItem scrollBox nation">
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아랍 에미리트 연방</span>
+																		<span>The UnitedArab Emirates</span>
+																		<span>阿拉伯联合酋长国</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아르헨티나</span>
+																		<span>Argentina</span>
+																		<span>阿根廷</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>알바니아</span>
+																		<span>Albania</span>
+																		<span>阿尔巴尼亚 </span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>보스니아-헤르체고비나</span>
+																		<span>Bosnia and Herzegovina</span>
+																		<span>波斯尼亚和黑塞哥维那 </span>
+																	</span>
+																</label>
+															</p>	
+															
+														</div>
+														<div class="selectedList">
+															<span>이스라엘</span>
+															<span>이라크</span>
+														</div>
+														<p class="btnGroup btm">
+															<button type="button" class="closePop">저장</button>
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- //국가찾기 팝업 -->
+										</div>
+									</td>
+									<td class="pad"><textarea>체류기간에 관계없이 모든 비자</textarea></td>
+								</tr>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="select" class="inp">
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td class="pad">
+										<div class="box">
+											<textarea>미국</textarea>
+											<!-- 국가찾기 팝업 -->
+											<div class="popWrap popS">
+												<div class="popArea">
+													<button type="button" class="closePopBtn closePop">닫기</button>
+													<div class="popTitle"><p>국가찾기</p></div>
+													<div class="popCont">
+														<p class="search">
+															<span class="txt">국가명</span>
+															<input type="text" class="inpT">
+															<button type="button" class="searchBtn">검색하기</button>
+														</p>
+														<div class="selectItem scrollBox nation">
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아랍 에미리트 연방</span>
+																		<span>The UnitedArab Emirates</span>
+																		<span>阿拉伯联合酋长国</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아르헨티나</span>
+																		<span>Argentina</span>
+																		<span>阿根廷</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>알바니아</span>
+																		<span>Albania</span>
+																		<span>阿尔巴尼亚 </span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>보스니아-헤르체고비나</span>
+																		<span>Bosnia and Herzegovina</span>
+																		<span>波斯尼亚和黑塞哥维那 </span>
+																	</span>
+																</label>
+															</p>	
+															
+														</div>
+														<div class="selectedList">
+															<span>이스라엘</span>
+															<span>이라크</span>
+														</div>
+														<p class="btnGroup btm">
+															<button type="button" class="closePop">저장</button>
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- //국가찾기 팝업 -->
+										</div>
+									</td>
+									<td class="pad"><textarea>외교(A-1), 관용(A-2) 내지 협정(A-3)</textarea></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tabBox">
+						<input type="text" placeholder="영문 제목을 입력해주세요." class="inpT">
+						<div class="topRight tableTop btnGroup">
+							<button type="button" class="btnBorder">선택삭제</button>
+							<button type="button" class="btnBorder">대상 추가</button>
+						</div>
+						<table class="table input">
+							<colgroup>
+								<col style="width: 56px" />
+								<col style="width: 320px" />
+								<col style="width: " />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>선택</th>
+									<th>면제대상국가</th>
+									<th>면제조건</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="select" class="inp">
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td class="pad">
+										<div class="box">
+											<textarea>콜롬비아, 페루, 라이베리아</textarea>
+											<!-- 국가찾기 팝업 -->
+											<div class="popWrap popS">
+												<div class="popArea">
+													<button type="button" class="closePopBtn closePop">닫기</button>
+													<div class="popTitle"><p>국가찾기</p></div>
+													<div class="popCont">
+														<p class="search">
+															<span class="txt">국가명</span>
+															<input type="text" class="inpT">
+															<button type="button" class="searchBtn">검색하기</button>
+														</p>
+														<div class="selectItem scrollBox nation">
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아랍 에미리트 연방</span>
+																		<span>The UnitedArab Emirates</span>
+																		<span>阿拉伯联合酋长国</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아르헨티나</span>
+																		<span>Argentina</span>
+																		<span>阿根廷</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>알바니아</span>
+																		<span>Albania</span>
+																		<span>阿尔巴尼亚 </span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>보스니아-헤르체고비나</span>
+																		<span>Bosnia and Herzegovina</span>
+																		<span>波斯尼亚和黑塞哥维那 </span>
+																	</span>
+																</label>
+															</p>	
+															
+														</div>
+														<div class="selectedList">
+															<span>이스라엘</span>
+															<span>이라크</span>
+														</div>
+														<p class="btnGroup btm">
+															<button type="button" class="closePop">저장</button>
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- //국가찾기 팝업 -->
+										</div>
+									</td>
+									<td class="pad"><textarea>체류기간에 관계없이 모든 비자</textarea></td>
+								</tr>
+								<tr>
+									<td class="inpCell">
+										<label class="inpD">
+											<input type="radio" name="select" class="inp">
+											<span class="icon"></span>
+										</label>
+									</td>
+									<td class="pad">
+										<div class="box">
+											<textarea>미국</textarea>
+											<!-- 국가찾기 팝업 -->
+											<div class="popWrap popS">
+												<div class="popArea">
+													<button type="button" class="closePopBtn closePop">닫기</button>
+													<div class="popTitle"><p>국가찾기</p></div>
+													<div class="popCont">
+														<p class="search">
+															<span class="txt">국가명</span>
+															<input type="text" class="inpT">
+															<button type="button" class="searchBtn">검색하기</button>
+														</p>
+														<div class="selectItem scrollBox nation">
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아랍 에미리트 연방</span>
+																		<span>The UnitedArab Emirates</span>
+																		<span>阿拉伯联合酋长国</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>아르헨티나</span>
+																		<span>Argentina</span>
+																		<span>阿根廷</span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>알바니아</span>
+																		<span>Albania</span>
+																		<span>阿尔巴尼亚 </span>
+																	</span>
+																</label>
+															</p>
+															<p>
+																<label class="inpD">
+																	<input type="checkbox" class="inp">
+																	<span class="icon"></span>
+																	<span class="text">
+																		<span>보스니아-헤르체고비나</span>
+																		<span>Bosnia and Herzegovina</span>
+																		<span>波斯尼亚和黑塞哥维那 </span>
+																	</span>
+																</label>
+															</p>
+														</div>
+														<div class="selectedList">
+															<span>이스라엘</span>
+															<span>이라크</span>
+														</div>
+														<p class="btnGroup btm">
+															<button type="button" class="closePop">저장</button>
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- //국가찾기 팝업 -->
+										</div>
+									</td>
+									<td class="pad"><textarea>외교(A-1), 관용(A-2) 내지 협정(A-3)</textarea></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
-				<table class="table input">
-					<colgroup>
-						<col style="width: 56px" />
-						<col style="width: 320px" />
-						<col style="width: " />
-					</colgroup>
-					<thead>
-						<tr>
-							<th>선택</th>
-							<th>면제대상국가</th>
-							<th>면제조건</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="inpCell">
-								<label class="inpD">
-									<input type="radio" name="select" class="inp">
-									<span class="icon"></span>
-								</label>
-							</td>
-							<td class="pad"><textarea>스페인, 이탈리아, 태국, 일본, 대만, 우크라이나, 바베이도스, 콜롬비아, 페루, 라이베리아</textarea></td>
-							<td class="pad"><textarea>체류기간에 관계없이 모든 비자</textarea></td>
-						</tr>
-						<tr>
-							<td class="inpCell">
-								<label class="inpD">
-									<input type="radio" name="select" class="inp">
-									<span class="icon"></span>
-								</label>
-							</td>
-							<td class="pad"><textarea>미국</textarea></td>
-							<td class="pad"><textarea>외교(A-1), 관용(A-2) 내지 협정(A-3)</textarea></td>
-						</tr>
-					</tbody>
-				</table>
 
 				<h4><em class="red">*</em>변경사유</h4>
 				<textarea></textarea>
 		
 				<span class="btnGroup btm">
+					<span class="text"><em class="red">*</em>필수항목</span>
 					<button type="button" class="btn">저장하기</button>
 				</span>
 			</div>

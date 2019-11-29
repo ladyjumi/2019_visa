@@ -15,7 +15,7 @@
 
 	<div class="header">
 		<div class="inner">
-			<h1><a href="#">비자네비게이터 Admin</a></h1>
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
 
 			<!-- GNB -->
 			<ul class="gnb">
@@ -30,17 +30,11 @@
 					<span>
 						[최종접속시간 
 						<em>2019.07.08</em>
-						<em>12:13:15</em>
-						/
-						<em>106.247.228.114</em>]
+						<em>12:13:15</em>]
 					</span>
 				</p>
 				<a href="#">로그아웃</a>
 				<a href="#">비밀번호 변경</a>
-				<span>
-					<input type="text" placeholder="검색" class="searchBox">
-					<button type="button" class="searchBtn">검색버튼</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -68,13 +62,7 @@
 							<li><a href="#">수수료 면제국가 관리</a></li>
 						</ul>
 					</li>
-					<li>
-						<span>비자표출 관리</span>
-						<ul class="subM depth2">
-							<li><a href="#">법무부</a></li>
-							<li><a href="#">중국(광저우)</a></li>
-						</ul>
-					</li>
+					<li><a href="">비자표출 관리</a></li>
 					<li>
 						<span>변경 이력 확인</span>
 						<ul class="subM depth2">
@@ -99,11 +87,29 @@
 			<div class="cont">
 
 				<h3>수수료 조정국가 관리</h3>
-				<span class="topRight"><em class="red">*</em>필수항목</span>
-				<div class="tableTop btnGroup">
+
+				<div class="tabWrap cmsTab">
+					<ul class="tabMenu">
+						<li class="active"><button type="button">국문</button></li>
+						<li><button type="button">중문</button></li>
+						<li><button type="button">영문</button></li>
+					</ul>
+					<div class="tabBox">
+						<input type="text" placeholder="국문 제목을 입력해주세요." class="inpT" value="수수료 조정 국가">
+					</div>
+					<div class="tabBox">
+						<input type="text" placeholder="중문 제목을 입력해주세요." class="inpT">
+					</div>
+					<div class="tabBox">
+						<input type="text" placeholder="영문 제목을 입력해주세요." class="inpT">
+					</div>
+				</div>
+
+				<div class="topRight tableTop btnGroup">
 					<button type="button" class="btnBorder">선택삭제</button>
 					<button type="button" class="btnBorder">대상 추가</button>
 				</div>
+				
 				<table class="table input">
 					<colgroup>
 						<col style="width: 56px" />
@@ -134,7 +140,19 @@
 									<span class="icon"></span>
 								</label>
 							</td>
-							<td><input type="text" autocomplete="autocomplete" class="inpT"></td>
+							<td>
+								<!-- 검색어 자동완성 -->
+								<div class="searchWords">
+									<input type="text" autocomplete="autocomplete" class="inpT">
+									<ul class="list" style="display: none;">
+										<li><a href="#">아프가니스탄</a></li>
+										<li><a href="#">아랍에미리트</a></li>
+										<li><a href="#">아르헨티나</a></li>
+										<li><a href="#">아이슬란드</a></li>
+									</ul>
+								</div>
+								<!-- //검색어 자동완성 -->
+							</td>
 							<td>
 								<span class="inpWrap">
 									<input type="text" class="inpT inpNum">달러
@@ -163,7 +181,19 @@
 									<span class="icon"></span>
 								</label>
 							</td>
-							<td><input type="text" autocomplete="autocomplete" class="inpT"></td>
+							<td>
+								<!-- 검색어 자동완성 -->
+								<div class="searchWords">
+									<input type="text" autocomplete="autocomplete" class="inpT">
+									<ul class="list" style="display: none;">
+										<li><a href="#">아프가니스탄</a></li>
+										<li><a href="#">아랍에미리트</a></li>
+										<li><a href="#">아르헨티나</a></li>
+										<li><a href="#">아이슬란드</a></li>
+									</ul>
+								</div>
+								<!-- //검색어 자동완성 -->
+							</td>
 							<td>
 								<span class="inpWrap">
 									<input type="text" class="inpT inpNum">달러
@@ -192,7 +222,19 @@
 									<span class="icon"></span>
 								</label>
 							</td>
-							<td><input type="text" autocomplete="autocomplete" class="inpT"></td>
+							<td>
+								<!-- 검색어 자동완성 -->
+								<div class="searchWords">
+									<input type="text" autocomplete="autocomplete" class="inpT">
+									<ul class="list" style="display: none;">
+										<li><a href="#">아프가니스탄</a></li>
+										<li><a href="#">아랍에미리트</a></li>
+										<li><a href="#">아르헨티나</a></li>
+										<li><a href="#">아이슬란드</a></li>
+									</ul>
+								</div>
+								<!-- //검색어 자동완성 -->
+							</td>
 							<td>
 								<span class="inpWrap">
 									<input type="text" class="inpT inpNum">달러
@@ -221,6 +263,7 @@
 				<textarea></textarea>
 		
 				<span class="btnGroup btm">
+					<span class="text"><em class="red">*</em>필수항목</span>
 					<button type="button" class="btn">저장하기</button>
 				</span>
 			</div>

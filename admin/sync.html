@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>Admin동기화</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body class="admin">
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
+
+			<!-- GNB -->
+			<ul class="gnb">
+				<li><a href="#">콘텐츠관리</a></li>
+				<li class="active"><a href="#">계정관리</a></li>
+			</ul>
+			<!-- //GNB -->
+
+			<div class="topMenu">
+				<p class="currentInfo">
+					<span><em>Admin1234</em>접속 중</span>
+					<span>
+						[최종접속시간 
+						<em>2019.07.08</em>
+						<em>12:13:15</em>]
+					</span>
+				</p>
+				<a href="#">로그아웃</a>
+				<a href="#">비밀번호 변경</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="contents">
+		<div class="inner">
+
+			<!-- LNB -->
+			<div class="aside">
+				<ul class="lnb">
+					<li><a href="#">계정관리</a></li>
+					<li><a href="#">계정생성</a></li>
+					<li><a href="#">공관/센터 관리</a></li>
+					<li><a href="#">공관/센터 생성</a></li>
+					<li><a href="#">로그</a></li>
+					<li class="active"><a href="#">동기화</a></li>
+				</ul>
+			</div>
+			<!-- //LNB -->
+
+			<div class="cont">
+
+				<h3>동기화</h3>
+
+				<div class="syncTxt">
+					<p><b>최종 동기화</b><span>2019.12.31</span><span>00:00:00</span></p>
+					<p><b>다음 동기화</b><span>2019.01.01</span><span>00:00:00</span></p>
+				</div>
+
+				<ul class="textList">
+					<li>*매일 00:00:00 서버 데이터를 동기화 합니다.</li>
+					<li>*수동으로 동기화를 원하시면 아래 버튼을 누르세요.</li>
+				</ul>
+
+				<div><button type="button" class="btn blue">지금 동기화</button></div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	
+</body>
+</html>

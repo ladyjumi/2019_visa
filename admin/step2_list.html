@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>체류자격코드관리</title>
+	<title>체류자격코드등록1</title>
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
@@ -15,7 +15,7 @@
 
 	<div class="header">
 		<div class="inner">
-			<h1><a href="#">비자네비게이터 Admin</a></h1>
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
 
 			<!-- GNB -->
 			<ul class="gnb">
@@ -30,17 +30,11 @@
 					<span>
 						[최종접속시간 
 						<em>2019.07.08</em>
-						<em>12:13:15</em>
-						/
-						<em>106.247.228.114</em>]
+						<em>12:13:15</em>]
 					</span>
 				</p>
 				<a href="#">로그아웃</a>
 				<a href="#">비밀번호 변경</a>
-				<span>
-					<input type="text" placeholder="검색" class="searchBox">
-					<button type="button" class="searchBtn">검색버튼</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -54,9 +48,10 @@
 					<li>
 						<span>체류자격 관리</span>
 						<ul class="subM depth2">
-							<li class="active"><a href="#">체류자격 코드 관리</a></li>
-							<li><a href="#">체류자격 항목 관리</a></li>
-							<li><a href="#">체류자격 등록 관리</a></li>
+							<li><a href="#">STEP1. 코드관리</a></li>
+							<li class="active"><a href="#">STEP2. 기본정보관리</a></li>
+							<li><a href="#">STEP3. 항목관리</a></li>
+							<li><a href="#">STEP4. 노출관리 </a></li>
 						</ul>
 					</li>
 					<li><a href="#">첨부파일 관리</a></li>
@@ -68,13 +63,7 @@
 							<li><a href="#">수수료 면제국가 관리</a></li>
 						</ul>
 					</li>
-					<li>
-						<span>비자표출 관리</span>
-						<ul class="subM depth2">
-							<li><a href="#">법무부</a></li>
-							<li><a href="#">중국(광저우)</a></li>
-						</ul>
-					</li>
+					<li><a href="">비자표출 관리</a></li>
 					<li>
 						<span>변경 이력 확인</span>
 						<ul class="subM depth2">
@@ -98,22 +87,31 @@
 
 			<div class="cont">
 
-				<h3>체류자격 코드 관리</h3>
+				<h3>STEP2. 기본정보관리</h3>
+
+				<!-- 1125수정 -->				
 				<ul class="optionTable">
 					<li>
 						<div class="cell">
-							<p class="title">체류자격</p>
-							<div class="box">
+							<p class="title">코드ID</p>
+							<div class="box auto">
 								<select class="selectD">
-									<option value="">전체</option>
-								</select>
-								<select class="selectD">
-									<option value="">전체</option>
+									<option value="">10</option>
+									<option value="">9</option>
 								</select>
 							</div>
 						</div>
 						<div class="cell">
-							<p class="title short">체류자격명</p>
+							<p class="title">약호</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">C3-01</option>
+									<option value="">E7-01</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title">체류자격명</p>
 							<div class="box">
 								<select class="selectD">
 									<option value="">전체</option>
@@ -125,8 +123,53 @@
 								</select>
 							</div>
 						</div>
+					</li>
+					<li>
 						<div class="cell">
-							<p class="title short">사용여부</p>
+							<p class="title">시퀀스</p>
+							<div class="box auto">
+								<select class="selectD">
+									<option value="">전체</option>
+									<option value="">1</option>
+									<option value="">2</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title">신청대상</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">비자발급인정서</option>
+									<option value="">제외공관</option>
+									<option value="">전자비자</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title">체류기간</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">90일 이하(단기/단기무사증)</option>
+									<option value="">91일 이상(장기사증)</option>
+									<option value="">영주(영주/특수사증)</option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title">사증종류</p>
+							<div class="box auto">
+								<select class="selectD">
+									<option value="">단수</option>
+									<option value="">복수</option>
+									<option value="">더블</option>
+								</select>
+							</div>
+						</div>
+						<!-- 1127 수정 -->
+						<div class="cell">
+							<p class="title">사용설정</p>
 							<div class="box">
 								<select class="selectD">
 									<option value="">전체</option>
@@ -135,9 +178,8 @@
 								</select>
 							</div>
 						</div>
-					</li>
-					<li>
-						<div class="cell">
+						<!-- //1127 수정 -->
+						<div class="cell autoF">
 							<p class="title">검색</p>
 							<div class="box">
 								<input type="text" class="inpT wide">
@@ -147,22 +189,31 @@
 					</li>
 				</ul>
 
+				<!-- 1127 수정 -->
 				<table class="table">
 					<colgroup>
-						<col style="width: 56px" />
-						<col style="width: 160px" />
-						<col style="width: 160px" />
+						<col style="width: 70px" />
+						<col style="width: 80px" />
+						<col style="width: 110px" />
+						<col style="width: 70px" />
 						<col style="width: auto" />
-						<col style="width: auto" />
-						<col style="width: 160px" />
+						<col style="width: 130px" />
+						<col style="width: 130px" />
+						<col style="width: 80px" />
 						<col style="width: 120px" />
+						<col style="width: 100px" />
+						<col style="width: 100px" />
 					</colgroup>
 					<thead>
 						<tr>
-							<th>번호</th>
-							<th>체류자격(대분류)</th>
-							<th>체류자격(소분류)</th>
+							<th>코드ID</th>
+							<th>약호</th>
 							<th>체류자격명</th>
+							<th>시퀀스</th>
+							<th>코드</th>
+							<th>신청대상</th>
+							<th>체류기간</th>
+							<th>사증종류</th>
 							<th>작성자</th>
 							<th>작성일</th>
 							<th>사용설정</th>
@@ -170,12 +221,18 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>1</td>
-							<td><a href="#" class="link">C3</a></td>
-							<td><a href="#" class="link">01</a></td>
-							<td><a href="#" class="link">단기일반</a></td>
-							<td>Admin</td>
-							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
+							<td>9999</td>
+							<td>C3-01</td>
+							<td>단기일반</td>
+							<td>0111</td>
+							<td>5</td>
+							<td>재외공관</td>
+							<td><p>90일 이하<br>(단기/단기무사증)</p></td>
+							<td>단수</td>
+							<td><p class="mail">Admin@naver.com</p></td>
+							<td>
+								<p class="date"><span>2019.07.31</span><span>16:31:22</span></p>
+							</td>
 							<td>
 								<select class="selectD">
 									<option value="">사용</option>
@@ -184,12 +241,20 @@
 							</td>
 						</tr>
 						<tr>
-							<td>2</td>
-							<td><a href="#" class="link">E3</a></td>
-							<td><a href="#" class="link">01</a></td>
-							<td><a href="#" class="link">특정활동</a></td>
-							<td>Admin</td>
-							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
+							<td>9998</td>
+							<td>E3-07</td>
+							<td>FTA독립</td>
+							<td>0911</td>
+							<td>5</td>
+							<td>비자발급인정서</td>
+							<td><p>영주<br>(영주/특수사증)</p></td>
+							<td>복수</td>
+							<td>
+								<p class="mail">mailtextlonglonmail@moretxt.com</p>
+							</td>
+							<td>
+								<p class="date"><span>2019.07.31</span><span>16:31:22</span></p>
+							</td>
 							<td>
 								<select class="selectD">
 									<option value="">사용</option>
@@ -199,9 +264,10 @@
 						</tr>
 					</tbody>
 				</table>
+				<!-- //1127 수정 -->
 
 				<span class="btnGroup btm">
-					<button type="button" class="btn">체류자격 등록</button>
+					<button type="button" class="btn">기본정보 관리 등록</button><!-- 1125수정 : 버튼 텍스트 변경 -->
 				</span>
 
 				<div class="paging">

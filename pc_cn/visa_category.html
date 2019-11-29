@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>입국목적별비자종류</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">签证导航</a></h1>
+			<!-- GNB -->
+			<ul class="gnb">
+				<li><a href="#">签证 搜索</a></li>
+				<li class="active"><a href="#">入境目的与签证种类</a></li>
+				<li><a href="#">签证申请程序介绍</a></li>
+				<li><a href="#">签证费介绍</a></li>
+				<li><a href="#">入境及滞留</a></li>
+			</ul>
+			<!-- //GNB -->
+			<div class="topMenu">
+				<!-- 언어변경 -->
+				<select class="lang">
+					<option value="">한국어</option>
+					<option value="">ENGLISH</option>
+					<option value="">中文</option>
+				</select>
+				<!-- //언어변경 -->
+				<button type="button" class="searchBtn showsearchBar">검색버튼</button>
+			</div>
+		</div>
+
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<div class="inner">
+					<span class="searchBox">
+						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
+						<input type="button" value="검색" class="searchBtn">
+					</span>
+				</div>
+			</div>
+			<div class="dimmed"></div>
+		</div>
+		<!-- //검색창 -->
+	</div>
+
+	<div class="contents">
+
+		<div class="frontCont">
+			<h2>入境目的签证种类</h2>
+			<div class="gridWrap">
+
+				<ul class="visaList total">
+					<li class="visa01">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>观光等 短期访问</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">免签证 <em>(B-1)</em></a></li>
+							<li><a href="#">一般免签证 <em>(B-2-1)</em></a></li>
+							<li><a href="#">济州免签证 <em>(B-2-2)</em></a></li>
+							<li><a href="#">短期一般 <em>(C-3-1)</em></a></li>
+							<li><a href="#">团体观光等 <em>(C-3-2)</em></a></li>
+							<li><a href="#">一般商务 <em>(C-3-4)</em></a></li>
+							<li><a href="#">协定短期商务 <em>(C-3-5)</em></a></li>
+							<li><a href="#">短期商务 <em>(C-3-6)</em></a></li>
+							<li><a href="#">同胞访问 <em>(C-3-8)</em></a></li>
+							<li><a href="#">一般观光 <em>(C-3-9)</em></a></li>
+							<li><a href="#">观光就业 <em>(H-1)</em></a></li>
+							<li><a href="#">直接转机 <em>(C-3-10)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa02">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>专职就业</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">短期就业 <em>(C-4)</em></a></li>
+							<li><a href="#">求职活动 <em>(D-10-1)</em></a></li>
+							<li><a href="#">技术创业活动 <em>(D-10-2)</em></a></li>
+							<li><a href="#">教授 <em>(E-1)</em></a></li>
+							<li><a href="#">普通会话讲师 <em>(E-2-1)</em></a></li>
+							<li><a href="#">学校辅助教师 <em>(E-2-2)</em></a></li>
+							<li><a href="#">FTA英语 <em>(E-2-91)</em></a></li>
+							<li><a href="#">研究 <em>(E-3)</em></a></li>
+							<li><a href="#">技术指导 <em>(E-4)</em></a></li>
+							<li><a href="#">专门职业 <em>(E-5)</em></a></li>
+							<li><a href="#">艺术演艺 <em>(E-6-1)</em></a></li>
+							<li><a href="#">酒店娱乐 <em>(E-6-2)</em></a></li>
+							<li><a href="#">运动 <em>(E-6-3)</em></a></li>
+							<li><a href="#">特定活动 <em>(E-7-1)</em></a></li>
+							<li><a href="#">FTA独立 <em>(E-7-91)</em></a></li>
+							<li><a href="#">特定能力 <em>(F-5-11)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa03">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>投资</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">向法人投资<em>(D-8-1)</em></a></li>
+							<li><a href="#">创业企业 <em>(D-8-2)</em></a></li>
+							<li><a href="#">个人企业投资 <em>(D-8-3)</em></a></li>
+							<li><a href="#">技术创业 <em>(D-8-4)</em></a></li>
+							<li><a href="#">FTA转岗 <em>(D-8-91)</em></a></li>
+							<li><a href="#">高额投资 <em>(F-5-5)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa04">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>访问就业</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">缘故访问就业 <em>(H-2-1)</em></a></li>
+							<li><a href="#">留学访问就业 <em>(H-2-2)</em></a></li>
+							<li><a href="#">抽签访问就业 <em>(H-2-5)</em></a></li>
+							<li><a href="#">到期访问就业 <em>(H-2-7)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa05">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>研修</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">文化艺术 <em>(D-1)</em></a></li>
+							<li><a href="#">海外直接投资 <em>(D-3-11)</em></a></li>
+							<li><a href="#">技术出口 <em>(D-3-12)</em></a></li>
+							<li><a href="#">成套设备出口 <em>(D-3-13)</em></a></li>
+							<li><a href="#">其他研修 <em>(D-4-2)</em></a></li>
+							<li><a href="#">韩食料理研修 <em>(D-4-5)</em></a></li>
+							<li><a href="#">私营机构研修 <em>(D-4-6)</em></a></li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="visaList total">
+					<li class="visa06">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>治疗疗养</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">医疗观光 <em>(C-3-3)</em></a></li>
+							<li><a href="#">治疗疗养 <em>(G-1-10)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa07">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>派驻</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">外国企业 <em>(D-7-1)</em></a></li>
+							<li><a href="#">国内企业 <em>(D-7-2)</em></a></li>
+							<li><a href="#">FTA转岗 <em>(D-7-91)</em></a></li>
+							<li><a href="#">FTA合同 <em>(D-7-92)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa08">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>贸易经营</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">贸易固有交易 <em>(D-9-1)</em></a></li>
+							<li><a href="#">出口设备 <em>(D-9-2)</em></a></li>
+							<li><a href="#">船舶设备 <em>(D-9-3)</em></a></li>
+							<li><a href="#">经营营利业务 <em>(D-9-4)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa09">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>探亲 · 同居</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">外交同住 <em>(F-1-3)</em></a></li>
+							<li><a href="#">同胞配偶等 <em>(F-1-19)</em></a></li>
+							<li><a href="#">留学生父母 <em>(F-1F-13)</em></a></li>
+							<li><a href="#">国民子女 <em>(F-2-2)</em></a></li>
+							<li><a href="#">永住者家属 <em>(F-2-3)</em></a></li>
+							<li><a href="#">随同 <em>(F-3-1)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa10">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>非专职就业</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">制造业 <em>(E-9-1)</em></a></li>
+							<li><a href="#">建设业 <em>(E-9-2)</em></a></li>
+							<li><a href="#">农业 <em>(E-9-3)</em></a></li>
+							<li><a href="#">渔业 <em>(E-9-4)</em></a></li>
+							<li><a href="#">服务业 <em>(E-9-5)</em></a></li>
+							<li><a href="#">内航船员 <em>(E-10-1)</em></a></li>
+							<li><a href="#">渔船船员 <em>(E-10-2)</em></a></li>
+							<li><a href="#">巡航船员 <em>(E-10-3)</em></a></li>
+							<li><a href="#">外交家政服务人员 <em>(F-1-21)</em></a></li>
+							<li><a href="#">高额家政服务人员 <em>(F-1-22)</em></a></li>
+							<li><a href="#">尖端家政服务人员 <em>(F-1-23)</em></a></li>
+							<li><a href="#">专门家政服务人员 <em>(F-1-24)</em></a></li>
+						</ol>
+					</li>
+				</ul>
+
+				<ul class="visaList total">
+					<li class="visa11">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>留学· 语言研修</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">大专学位 <em>(D-2-1)</em></a></li>
+							<li><a href="#">学士学位 <em>(D-2-2)</em></a></li>
+							<li><a href="#">硕士学位 <em>(D-2-3)</em></a></li>
+							<li><a href="#">博士学位 <em>(D-2-4)</em></a></li>
+							<li><a href="#">研究留学 <em>(D-2-5)</em></a></li>
+							<li><a href="#">交换学生 <em>(D-2-6)</em></a></li>
+							<li><a href="#">韩国语研修 <em>(D-4-1)</em></a></li>
+							<li><a href="#">小学、初中、高中学生 <em>(D-4-3)</em></a></li>
+							<li><a href="#">外国语研修 <em>(D-4-7)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa12">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>采访· 宗教</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">短期采访 <em>(C-1)</em></a></li>
+							<li><a href="#">采访 <em>(D-5)</em></a></li>
+							<li><a href="#">宗教 <em>(D-6)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa13">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>在外同胞</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">在外同胞本人 <em>(F-4-11)</em></a></li>
+							<li><a href="#">在外同胞直系 <em>(F-4-12)</em></a></li>
+							<li><a href="#">DE系列滞留者 <em>(F-4-13)</em></a></li>
+							<li><a href="#">大学毕业者 <em>(F-4-14)</em></a></li>
+							<li><a href="#">OECD永住者 <em>(F-4-15)</em></a></li>
+							<li><a href="#">法人代表等 <em>(F-4-16)</em></a></li>
+							<li><a href="#">10万美元企业家 <em>(F-4-17)</em></a></li>
+							<li><a href="#">跨国企业 <em>(F-4-18)</em></a></li>
+							<li><a href="#">同胞团体代表 <em>(F-4-19)</em></a></li>
+							<li><a href="#">公务员等 <em>(F-4-20)</em></a></li>
+							<li><a href="#">教员 <em>(F-4-21)</em></a></li>
+							<li><a href="#">年满60周岁以上者 <em>(F-F-25)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa14">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>结婚移民
+</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">国民配偶 <em>(F-6-1)</em></a></li>
+							<li><a href="#">子女养育 <em>(F-6-2)</em></a></li>
+						</ol>
+					</li>
+					<li class="visa15">
+						<button type="button" class="inBox">
+							<strong class="name">
+								<span class="icon"></span>
+								<em>外交 · 公务</em>
+							</strong>
+						</button>
+						<ol class="visaType">
+							<li><a href="#">外交 <em>(A-1)</em></a></li>
+							<li><a href="#">公务 <em>(A-2)</em></a></li>
+						</ol>
+					</li>
+				</ul>
+			</div>			
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>签证导航</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 ( 외국인종합안내센터 : 국번없이 1345 )</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+
+	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
+</div>
+	
+</body>
+</html>

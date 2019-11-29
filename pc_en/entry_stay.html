@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>입국및체류</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">Visa Navigator</a></h1>
+			<!-- GNB -->
+			<ul class="gnb">
+				<li><a href="#">Searching Visa</a></li>
+				<li><a href="#">Visa type by purpose of entry</a></li>
+				<li><a href="#">How to apply</a></li>
+				<li><a href="#">Visa Fees</a></li>
+				<li class="active"><a href="#">Entry & Stay</a></li>
+			</ul>
+			<!-- //GNB -->
+			<div class="topMenu">
+				<!-- 언어변경 -->
+				<select class="lang">
+					<option value="">한국어</option>
+					<option value="">ENGLISH</option>
+					<option value="">中文</option>
+				</select>
+				<!-- //언어변경 -->
+				<button type="button" class="searchBtn showsearchBar">Search Button</button>
+			</div>
+		</div>
+
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<div class="inner">
+					<span class="searchBox">
+						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
+						<input type="button" value="검색" class="searchBtn">
+					</span>
+				</div>
+			</div>
+			<div class="dimmed"></div>
+		</div>
+		<!-- //검색창 -->
+	</div>
+
+	<div class="contents">
+
+		<div class="frontCont">
+			<h2>Entry & Stay</h2>
+
+			<h3>Entry Procedure</h3>
+			<table class="txtTable">
+				<colgroup>
+					<col style="width: 140px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>Entry Requirements</th>
+						<td>
+							<p>A foreigner who plans to enter the Korea has to meet the entry requirements as below:</p>
+							<ul class="listDot">
+								<li>You must possess a valid passport.<br>Immigration officials will reject your entry if you present him/her an expired or fake/false passport.</li>
+								<li>You must possess a valid visa.<br>You must enter before the expiry date of your visa. Moreover, immigration officials may reject your entry if your Visa type does not match with your entry purpose.
+									<div class="divBox">
+										<p class="red">※ You can enter without a visa, if you are:</p>
+										<ul class="listDash">
+											<li>A person who will enter the Korea before the expiry date of his/her re-entry permit or has been exempted from his/her re-entry permit.</li>
+											<li>A citizen of a country who is exempted in accordance with the visa exemption agreement between his/her country and the Korea</li>
+											<li>A person specially approved by the Presidential Decree who will enter the Korea to contribute to international relations, national interests and the tourism industry of Korea.</li>
+											<li>A person who has been issued a refugee travel document and will enter Korea before the expiry date</li>
+										</ul>
+									</div>
+								</li>
+								<li>You must not have any grounds for entry restrictions in accordance with the Immigration Act.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Type of Visa and period of validity</th>
+						<td>
+							<p>
+								Single-entry Visa : You can enter once before the expiry date. <br>
+								Double-entry Visa : You can enter twice before the expiry date (6 months). <br>
+								Multiple-entry Visa : You can enter unlimited times before the expiry date (1 year, 3 years, 5 years).
+							</p>
+							<div class="imgWrap">
+								<img src="../static/images/img_visa.jpg" alt="대한민국 비자 견본이미지(다음내용 참고)">
+								<p>REPUBLIC OF KOREA VISA</p>
+							</div>
+							<ol class="listNum">
+								<li><span><i>1</i>No. of Visa</span> :  Serial No. of Visa Issuance</li>
+								<li><span><i>2</i>Status</span> : Type of social activities or status of Foreigners while their stay in Korea</li>
+								<li><span><i>3</i>Period of Sojoum</span> : The permitted term of stay from starting from the date of entry into Korea</li>
+								<li><span><i>4</i>Entries</span> :  Visa Types, single-entry visa/double-entry visa/multiple-entry visa</li>
+								<li><span><i>5</i>Issue Date</span> : Visa Issuance date</li>
+								<li><span><i>6</i>Final Entry Date</span> : The Valid Term of Visa/ After this date, the visa is automatically rendered void</li>
+								<li><span><i>7</i>Issued at</span> : Where the visa was issued</li>
+							</ol>
+						</td>
+					</tr>
+					<tr>
+						<th>Arrival Card</th>
+						<td>
+							<p>A foreigner entering the Korea has to go through immigration at the port of entry. <br>Please present your passport along with the completed arrival card (Form No.41-2) that states the purpose of your entry, location of residence, etc to immigration officials.</p>
+							<div class="imgWrap">
+								<img src="../static/images/img_arrivalcard.jpg" alt="대한민국 입국신고서(서식 제41의2호) 이미지">
+								<p>Arrival Card</p>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Registration and Procedures</h3>
+			<table class="txtTable">
+				<colgroup>
+					<col style="width: 140px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>Alien Registrations</th>
+						<td>
+							<p>Foreigners under the conditions below have to register with their jurisdictional immigration offices within 90 days from the date of entry:</p>
+							<ul class="listDot">
+								<li>A foreigner who plans to stay for more than 90 days from the date of entry</li>
+								<li>A foreigner who has lost his/her Korean nationality upon the acquisition of foreign nationality, or who plans to stay for more than 90 days from the date on which his/her status was granted after being born in Korea.</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th>Alien Registration Exemption</th>
+						<td>
+							<p>Foreigners (or their legal representatives) under the circumstances below must notify the Immigration Office, within 14 days, of any changes in their alien registration information. <br>(Foreigners who fail to submit notification of changes in their alien registration information to the Immigration Office will be fined for violation of Article 35 of the Immigration Act)</p>
+							<ul class="listNumber">
+								<li>Circumstances for Notification
+									<ul class="listDot">
+										<li>Change in name, gender, date of birth, or nationality</li>
+										<li>Change in passport number, expiry date, or date of issue우</li>
+										<li>Change in affiliated organization or department of a foreigner with the status of - Korean Arts and Culture (D-1), Student (D-2), General trainee (D-4)</li>
+										<li> Long-term News Coverage (D-5), Religious Worker (D-6), Intra-company Transferee (D-7), Corporate/Foreign Investor (D-8), or International Trade (D-9)</li>
+									</ul>
+								</li>
+								<li>Required Documents
+									<ul class="listDot">
+										<li>Passport and alien registration card</li>
+										<li>Change notification of alien registration information</li>
+									</ul>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Foreigner’s range of activity and employment</h3>
+			<table class="txtTable">
+				<colgroup>
+					<col style="width: 140px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>Foreigner’s range of activity and employment</th>
+						<td>
+							<ul class="listDot">
+								<li>Foreigners can stay in the Korea according to their status of stay and durations of stay as stated on the visa.</li>
+								<li>Foreigners must possess status of stay for employment to work in the Korea, and can only work for the assigned jobs.</li>
+								<li>Eligible status of stay for employment are as below:
+									<div class="divBox">
+										<p>Short-term Employee (C-4), Professor (E-1), Foreign Language Instructor (E-2), Researcher (E-3), Technical Instructor/Technician (E-4), Professional (E-5), Arts/Athlete (E-6), Foreign National of Special Ability (E-7), Non-professional (E-9), Maritime Crew (E-10), Resident (F-2), Overseas Korean (F-4), Permanent Resident (F-5), Marriage Migrant (F-6), Working Holiday (H-1), Work and Visit (H-2)</p>
+									</div>
+								</li>
+								<li>Despite the possession of qualifying status of stay for employment, working for an employer other than the ones stated on the visa application forms, without receiving prior permission from or reporting in advance to the Immigration Office, is considered as violation of the terms and conditions of the visa.</li>
+								<li>For any changes in employer, work location, etc., you must check the proper procedure from the immigration office or Immigration Contact Center (1345 without area code) and make a report or apply for permission in advance or within the specified date.</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>Visa Navigator</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 ( 외국인종합안내센터 : 국번없이 1345 )</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+
+	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<title>입국목적별비자종류</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style_m.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">Visa Navigator</a></h1>
+			<span class="btnWrap">
+				<button type="button" class="searchBtn showsearchBar">Search Button</button>
+				<button type="button" class="gnbBtn">Open Menu</button>					
+			</span>
+		</div>
+		<nav class="gnbWrap">
+			<div class="navBox">
+				<!-- 언어변경 -->
+				<ul class="lang">
+					<li class="active"><a href="#">KOR</a></li>
+					<li><a href="#">ENG</a></li>
+					<li><a href="#">中文</a></li>
+				</ul>
+				<!-- //언어변경 -->
+				<!-- GNB -->
+				<ul class="gnb">
+					<li><a href="#">Searching Visa</a></li>
+					<li class="active"><a href="#">Visa type by purpose of entry</a></li>
+					<li><a href="#">How to apply</a></li>
+					<li><a href="#">Visa Fees</a></li>
+					<li><a href="#">Entry & Stay</a></li>
+				</ul>
+				<!-- //GNB -->
+				<button type="button" class="gnbClose">Close Menu</button>
+			</div>
+		</nav>
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<span class="inputWrap">
+					<input type="text" placeholder="검색어를 입력하세요.">
+					<button type="button" class="btnDel">Delete</button>
+				</span>
+				<input type="button" value="검색" class="searchBtn">
+			</div>
+			<button type="button" class="back">Close Searching</button>			
+		</div>
+		<!-- //검색창 -->
+	</div>
+
+	<div class="contents">
+
+		<div class="frontCont">
+			<h2>Visa type by purpose of entry</h2>
+			<ul class="visaList total">
+				<li class="visa01">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Short Term Visit (ex. Tour)</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Visa Exempted <em>(B-1)</em></a></li>
+						<li><a href="#">Tourist / Transit (General) <em>(B-2-1)</em></a></li>
+						<li><a href="#">Tourist / Transit (Jeju <em>(B-2-2)</em></a></li>
+						<li><a href="#">Short-Term Genera <em>(C-3-1)</em></a></li>
+						<li><a href="#">Group Tourist <em>(C-3-2)</em></a></li>
+						<li><a href="#">Business Visitor (General) <em>(C-3-4)</em></a></li>
+						<li><a href="#">Business Visitor (Agreement) <em>(C-3-5)</em></a></li>
+						<li><a href="#">Business Visitor (Sponsored) <em>(C-3-6)</em></a></li>
+						<li><a href="#">Short term Visitor (Overseas Korean) <em>(C-3-8)</em></a></li>
+						<li><a href="#">Ordinary Tourist <em>(C-3-9)</em></a></li>
+						<li><a href="#">Working Holiday <em>(H-1)</em></a></li>
+						<li><a href="#">Direct Transit Visa(Air-side) <em>(C-3-10)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa02">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+								<em>Professional</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Short-Term Employee <em>(C-4)</em></a></li>
+						<li><a href="#">Job Seeker <em>(D-10-1)</em></a></li>
+						<li><a href="#">Business Startup <em>(D-10-2)</em></a></li>
+						<li><a href="#">Professor <em>(E-1)</em></a></li>
+						<li><a href="#">Foreign Language Instructor (General) <em>(E-2-1)</em></a></li>
+						<li><a href="#">Teaching Assistant <em>(E-2-2)</em></a></li>
+						<li><a href="#">Foreign Language Instructor (by FTA) <em>(E-2-91)</em></a></li>
+						<li><a href="#">Researcher <em>(E-3)</em></a></li>
+						<li><a href="#">Technical Instructor / Technician <em>(E-4)</em></a></li>
+						<li><a href="#">Professional <em>(E-5)</em></a></li>
+						<li><a href="#">Artist <em>(E-6-1)</em></a></li>
+						<li><a href="#">Hotel and Adult Entertainment <em>(E-6-2)</em></a></li>
+						<li><a href="#">Athlete <em>(E-6-3)</em></a></li>
+						<li><a href="#">Foreign National of Special Ability <em>(E-7-1)</em></a></li>
+						<li><a href="#">Independent Professional (by FTA) <em>(E-7-91)</em></a></li>
+						<li><a href="#">Special talent <em>(F-5-11)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa03">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Investment</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Incorporated Enterprise<em>(D-8-1)</em></a></li>
+						<li><a href="#">Business Venture <em>(D-8-2)</em></a></li>
+						<li><a href="#">Unincorporated Enterprise <em>(D-8-3)</em></a></li>
+						<li><a href="#">Technology and Business Startup <em>(D-8-4)</em></a></li>
+						<li><a href="#">Intra-Company Transferee (by FTA) <em>(D-8-91)</em></a></li>
+						<li><a href="#">Big Investor <em>(F-5-5)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa04">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Work and Visit</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Work and Visit (Family Connection) <em>(H-2-1)</em></a></li>
+						<li><a href="#">Work and Visit (Parents/Spouse of D-2 Student) <em>(H-2-2)</em></a></li>
+						<li><a href="#">Work and Visit (By lottery) <em>(H-2-5)</em></a></li>
+						<li><a href="#">Work and Visit (Expired visa) <em>(H-2-7)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa05">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Trainee</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Korean Arts and Culture <em>(D-1)</em></a></li>
+						<li><a href="#">Industrial Trainee (FDI) <em>(D-3-11)</em></a></li>
+						<li><a href="#">Industrial Trainee (Technology) <em>(D-3-12)</em></a></li>
+						<li><a href="#">Industrial Trainee (Plant) <em>(D-3-13)</em></a></li>
+						<li><a href="#">General Trainee (Others) <em>(D-4-2)</em></a></li>
+						<li><a href="#">Trainee Chef (Korean Cuisine) <em>(D-4-5)</em></a></li>
+						<li><a href="#">General Trainee (Private Institute) <em>(D-4-6)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa06">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Treatment and Recuperation</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Medical Tourist <em>(C-3-3)</em></a></li>
+						<li><a href="#">Treatment and Recuperation <em>(G-1-10)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa07">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Intra-Company Transfer</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Intra-Company Transferee (Foreign Company) <em>(D-7-1)</em></a></li>
+						<li><a href="#">Intra-Company Transferee (Domestic Company) <em>(D-7-2)</em></a></li>
+						<li><a href="#">Intra-Company Transferee (by FTA) <em>(D-7-91)</em></a></li>
+						<li><a href="#">Contractual Service Supplier (by FTA) <em>(D-7-92)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa08">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>International Trade</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">International Trade <em>(D-9-1)</em></a></li>
+						<li><a href="#">Technician (Industrial Machinery) <em>(D-9-2)</em></a></li>
+						<li><a href="#">Technician (Ship Building) <em>(D-9-3)</em></a></li>
+						<li><a href="#">Individual Foreign Business Man <em>(D-9-4)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa09">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Family Visitor</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Cohabitee of diplomat/foreign government official <em>(F-1-3)</em></a></li>
+						<li><a href="#">Spouse/underage children of F-4 Overseas Korean <em>(F-1-19)</em></a></li>
+						<li><a href="#">Parents of international student <em>(F-1F-13)</em></a></li>
+						<li><a href="#">Underage children of Korean National <em>(F-2-2)</em></a></li>
+						<li><a href="#">Spouse of permanent resident <em>(F-2-3)</em></a></li>
+						<li><a href="#">Dependent Family <em>(F-3-1)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa10">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Non - Professional</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Manufacturing <em>(E-9-1)</em></a></li>
+						<li><a href="#">Construction <em>(E-9-2)</em></a></li>
+						<li><a href="#">Agriculture <em>(E-9-3)</em></a></li>
+						<li><a href="#">Fishery <em>(E-9-4)</em></a></li>
+						<li><a href="#">Service <em>(E-9-5)</em></a></li>
+						<li><a href="#">Coastal Crew <em>(E-10-1)</em></a></li>
+						<li><a href="#">Fishing ship crew <em>(E-10-2)</em></a></li>
+						<li><a href="#">Cruise Ship Crew <em>(E-10-3)</em></a></li>
+						<li><a href="#">Household assistant of diplomat <em>(F-1-21)</em></a></li>
+						<li><a href="#">Household assistant of big investor <em>(F-1-22)</em></a></li>
+						<li><a href="#">Household assistant of high-tech investor <em>(F-1-23)</em></a></li>
+						<li><a href="#">Household assistant of professional <em>(F-1-24)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa11">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Study· Language Training</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Associate Degree <em>(D-2-1)</em></a></li>
+						<li><a href="#">Bachelor's Degree <em>(D-2-2)</em></a></li>
+						<li><a href="#">Master's Degree <em>(D-2-3)</em></a></li>
+						<li><a href="#">Doctoral Degree <em>(D-2-4)</em></a></li>
+						<li><a href="#">Research Study <em>(D-2-5)</em></a></li>
+						<li><a href="#">Exchange Student <em>(D-2-6)</em></a></li>
+						<li><a href="#">Korean Language Trainee <em>(D-4-1)</em></a></li>
+						<li><a href="#">Student (Elementary, Middle, High School) <em>(D-4-3)</em></a></li>
+						<li><a href="#">Foreign Language Trainee <em>(D-4-7)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa12">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Journalism· Religious Affairs</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Short-Term News Coverage <em>(C-1)</em></a></li>
+						<li><a href="#">Long-term News Coverage <em>(D-5)</em></a></li>
+						<li><a href="#">Religious Worker <em>(D-6)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa13">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Overseas Korean</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Overseas Korean <em>(F-4-11)</em></a></li>
+						<li><a href="#">Descendant of Overseas Korean <em>(F-4-12)</em></a></li>
+						<li><a href="#">Former D or E visa holder <em>(F-4-13)</em></a></li>
+						<li><a href="#">University Graduates <em>(F-4-14)</em></a></li>
+						<li><a href="#">Permanent resident of OECD country <em>(F-4-15)</em></a></li>
+						<li><a href="#">Corporate Executive <em>(F-4-16)</em></a></li>
+						<li><a href="#">Entrepreneur of $100,000 <em>(F-4-17)</em></a></li>
+						<li><a href="#">Multinational Company <em>(F-4-18)</em></a></li>
+						<li><a href="#">Representative of overseas Koreans organization <em>(F-4-19)</em></a></li>
+						<li><a href="#">Government Employee <em>(F-4-20)</em></a></li>
+						<li><a href="#">Teacher <em>(F-4-21)</em></a></li>
+						<li><a href="#">Person of Age 60 or older <em>(F-F-25)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa14">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Marriage Migrant</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Spouse of a Korean National <em>(F-6-1)</em></a></li>
+						<li><a href="#">Child Raising <em>(F-6-2)</em></a></li>
+					</ol>
+				</li>
+				<li class="visa15">
+					<button type="button" class="inBox">
+						<strong class="name">
+							<span class="icon"></span>
+							<em>Diplomacy · Official Business</em>
+						</strong>
+					</button>
+					<ol class="visaType">
+						<li><a href="#">Diplomat <em>(A-1)</em></a></li>
+						<li><a href="#">Foreign Government Official <em>(A-2)</em></a></li>
+					</ol>
+				</li>
+			</ul>		
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>Visa Navigator</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 <br>(외국인종합안내센터 : 국번없이 1345)</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+
+	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
+</div>
+	
+</body>
+</html>

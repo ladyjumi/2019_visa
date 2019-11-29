@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>체류자격등록(법무부)</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body class="admin">
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
+
+			<!-- GNB -->
+			<ul class="gnb">
+				<li class="active"><a href="#">콘텐츠관리</a></li>
+				<li><a href="#">계정관리</a></li>
+			</ul>
+			<!-- //GNB -->
+
+			<div class="topMenu">
+				<p class="currentInfo">
+					<span><em>Admin1234</em>접속 중</span>
+					<span>
+						[최종접속시간 
+						<em>2019.07.08</em>
+						<em>12:13:15</em>]
+					</span>
+				</p>
+				<a href="#">로그아웃</a>
+				<a href="#">비밀번호 변경</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="contents">
+		<div class="inner">
+
+			<!-- LNB -->
+			<div class="aside">
+				<ul class="lnb">
+					<li>
+						<span>체류자격 관리</span>
+						<ul class="subM depth2">
+							<li><a href="#">STEP1. 코드관리</a></li>
+							<li><a href="#">STEP2. 기본정보관리</a></li>
+							<li><a href="#">STEP3. 항목관리</a></li>
+							<li class="active"><a href="#">STEP4. 노출관리 </a></li>
+						</ul>
+					</li>
+					<li><a href="#">첨부파일 관리</a></li>
+					<li>
+						<span>수수료 관리</span>
+						<ul class="subM depth2">
+							<li><a href="#">MAIN 관리</a></li>
+							<li><a href="#">수수료 조정국가 관리</a></li>
+							<li><a href="#">수수료 면제국가 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="">비자표출 관리</a></li>
+					<li>
+						<span>변경 이력 확인</span>
+						<ul class="subM depth2">
+							<li><a href="#">체류자격 코드 이력</a></li>
+							<li><a href="#">체류자격 항목 이력</a></li>
+							<li><a href="#">체류자격 등록 이력</a></li>
+							<li><a href="#">첨부파일 등록 이력</a></li>
+							<li><span>수수료 변경 이력</span>
+								<ul class="subM depth3">
+									<li><a href="#">MAIN</a></li>
+									<li><a href="#">수수료 조정국가</a></li>
+									<li><a href="#">수수료 면제국가</a></li>
+								</ul>
+							</li>
+							<li><a href="#">비자표출 관리 이력</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- //LNB -->
+
+			<div class="cont">
+
+				<!-- 화면잠김 딤처리-->
+				<div class="lock type2"><div><span>화면잠김</span></div></div>
+				<!-- //화면잠김 딤처리-->
+
+				<h3>STEP4. 노출관리</h3>
+				
+				<div class="topRight">
+					<span class="selectWrap">
+						<span class="txt">사용설정</span>
+						<select class="selectD">
+							<option value="">미사용</option>
+							<option value="">사용</option>
+						</select>
+					</span>
+				</div>
+
+				<h4>항목 등록</h4>
+				<div class="topRight tableTop btnGroup">
+					<button type="button" class="btnBorder">선택삭제</button>
+					<button type="button" class="btnBorder openPopS">항목찾기</button>
+					<div class="popWrap popS">
+						<div class="popArea">
+							<button type="button" class="closePopBtn closePop">닫기</button>
+							<div class="popTitle"><p>항목선택</p></div>
+							<div class="popCont">
+								<div class="selectItem">
+									<p>
+										<label class="inpD">
+											<input type="checkbox" class="inp">
+											<span class="icon"></span>
+											<span class="text">체류자격 순번</span>
+										</label>
+									</p>
+									<p>
+										<label class="inpD">
+											<input type="checkbox" class="inp">
+											<span class="icon"></span>
+											<span class="text">기본 체류기간 30일 이하</span>
+										</label>
+									</p>
+									<p>
+										<label class="inpD">
+											<input type="checkbox" class="inp">
+											<span class="icon"></span>
+											<span class="text">기본체류기간 90일 이하</span>
+										</label>
+									</p>
+									<p>
+										<label class="inpD">
+											<input type="checkbox" class="inp">
+											<span class="icon"></span>
+											<span class="text">기본 체류기간 90일 이상</span>
+										</label>
+									</p>
+									<p>
+										<label class="inpD">
+											<input type="checkbox" class="inp">
+											<span class="icon"></span>
+											<span class="text">기본 체류기간 영주</span>
+										</label>
+									</p>
+								</div>
+								<p class="btnGroup btm">
+									<button type="button" class="closePop">선택</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<table class="table input">
+					<colgroup>
+						<col style="width: 56px" />
+						<col style="width: auto" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>선택</th>
+							<th>항목명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="inpCell">
+								<label class="inpD">
+									<input type="radio" name="select" class="inp">
+									<span class="icon"></span>
+								</label>
+							</td>
+							<td><input type="text" class="inpT wide"></td>
+						</tr>
+						<tr>
+							<td class="inpCell">
+								<label class="inpD">
+									<input type="radio" name="select" class="inp">
+									<span class="icon"></span>
+								</label>
+							</td>
+							<td><input type="text" class="inpT wide"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h4><em class="red">*</em>등록 항목</h4>
+				<div class="registBox viewBox">
+					<div class="titleBox">
+						<p>체류자격 순번</p>
+						<button type="button" class="openBtn"></button>
+					</div>
+					<div class="contBox">
+						<textarea placeholder="내용을 입력하세요."></textarea>
+						<ul class="addOption">
+							<li>
+								<label class="inpD">
+									<input type="radio" name="radio" class="inp">
+									<span class="icon"></span>
+									<span class="text">라디오 1</span>
+								</label>
+								<label class="inpD">
+									<input type="radio" name="radio" class="inp">
+									<span class="icon"></span>
+									<span class="text">라디오 2</span>
+								</label>
+							</li>
+							<li>
+								<label class="inpD">
+									<input type="checkbox" name="" class="inp">
+									<span class="icon"></span>
+									<span class="text">체크박스 1</span>
+								</label>
+								<label class="inpD">
+									<input type="checkbox" name="" class="inp">
+									<span class="icon"></span>
+									<span class="text">체크박스 2</span>
+								</label>
+							</li>
+						</ul>
+						<ul class="optionTable fileReg">
+							<li>
+								<div class="cell">
+									<p class="title">파일등록</p>
+									<div class="box row">
+										<div class="boxLine">
+											<em class="subTitle">첨부파일 버튼명</em>
+											<div class="tabWrap typeSmall">
+												<ul class="tabMenu">
+													<li class="active"><button type="button">버튼명(국문)</button></li>
+													<li><button type="button">버튼명(중문)</button></li>
+													<li><button type="button">버튼명(영문)</button></li>
+												</ul>
+												<div class="tabBox">
+													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+												</div>
+												<div class="tabBox">
+													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+												</div>
+												<div class="tabBox">
+													<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+												</div>
+											</div>
+										</div>
+										<div class="boxLine">
+											<em class="subTitle">첨부파일 등록</em>
+											<div class="tabBoxWrap">
+												<div class="tabBox">
+													<span class="inpFileWrap">
+														<input type="text" readonly="" class="inpT" placeholder="국문 파일을 등록해주세요.">
+														<label for=""><b>파일 찾기</b><input type="file"></label>
+													</span>
+													<button type="button" class="btn grey">파일 삭제</button>
+												</div>
+												<div class="tabBox">
+													<span class="inpFileWrap">
+														<input type="text" readonly="" class="inpT" placeholder="중문 파일을 등록해주세요.">
+														<label for=""><b>파일 찾기</b><input type="file"></label>
+													</span>
+													<button type="button" class="btn grey">파일 삭제</button>
+												</div>
+												<div class="tabBox">
+													<span class="inpFileWrap">
+														<input type="text" readonly="" class="inpT" placeholder="영문 파일을 등록해주세요.">
+														<label for=""><b>파일 찾기</b><input type="file"></label>
+													</span>
+													<button type="button" class="btn grey">파일 삭제</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">URL</p>
+									<div class="box row">
+										<div class="boxLine">
+											<em class="subTitle">버튼명</em>
+											<p>									
+												<div class="tabWrap typeSmall">
+													<ul class="tabMenu">
+														<li class="active"><button type="button">버튼명(국문)</button></li>
+														<li><button type="button">버튼명(중문)</button></li>
+														<li><button type="button">버튼명(영문)</button></li>
+													</ul>
+													<div class="tabBox">
+														<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+													</div>
+													<div class="tabBox">
+														<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+													</div>
+													<div class="tabBox">
+														<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+													</div>
+												</div>
+											</p>
+										</div>
+										<div class="boxLine">
+											<em class="subTitle">입력</em>
+											<p><input type="text" class="inpT wide"></p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="registBox viewBox">
+					<div class="titleBox">
+						<p>체류기간 영주</p>
+						<button type="button" class="openBtn"></button>
+					</div>
+					<div class="contBox">
+						<label class="inpD">
+							<input type="radio" name="distance" class="inp">
+							<span class="icon"></span>
+							<span class="text">Y</span>
+						</label>
+						<label class="inpD">
+							<input type="radio" name="distance" class="inp">
+							<span class="icon"></span>
+							<span class="text">N</span>
+						</label>
+					</div>
+				</div>
+
+				<hr class="line">
+
+				<strong class="titleTxtBox">재외공관 신청발급 대상</strong>
+
+				<!-- 국문 -->
+				<div class="registBox viewBox">
+					<div class="titleBox">
+						<p class="taC">국문</p>
+						<button type="button" class="openBtn"></button>
+					</div>
+					<div class="contBox">
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">기간</p>
+									<div class="box">
+										<input type="text" class="inpT inpNum">
+										<select class="selectD">
+											<option value="">일</option>
+											<option value="">월</option>
+											<option value="">년</option>
+										</select>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title short">유효기간</p>
+									<div class="box">
+										<input type="text" class="inpT inpNum">
+										<select class="selectD">
+											<option value="">일</option>
+											<option value="">월</option>
+											<option value="">년</option>
+										</select>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title short">연령</p>
+									<div class="box">
+										<input type="text" class="inpT inpNum">
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">대상</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">첨부서류</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">체류기간 설명</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">참고</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+						</ul>
+						<strong class="title">광저우</strong>
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">제목</p>
+									<div class="box">
+										<input type="text" class="inpT max">
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="editWrap">
+							<!-- 에디터영역 -->
+							<div class="editArea">에디터 영역</div>
+							<!-- //에디터영역 -->
+							<div class="attachWrap">
+								<span class="btnGroup">
+									<button type="button" class="btnBorder">선택삭제</button>
+									<button type="button" class="btnBorder">첨부파일 추가</button>
+								</span>
+								<div class="attachBox box">
+									<label class="inpD">
+										<input type="radio" name="attach1" class="inp">
+										<span class="icon"></span>
+										<span class="text">첨부파일</span>
+									</label>
+									<span class="inpFileWrap">
+										<input type="text" readonly="" class="inpT" placeholder="국문 파일을 등록해주세요.">
+										<label for=""><b>파일 찾기</b><input type="file"></label>
+									</span>
+									<span class="btnName">
+										<span>버튼명(국문)</span>
+										<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //국문 -->
+
+				<!-- 중문 -->
+				<div class="registBox viewBox">
+					<div class="titleBox">
+						<p class="taC">중문</p>
+						<button type="button" class="openBtn"></button>
+					</div>
+					<div class="contBox">
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">기간</p>
+									<div class="box">
+										<input type="text" class="inpT inpNum">
+										<select class="selectD">
+											<option value="">일</option>
+											<option value="">월</option>
+											<option value="">년</option>
+										</select>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title short">유효기간</p>
+									<div class="box">
+										<input type="text" class="inpT inpNum">
+										<select class="selectD">
+											<option value="">일</option>
+											<option value="">월</option>
+											<option value="">년</option>
+										</select>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title short">연령</p>
+									<div class="box">
+										<input type="text" class="inpT inpNum">
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">대상</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">첨부서류</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">체류기간 설명</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">참고</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+						</ul>
+						<strong class="title">광저우</strong>
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">제목</p>
+									<div class="box">
+										<input type="text" class="inpT max">
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="editWrap">
+							<!-- 에디터영역 -->
+							<div class="editArea">에디터 영역</div>
+							<!-- //에디터영역 -->
+							<div class="attachWrap">
+								<span class="btnGroup">
+									<button type="button" class="btnBorder">선택삭제</button>
+									<button type="button" class="btnBorder">첨부파일 추가</button>
+								</span>
+								<div class="attachBox box">
+									<label class="inpD">
+										<input type="radio" name="attach1" class="inp">
+										<span class="icon"></span>
+										<span class="text">첨부파일</span>
+									</label>
+									<span class="inpFileWrap">
+										<input type="text" readonly="" class="inpT" placeholder="중문 파일을 등록해주세요.">
+										<label for=""><b>파일 찾기</b><input type="file"></label>
+									</span>
+									<span class="btnName">
+										<span>버튼명(중문)</span>
+										<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //중문 -->
+
+				<!-- 영문 -->
+				<div class="registBox viewBox">
+					<div class="titleBox">
+						<p class="taC">영문</p>
+						<button type="button" class="openBtn"></button>
+					</div>
+					<div class="contBox">
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">기간</p>
+									<div class="box">
+										<input type="text" class="inpT inpNum">
+										<select class="selectD">
+											<option value="">일</option>
+											<option value="">월</option>
+											<option value="">년</option>
+										</select>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title short">유효기간</p>
+									<div class="box">
+										<input type="text" class="inpT inpNum">
+										<select class="selectD">
+											<option value="">일</option>
+											<option value="">월</option>
+											<option value="">년</option>
+										</select>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title short">연령</p>
+									<div class="box">
+										<input type="text" class="inpT inpNum">
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">대상</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">첨부서류</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">체류기간 설명</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">참고</p>
+									<div class="box"><textarea></textarea></div>
+								</div>
+							</li>
+						</ul>
+						<strong class="title">광저우</strong>
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">제목</p>
+									<div class="box">
+										<input type="text" class="inpT max">
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="editWrap">
+							<!-- 에디터영역 -->
+							<div class="editArea">에디터 영역</div>
+							<!-- //에디터영역 -->
+							<div class="attachWrap">
+								<span class="btnGroup">
+									<button type="button" class="btnBorder">선택삭제</button>
+									<button type="button" class="btnBorder">첨부파일 추가</button>
+								</span>
+								<div class="attachBox box">
+									<label class="inpD">
+										<input type="radio" name="attach1" class="inp">
+										<span class="icon"></span>
+										<span class="text">첨부파일</span>
+									</label>
+									<span class="inpFileWrap">
+										<input type="text" readonly="" class="inpT" placeholder="영문 파일을 등록해주세요.">
+										<label for=""><b>파일 찾기</b><input type="file"></label>
+									</span>
+									<span class="btnName">
+										<span>버튼명(영문)</span>
+										<input type="text" placeholder="*최대 10자까지 입력 가능합니다." class="inpT">
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //영문 -->
+
+				<h4><em class="red">*</em>등록사유</h4>
+				<textarea></textarea>
+
+				<h4>미리보기 설정</h4>
+				<!-- 테이블상단버튼 -->
+				<div class="tableTop topRight btnGroup">
+						<button type="button" class="btnBorder"><b>미리보기</b></button>
+				</div>
+				<!-- 테이블상단버튼 -->
+
+				<ul class="optionTable">
+					<li>
+						<div class="cell">
+							<p class="title">접근 경로</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">일반 도메인</option>
+									<option value="">비자포털</option>
+									<option value="">공관</option>
+									<option value="">센터</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title">2차</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">칭다오 공관</option>
+									<option value="">광저우 공관</option>
+									<option value="">우한 공관</option>
+									<option value="">호치민 공관</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title">언어</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">국문</option>
+									<option value="">중문</option>
+									<option value="">영문</option>
+								</select>
+							</div>
+						</div>
+					</li>
+				</ul>
+				
+				<span class="btnGroup btm">
+					<button type="button" class="btn">목록</button>
+					<span class="text"><em class="red">*</em>필수항목</span>
+					<button type="button" class="btn">등록하기</button>
+				</span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	
+</body>
+</html>

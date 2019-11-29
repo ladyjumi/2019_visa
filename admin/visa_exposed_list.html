@@ -15,7 +15,7 @@
 
 	<div class="header">
 		<div class="inner">
-			<h1><a href="#">비자네비게이터 Admin</a></h1>
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
 
 			<!-- GNB -->
 			<ul class="gnb">
@@ -30,17 +30,11 @@
 					<span>
 						[최종접속시간 
 						<em>2019.07.08</em>
-						<em>12:13:15</em>
-						/
-						<em>106.247.228.114</em>]
+						<em>12:13:15</em>]
 					</span>
 				</p>
 				<a href="#">로그아웃</a>
 				<a href="#">비밀번호 변경</a>
-				<span>
-					<input type="text" placeholder="검색" class="searchBox">
-					<button type="button" class="searchBtn">검색버튼</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -68,13 +62,7 @@
 							<li><a href="#">수수료 면제국가 관리</a></li>
 						</ul>
 					</li>
-					<li>
-						<span>비자표출 관리</span>
-						<ul class="subM depth2">
-							<li class="active"><a href="#">법무부</a></li>
-							<li><a href="#">중국(광저우)</a></li>
-						</ul>
-					</li>
+					<li class="active"><a href="">비자표출 관리</a></li>
 					<li>
 						<span>변경 이력 확인</span>
 						<ul class="subM depth2">
@@ -98,7 +86,7 @@
 
 			<div class="cont">
 
-				<h3>비자표출 관리(법무부)</h3>
+				<h3>비자표출 관리</h3> <!-- 1127 수정 -->
 				<ul class="optionTable">
 					<li>
 						<div class="cell">
@@ -113,7 +101,18 @@
 							</div>
 						</div>
 						<div class="cell">
-							<p class="title short">센터/공관</p>
+							<p class="title short">공관</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+									<option value="">칭다오</option>
+									<option value="">베이징</option>
+									<option value="">청도</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title short">센터</p>
 							<div class="box">
 								<select class="selectD">
 									<option value="">전체</option>
@@ -134,19 +133,10 @@
 								</select>
 							</div>
 						</div>
-						<div class="cell">
-							<p class="title short">사용여부</p>
-							<div class="box">
-								<select class="selectD">
-									<option value="">전체</option>
-									<option value="">사용</option>
-									<option value="">미사용</option>
-								</select>
-							</div>
-						</div>
 					</li>
 				</ul>
 
+				<!-- 1127 수정 -->
 				<table class="table">
 					<colgroup>
 						<col style="width: 56px" />
@@ -154,68 +144,56 @@
 						<col style="width: auto" />
 						<col style="width: auto" />
 						<col style="width: auto" />
-						<col style="width: 120px" />
-						<col style="width: 120px" />
+						<col style="width: auto" />
+						<col style="width: 100px" />
+						<col style="width: auto" />
 					</colgroup>
 					<thead>
 						<tr>
 							<th>번호</th>
+							<th>국가</th>
+							<th>공관</th>
+							<th>센터</th>
 							<th>목적</th>
-							<th>사증</th>
-							<th>체류기간</th>
+							<th>URL</th>
 							<th>작성자</th>
 							<th>작성일</th>
-							<th>사용여부</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>1</td>
-							<td><a href="#" class="link">주재</a></td>
-							<td><a href="#" class="link">단수</a></td>
-							<td><a href="#" class="link">90일 이하</a></td>
-							<td><p>Admin</p></td>
+							<td>중국</td>
+							<td>우한</td>
+							<td>우한</td>
+							<td>주재</td>
+							<td><p>Admin1</p></td>
 							<td>2019-07-31</td>
-							<td>
-								<select class="selectD">
-									<option value="">전체</option>
-									<option value="">사용</option>
-									<option value="">미사용</option>
-								</select>
-							</td>
+							<td><a href="http://www.abc.co.kr">http://www.abc.co.kr</a></td>
 						</tr>
 						<tr>
 							<td>2</td>
-							<td><a href="#" class="link">주재</a></td>
-							<td><a href="#" class="link">단수</a></td>
-							<td><a href="#" class="link">90일 이하</a></td>
-							<td><p>Admin</p></td>
+							<td>중국</td>
+							<td>우한</td>
+							<td>우한</td>
+							<td>주재</td>
+							<td><p>Admin1</p></td>
 							<td>2019-07-31</td>
-							<td>
-								<select class="selectD">
-									<option value="">전체</option>
-									<option value="">사용</option>
-									<option value="">미사용</option>
-								</select>
-							</td>
+							<td><a href="http://www.abc.co.kr">http://www.abc.co.kr</a></td>
 						</tr>
 						<tr>
 							<td>3</td>
-							<td><a href="#" class="link">주재</a></td>
-							<td><a href="#" class="link">단수</a></td>
-							<td><a href="#" class="link">90일 이하</a></td>
-							<td><p>Admin</p></td>
+							<td>중국</td>
+							<td>칭다오</td>
+							<td>칭다오</td>
+							<td>주재</td>
+							<td><p>Admin2</p></td>
 							<td>2019-07-31</td>
-							<td>
-								<select class="selectD">
-									<option value="">전체</option>
-									<option value="">사용</option>
-									<option value="">미사용</option>
-								</select>
-							</td>
+							<td><a href="http://www.abc.co.kr">http://www.abc.co.kr</a></td>
 						</tr>
 					</tbody>
 				</table>
+				<!-- //1127 수정 -->
 
 				<span class="btnGroup btm">
 					<button type="button" class="btn">비자표출 등록</button>

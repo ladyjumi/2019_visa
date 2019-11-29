@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>비자리스트전체</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">Visa Navigator</a></h1>
+			<!-- GNB -->
+			<ul class="gnb">
+				<li><a href="#">Searching Visa</a></li>
+				<li><a href="#">Visa type by purpose of entry</a></li>
+				<li><a href="#">How to apply</a></li>
+				<li><a href="#">Visa Fees</a></li>
+				<li><a href="#">Entry & Stay</a></li>
+			</ul>
+			<!-- //GNB -->
+			<div class="topMenu">
+				<!-- 언어변경 -->
+				<select class="lang">
+					<option value="">한국어</option>
+					<option value="">ENGLISH</option>
+					<option value="">中文</option>
+				</select>
+				<!-- //언어변경 -->
+				<button type="button" class="searchBtn showsearchBar">Search Button</button>
+			</div>
+		</div>
+
+		<!-- 검색창 -->
+		<div class="searchTop">
+			<div class="searchArea">
+				<div class="inner">
+					<span class="searchBox">
+						<span class="inputWrap"><input type="text" placeholder="검색어를 입력하세요."></span>
+						<input type="button" value="검색" class="searchBtn">
+					</span>
+				</div>
+			</div>
+			<div class="dimmed"></div>
+		</div>
+		<!-- //검색창 -->
+	</div>
+
+	<div class="contents">
+
+		<div class="frontCont">
+			<h2>Visa List</h2>
+			<table class="table visaAll">
+				<thead>
+					<tr>
+						<th>Purpose of entry</th>
+						<th>Status of residences</th>
+						<th>VISA type</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><p>Diplomacy · Official Business</p></td>
+						<td><p>Diplomat</p></td>
+						<td><a href="#">A-1</a></td>
+					</tr>
+					<tr>
+						<td><p>Diplomacy · Official Business</p></td>
+						<td><p>Foreign Government Official</p></td>
+						<td><a href="#">A-2</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>Visa Exempted</p></td>
+						<td><a href="#">B-1</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>Tourist / Transit (General)</p></td>
+						<td><a href="#">B-2-1</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>Tourist / Transit (Jeju)</p></td>
+						<td><a href="#">B-2-2</a></td>
+					</tr>
+					<tr>
+						<td><p>Journalism· Religious Affairs</p></td>
+						<td><p>Short-Term News Coverage</p></td>
+						<td><a href="#">C-1</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>Short-Term General</p></td>
+						<td><a href="#">C-3-1</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>순수환승</p></td>
+						<td><a href="#">C-3-10</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>단체관광등</p></td>
+						<td><a href="#">C-3-2</a></td>
+					</tr>
+					<tr>
+						<td><p>치료요양</p></td>
+						<td><p>의료관광</p></td>
+						<td><a href="#">C-3-3</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>일반상용</p></td>
+						<td><a href="#">C-3-4</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>협정단기상용</p></td>
+						<td><a href="#">C-3-5</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>단기상용</p></td>
+						<td><a href="#">C-3-6</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>동포방문</p></td>
+						<td><a href="#">C-3-8</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>일반관광</p></td>
+						<td><a href="#">C-3-9</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>단기취업</p></td>
+						<td><a href="#">C-4</a></td>
+					</tr>
+					<tr>
+						<td><p>연수</p></td>
+						<td><p>문화예술</p></td>
+						<td><a href="#">D-1</a></td>
+					</tr>
+					<tr>
+						<td><p>유학∙어학연수</p></td>
+						<td><p>전문학사</p></td>
+						<td><a href="#">D-2-1</a></td>
+					</tr>
+					<tr>
+						<td><p>유학∙어학연수</p></td>
+						<td><p>학사유학</p></td>
+						<td><a href="#">D-2-2</a></td>
+					</tr>
+					<tr>
+						<td><p>유학∙어학연수</p></td>
+						<td><p>석사유학</p></td>
+						<td><a href="#">D-2-3</a></td>
+					</tr>
+					<tr>
+						<td><p>유학∙어학연수</p></td>
+						<td><p>박사유학</p></td>
+						<td><a href="#">D-2-4</a></td>
+					</tr>
+					<tr>
+						<td><p>유학∙어학연수</p></td>
+						<td><p>연구유학</p></td>
+						<td><a href="#">D-2-5</a></td>
+					</tr>
+					<tr>
+						<td><p>유학∙어학연수</p></td>
+						<td><p>교환학생</p></td>
+						<td><a href="#">D-2-6</a></td>
+					</tr>
+					<tr>
+						<td><p>연수</p></td>
+						<td><p>해외직접</p></td>
+						<td><a href="#">D-3-11</a></td>
+					</tr>
+					<tr>
+						<td><p>연수</p></td>
+						<td><p>기술수출</p></td>
+						<td><a href="#">D-3-12</a></td>
+					</tr>
+					<tr>
+						<td><p>연수</p></td>
+						<td><p>플랜트수출</p></td>
+						<td><a href="#">D-3-13</a></td>
+					</tr>
+					<tr>
+						<td><p>유학∙어학연수</p></td>
+						<td><p>대학부설어학원연수</p></td>
+						<td><a href="#">D-4-1</a></td>
+					</tr>
+					<tr>
+						<td><p>연수</p></td>
+						<td><p>기타기관연수</p></td>
+						<td><a href="#">D-4-2</a></td>
+					</tr>
+					<tr>
+						<td><p>유학∙어학연수</p></td>
+						<td><p>초중고생</p></td>
+						<td><a href="#">D-4-3</a></td>
+					</tr>
+					<tr>
+						<td><p>연수</p></td>
+						<td><p>한식조리연수</p></td>
+						<td><a href="#">D-4-5</a></td>
+					</tr>
+					<tr>
+						<td><p>연수</p></td>
+						<td><p>사설기관연수</p></td>
+						<td><a href="#">D-4-6</a></td>
+					</tr>
+					<tr>
+						<td><p>유학∙어학연수</p></td>
+						<td><p>외국어연수</p></td>
+						<td><a href="#">D-4-7</a></td>
+					</tr>
+					<tr>
+						<td><p>Journalism· Religious Affairs</p></td>
+						<td><p>취재</p></td>
+						<td><a href="#">D-5</a></td>
+					</tr>
+					<tr>
+						<td><p>Journalism· Religious Affairs</p></td>
+						<td><p>종교</p></td>
+						<td><a href="#">D-6</a></td>
+					</tr>
+					<tr>
+						<td><p>주재</p></td>
+						<td><p>외국기업</p></td>
+						<td><a href="#">D-7-1</a></td>
+					</tr>
+					<tr>
+						<td><p>주재</p></td>
+						<td><p>내국기업</p></td>
+						<td><a href="#">D-7-2</a></td>
+					</tr>
+					<tr>
+						<td><p>주재</p></td>
+						<td><p>FTA전근</p></td>
+						<td><a href="#">D-7-91</a></td>
+					</tr>
+					<tr>
+						<td><p>주재</p></td>
+						<td><p>FTA계약</p></td>
+						<td><a href="#">D-7-92</a></td>
+					</tr>
+					<tr>
+						<td><p>투자</p></td>
+						<td><p>법인에 투자</p></td>
+						<td><a href="#">D-8-1</a></td>
+					</tr>
+					<tr>
+						<td><p>투자</p></td>
+						<td><p>벤처기업</p></td>
+						<td><a href="#">D-8-2</a></td>
+					</tr>
+					<tr>
+						<td><p>투자</p></td>
+						<td><p>개인기업투자</p></td>
+						<td><a href="#">D-8-3</a></td>
+					</tr>
+					<tr>
+						<td><p>투자</p></td>
+						<td><p>기술창업</p></td>
+						<td><a href="#">D-8-4</a></td>
+					</tr>
+					<tr>
+						<td><p>투자</p></td>
+						<td><p>FTA전근</p></td>
+						<td><a href="#">D-8-91</a></td>
+					</tr>
+					<tr>
+						<td><p>무역경영</p></td>
+						<td><p>무역고유거래</p></td>
+						<td><a href="#">D-9-1</a></td>
+					</tr>
+					<tr>
+						<td><p>무역경영</p></td>
+						<td><p>수출설비</p></td>
+						<td><a href="#">D-9-2</a></td>
+					</tr>
+					<tr>
+						<td><p>무역경영</p></td>
+						<td><p>선박설비</p></td>
+						<td><a href="#">D-9-3</a></td>
+					</tr>
+					<tr>
+						<td><p>무역경영</p></td>
+						<td><p>경영영리사업</p></td>
+						<td><a href="#">D-9-4</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>구직활동</p></td>
+						<td><a href="#">D-10-1</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>기술창업활동</p></td>
+						<td><a href="#">D-10-2</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>교수</p></td>
+						<td><a href="#">E-1</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>일반회화강사</p></td>
+						<td><a href="#">E-2-1</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>학교보조교사</p></td>
+						<td><a href="#">E-2-2</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>FTA영어</p></td>
+						<td><a href="#">E-2-91</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>연구</p></td>
+						<td><a href="#">E-3</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>기술지도</p></td>
+						<td><a href="#">E-4</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>전문직업</p></td>
+						<td><a href="#">E-5</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>예술연예</p></td>
+						<td><a href="#">E-6-1</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>호텔유흥</p></td>
+						<td><a href="#">E-6-2</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>운동</p></td>
+						<td><a href="#">E-6-3</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>특정활동</p></td>
+						<td><a href="#">E-7-1</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>FTA독립</p></td>
+						<td><a href="#">E-7-91</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>제조업</p></td>
+						<td><a href="#">E-9-1</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>건설업</p></td>
+						<td><a href="#">E-9-2</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>농업</p></td>
+						<td><a href="#">E-9-3</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>어업</p></td>
+						<td><a href="#">E-9-4</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>서비스업</p></td>
+						<td><a href="#">E-9-5</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>내항선원</p></td>
+						<td><a href="#">E-10-1</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>어선원</p></td>
+						<td><a href="#">E-10-2</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>순항선원</p></td>
+						<td><a href="#">E-10-3</a></td>
+					</tr>
+					<tr>
+						<td><p>가족방문∙동거</p></td>
+						<td><p>동포배우자등</p></td>
+						<td><a href="#">F-1-19</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>외교가사보조</p></td>
+						<td><a href="#">F-1-21</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>고액가사보조</p></td>
+						<td><a href="#">F-1-22</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>첨단가사보조</p></td>
+						<td><a href="#">F-1-23</a></td>
+					</tr>
+					<tr>
+						<td><p>비전문직 취업</p></td>
+						<td><p>전문가사보조</p></td>
+						<td><a href="#">F-1-24</a></td>
+					</tr>
+					<tr>
+						<td><p>가족방문∙동거</p></td>
+						<td><p>외교동거</p></td>
+						<td><a href="#">F-1-3</a></td>
+					</tr>
+					<tr>
+						<td><p>가족방문∙동거</p></td>
+						<td><p>유학생부모</p></td>
+						<td><a href="#">F-1F-13</a></td>
+					</tr>
+					<tr>
+						<td><p>가족방문∙동거</p></td>
+						<td><p>국민자녀</p></td>
+						<td><a href="#">F-2-2</a></td>
+					</tr>
+					<tr>
+						<td><p>가족방문∙동거</p></td>
+						<td><p>영주자가족</p></td>
+						<td><a href="#">F-2-3</a></td>
+					</tr>
+					<tr>
+						<td><p>가족방문∙동거</p></td>
+						<td><p>동반</p></td>
+						<td><a href="#">F-3-1</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>재외동포본인</p></td>
+						<td><a href="#">F-4-11</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>재외동포 직계가족</p></td>
+						<td><a href="#">F-4-12</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>DE계열 6개월 이상 체류자</p></td>
+						<td><a href="#">F-4-13</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>대학 졸업자</p></td>
+						<td><a href="#">F-4-14</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>OECD영주자</p></td>
+						<td><a href="#">F-4-15</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>법인대표 등</p></td>
+						<td><a href="#">F-4-16</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>10만불 기업가</p></td>
+						<td><a href="#">F-4-17</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>다국적기업</p></td>
+						<td><a href="#">F-4-18</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>동포단체대표</p></td>
+						<td><a href="#">F-4-19</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>공무원 등</p></td>
+						<td><a href="#">F-4-20</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>교원</p></td>
+						<td><a href="#">F-4-21</a></td>
+					</tr>
+					<tr>
+						<td><p>전문직 취업</p></td>
+						<td><p>특정능력</p></td>
+						<td><a href="#">F-5-11</a></td>
+					</tr>
+					<tr>
+						<td><p>투자</p></td>
+						<td><p>고액투자</p></td>
+						<td><a href="#">F-5-5</a></td>
+					</tr>
+					<tr>
+						<td><p>결혼이민</p></td>
+						<td><p>국민배우자</p></td>
+						<td><a href="#">F-6-1</a></td>
+					</tr>
+					<tr>
+						<td><p>결혼이민</p></td>
+						<td><p>자녀양육</p></td>
+						<td><a href="#">F-6-2</a></td>
+					</tr>
+					<tr>
+						<td><p>재외동포</p></td>
+						<td><p>60세이상자</p></td>
+						<td><a href="#">F-F-25</a></td>
+					</tr>
+					<tr>
+						<td><p>치료요양</p></td>
+						<td><p>치료요양</p></td>
+						<td><a href="#">G-1-10</a></td>
+					</tr>
+					<tr>
+						<td><p>Short Term Visit (ex. Tour)</p></td>
+						<td><p>관광취업</p></td>
+						<td><a href="#">H-1</a></td>
+					</tr>
+					<tr>
+						<td><p>방문취업</p></td>
+						<td><p>연고방취</p></td>
+						<td><a href="#">H-2-1</a></td>
+					</tr>
+					<tr>
+						<td><p>방문취업</p></td>
+						<td><p>유학방취</p></td>
+						<td><a href="#">H-2-2</a></td>
+					</tr>
+					<tr>
+						<td><p>방문취업</p></td>
+						<td><p>추첨방취</p></td>
+						<td><a href="#">H-2-5</a></td>
+					</tr>
+					<tr>
+						<td><p>방문취업</p></td>
+						<td><p>만기방취</p></td>
+						<td><a href="#">H-2-7</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<div class="inner">
+			<span>Visa Navigator</span>
+			<address>
+				<p class="address">주소 : 경기도 과천시 관문로 47 정부과천청사 1동 ( 외국인종합안내센터 : 국번없이 1345 )</p>
+				<p class="copy">COPYRIGHT©MINISTRY OF JUSTICE. REPUBLIC OF KOREA. ALL RIGHT RESERVED.</p>
+			</address>
+		</div>
+	</div>
+
+	<div class="topButtonArea"><span class="backTop">맨 위로 이동</span></div>
+</div>
+	
+</body>
+</html>
+

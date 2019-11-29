@@ -15,7 +15,7 @@
 
 	<div class="header">
 		<div class="inner">
-			<h1><a href="#">비자네비게이터 Admin</a></h1>
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
 
 			<!-- GNB -->
 			<ul class="gnb">
@@ -99,7 +99,21 @@
 			<div class="cont">
 
 				<h3>체류자격 등록 관리</h3>
-				<span class="topRight"><em class="red">*</em>필수항목</span>
+
+				<!-- 화면잠김 딤처리-->
+				<div class="lock"><div><span>화면잠김</span></div></div>
+				<!-- //화면잠김 딤처리-->
+
+				<div class="topRight">
+					<span class="selectWrap">
+						<span class="txt">사용설정</span>
+						<select class="selectD">
+							<option value="">미사용</option>
+							<option value="">사용</option>
+						</select>
+					</span>
+				</div>
+
 				<ul class="optionTable">
 					<li>
 						<div class="cell">
@@ -238,7 +252,8 @@
 				<textarea></textarea>
 				
 				<span class="btnGroup btm">
-					<button type="button" class="btn">목록으로 이동</button>
+					<button type="button" class="btn">목록</button>
+					<span class="text"><em class="red">*</em>필수항목</span>
 					<button type="button" class="btn">미리보기</button>
 					<button type="button" class="btn">수정하기</button>
 				</span>

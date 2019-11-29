@@ -28,8 +28,8 @@
 		hr{border:0 none;height:1px;background:#e3e3e3;}
 		*{word-break: keep-all;}	
 		.wrap{padding:10px;max-width:1200px;margin:0 auto;}
-		.text_box{padding:10px;margin-bottom:10px;color:#666;border:2px solid #ccc;line-height:1.5;background-color: #fff;}
-		.text_box h4{margin: 5px 0 3px;}
+		.text_box{padding:15px;margin-bottom:10px;color:#666;border:1px solid #ccc;line-height:1.5;background-color: #fff;}
+		.text_box h4{margin: 0 0 3px;}
 		.text_box p{padding-left: 5px;}
 		.text_box strong{display:inline-block;}
 		.text_box strong:first-child{padding-left:0;}
@@ -53,6 +53,16 @@
 		.table .line th, .table .line td{border-top-color:#bbb;}
 
 		.midline{text-decoration:line-through;color: #aaa;}
+
+		.edit_history{border: 1px solid #ccc; padding: 18px 70px 20px 15px; margin-bottom: 16px; background-color: #fff}
+		.edit_history h4{margin: 0;}
+		.edit_history table{width: 100%; margin-top: 6px; line-height: 1.6; border-top: 1px solid #aaa; background-color: transparent;}
+		.edit_history table tr{border-bottom: 1px solid #ddd;}
+		.edit_history table th{font-weight: normal;}
+		.edit_history table th,
+		.edit_history table td{padding: 3px 0; text-align: left;}
+		.edit_history table .date span{padding: 0 5px; font-weight: bold; color: #000}
+		.edit_history table tr:first-of-type .date span{background-color: yellow;}
 
 	@media only screen and (max-width:760px ){
 		.table{overflow-y:auto;}
@@ -84,6 +94,128 @@
 		<h4>적용 브라우저</h4>
 		<p>PC: IE10, IE11, Chrome</p>
 		<p>Mobile: 안드로이드 4.x ~ 9 / iOS 10 이상 단말기 내장 기본 브라우저</p>
+	</div>
+
+	<div class="edit_history">
+		<h4>수정 히스토리</h4>
+
+		<table>
+
+			<colgroup>
+				<col style="width: 90px">
+				<col style="width: 120px">
+			</colgroup>
+
+			<tbody>
+
+				<tr>
+					<th class="date" rowspan="2"><span>2019-11-27</span></th>
+					<td class="cate">수정</td>
+					<td class="text">전체파일 헤더에 아이피주소 삭제,  LNB 수정 (공통사항)</td>
+				</tr>
+				<tr>
+					<td class="cate">수정</td>
+					<td class="text">개발페이지와 싱크 맞춤. 해당 파일 소스에 주석처리</td>
+				</tr>
+
+				<tr>
+					<th class="date" rowspan="2"><span>2019-11-25</span></th>
+					<td class="cate">수정</td>
+					<td class="text">체류자격관리 하위 페이지들 html파일명 변경</td>
+				</tr>
+				<tr>
+					<td class="cate">수정</td>
+					<td class="text">step2 기본정보관리 리스트페이지 상단 표 수정 (주석처리 해놓음)</td>
+				</tr>
+
+				<tr>
+					<th class="date" rowspan="3"><span>2019-10-28</span></th>
+					<td class="cate">추가, 수정</td>
+					<td class="text">코드관리페이지 기존 2페이지에서 4페이지로 분할수정, html파일명 변경</td>
+				</tr>
+				<tr>
+					<td class="cate">수정</td>
+					<td class="text">국가찾기 팝업 내 국가명(언어별)텍스트 영역 수정</td>
+				</tr>
+				<tr>
+					<td class="cate">수정</td>
+					<td class="text">수수료면제국가관리 페이지 textarea클릭시 팝업 뜨도록 수정</td>
+				</tr>
+
+				<tr>
+					<th class="date" rowspan="3"><span>2019-10-08</span></th>
+					<td class="cate">수정</td>
+					<td class="text">수수료조정국가 페이지 탭 눌렀을때 바뀌는 영역 수정</td>
+				</tr>
+				<tr>
+					<td class="cate">수정</td>
+					<td class="text">계정수정, 계정생성 페이지 IP입력란 수정, 표 내부 수정버튼 삭제</td>
+				</tr>
+				<tr>
+					<td class="cate">추가</td>
+					<td class="text">비밀번호 재확인 페이지 추가</td>
+				</tr>
+
+				<tr>
+					<th class="date"><span>2019-10-07</span></th>
+					<td class="cate">수정</td>
+					<td class="text">수수료 조정국가 관리 페이지 국가명 자동완성 영역 추가 (display: none; 처리 해놨습니다.)</td>
+				</tr>
+<!--
+				<tr>
+					<th class="date"><span>2019-09-26</span></th>
+					<td class="cate">수정</td>
+					<td class="text">수수료 MAIN 페이지 에디터영역 언어별 탭 추가</td>
+				</tr>
+
+				<tr>
+					<th class="date" rowspan="3"><span>2019-09-24</span></th>
+					<td class="cate">수정</td>
+					<td class="text">비자표출 페이지 표 수정 / 상단 기능 제거</td>
+				</tr>
+				<tr>
+					<td class="cate">수정</th>
+					<td class="text">admin 체류자격코드등록 페이지 [체류기간선택] 기능 추가, 클래스 수정 (해당페이지 주석으로 기입)</td>
+				</tr>
+				<tr>
+					<td class="cate">페이지 추가</th>
+					<td class="text">error404, 500 페이지 추가</td>
+				</tr>
+
+				<tr>
+					<th class="date" rowspan="3"><span>2019-09-19</span></th>
+					<td class="cate">레이아웃 수정</td>
+					<td class="text">admin 수수료 관리 페이지에 언어별 탭 추가</td>
+				</tr>
+				<tr>
+					<td class="cate">요소 제거</th>
+					<td class="text">admin Header에 검색영역 제거 (pub/admin.html)</td>
+				</tr>
+				<tr>
+					<td class="cate">요소 이동</th>
+					<td class="text">admin 페이지에 있는 [*필수항목] 텍스트를 표 상단에서 하단으로 이동</td>
+				</tr>
+
+				<tr>
+					<th class="date" rowspan="4"><span>2019-09-16</span></th>
+					<td class="cate">텍스트 수정</td>
+					<td class="text">admin 모든 페이지 하단 버튼 (목록으로 이동 -> 목록)</td>
+				</tr>
+				<tr>
+					<td class="cate">요소 추가</th>
+					<td class="text">admin 등록페이지들 상단 오른쪽에 '사용설정' selectbox 추가</td>
+				</tr>
+				<tr>
+					<td class="cate">요소 제거</th>
+					<td class="text">admin 리스트 페이지들 테이블 내부 a태그 제거</td>
+				</tr>
+				<tr>
+					<td class="cate">요소 이동</th>
+					<td class="text">admin 비자표출 페이지 '노출 순서 이동 버튼' 위치 변경 (테이블 상단오른쪽에서 하단왼쪽으로)</td>
+				</tr>
+-->
+			</tbody>
+		</table>
 	</div>
 
 	<div class="table">
@@ -175,82 +307,109 @@
 				<tr>
 
 				<tr>
-					<td rowspan="7">체류자격 관리</td>
-					<td>코드리스트</td>
-					<td></td>
-					<td class="fileName">admin/stay_code_list.html</td>
+					<td rowspan="10">체류자격 관리</td>
+					<td rowspan="2">STEP1. 코드관리</td>
+					<td>리스트</td>
+					<td class="fileName">admin/step1_list.html</td>
 					<td>
 						<span class="link">
-							<a target="_blank" href="admin/stay_code_list.html">Link</a>
+							<a target="_blank" href="admin/step1_list.html">Link</a>
 						</span>
 					</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>코드등록</td>
-					<td></td>
-					<td class="fileName">admin/stay_code_reg.html</td>
+					<td>등록/수정</td>
+					<td class="fileName">admin/step1_reg.html</td>
 					<td>
 						<span class="link">
-							<a target="_blank" href="admin/stay_code_reg.html">Link</a>
+							<a target="_blank" href="admin/step1_reg.html">Link</a>
 						</span>
 					</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>항목리스트</td>
-					<td></td>
-					<td class="fileName">admin/stay_item_list.html</td>
+					<td rowspan="2">STEP2. 기본정보관리</td>
+					<td>리스트</td>
+					<td class="fileName">admin/step2_list.html</td>
 					<td>
 						<span class="link">
-							<a target="_blank" href="admin/stay_item_list.html">Link</a>
+							<a target="_blank" href="admin/step2_list.html">Link</a>
+						</span>
+					</td>
+					<td>1127 업데이트</td>
+				</tr>
+				<tr>
+					<td>등록/수정</td>
+					<td class="fileName">admin/step2_reg.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/step2_reg.html">Link</a>
+						</span>
+					</td>
+					<td>1127 업데이트</td>
+				</tr>
+				<tr>
+					<td rowspan="2">STEP3. 항목관리</td>
+					<td>리스트</td>
+					<td class="fileName">admin/step3_list.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/step3_list.html">Link</a>
 						</span>
 					</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>항목등록</td>
-					<td></td>
-					<td class="fileName">admin/stay_item_reg.html</td>
+					<td>등록/수정</td>
+					<td class="fileName">admin/step3_reg.html</td>
 					<td>
 						<span class="link">
-							<a target="_blank" href="admin/stay_item_reg.html">Link</a>
+							<a target="_blank" href="admin/step3_reg.html">Link</a>
 						</span>
 					</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td>체류자격리스트</td>
-					<td></td>
-					<td class="fileName">admin/stay_reg_list.html</td>
+					<td rowspan="4">STEP4. 노출관리</td>
+					<td>리스트 (법무부)</td>
+					<td class="fileName">admin/step4_list1.html</td>
 					<td>
 						<span class="link">
-							<a target="_blank" href="admin/stay_reg_list.html">Link</a>
+							<a target="_blank" href="admin/step4_list1.html">Link</a>
 						</span>
 					</td>
-					<td></td>
+					<td>1031 업데이트</td>
 				</tr>
 				<tr>
-					<td>체류자격등록</td>
-					<td></td>
-					<td class="fileName">admin/stay_reg.html</td>
+					<td>리스트 (공관/센터)</td>
+					<td class="fileName">admin/step4_list2.html</td>
 					<td>
 						<span class="link">
-							<a target="_blank" href="admin/stay_reg.html">Link</a>
+							<a target="_blank" href="admin/step4_list2.html">Link</a>
 						</span>
 					</td>
-					<td></td>
+					<td>1031 업데이트</td>
 				</tr>
 				<tr>
-					<td>체류자격수정</td>
-					<td></td>
-					<td class="fileName">admin/stay_reg_edit.html</td>
+					<td>등록</td>
+					<td class="fileName">admin/step4_reg.html</td>
 					<td>
 						<span class="link">
-							<a target="_blank" href="admin/stay_reg_edit.html">Link</a>
+							<a target="_blank" href="admin/step4_reg.html">Link</a>
 						</span>
 					</td>
-					<td></td>
+					<td>1122 업데이트</td>
+				</tr>
+				<tr>
+					<td>수정</td>
+					<td class="fileName">admin/step4_edit.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/step4_edit.html">Link</a>
+						</span>
+					</td>
+					<td>1127 업데이트</td>
 				</tr>
 
 				<tr>
@@ -323,7 +482,7 @@
 							<a target="_blank" href="admin/visa_exposed_list.html">Link</a>
 						</span>
 					</td>
-					<td></td>
+					<td>1127 업데이트</td>
 				</tr>
 				<tr>
 					<td>등록</td>
@@ -349,7 +508,72 @@
 				</tr>
 
 				<tr>
-					<td rowspan="14">변경 이력 리스트 / 변경 사항 비교</td>
+					<td rowspan="16">변경 이력 리스트 / 변경 사항 비교</td>
+					<td rowspan="2">STEP1. 코드생성 이력</td>
+					<td>리스트</td>
+					<td class="fileName">admin/history_step1-1.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/history_step1-1.html">Link</a>
+						</span>
+					</td>
+					<td>1119 추가생성</td>
+				</tr>
+				<tr>
+					<td>상세 비교</td>
+					<td class="fileName">admin/history_step1-2.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/history_step1-2.html">Link</a>
+						</span>
+					</td>
+					<td>1119 추가생성</td>
+				</tr>
+				<tr>
+					<td rowspan="2">STEP2. 기본정보관리 이력</td>
+					<td>리스트</td>
+					<td class="fileName">admin/history_step2-1.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/history_step2-1.html">Link</a>
+						</span>
+					</td>
+					<td>1119 추가생성</td>
+				</tr>
+				<tr>
+					<td>상세 비교</td>
+					<td class="fileName">admin/history_step2-2.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/history_step2-2.html">Link</a>
+						</span>
+					</td>
+					<td>1119 추가생성</td>
+				</tr>
+<!-- 				<tr>
+					<td>STEP3. 항목관리 이력</td>
+					<td></td>
+					<td class="fileName">admin/history_list_code.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/history_list_code.html">Link</a>
+						</span>
+					</td>
+					<td>1119 추가생성</td>
+				</tr>
+				<tr>
+					<td>STEP4. 노출관리 이력</td>
+					<td></td>
+					<td class="fileName">admin/history_list_code.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/history_list_code.html">Link</a>
+						</span>
+					</td>
+					<td>1119 추가생성</td>
+				</tr> -->
+
+				<!-- <tr>
 					<td rowspan="2">체류자격 코드 이력</td>
 					<td>변경 이력 리스트</td>
 					<td class="fileName">admin/history_list_code.html</td>
@@ -369,10 +593,10 @@
 						</span>
 					</td>
 					<td></td>
-				</tr>
+				</tr> -->
 				<tr>
-					<td rowspan="2">체류자격 항목 이력</td>
-					<td>변경 이력 리스트</td>
+					<td rowspan="2">STEP3. 항목관리 이력</td>
+					<td>리스트</td>
 					<td class="fileName">admin/history_list_item.html</td>
 					<td>
 						<span class="link">
@@ -382,7 +606,7 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>변경 내용 비교</td>
+					<td>상세 비교</td>
 					<td class="fileName">admin/history_stay_item.html</td>
 					<td>
 						<span class="link">
@@ -392,39 +616,39 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td rowspan="2">체류자격 등록 이력</td>
-					<td>변경 이력 리스트</td>
+					<td rowspan="2">STEP4. 노출관리 이력</td>
+					<td>리스트</td>
 					<td class="fileName">admin/history_list_reg.html</td>
 					<td>
 						<span class="link">
 							<a target="_blank" href="admin/history_list_reg.html">Link</a>
 						</span>
 					</td>
-					<td></td>
+					<td>1127 업데이트</td>
 				</tr>
 				<tr>
-					<td>변경 내용 비교</td>
+					<td>상세 비교</td>
 					<td class="fileName">admin/history_stay_reg.html</td>
 					<td>
 						<span class="link">
 							<a target="_blank" href="admin/history_stay_reg.html">Link</a>
 						</span>
 					</td>
-					<td></td>
+					<td>1127 업데이트</td>
 				</tr>
 				<tr>
 					<td rowspan="2">첨부파일 등록 이력</td>
-					<td>변경 이력 리스트</td>
+					<td>리스트</td>
 					<td class="fileName">admin/history_list_file.html</td>
 					<td>
 						<span class="link">
 							<a target="_blank" href="admin/history_list_file.html">Link</a>
 						</span>
 					</td>
-					<td></td>
+					<td>1127 업데이트</td>
 				</tr>
 				<tr>
-					<td>변경 내용 비교</td>
+					<td>상세 비교</td>
 					<td class="fileName">admin/history_file.html</td>
 					<td>
 						<span class="link">
@@ -435,7 +659,7 @@
 				</tr>
 				<tr>
 					<td rowspan="4">수수료 변경 이력</td>
-					<td>변경 이력 리스트</td>
+					<td>리스트</td>
 					<td class="fileName">admin/history_list_commission.html</td>
 					<td>
 						<span class="link">
@@ -445,7 +669,7 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>변경 내용 비교 (MAIN)</td>
+					<td>상세 비교 (MAIN)</td>
 					<td class="fileName">admin/history_commission1.html</td>
 					<td>
 						<span class="link">
@@ -455,7 +679,7 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>변경 내용 비교 (조정국가)</td>
+					<td>상세 비교 (조정국가)</td>
 					<td class="fileName">admin/history_commission2.html</td>
 					<td>
 						<span class="link">
@@ -465,7 +689,7 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>변경 내용 비교 (면제국가)</td>
+					<td>상세 비교 (면제국가)</td>
 					<td class="fileName">admin/history_commission3.html</td>
 					<td>
 						<span class="link">
@@ -476,7 +700,7 @@
 				</tr>
 				<tr>
 					<td rowspan="2">비자노출 관리 이력</td>
-					<td>변경 이력 리스트</td>
+					<td>리스트</td>
 					<td class="fileName">admin/history_list_exposed.html</td>
 					<td>
 						<span class="link">
@@ -486,7 +710,7 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>변경 내용 비교</td>
+					<td>상세 비교</td>
 					<td class="fileName">admin/history_exposed.html</td>
 					<td>
 						<span class="link">
@@ -497,7 +721,7 @@
 				</tr>
 
 				<tr>
-					<td rowspan="6">계정관리</td>
+					<td rowspan="9">계정관리</td>
 					<td>계정리스트</td>
 					<td></td>
 					<td class="fileName">admin/account_manage.html</td>
@@ -526,6 +750,17 @@
 					<td>
 						<span class="link">
 							<a target="_blank" href="admin/account_new.html">link</a>
+						</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>비밀번호 확인</td>
+					<td></td>
+					<td class="fileName">admin/account_confirm.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/account_confirm.html">link</a>
 						</span>
 					</td>
 					<td></td>
@@ -563,14 +798,92 @@
 					</td>
 					<td></td>
 				</tr>
+				<tr>
+					<td>로그 리스트</td>
+					<td></td>
+					<td class="fileName">admin/log_list.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/log_list.html">link</a>
+						</span>
+					</td>
+					<td>1122 업데이트</td>
+				</tr>
+				<tr>
+					<td>동기화</td>
+					<td></td>
+					<td class="fileName">admin/sync.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/sync.html">link</a>
+						</span>
+					</td>
+					<td>1105 추가</td>
+				</tr>
 
-				<!-- //////////////////////////////Front////////////////////////////////// -->
+				<tr>
+					<td rowspan="2">기타</td>
+					<td rowspan="2">에러페이지</td>
+					<td>404</td>
+					<td class="fileName">admin/error404.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/error404.html">link</a>
+						</span>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>500</td>
+					<td class="fileName">admin/error500.html</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="admin/error500.html">link</a>
+						</span>
+					</td>
+					<td></td>
+				</tr>
 
+			</tbody>
+		</table>
+	</div>
+
+	<!-- //////////////////////////////Front////////////////////////////////// -->
+
+	<div class="table">
+
+		<table>
+		
+			<colgroup>
+				<col style="width: 8%">
+				<col style="width: 140px">
+				<col style="width: 180px">
+				<col style="width: 200px">
+				<col style="width: 110px">
+				<col style="width: 110px">
+				<col style="width: 110px">
+				<col style="width: auto">
+			</colgroup>
+
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>3depth</th>
+					<th>파일명</th>
+					<th>한국어</th>
+					<th>영어</th>
+					<th>중국어</th>
+					<th>기타</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				
 				<tr class="line">
 					<th>Front</th>
 					<td rowspan="3">메인 (비자검색)</td>
 					<td>퀵파인더 step1</td>
-					<td></td>
 					<td class="fileName">finder1.html</td>
 					<td>
 						<span class="link">
@@ -578,11 +891,18 @@
 							<a target="_blank" href="m/finder1.html">M</a>
 						</span>
 					</td>
-					<td>0911 레이어팝업 추가</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc_en/finder1.html">PC</a>
+							<a target="_blank" href="m_en/finder1.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
 				</tr>
+
 				<tr>
 					<td>퀵파인더 step2</td>
-					<td></td>
 					<td class="fileName">finder2.html</td>
 					<td>
 						<span class="link">
@@ -590,11 +910,18 @@
 							<a target="_blank" href="m/finder2.html">M</a>
 						</span>
 					</td>
-					<td>0911 레이어팝업 추가</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc_en/finder2.html">PC</a>
+							<a target="_blank" href="m_en/finder2.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
 				</tr>
+
 				<tr>
 					<td>퀵파인더 step3</td>
-					<td></td>
 					<td class="fileName">finder3.html</td>
 					<td>
 						<span class="link">
@@ -602,12 +929,18 @@
 							<a target="_blank" href="m/finder3.html">M</a>
 						</span>
 					</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc_en/finder3.html">PC</a>
+							<a target="_blank" href="m_en/finder3.html">M</a>
+						</span>
+					</td>
+					<td></td>
 					<td></td>
 				</tr>
 
 				<tr>
 					<td>입국목적별 비자종류</td>
-					<td></td>
 					<td></td>
 					<td class="fileName">visa_category.html</td>
 					<td>
@@ -616,12 +949,18 @@
 							<a target="_blank" href="m/visa_category.html">M</a>
 						</span>
 					</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc_en/visa_category.html">PC</a>
+							<a target="_blank" href="m_en/visa_category.html">M</a>
+						</span>
+					</td>
+					<td></td>
 					<td></td>
 				</tr>
 
 				<tr>
 					<td>신청절차</td>
-					<td></td>
 					<td></td>
 					<td class="fileName">apply.html</td>
 					<td>
@@ -630,12 +969,18 @@
 							<a target="_blank" href="m/apply.html">M</a>
 						</span>
 					</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc_en/apply.html">PC</a>
+							<a target="_blank" href="m_en/apply.html">M</a>
+						</span>
+					</td>
+					<td></td>
 					<td></td>
 				</tr>
 
 				<tr>
 					<td>수수료</td>
-					<td></td>
 					<td></td>
 					<td class="fileName">commission.html</td>
 					<td>
@@ -644,12 +989,18 @@
 							<a target="_blank" href="m/commission.html">M</a>
 						</span>
 					</td>
-					<td>레이어팝업 두개 포함</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc_en/commission.html">PC</a>
+							<a target="_blank" href="m_en/commission.html">M</a>
+						</span>
+					</td>
+					<td></td>
+					<td></td>
 				</tr>
 
 				<tr>
 					<td>입국 및 체류</td>
-					<td></td>
 					<td></td>
 					<td class="fileName">entry_stay.html</td>
 					<td>
@@ -658,13 +1009,19 @@
 							<a target="_blank" href="m/entry_stay.html">M</a>
 						</span>
 					</td>
+					<td>
+						<span class="link">
+							<a target="_blank" href="pc_en/entry_stay.html">PC</a>
+							<a target="_blank" href="m_en/entry_stay.html">M</a>
+						</span>
+					</td>
+					<td></td>
 					<td></td>
 				</tr>
 
 				<tr>
 					<td rowspan="3">기타 페이지</td>
 					<td>검색결과</td>
-					<td></td>
 					<td class="fileName">result.html</td>
 					<td>
 						<span class="link">
@@ -673,10 +1030,11 @@
 						</span>
 					</td>
 					<td></td>
+					<td></td>
+					<td></td>
 				</tr>
 				<tr>
 					<td>비자 전체 리스트</td>
-					<td></td>
 					<td class="fileName">visa_list.html</td>
 					<td>
 						<span class="link">
@@ -685,10 +1043,11 @@
 						</span>
 					</td>
 					<td></td>
+					<td></td>
+					<td></td>
 				</tr>
 				<tr>
 					<td>입국 목적별 비자 상세조회</td>
-					<td></td>
 					<td class="fileName">visa_view.html</td>
 					<td>
 						<span class="link">
@@ -697,11 +1056,13 @@
 						</span>
 					</td>
 					<td></td>
+					<td></td>
+					<td></td>
 				</tr>
-
 			</tbody>
+
 		</table>
-	</div>	
+	</div>
 
 </section>
 	<!-- //contents -->

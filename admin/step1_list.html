@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>체류자격항목관리</title>
+	<title>체류자격코드생성1</title>
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
@@ -15,7 +15,7 @@
 
 	<div class="header">
 		<div class="inner">
-			<h1><a href="#">비자네비게이터 Admin</a></h1>
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
 
 			<!-- GNB -->
 			<ul class="gnb">
@@ -30,17 +30,11 @@
 					<span>
 						[최종접속시간 
 						<em>2019.07.08</em>
-						<em>12:13:15</em>
-						/
-						<em>106.247.228.114</em>]
+						<em>12:13:15</em>]
 					</span>
 				</p>
 				<a href="#">로그아웃</a>
 				<a href="#">비밀번호 변경</a>
-				<span>
-					<input type="text" placeholder="검색" class="searchBox">
-					<button type="button" class="searchBtn">검색버튼</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -54,9 +48,10 @@
 					<li>
 						<span>체류자격 관리</span>
 						<ul class="subM depth2">
-							<li><a href="#">체류자격 코드 관리</a></li>
-							<li class="active"><a href="#">체류자격 항목 관리</a></li>
-							<li><a href="#">체류자격 등록 관리</a></li>
+							<li class="active"><a href="#">STEP1. 코드관리</a></li>
+							<li><a href="#">STEP2. 기본정보관리</a></li>
+							<li><a href="#">STEP3. 항목관리</a></li>
+							<li><a href="#">STEP4. 노출관리 </a></li>
 						</ul>
 					</li>
 					<li><a href="#">첨부파일 관리</a></li>
@@ -68,13 +63,7 @@
 							<li><a href="#">수수료 면제국가 관리</a></li>
 						</ul>
 					</li>
-					<li>
-						<span>비자표출 관리</span>
-						<ul class="subM depth2">
-							<li><a href="#">법무부</a></li>
-							<li><a href="#">중국(광저우)</a></li>
-						</ul>
-					</li>
+					<li><a href="">비자표출 관리</a></li>
 					<li>
 						<span>변경 이력 확인</span>
 						<ul class="subM depth2">
@@ -98,15 +87,31 @@
 
 			<div class="cont">
 
-				<h3>체류자격 항목 관리</h3>
-
+				<h3>STEP1. 코드관리</h3>
 				<ul class="optionTable">
 					<li>
 						<div class="cell">
-							<p class="title short">검색</p>
+							<p class="title">체류자격</p>
 							<div class="box">
-								<input type="text" class="inpT wide">
-								<button type="button" class="searchBtn">검색하기</button>
+								<select class="selectD">
+									<option value="">전체</option>
+								</select>
+								<select class="selectD">
+									<option value="">전체</option>
+								</select>
+							</div>
+						</div>
+						<div class="cell">
+							<p class="title short">체류자격명</p>
+							<div class="box">
+								<select class="selectD">
+									<option value="">전체</option>
+									<option value="">단기일반</option>
+									<option value="">일반관광</option>
+									<option value="">FTA독립</option>
+									<option value="">학사유학</option>
+									<option value="">DE계열 6개월이상 체류자</option>
+								</select>
 							</div>
 						</div>
 						<div class="cell">
@@ -118,63 +123,49 @@
 									<option value="">미사용</option>
 								</select>
 							</div>
-						</div>						
+						</div>
+					</li>
+					<li>
+						<div class="cell">
+							<p class="title">검색</p>
+							<div class="box">
+								<input type="text" class="inpT wide">
+								<button type="button" class="searchBtn">검색하기</button>
+							</div>
+						</div>
 					</li>
 				</ul>
 
 				<table class="table">
 					<colgroup>
-						<col style="width: 56px" />
+						<col style="width: 80px" />
+						<col style="width: 120px" />
+						<col style="width: 120px" />
+						<col style="width: 150px" />
 						<col style="width: auto" />
-						<col style="width: auto" />
-						<col style="width: auto" />
-						<col style="width: 410px" />
-						<col style="width: 100px" />
+						<col style="width: 130px" />
+						<col style="width: 150px" />
 					</colgroup>
 					<thead>
 						<tr>
-							<th>순서</th>
-							<th>항목명</th>
+							<th>시퀀스</th>
+							<th>체류자격(대분류)</th>
+							<th>체류자격(소분류)</th>
+							<th>체류자격명</th>
 							<th>작성자</th>
 							<th>작성일</th>
-							<th>작성 폼 선택</th>
-							<th>사용 여부</th>
+							<th>사용설정</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>1</td>
-							<td><p><a href="#" class="link">기본 체류기간 영주</a></p></td>
-							<td><p>Admin</p></td>
-							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
+							<td>9999</td>
+							<td>C3</td>
+							<td>01</td>
+							<td>단기일반</td>
+							<td>Admin@naver.com</td>
 							<td>
-								<div class="inpGroup">
-									<label class="inpD">
-										<input type="checkbox" name="" class="inp">
-										<span class="icon"></span>
-										<span class="text">TEXT</span>
-									</label>
-									<label class="inpD">
-										<input type="checkbox" name="" class="inp">
-										<span class="icon"></span>
-										<span class="text">RADIO</span>
-									</label>
-									<label class="inpD">
-										<input type="checkbox" name="" class="inp">
-										<span class="icon"></span>
-										<span class="text">체크박스</span>
-									</label>
-									<label class="inpD">
-										<input type="checkbox" name="" class="inp">
-										<span class="icon"></span>
-										<span class="text">첨부파일</span>
-									</label>
-									<label class="inpD">
-										<input type="checkbox" name="" class="inp">
-										<span class="icon"></span>
-										<span class="text">URL</span>
-									</label>
-								</div>
+								<p class="date"><span>2019.07.31</span><span>16:31:22</span></p>
 							</td>
 							<td>
 								<select class="selectD">
@@ -184,38 +175,15 @@
 							</td>
 						</tr>
 						<tr>
-							<td>2</td>
-							<td><p><a href="" class="link">기본 체류기간 30일 이하</a></p></td>
-							<td><p>Admin</p></td>
-							<td><p><span>2019.07.31</span><span>16:31:22</span></p></td>
+							<td>9998</td>
+							<td>E3</td>
+							<td>01</td>
+							<td>특정활동</td>
 							<td>
-								<div class="inpGroup">
-									<label class="inpD">
-										<input type="checkbox" name="" class="inp">
-										<span class="icon"></span>
-										<span class="text">TEXT</span>
-									</label>
-									<label class="inpD">
-										<input type="checkbox" name="" class="inp">
-										<span class="icon"></span>
-										<span class="text">RADIO</span>
-									</label>
-									<label class="inpD">
-										<input type="checkbox" name="" class="inp">
-										<span class="icon"></span>
-										<span class="text">체크박스</span>
-									</label>
-									<label class="inpD">
-										<input type="checkbox" name="" class="inp">
-										<span class="icon"></span>
-										<span class="text">첨부파일</span>
-									</label>
-									<label class="inpD">
-										<input type="checkbox" name="" class="inp">
-										<span class="icon"></span>
-										<span class="text">URL</span>
-									</label>
-								</div>
+								<p class="mail">mailtextlonglonmailtextlonglongverylonglongaddgverylongadd@moretxt.com</p>
+							</td>
+							<td>
+								<p class="date"><span>2019.07.31</span><span>16:31:22</span></p>
 							</td>
 							<td>
 								<select class="selectD">
@@ -228,7 +196,7 @@
 				</table>
 
 				<span class="btnGroup btm">
-					<button type="button" class="btn">체류자격 항목 등록</button>
+					<button type="button" class="btn">체류자격 생성</button>
 				</span>
 
 				<div class="paging">

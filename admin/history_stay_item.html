@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
 	<script src="../static/js/ui.js"></script>
 </head>
 <body class="admin">
@@ -15,7 +16,7 @@
 
 	<div class="header">
 		<div class="inner">
-			<h1><a href="#">비자네비게이터 Admin</a></h1>
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
 
 			<!-- GNB -->
 			<ul class="gnb">
@@ -30,17 +31,11 @@
 					<span>
 						[최종접속시간 
 						<em>2019.07.08</em>
-						<em>12:13:15</em>
-						/
-						<em>106.247.228.114</em>]
+						<em>12:13:15</em>]
 					</span>
 				</p>
 				<a href="#">로그아웃</a>
 				<a href="#">비밀번호 변경</a>
-				<span>
-					<input type="text" placeholder="검색" class="searchBox">
-					<button type="button" class="searchBtn">검색버튼</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -68,13 +63,7 @@
 							<li><a href="#">수수료 면제국가 관리</a></li>
 						</ul>
 					</li>
-					<li>
-						<span>비자표출 관리</span>
-						<ul class="subM depth2">
-							<li><a href="#">법무부</a></li>
-							<li><a href="#">중국(광저우)</a></li>
-						</ul>
-					</li>
+					<li><a href="">비자표출 관리</a></li>
 					<li>
 						<span>변경 이력 확인</span>
 						<ul class="subM depth2">
@@ -94,9 +83,7 @@
 					</li>
 				</ul>
 			</div>
-			<!-- //LNB -->
-
-			
+			<!-- //LNB -->			
 
 			<div class="cont">
 
@@ -107,11 +94,62 @@
 
 					<!-- 비교계정1 -->
 					<div class="account">
-						
-						<div class="titleWrap">
-							<b>관리계정 : <em>Admin1</em></b>
-							<span class="date">작성일 : 2019-09-28</span>
-						</div>
+
+						<!-- 작성정보 공통영역 -->
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">계정종류</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">법무부</option>
+											<option value="">공관</option>
+											<option value="">센터</option>
+										</select>
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">중국/광저우</option>
+											<option value="">인도네시아/자카르타</option>
+											<option value="">베트남/호치민2</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">관리계정</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">visanavadmin4@moj.go.kr</option>
+											<option value="">abc123@moj.go.ke</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">작성일</p>
+									<div class="box">
+										<span class="datePicker">
+											<span class="calenderBox">
+												<input type="text" class=" dateFrom inpT" name="from" readonly="" value="날짜선택">
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title">작성시간</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">21:43:22</option>
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<!-- 작성정보 공통영역 -->
 
 						<h5>TEXT</h5>
 						<ul class="optionTable">
@@ -149,7 +187,7 @@
 											<span class="icon"></span>
 										</label>
 									</td>
-									<td><input type="text" class="inpT" value="버튼이름1" disabled></td>
+									<td><div class="inpT">버튼이름1</div></td>
 								</tr>
 								<tr>
 									<td class="inpCell">
@@ -158,7 +196,7 @@
 											<span class="icon"></span>
 										</label>
 									</td>
-									<td><input type="text" class="inpT" value="버튼이름2" disabled></td>
+									<td><div class="inpT">버튼이름2</div></td>
 								</tr>
 								<tr>
 									<td class="inpCell">
@@ -167,7 +205,7 @@
 											<span class="icon"></span>
 										</label>
 									</td>
-									<td><input type="text" class="inpT" value="버튼이름3" disabled></td>
+									<td><div class="inpT">버튼이름3</div></td>
 								</tr>
 							</tbody>
 						</table>
@@ -192,7 +230,7 @@
 											<span class="icon"></span>
 										</label>
 									</td>
-									<td><input type="text" class="inpT" value="버튼이름1" disabled></td>
+									<td><div class="inpT">버튼이름1</div></td>
 								</tr>
 								<tr>
 									<td class="inpCell">
@@ -201,7 +239,7 @@
 											<span class="icon"></span>
 										</label>
 									</td>
-									<td><input type="text" class="inpT" value="버튼이름2" disabled></td>
+									<td><div class="inpT">버튼이름2</div></td>
 								</tr>
 							</tbody>
 						</table>
@@ -239,17 +277,68 @@
 						</ul>
 
 						<h5><em class="red">*</em>등록사유</h5>
-						<textarea disabled>신규등록</textarea>
+						<div class="textarea">신규등록</div>
 					</div>
 					<!-- //비교계정1 -->
 
 					<!-- 비교계정2 -->
 					<div class="account">
-						
-						<div class="titleWrap">
-							<b>관리계정 : <em>Admin2</em></b>
-							<span class="date">작성일 : 2019-09-28</span>
-						</div>
+
+						<!-- 작성정보 공통영역 -->
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">계정종류</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">법무부</option>
+											<option value="">공관</option>
+											<option value="">센터</option>
+										</select>
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">중국/광저우</option>
+											<option value="">인도네시아/자카르타</option>
+											<option value="">베트남/호치민2</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">관리계정</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">visanavadmin4@moj.go.kr</option>
+											<option value="">abc123@moj.go.ke</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">작성일</p>
+									<div class="box">
+										<span class="datePicker">
+											<span class="calenderBox">
+												<input type="text" class=" dateFrom inpT" name="from" readonly="" value="날짜선택">
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title">작성시간</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">21:43:22</option>
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<!-- 작성정보 공통영역 -->
 
 						<h5>TEXT</h5>
 						<ul class="optionTable">
@@ -287,7 +376,7 @@
 											<span class="icon"></span>
 										</label>
 									</td>
-									<td><input type="text" class="inpT" value="버튼이름1" disabled></td>
+									<td><div class="inpT">버튼이름1</div></td>
 								</tr>
 								<tr>
 									<td class="inpCell">
@@ -296,7 +385,7 @@
 											<span class="icon"></span>
 										</label>
 									</td>
-									<td><input type="text" class="inpT" value="버튼이름2" disabled></td>
+									<td><div class="inpT">버튼이름2</div></td>
 								</tr>
 								<tr>
 									<td class="inpCell">
@@ -305,7 +394,7 @@
 											<span class="icon"></span>
 										</label>
 									</td>
-									<td><input type="text" class="inpT" value="버튼이름3" disabled></td>
+									<td><div class="inpT">버튼이름3</div></td>
 								</tr>
 							</tbody>
 						</table>
@@ -359,7 +448,7 @@
 						</ul>
 
 						<h5><em class="red">*</em>수정사유</h5>
-						<textarea class="red" disabled>체크박스 폼 삭제, URL 등록영역 추가</textarea>
+						<div class="textarea"><em class="red">체크박스 폼 삭제, URL 등록영역 추가</em></div>
 					</div>
 					<!-- //비교계정2 -->
 					

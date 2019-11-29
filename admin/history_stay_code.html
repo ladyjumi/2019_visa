@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../static/css/reset.css" />
 	<link rel="stylesheet" href="../static/css/style.css" />
 	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
 	<script src="../static/js/ui.js"></script>
 </head>
 <body class="admin">
@@ -15,7 +16,7 @@
 
 	<div class="header">
 		<div class="inner">
-			<h1><a href="#">비자네비게이터 Admin</a></h1>
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
 
 			<!-- GNB -->
 			<ul class="gnb">
@@ -30,17 +31,11 @@
 					<span>
 						[최종접속시간 
 						<em>2019.07.08</em>
-						<em>12:13:15</em>
-						/
-						<em>106.247.228.114</em>]
+						<em>12:13:15</em>]
 					</span>
 				</p>
 				<a href="#">로그아웃</a>
 				<a href="#">비밀번호 변경</a>
-				<span>
-					<input type="text" placeholder="검색" class="searchBox">
-					<button type="button" class="searchBtn">검색버튼</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -68,13 +63,7 @@
 							<li><a href="#">수수료 면제국가 관리</a></li>
 						</ul>
 					</li>
-					<li>
-						<span>비자표출 관리</span>
-						<ul class="subM depth2">
-							<li><a href="#">법무부</a></li>
-							<li><a href="#">중국(광저우)</a></li>
-						</ul>
-					</li>
+					<li><a href="">비자표출 관리</a></li>
 					<li>
 						<span>변경 이력 확인</span>
 						<ul class="subM depth2">
@@ -106,17 +95,133 @@
 					<!-- 비교계정1 -->
 					<div class="account">
 						
-						<div class="titleWrap">
-							<b>관리계정 : <em>Admin1</em></b>
-							<span class="date">작성일 : 2019-09-28</span>
-						</div>
+						<!-- 작성정보 공통영역 -->
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">계정종류</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">법무부</option>
+											<option value="">공관</option>
+											<option value="">센터</option>
+										</select>
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">중국/광저우</option>
+											<option value="">인도네시아/자카르타</option>
+											<option value="">베트남/호치민2</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">관리계정</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">visanavadmin4@moj.go.kr</option>
+											<option value="">abc123@moj.go.ke</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">작성일</p>
+									<div class="box">
+										<span class="datePicker">
+											<span class="calenderBox">
+												<input type="text" class=" dateFrom inpT" name="from" readonly="" value="날짜선택">
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title">작성시간</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">21:43:22</option>
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<!-- 작성정보 공통영역 -->
 						
 						<h4>체류자격 코드 등록</h4>
+
+						<div class="langTab">
+							<ul class="tabMenu">
+								<li class="active"><button type="button">국문</button></li>
+								<li><button type="button">중문</button></li>
+								<li><button type="button">영문</button></li>
+							</ul>
+							<div class="tabBox">
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title"><em class="red">*</em>체류자격명</p>
+											<div class="box"><div class="inpT"></div></div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">검색색인</p>
+											<div class="box">
+												<div class="textarea">국문</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabBox">
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title"><em class="red">*</em>체류자격명</p>
+											<div class="box"><div class="inpT"></div></div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">검색색인</p>
+											<div class="box">
+												<div class="textarea">중문</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabBox">
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title"><em class="red">*</em>체류자격명</p>
+											<div class="box"><div class="inpT"></div></div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">검색색인</p>
+											<div class="box">
+												<div class="textarea">영문</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
 						<ul class="optionTable">
 							<li>
 								<div class="cell">
 									<p class="title">체류자격 대분류</p>
-									<div class="box"><input type="text" class="inpT" value="disabled" disabled></div>
+									<div class="box">
+										<div class="inpT">글자색<em class="red">빨간색</em></div>
+									</div>
 								</div>
 							</li>
 							<li>
@@ -146,19 +251,21 @@
 							<li>
 								<div class="cell">
 									<p class="title">체류자격 소분류</p>
-									<div class="box"><input type="text" class="inpT" disabled></div>
+									<div class="box">
+										<div class="inpT">02</div>
+									</div>
 								</div>
 							</li>
 							<li>
 								<div class="cell">
-									<p class="title">검색키워드</p>
-									<div class="box"><input type="text" class="inpT" disabled></div>
-								</div>
-							</li>
-							<li>
-								<div class="cell">
-									<p class="title">체류자격명</p>
-									<div class="box"><input type="text" class="inpT" disabled></div>
+									<p class="title"><em class="red">*</em>체류기간</p>
+									<div class="box">
+										<select class="selectD" disabled="">
+											<option value="">90일 이하(단기/단기무사증)</option>
+											<option value="">91일 이상(장기사증)</option>
+											<option value="">영주(영주/특수사증)</option>
+										</select>
+									</div>
 								</div>
 							</li>
 							<li>
@@ -185,11 +292,24 @@
 									</div>
 								</div>
 							</li>
+							<!-- 1016 수정 -->
 							<li>
 								<div class="cell">
-									<p class="title">적용국가</p>
+									<p class="title">
+										<label class="inpD">
+											<input type="radio" name="country" class="inp">
+											<span class="icon"></span>
+											<span class="text">적용국가</span>
+										</label>
+									</p>
 									<div class="box">
-										<input type="text" class="inpT wide" disabled>
+										<div class="inpT wide">
+											<span class="text">텍스트가 길어서 넘칠시 삼각형 마크가 나옵니다. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, voluptas.</span>
+											<button type="button" class="cutMark"></button>
+											<p class="overBox">
+												이스라엘, <em class="red">이라크</em>
+											</p>
+										</div>
 										<button type="button" class="btn grey" disabled>국가찾기</button>
 									</div>
 								</div>
@@ -197,9 +317,58 @@
 							<li>
 								<div class="cell">
 									<p class="title">국가코드</p>
-									<div class="box"><input type="text" class="inpT" disabled></div>
+									<div class="box"><div class="inpT">123, 456</div></div>
 								</div>
 							</li>
+							<li>
+								<div class="cell">									
+									<p class="title">
+										<label class="inpD">
+											<input type="radio" name="country" class="inp">
+											<span class="icon"></span>
+											<span class="text">제외국가</span>
+										</label>
+									</p>
+									<div class="box">
+										<div class="inpT wide">
+											<span class="text">이스라엘, 이라크</span>
+											<button type="button" class="cutMark"></button>
+											<p class="overBox">이스라엘, <em class="red">이라크</em></p>
+										</div>
+										<button type="button" class="btn grey" disabled>국가찾기</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">국가코드</p>
+									<div class="box"><div class="inpT"></div></div>
+								</div>
+							</li>							
+							<li>
+								<div class="cell">
+									<p class="title">1차구분</p>
+									<div class="box">
+										<select class="selectD" disabled="">
+											<option value="">신분</option>
+											<option value="">체류목적</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">2차구분</p>
+									<div class="box">
+										<select class="selectD" disabled="">
+											<option value="">동반자 신분</option>
+											<option value="">재외동포</option>
+											<option value="">주재원, 전근자</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<!-- //1016 수정 -->
 						</ul>
 
 						<h5><em class="red">*</em>입국목적</h5>
@@ -289,30 +458,146 @@
 								<li><button type="button"><em class="red">*</em>기본발급대상(영문)</button></li>
 							</ul>
 							<div class="tabBox">
-								<textarea disabled>체류기간 경과시 대행사(여행사)가 책임을 지는 보증개별, 단체관광 등 관광, 공항만 소무역활동 등을 목적으로 입국하려는 자 체류기간 경과시 대행사(여행사)가 책임을 지는 보증개별, 단체관광 등 관광, 공항만 소무역활동 등을 목적으로 입국하려는 자</textarea>
+								<div class="textarea">
+									체류기간 경과시 대행사(여행사)가 책임을 지는 <em class="red">보증개별, 단체관광 등 관광, 공항만 소무역활동</em> 등을 목적으로 입국하려는 자 체류기간 경과시 대행사(여행사)가 책임을 지는 보증개별, 단체관광 등 관광, 공항만 소무역활동 등을 목적으로 입국하려는 자
+								</div>
 							</div>
-							<div class="tabBox"><textarea disabled>2</textarea></div>
-							<div class="tabBox"><textarea disabled>3</textarea></div>
+							<div class="tabBox"><div class="textarea">2</div></div>
+							<div class="tabBox"><div class="textarea">3</div></div>
 						</div>
 						<h5><em class="red">*</em>등록사유</h5>
-						<textarea disabled>수정전</textarea>
+						<div class="textarea">수정전</div>
 					</div>
 					<!-- //비교계정1 -->
 					
 					<!-- 비교계정2 -->
 					<div class="account">
-						
-						<div class="titleWrap">
-							<b>관리계정 : <em>Admin2</em></b>
-							<span class="date">작성일 : 2019-09-28</span>
-						</div>
+
+						<!-- 작성정보 공통영역 -->
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title">계정종류</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">법무부</option>
+											<option value="">공관</option>
+											<option value="">센터</option>
+										</select>
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">중국/광저우</option>
+											<option value="">인도네시아/자카르타</option>
+											<option value="">베트남/호치민2</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">관리계정</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">전체</option>
+											<option value="">visanavadmin4@moj.go.kr</option>
+											<option value="">abc123@moj.go.ke</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">작성일</p>
+									<div class="box">
+										<span class="datePicker">
+											<span class="calenderBox">
+												<input type="text" class=" dateFrom inpT" name="from" readonly="" value="날짜선택">
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="cell">
+									<p class="title">작성시간</p>
+									<div class="box">
+										<select class="selectD">
+											<option value="">21:43:22</option>
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<!-- 작성정보 공통영역 -->
 						
 						<h4>체류자격 코드 등록</h4>
+
+						<div class="langTab">
+							<ul class="tabMenu">
+								<li class="active"><button type="button">국문</button></li>
+								<li><button type="button">중문</button></li>
+								<li><button type="button">영문</button></li>
+							</ul>
+							<div class="tabBox">
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title"><em class="red">*</em>체류자격명</p>
+											<div class="box"><div class="inpT"></div></div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">검색색인</p>
+											<div class="box">
+												<div class="textarea">국문</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabBox">
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title"><em class="red">*</em>체류자격명</p>
+											<div class="box"><div class="inpT"></div></div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">검색색인</p>
+											<div class="box">
+												<div class="textarea">중문</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="tabBox">
+								<ul class="optionTable">
+									<li>
+										<div class="cell">
+											<p class="title"><em class="red">*</em>체류자격명</p>
+											<div class="box"><div class="inpT"></div></div>
+										</div>
+									</li>
+									<li>
+										<div class="cell">
+											<p class="title">검색색인</p>
+											<div class="box">
+												<div class="textarea">영문</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
 						<ul class="optionTable">
 							<li>
 								<div class="cell">
 									<p class="title red">체류자격 대분류</p>
-									<div class="box"><input type="text" class="inpT" value="disabled123" disabled></div>
+									<div class="box"><div class="inpT"></div></div>
 								</div>
 							</li>
 							<li>
@@ -342,19 +627,19 @@
 							<li>
 								<div class="cell">
 									<p class="title">체류자격 소분류</p>
-									<div class="box"><input type="text" class="inpT" disabled></div>
+									<div class="box"><div class="inpT"></div></div>
 								</div>
 							</li>
 							<li>
 								<div class="cell">
-									<p class="title">검색키워드</p>
-									<div class="box"><input type="text" class="inpT" disabled></div>
-								</div>
-							</li>
-							<li>
-								<div class="cell">
-									<p class="title">체류자격명</p>
-									<div class="box"><input type="text" class="inpT" disabled></div>
+									<p class="title"><em class="red">*</em>체류기간</p>
+									<div class="box">
+										<select class="selectD" disabled="">
+											<option value="">90일 이하(단기/단기무사증)</option>
+											<option value="">91일 이상(장기사증)</option>
+											<option value="">영주(영주/특수사증)</option>
+										</select>
+									</div>
 								</div>
 							</li>
 							<li>
@@ -381,11 +666,22 @@
 									</div>
 								</div>
 							</li>
+							<!-- 1016 수정 -->
 							<li>
 								<div class="cell">
-									<p class="title">적용국가</p>
+									<p class="title">
+										<label class="inpD">
+											<input type="radio" name="country" class="inp">
+											<span class="icon"></span>
+											<span class="text">적용국가</span>
+										</label>
+									</p>
 									<div class="box">
-										<input type="text" class="inpT wide" disabled>
+										<div class="inpT wide">
+											<span class="text">텍스트가 길어서 넘칠시 삼각형 마크가 나옵니다. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, voluptas.</span>
+											<button type="button" class="cutMark"></button>
+											<p class="overBox">이스라엘, <em class="red">이라크</em></p>
+										</div>
 										<button type="button" class="btn grey" disabled>국가찾기</button>
 									</div>
 								</div>
@@ -393,9 +689,58 @@
 							<li>
 								<div class="cell">
 									<p class="title">국가코드</p>
-									<div class="box"><input type="text" class="inpT" disabled></div>
+									<div class="box"><div class="inpT"></div></div>
 								</div>
 							</li>
+							<li>
+								<div class="cell">									
+									<p class="title">
+										<label class="inpD">
+											<input type="radio" name="country" class="inp">
+											<span class="icon"></span>
+											<span class="text">제외국가</span>
+										</label>
+									</p>									
+									<div class="box">
+										<div class="inpT wide">
+											<span class="text">이스라엘, 이라크</span>
+											<button type="button" class="cutMark"></button>
+											<p class="overBox">이스라엘, <em class="red">이라크</em></p>
+										</div>
+										<button type="button" class="btn grey" disabled>국가찾기</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">국가코드</p>
+									<div class="box"><div class="inpT"></div></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">1차구분</p>
+									<div class="box">
+										<select class="selectD red" disabled="">
+											<option value="">신분</option>
+											<option value="" selected="">체류목적</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title">2차구분</p>
+									<div class="box">
+										<select class="selectD" disabled="">
+											<option value="">동반자 신분</option>
+											<option value="">재외동포</option>
+											<option value="">주재원, 전근자</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<!-- //1016 수정 -->
 						</ul>
 
 						<h5><em class="red">*</em>입국목적</h5>
@@ -485,13 +830,15 @@
 								<li><button type="button"><em class="red">*</em>기본발급대상(영문)</button></li>
 							</ul>
 							<div class="tabBox">
-								<textarea disabled>체류기간 경과시 대행사(여행사)가 책임을 지는 보증개별, 단체관광 등 관광, 공항만 소무역활동 등을 목적으로 입국하려는 자 체류기간 경과시 대행사(여행사)가 책임을 지는 보증개별, 단체관광 등 관광, 공항만 소무역활동 등을 목적으로 입국하려는 자</textarea>
+								<div class="textarea">
+									체류기간 경과시 대행사(여행사)가 책임을 지는 <em class="red">보증개별, 단체관광 등 관광, 공항만 소무역활동</em> 등을 목적으로 입국하려는 자 체류기간 경과시 대행사(여행사)가 책임을 지는 보증개별, 단체관광 등 관광, 공항만 소무역활동 등을 목적으로 입국하려는 자
+								</div>
 							</div>
-							<div class="tabBox"><textarea disabled>2</textarea></div>
-							<div class="tabBox"><textarea disabled>3</textarea></div>
+							<div class="tabBox"><div class="textarea">2</div></div>
+							<div class="tabBox"><div class="textarea">3</div></div>
 						</div>
 						<h5><em class="red">*</em>등록사유</h5>
-						<textarea class="red" disabled>"red" 클래스 추가시 글자 색상이 빨간색으로 바뀝니다</textarea>
+						<div class="textarea"><em class="red">수정 후</em></div>
 					</div>
 					<!-- //비교계정2 -->
 

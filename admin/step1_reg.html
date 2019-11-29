@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>체류자격코드생성2</title>
+	<link rel="stylesheet" href="../static/css/reset.css" />
+	<link rel="stylesheet" href="../static/css/style.css" />
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../static/js/ui.js"></script>
+</head>
+<body class="admin">
+
+<div class="wrap">
+
+	<div class="header">
+		<div class="inner">
+			<h1><a href="#">비자내비게이터 Admin</a></h1>
+
+			<!-- GNB -->
+			<ul class="gnb">
+				<li class="active"><a href="#">콘텐츠관리</a></li>
+				<li><a href="#">계정관리</a></li>
+			</ul>
+			<!-- //GNB -->
+
+			<div class="topMenu">
+				<p class="currentInfo">
+					<span><em>Admin1234</em>접속 중</span>
+					<span>
+						[최종접속시간 
+						<em>2019.07.08</em>
+						<em>12:13:15</em>]
+					</span>
+				</p>
+				<a href="#">로그아웃</a>
+				<a href="#">비밀번호 변경</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="contents">
+		<div class="inner">
+
+			<!-- LNB -->
+			<div class="aside">
+				<ul class="lnb">
+					<li>
+						<span>체류자격 관리</span>
+						<ul class="subM depth2">
+							<li class="active"><a href="#">STEP1. 코드관리</a></li>
+							<li><a href="#">STEP2. 기본정보관리</a></li>
+							<li><a href="#">STEP3. 항목관리</a></li>
+							<li><a href="#">STEP4. 노출관리 </a></li>
+						</ul>
+					</li>
+					<li><a href="#">첨부파일 관리</a></li>
+					<li>
+						<span>수수료 관리</span>
+						<ul class="subM depth2">
+							<li><a href="#">MAIN 관리</a></li>
+							<li><a href="#">수수료 조정국가 관리</a></li>
+							<li><a href="#">수수료 면제국가 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="">비자표출 관리</a></li>
+					<li>
+						<span>변경 이력 확인</span>
+						<ul class="subM depth2">
+							<li><a href="#">체류자격 코드 이력</a></li>
+							<li><a href="#">체류자격 항목 이력</a></li>
+							<li><a href="#">체류자격 등록 이력</a></li>
+							<li><a href="#">첨부파일 등록 이력</a></li>
+							<li><span>수수료 변경 이력</span>
+								<ul class="subM depth3">
+									<li><a href="#">MAIN</a></li>
+									<li><a href="#">수수료 조정국가</a></li>
+									<li><a href="#">수수료 면제국가</a></li>
+								</ul>
+							</li>
+							<li><a href="#">비자표출 관리 이력</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- //LNB -->
+
+			<div class="cont">
+
+				<h3>STEP1. 코드관리</h3>
+
+				<div class="topRight">
+					<span class="selectWrap">
+						<span class="txt">사용설정</span>
+						<select class="selectD">
+							<option value="">미사용</option>
+							<option value="">사용</option>
+						</select>
+					</span>
+				</div>
+
+				<div class="langTab typeSmall">
+					<ul class="tabMenu">
+						<li class="active"><button type="button">국문</button></li>
+						<li><button type="button">중문</button></li>
+						<li><button type="button">영문</button></li>
+					</ul>
+					<div class="tabBox">
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title"><em class="red">*</em>체류자격명</p>
+									<div class="box"><input type="text" class="inpT"></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title"><em class="red">*</em>검색색인</p>
+									<div class="box">
+										<textarea>국문</textarea>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tabBox">
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title"><em class="red">*</em>체류자격명</p>
+									<div class="box"><input type="text" class="inpT"></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title"><em class="red">*</em>검색색인</p>
+									<div class="box">
+										<textarea>중문</textarea>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="tabBox">
+						<ul class="optionTable">
+							<li>
+								<div class="cell">
+									<p class="title"><em class="red">*</em>체류자격명</p>
+									<div class="box"><input type="text" class="inpT"></div>
+								</div>
+							</li>
+							<li>
+								<div class="cell">
+									<p class="title"><em class="red">*</em>검색색인</p>
+									<div class="box">
+										<textarea>영문</textarea>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<ul class="optionTable">
+					<li>
+						<div class="cell">
+							<p class="title"><em class="red">*</em>체류자격 대분류</p>
+							<div class="box"><input type="text" class="inpT"></div>
+						</div>
+						<div class="cell">
+							<p class="title"><em class="red">*</em>체류자격 소분류</p>
+							<div class="box"><input type="text" class="inpT"></div>
+						</div>
+					</li>
+				</ul>
+
+				<div class="tabWrap">
+					<ul class="tabMenu">
+						<li class="active"><button type="button"><em class="red">*</em>기본발급대상(국문)</button></li>
+						<li><button type="button"><em class="red">*</em>기본발급대상(중문)</button></li>
+						<li><button type="button"><em class="red">*</em>기본발급대상(영문)</button></li>
+					</ul>
+					<div class="tabBox">
+						<textarea>체류기간 경과시 대행사(여행사)가 책임을 지는 보증개별, 단체관광 등 관광, 공항만 소무역활동 등을 목적으로 입국하려는 자 체류기간 경과시 대행사(여행사)가 책임을 지는 보증개별, 단체관광 등 관광, 공항만 소무역활동 등을 목적으로 입국하려는 자</textarea>
+					</div>
+					<div class="tabBox"><textarea>2</textarea></div>
+					<div class="tabBox"><textarea>3</textarea></div>
+				</div>
+
+				<h4><em class="red">*</em>등록사유</h4>
+				<textarea></textarea>
+				
+				<span class="btnGroup btm">
+					<button type="button" class="btn">목록</button>
+					<span class="text"><em class="red">*</em>필수항목</span>
+					<button type="button" class="btn">등록하기</button>
+				</span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+	
+</body>
+</html>

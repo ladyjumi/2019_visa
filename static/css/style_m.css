@@ -350,6 +350,18 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .divBox{padding: 12px; margin-bottom: 24px; border: 1px solid #dadada; font-size: 12px;}
 .divBox p.text{font-size: 13px; line-height: 21px}
 
+/*에러페이지*/
+.warnMark{display: block; width: 57px; height: 57px; margin: 0 auto 24px; background: url(../images/common/icon_warning_red.svg);}
+.warnBox{padding: 80px 20px; text-align: center;}
+.warnBox strong{display: block; font-size: 17px; line-height: 1.4; font-weight: 500}
+.warnBox strong + p{margin-top: 12px; font-size: 13px; line-height: 1.5;}
+.warnBox .addInfo{margin: 40px auto 0; padding: 20px 18px 0; border-top: 1px solid #dadada;}
+.warnBox .addInfo table{width: auto; margin: 0 auto; font-size: 13px; line-height: 1.5; text-align: left;}
+.warnBox .addInfo table th,
+.warnBox .addInfo table td{vertical-align: top;}
+.warnBox .addInfo table tr + tr > *{padding-top: 8px;}
+.warnBox .btn.red{margin-top: 36px;}
+
 /* popup */
 	.popWrap{display: none; position:absolute;top:0;left:0;width:100%;height:100%; z-index: 1000}/*레이어박스높이가짧을경우:fixed*/
 	.popWrap .popDim{position:fixed;top:0;left:0;width:100%;height:100%;background:black;opacity:0.7;}

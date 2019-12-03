@@ -336,6 +336,15 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .visaDesc p.txt{line-height: 22px; margin: 3px 0;}
 .visaDesc + .addTxt{padding: 18px;}
 
+.warnMark{display: block; width: 79px; height: 79px; margin: 0 auto 30px; background: url(../images/common/icon_warning_red.svg);}
+.warnBox{margin: 113px auto 0; width: 570px; padding: 48px 20px 42px; border: 1px solid #dadada; text-align: center;}
+.warnBox strong{display: block; font-size: 22px; line-height: 26px; font-weight: 500}
+.warnBox strong + p{margin-top: 18px; font-size: 16px; line-height: 23px;}
+.warnBox .addInfo{width: 432px; margin: 40px auto 0; padding: 20px 80px 0; border-top: 1px solid #dadada;}
+.warnBox .addInfo table{font-size: 13px; line-height: 21px; text-align: left;}
+.warnBox .addInfo table tr + tr > *{padding-top: 8px;}
+.warnBox .btn.red{margin-top: 36px;}
+
 
 /*////////////////////////////////////////////////Admin///////////////////////////////////////////////////////*/
 

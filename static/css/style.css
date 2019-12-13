@@ -35,7 +35,7 @@
 .lineMoveBtn.up{background-position: -32px -50px}
 .lineMoveBtn.dw{background-position: -32px -74px}
 .lineMoveBtn + .lineMoveBtn{margin-left: 2px;}
-.optionTable + .btnGroup{margin-top: 30px;}
+.optionTable + .btnGroup{margin-top: 50px;}
 
 /*툴팁*/
 .tooltip{position: relative; margin: 0 0 0 4px;}
@@ -355,6 +355,7 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .admin h3{padding: 20px 0 14px; font-size: 16px; font-weight: 700; border-bottom: 1px solid #999}
 .admin h3 + .descText{padding: 20px;}
 .admin h4{padding: 24px 0 12px; font-weight: 500}
+.admin hr.line + h4{padding-top: 0;}
 .admin .shapeRequire{color: #bf3f44; font-weight: 400}
 .admin .header .gnb li.active a{color: #1a6fa0; border-color: #1a6fa0;}
 .admin .contents .inner{position: relative}
@@ -407,7 +408,7 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .inpT:focus{border-color: #999}
 .inpT:disabled{color: #aaa; background-color: #f4f4f4}
 .inpNum{width: 70px}
-.selectD{height: 36px; padding: 0 30px 0 10px; background: #fff url(../images/selectbox1.png) no-repeat right 10px center; border: 1px solid #d3d3d3}
+.selectD{height: 36px; max-width: 100%; padding: 0 30px 0 10px; background: #fff url(../images/selectbox1.png) no-repeat right 10px center; border: 1px solid #d3d3d3}
 .selectD:disabled{background-color: #f4f4f4;}
 .selectD:focus{border-color: #999}
 .selectD + .selectD{margin-left: 10px;}
@@ -427,6 +428,14 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 
 .inpD + .inpD{margin-left: 16px}
 
+/************딤*************/
+.dimm{position: relative;}
+.dimm:after{display: block; content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.25); z-index: 3}
+.dimm:hover:after{background: rgba(0,0,0,0.25) url(../images/dimm_txt.png) repeat-y center;}
+.dimm.typeSmall:after{top: inherit; bottom: 0; height: calc(100% - 30px)}
+.dimm.tabWrap:after{top: inherit; bottom: 0; height: calc(100% - 44px)}
+.dimm.registBox:after{top: inherit; bottom: 0; height: calc(100% - 44px)}
+
 /*탭메뉴*/
 .tabMenu{font-size: 0}
 .tabMenu em.red{color: #666}
@@ -436,6 +445,8 @@ ul[class*="list"] > *::before{display: initial; position: absolute; left: 0;}
 .tabMenu li.active{position: relative; z-index: 1}
 .tabMenu li.active button{background-color: #fff; border-color: #1a6fa0; color: #333}
 .tabMenu li.active em.red{color: #bf3f44}
+.tabMenu.big{display: flex;}
+.tabMenu.big li{flex: 1;}
 .tabBox + .tabBox{display: none}
 .tabBox{margin-top: -1px}
 /*작은타입*/
@@ -646,6 +657,13 @@ h3 + .optionTable, .topRight + .optionTable{margin-top: -1px;} /*테이블상단
 .moddable{padding: 0 20px 20px;}
 .moddable strong.title{padding-top: 15px; font-size: 16px; font-weight: 700;}
 
+/*step4_reg*/
+.tabBox .contBox{padding: 10px 20px 40px; border: 1px solid #dadada;}
+.tabBox .contBox .optionTable{border-top: 1px solid #999}
+.contBox strong.title{padding: 20px 0 14px; font-size: 14px; font-weight: 500;}
+.contBox .optionTable .selectD{width: 100%}
+.contBox .optionTable + .optionTable{margin-top: 9px;}
+
 /*동기화*/
 .syncTxt{padding: 20px; border-bottom: 1px solid #dadada}
 .syncTxt > p{line-height: 18px;}
@@ -657,6 +675,7 @@ h3 + .optionTable, .topRight + .optionTable{margin-top: -1px;} /*테이블상단
 
 /*타이틀회색상자*/
 .titleTxtBox{display: block; margin-bottom: 15px; background-color: #ebebeb; border: 1px solid #e0e0e0; font-size: 16px; font-weight: 700; line-height: 42px; text-align: center}
+.topRight + .titleTxtBox{margin-top: 20px;}
 
 /*이력비교 (2단)*/
 .columnWrap{position: relative; margin-top: 25px; font-size: 0}
@@ -681,6 +700,9 @@ h3 + .optionTable, .topRight + .optionTable{margin-top: -1px;} /*테이블상단
 .columnWrap div.textarea,
 .columnWrap textarea{height: 70px; padding: 8px 9px; font-size: 11px; line-height: 1.5}
 .columnWrap select{height: 30px; padding: 0 30px 0 10px; font-size: 12px}
+.columnWrap .optionTable .inpD{margin-right: 10px;}
+.columnWrap .optionTable .inpD + .inpD{margin-left: 0;}
+.columnWrap .optionTable .inpGroup .inpD{margin-bottom: 6px;}
 .columnWrap .optionTable .inpT{width: auto; ;}
 .columnWrap .optionTable .inpT + .btn{margin-left: 5px}
 .columnWrap .optionTable .inpT + .inpT{margin-left: 12px;}
@@ -842,7 +864,8 @@ h3 + .optionTable, .topRight + .optionTable{margin-top: -1px;} /*테이블상단
 	.btnGroup .popWrap{margin-left: 0;}
 
 	/*업로드*/
-	.popWrap.upload{position: absolute; top: 40%; left: 50%; right: inherit; width: 400px; transform: translate(-50%, -50%); text-align: center;}
+	.popWrap.upload:before{display: block; content: ''; position: fixed; top:0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4);}
+	.popWrap.upload .popS{position: absolute; top: 40%; left: 50%; right: inherit; width: 400px; transform: translate(-50%, -50%); text-align: center;}
 	.upload .popCont{padding: 40px 0 60px;}
 	.upload .popCont p{margin-top: 29px; font-size: 14px; line-height: 27px;}
 	.upload .popCont .iconUpload{width: 28px; height: 22px; background: url(../images/icon_upload.png) no-repeat center;}
